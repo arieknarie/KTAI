@@ -1,0 +1,115 @@
+% =============================================================================
+%  references.bib -- bibliography for main.tex
+%
+%  Every \cite{key} in main.tex needs a matching entry below. Only entries
+%  that are actually cited appear in the reference list of the PDF.
+% =============================================================================
+
+
+% -----------------------------------------------------------------------------
+% Papers cited in the Introduction and Related works
+% -----------------------------------------------------------------------------
+
+% FaceNet: the face recognition model under evaluation.
+@inproceedings{schroff2015facenet,
+  author    = {Schroff, Florian and Kalenichenko, Dmitry and Philbin, James},
+  title     = {{FaceNet}: A Unified Embedding for Face Recognition and Clustering},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {815--823},
+  year      = {2015},
+  doi       = {10.1109/CVPR.2015.7298682}
+}
+
+% Stress Test 1 (low resolution).
+% NOTE: the text cites "Cheng and Zhu (2024)", but no 2024 review by these
+% authors could be found. The best match is the Cheng, Zhu & Gong paper below
+% (ACCV 2018), which introduces the TinyFace benchmark and shows that standard
+% face recognition models degrade on low-resolution faces. Please verify that
+% this is the intended source and update the entry if it is not.
+@inproceedings{cheng2024,
+  author    = {Cheng, Zhiyi and Zhu, Xiatian and Gong, Shaogang},
+  title     = {Low-Resolution Face Recognition},
+  booktitle = {Computer Vision -- ACCV 2018},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11363},
+  pages     = {605--621},
+  publisher = {Springer},
+  year      = {2018}
+}
+
+% Stress Test 1 (low resolution): interpolation vs. generative super-resolution.
+@inproceedings{luevano2026,
+  author    = {Luevano, Luis S. and {\"O}zt{\"u}rk, {\"U}nsal and Otroshi Shahreza, Hatef and George, Anjith and Marcel, S{\'e}bastien},
+  title     = {Improving Low-Resolution Face Recognition under Limited Data: How Synthetic Data Generation Can Close the Domain Gap},
+  booktitle = {IEEE International Joint Conference on Biometrics (IJCB)},
+  year      = {2026},
+  note      = {arXiv:2608.06580}
+}
+
+% Stress Test 2 (changing facial appearance). PDF: ../papers/Abdalah_Predicting_Movie.pdf
+@article{abdalah2025,
+  author    = {Abdalah, Asraa Muayed and Alkazaz, Noor Redha},
+  title     = {Predicting Movie Production Years through Facial Recognition of Actors with Machine Learning},
+  journal   = {Baghdad Science Journal},
+  volume    = {21},
+  number    = {12},
+  year      = {2024},
+  doi       = {10.21123/bsj.2024.8996}
+}
+
+% Stress Test 3 (poor lighting): original description of CLAHE.
+@incollection{zuiderveld1994,
+  author    = {Zuiderveld, Karel},
+  title     = {Contrast Limited Adaptive Histogram Equalization},
+  booktitle = {Graphics Gems IV},
+  editor    = {Heckbert, Paul S.},
+  publisher = {Academic Press},
+  address   = {San Diego, CA},
+  pages     = {474--485},
+  year      = {1994}
+}
+
+
+% -----------------------------------------------------------------------------
+% Example entries from the ICML 2021 template.
+% Used only by the "Citing references" template paragraph in main.tex;
+% remove these together with that paragraph.
+% -----------------------------------------------------------------------------
+
+@inproceedings{langley00,
+  author    = {P. Langley},
+  title     = {Crafting Papers on Machine Learning},
+  booktitle = {Proceedings of the 17th International Conference on Machine Learning (ICML 2000)},
+  editor    = {Pat Langley},
+  pages     = {1207--1216},
+  address   = {Stanford, CA},
+  publisher = {Morgan Kaufmann},
+  year      = {2000}
+}
+
+@book{DudaHart2nd,
+  author    = {R. O. Duda and P. E. Hart and D. G. Stork},
+  title     = {Pattern Classification},
+  publisher = {John Wiley and Sons},
+  edition   = {2nd},
+  year      = {2000}
+}
+
+@incollection{Newell81,
+  author    = {A. Newell and P. S. Rosenbloom},
+  title     = {Mechanisms of Skill Acquisition and the Law of Practice},
+  booktitle = {Cognitive Skills and Their Acquisition},
+  editor    = {J. R. Anderson},
+  chapter   = {1},
+  pages     = {1--51},
+  publisher = {Lawrence Erlbaum Associates, Inc.},
+  address   = {Hillsdale, NJ},
+  year      = {1981}
+}
+
+@phdthesis{kearns89,
+  author    = {M. J. Kearns},
+  title     = {Computational Complexity of Machine Learning},
+  school    = {Department of Computer Science, Harvard University},
+  year      = {1989}
+}

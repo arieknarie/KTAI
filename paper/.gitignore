@@ -1,0 +1,13 @@
+# LaTeX build artefacts (regenerated on every build, do not commit)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Compiled PDF -- remove this line if you do want to commit the PDF
+main.pdf
