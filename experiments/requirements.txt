@@ -1,0 +1,8 @@
+# Python packages for the FaceNet stress tests (Python 3.11 or 3.12).
+deepface>=0.0.93      # FaceNet (128-d) model and RetinaFace detector
+tensorflow>=2.16      # neural-network backend used by deepface
+tf-keras>=2.16        # needed by deepface together with TensorFlow 2.16+
+opencv-python>=4.8    # image reading, resizing, CLAHE, video frames
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
