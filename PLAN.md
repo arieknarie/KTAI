@@ -20,8 +20,8 @@ belichting in *Das Boot* de prestaties van het FaceNet-herkenningsalgoritme?
 
 | Map | Inhoud | Rol |
 |---|---|---|
-| `pictures/personal/<naam>/` | 28 foto's van de vier acteurs **buiten** hun rol | Referentiegalerij (normale uitgangssituatie) |
-| `pictures/inCharacter/<naam>/` | 38 filmstills (2 zijn exacte dubbelingen) | Testscènes; deels ook extra referenties (stresstest 2) |
+| `pictures/personal/<naam>/` | 23 foto's van de vier acteurs **buiten** hun rol | Referentiegalerij (normale uitgangssituatie) |
+| `pictures/inCharacter/<naam>/` | 35 filmstills, waarvan 2 exacte dubbelingen (dus 33 unieke) | Testscènes; deels ook extra referenties (uitgebreide galerij, gebruikt in alle drie de stresstests) |
 | `movies/` | 3 filmclips (± 10 minuten in totaal) | Beschrijving van echt filmmateriaal (gezichtsgrootte, helderheid) |
 | `papers/` | Gebruikte literatuur | – |
 
@@ -39,17 +39,19 @@ Wie er op een still staat, volgt uit de bestandsnaam
    128-dimensionale vector met lengte 1.
 3. **Vergelijking:** de Euclidische afstand tot alle referentiegezichten wordt
    berekend en de dichtstbijzijnde referentie bepaalt de naam.
-4. **Open set:** is die afstand groter dan de drempel (0,80, de standaardwaarde
+4. **Open set:** is die afstand gelijk aan of groter dan de drempel (0,80, de standaardwaarde
    van deepface voor FaceNet), dan wordt het gezicht **"onbekend"**. Dat is
    nodig, omdat er op de stills ook figuranten staan.
 
 ### 3.2 Evaluatie per scène, gescoord per gezicht
 
 Het systeem krijgt steeds een **complete still**, met figuranten,
-achtergrondgezichten, kleine en donkere gezichten. Er wordt niets weggefilterd:
-precies die moeilijkheden worden onderzocht.
+achtergrondgezichten, kleine en donkere gezichten. De stills worden vooraf niet
+opgeschoond: precies die moeilijkheden worden onderzocht. Wel negeert de
+detector gezichten met een detectiescore onder 0,90. Een gezicht dat in de
+originele still zo wegvalt, krijgt geen label en telt niet mee.
 
-Om eerlijk te kunnen scoren heeft elk gevonden gezicht een **label**: een van de
+Om te kunnen scoren heeft elk gevonden gezicht een **label**: een van de
 vier personen, of `other` (figurant). Het systeem ziet die labels niet; ze zijn
 alleen de grondwaarheid. Gedetecteerde gezichten worden via de overlap van de
 kaders aan de labels gekoppeld, ook in gedegradeerde beelden.
@@ -69,17 +71,20 @@ Daarnaast: gemist, figuranten onterecht benoemd, precisie en `closest_correct`
 
 **Labelen:** automatisch alleen als de bestandsnaam één persoon noemt en er precies
 één gezicht is gevonden. De rest is gelabeld door visuele inspectie
-(`label_source = claude`) en via de labelquiz (`label_quiz.py`, `label_source = quiz`).
+(`label_source = visual`) en via de labelquiz (`label_quiz.py`, `label_source = quiz`).
 "Weet niet" in de quiz betekent dat het gezicht niet wordt gescoord.
 
 ### 3.3 Referentiegalerij
 
 - **Basis:** de gezichten van de acteurs op hun persoonlijke foto's (gelabeld).
-- **Uitgebreid (stresstest 2):** basis + de gelabelde in-character gezichten.
+- **Uitgebreid:** basis + de gelabelde in-character gezichten. Stresstest 2 vergelijkt deze galerij met de basisgalerij; stresstest 1 en 3 gebruiken altijd de uitgebreide galerij (bij CLAHE krijgen ook de referentiefoto's die bewerking).
 - **Leave-one-out:** een still wordt nooit vergeleken met referenties uit
-  dezelfde still of met kopieën ervan. Exacte dubbele bestanden worden
-  overgeslagen en bijna-identieke gezichten worden via een perceptuele hash
-  gegroepeerd.
+  dezelfde still. Dubbele stills (exact hetzelfde bestand, of dezelfde still op
+  een ander formaat, herkend via een perceptuele hash van de hele foto) worden
+  overgeslagen.
+- **Zelfde bewerking:** referenties worden op dezelfde manier uit hun foto
+  geknipt als de gezichten in een still (hele foto bewerken, bijv. CLAHE, dan
+  detecteren en via de kaders aan de labels koppelen).
 
 ### 3.4 De drie stresstests
 
@@ -117,51 +122,64 @@ terminal getoond.
 
 | Paper-sectie | Wat er komt te staan | Bron |
 |---|---|---|
-| Methods | Pipeline (3.1), evaluatie (3.2), galerij (3.3), stresstests (3.4); een pipeline-figuur | Dit plan, `experiments/README.md` |
-| Datasets | Aantallen stills/gezichten per persoon, gezichtsgrootte en helderheid van foto's vs. stills vs. filmclips | `describe_dataset.py` → `dataset_summary.csv`, `dataset_faces.pdf` |
+| Methods | Pipeline (3.1), evaluatie (3.2), galerij (3.3), stresstests (3.4); een pipeline-figuur | Dit plan, `README.md` (Werking, Stresstests, Evaluatie) |
+| Datasets | Aantallen stills/gezichten per persoon, gezichtsgrootte en helderheid van foto's vs. stills vs. filmclips | `describe_dataset.py` → `dataset_summary.csv`, `dataset_per_identity.csv`, `dataset_faces.pdf` |
 | Implementation details | deepface, RetinaFace, FaceNet-128, drempel 0,80, CLAHE-parameters, niveaus | `experiments/config.py` |
 | Results | Eén figuur per stresstest plus een tabel | `results/figures/stress_test_*.pdf`, `results/summary*.csv` |
-| Discussion | Beperkingen (zie §6) en voorbeelden uit de tussenresultaten | `results/intermediate/` |
+| Discussion | Beperkingen (zie §7) en voorbeelden uit de tussenresultaten | `results/intermediate/` |
 
 ## 5. Werkwijze en status
 
 | Stap | Wat | Status |
 |---|---|---|
 | 1 | Repository gekloond, branch `facenet-stress-tests` | ✅ |
-| 2 | Paper-skelet (`paper/main.tex`) + `references.bib` met geverifieerde bronnen | ✅ (ICML-stijlbestanden moet het team zelf toevoegen) |
+| 2 | Paper-skelet (`paper/main.tex`) + `references.bib` met opgezochte bronnen (`cheng2024` nog niet bevestigd, zie stap 8 en §7) | ✅ (ICML-stijlbestanden moet het team zelf toevoegen) |
 | 3 | Pipeline: detectie, embeddings, degradaties, CLAHE, tussenresultaten | ✅ |
 | 4 | Evaluatie per scène, gescoord per gezicht (figuranten horen erbij) | ✅ proefrun op 3 stills geslaagd |
-| 5 | Gezichten labelen: 28 automatisch, 39 visueel, 70 via de quiz | 🔄 quiz bij het team |
-| 6 | Volledige run (± 30 min), tussenresultaten controleren | ⏳ na de quiz |
-| 6b | Team: labels met `label_source = claude` steekproefsgewijs controleren | ⏳ team |
+| 5 | Gezichten labelen: 28 automatisch, 38 visueel, 68 via de quiz, 3 zonder label | ✅ |
+| 6 | Codereview (5 reviewers + controle), gevonden fouten hersteld | ✅ |
+| 6a | Volledige run (± 20 min), tussenresultaten gecontroleerd, [RESULTATEN.md](RESULTATEN.md) | ✅ |
+| 6b | Team: labels met `label_source = visual` steekproefsgewijs controleren | ⏳ team |
 | 7 | Team: Methods, Results en Discussion schrijven met de figuren en tabellen | ⏳ team |
 | 8 | Team: placeholders vervangen (abstract, figuren, studentnummer), bron `cheng2024` controleren | ⏳ team |
 
-## 6. Eerste bevindingen (proefrun op 3 stills, nog niet representatief)
+## 6. Bevindingen (volledige run, 33 stills, 52 gezichten)
 
-- **De drempel is de bottleneck bij veranderde gezichten:** op de originele stills
-  wijst de dichtstbijzijnde referentie steeds de juiste persoon aan, maar de
-  afstand ligt vaak boven 0,80, waardoor het gezicht als "onbekend" wordt
-  afgewezen. Dat is het effect van zweet, vuil en baarden (stresstest 2).
-- **Zekere foute namen bij zware degradatie:** bij rood licht (vanaf 0,5) en schaal
-  1/8–1/16 krijgen gezichten massaal de naam "FritzGrade", met een heel kleine
-  afstand (0,2–0,3). Ze worden allemaal aangetrokken door één referentie:
-  een onscherp, donker achtergrondgezicht van Fritz (`alte_and_fritz2.png`, f1).
-  Gedegradeerde beelden lijken op elkaar en dus op die slechte referentie. Een
-  extra referentiefoto van lage kwaliteit kan de herkenning dus **schaden**.
-  Dat is een discussiepunt voor stresstest 2 en sluit aan bij Luévano et al.
-  De referentie blijft bewust in de galerij: weglaten zou de resultaten
-  mooier maken dan ze zijn.
+Uitgebreid in [RESULTATEN.md](RESULTATEN.md). Kort:
+
+- **De drempel is de bottleneck bij veranderde gezichten:** met alleen
+  acteursfoto's wijst de dichtstbijzijnde referentie in 79% van de gevallen de
+  juiste persoon aan, maar wordt maar 15% herkend: de afstand ligt meestal boven
+  0,80 (mediaan 0,97). Met filmgezichten erbij wordt 62% herkend (stresstest 2).
+- **Zekere foute namen:** met filmgezichten krijgen 45 van de 56 figuranten een
+  naam. 25 daarvan via één onscherp, donker achtergrondgezicht van Fritz
+  (`alte_and_fritz2.png`, f1) en 10 via een donker gezicht van Johann. Bij zware
+  degradatie (1/8–1/16, veel donker of rood licht) krijgen gezichten massaal die
+  twee namen, met een heel kleine afstand. Een extra referentiefoto van lage
+  kwaliteit kan de herkenning dus **schaden**. Dat is een discussiepunt voor
+  stresstest 2 en staat op gespannen voet met Luévano et al.: volgens `main.tex`
+  geeft juist een diverse database met referentiebeelden van lage kwaliteit,
+  samen met eenvoudige interpolatie, de stabielste herkenning (die bewering moet
+  nog in het artikel worden nagelezen, zie §7). De referentie blijft bewust in de
+  galerij: weglaten zou de resultaten mooier maken dan ze zijn.
+- **Resolutie:** herkenning daalt van 62% naar ± 30% bij gezichten van ± 40 px.
+  Interpolatie houdt kleine gezichten vindbaar (bij 1/16 mist nearest neighbour
+  96%, bicubic 25%), maar herkent ze nauwelijks beter.
+- **Belichting:** herkenning daalt met de helderheid; bij gelijke helderheid is
+  rood licht niet slechter dan duisternis. CLAHE verandert de herkenning weinig,
+  maar voorkomt een groot deel van de foute namen (bijv. figuranten met een naam
+  bij donker 0,5: 40/42 → 7/46).
 
 ## 7. Beperkingen en risico's
 
-- **Kleine dataset:** ± 36 unieke stills, dus de percentages hebben een grote
-  onzekerheid. Noem altijd *n*.
+- **Kleine dataset:** 33 unieke stills met 52 gezichten van de vier, dus de
+  percentages hebben een grote onzekerheid. Noem altijd *n*. (Het rechtergezicht
+  in `derAlte1.jpeg` is een recent portret van de acteur en telt niet mee.)
 - **Labels deels door visuele inspectie:** de grondwaarheid is zo goed als de
-  labels. Labels met `label_source = claude` moet het team controleren.
+  labels. Labels met `label_source = visual` moet het team controleren.
 - **Gesimuleerde degradaties** benaderen het echte filmmateriaal, maar zijn het
-  niet. De statistieken van de filmclips (stap 3 van de README) laten zien hoe
-  klein en donker de echte gezichten zijn.
+  niet. De statistieken van de filmclips (stap 4 in de README,
+  `describe_dataset.py`) laten zien hoe klein en donker de echte gezichten zijn.
 - **Drempel niet getuned:** 0,80 is de standaardwaarde van deepface. Afstemmen op
   deze data zou zonder aparte validatieset tot overfitting leiden.
 - **Leeftijdsverschil:** de persoonlijke foto's zijn deels jaren na de film
