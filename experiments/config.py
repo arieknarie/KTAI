@@ -60,10 +60,10 @@ FACE_SIZE = 160                   # FaceNet input size: 160 x 160 pixels
 # a distance below it counts as "same person".
 DISTANCE_THRESHOLD = 0.80
 
-# Two face crops whose difference hash differs in at most this many of the 64
-# bits are treated as copies of the same face (e.g. the same film still saved
-# twice at different sizes). Copies are never compared with each other.
-DUPLICATE_HASH_DISTANCE = 6
+# Two pictures whose difference hash differs in at most this many of the 64
+# bits are treated as copies (e.g. the same still saved at another size); only
+# the first one is used. Exact copies are found by comparing file contents.
+DUPLICATE_PICTURE_DISTANCE = 2
 
 # ---------------------------------------------------------------------------
 # Movie clips

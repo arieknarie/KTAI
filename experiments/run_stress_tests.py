@@ -1,4 +1,4 @@
-"""Step 2: run the baseline and the three stress tests on complete film stills.
+"""Step 3: run the baseline and the three stress tests on complete film stills.
 
 The system gets every in-character still as a whole, exactly as in practice:
 it must find all faces itself (including extras in the background), and name
@@ -7,8 +7,12 @@ each face, or call it "unknown" when no reference face is close enough
 
 Recognition: every face is mapped to a 128-d FaceNet embedding and gets the
 name of the reference (gallery) face at the smallest Euclidean distance.
-References from the same still, or copies of its faces, are never used
-(leave-one-out).
+References from the same still are never used (leave-one-out); stills that
+are stored twice were already skipped by prepare_faces.py.
+
+Reference faces are cut from their pictures in the same way as the faces in
+a still: the whole picture is processed (e.g. CLAHE) and the faces are
+detected in it, then paired with their labelled rows by box overlap.
 
 Scoring: the detected faces are matched (by box overlap) with the labelled
 faces of the still in data/labels.csv, which gives one outcome per face:
@@ -28,7 +32,9 @@ Experiments (one per sub-question of the paper)
                 (b) personal photos + in-character reference faces.
     resolution  Stress Test 1: the still shrunk to 1/2 ... 1/16 and enlarged
                 again with nearest neighbour (no interpolation), bicubic
-                or Lanczos interpolation.
+                or Lanczos interpolation. Only this enlargement of the still
+                differs between the methods; the face crops are resized to
+                160 x 160 in the same way as everywhere else.
     lighting    Stress Test 3: the still darkened ("dark") or lit by red
                 light ("red_alarm") at increasing severity, without/with CLAHE.
 
@@ -53,8 +59,8 @@ import config
 import labels
 import plots
 from face_model import DetectedFace, detect_faces, embed
-from image_ops import (apply_clahe, read_image, reduce_resolution,
-                       simulate_low_light, to_model_input)
+from image_ops import (apply_clahe, brightness, match_boxes, read_image,
+                       reduce_resolution, simulate_low_light, to_model_input)
 from intermediate import SceneSheets, gallery_overview, save_image, scene_thumbnail
 
 
@@ -67,27 +73,24 @@ class Scene:
     image: np.ndarray
     truth: pd.DataFrame    # the labelled faces (boxes and labels) of this still
     # Analysed versions of this still, so identical images are processed once:
-    # image key -> (image, detected faces); (image key, upscale) -> embeddings.
-    detections: dict = field(default_factory=dict)
-    embeddings: dict = field(default_factory=dict)
+    # image key -> (image, detected faces, embeddings).
+    analysed: dict = field(default_factory=dict)
 
 
 class Gallery:
     """Reference faces with known identity that the faces in a still are compared with."""
 
     def __init__(self, name: str, faces: pd.DataFrame, images: dict[str, np.ndarray]):
+        faces = faces[faces["face_id"].isin(images)]  # faces that were found again
         self.name = name
         self.face_ids = faces["face_id"].to_numpy()
         self.labels = faces["label"].to_numpy()
-        self.groups = faces["duplicate_group"].to_numpy()
         self.source_paths = faces["source_path"].to_numpy()
         self.vectors = np.stack([embed(images[face_id]) for face_id in faces["face_id"]])
 
     def identify(self, vector: np.ndarray, scene: Scene) -> dict:
         """Nearest-neighbour identification of one face from `scene`."""
-        # Leave-one-out: skip references from this still and copies of its faces.
-        allowed = ((self.source_paths != scene.source_path)
-                   & ~np.isin(self.groups, scene.truth["duplicate_group"].to_numpy()))
+        allowed = self.source_paths != scene.source_path  # leave-one-out
         distances = np.linalg.norm(self.vectors[allowed] - vector, axis=1)
         best = int(distances.argmin())
         closest, distance = self.labels[allowed][best], float(distances[best])
@@ -99,37 +102,38 @@ class Gallery:
         }
 
 
-def box_overlap(a, b) -> float:
-    """Intersection over union of two (x, y, w, h) boxes."""
-    ax, ay, aw, ah = a
-    bx, by, bw, bh = b
-    inter_w = max(0.0, min(ax + aw, bx + bw) - max(ax, bx))
-    inter_h = max(0.0, min(ay + ah, by + bh) - max(ay, by))
-    intersection = inter_w * inter_h
-    union = aw * ah + bw * bh - intersection
-    return intersection / union if union > 0 else 0.0
-
-
 def match_faces(detected: list[DetectedFace], truth: pd.DataFrame) -> dict[int, int]:
     """Pair detected faces with labelled faces: {truth position: detection index}.
 
-    Greedy: the pair with the largest overlap first, every face used once.
+    Greedy: the pair with the largest box overlap first, every face used once.
     """
-    truth_boxes = truth[["x", "y", "w", "h"]].to_numpy(dtype=float)
-    pairs = sorted(
-        ((box_overlap((face.x, face.y, face.w, face.h), truth_box), d, t)
-         for d, face in enumerate(detected) for t, truth_box in enumerate(truth_boxes)),
-        reverse=True,
-    )
-    matches: dict[int, int] = {}
-    used = set()
-    for overlap, d, t in pairs:
-        if overlap < config.MIN_BOX_OVERLAP:
-            break
-        if t not in matches and d not in used:
-            matches[t] = d
-            used.add(d)
-    return matches
+    return match_boxes([(face.x, face.y, face.w, face.h) for face in detected],
+                       truth[["x", "y", "w", "h"]].to_numpy(dtype=float).tolist(),
+                       config.MIN_BOX_OVERLAP)
+
+
+def reference_images(faces: pd.DataFrame, transform=None) -> dict[str, np.ndarray]:
+    """Model inputs of the labelled reference faces, cut from their pictures.
+
+    Each picture is processed in the same way as the stills under test
+    (`transform`, e.g. CLAHE on the whole picture), the faces are detected in
+    it and paired with the labelled rows by box overlap. This way references
+    and tested faces are prepared identically, and the stored crops in
+    data/faces/ are not needed.
+    """
+    images = {}
+    for source_path, rows in faces.groupby("source_path", sort=False):
+        picture = read_image(config.REPO_ROOT / source_path)
+        if transform is not None:
+            picture = transform(picture)
+        detected = detect_faces(picture)
+        matches = match_faces(detected, rows.reset_index(drop=True))
+        for position, face_id in enumerate(rows["face_id"]):
+            if position in matches:
+                images[face_id] = to_model_input(detected[matches[position]].crop)
+            else:
+                print(f"  warning: reference face {face_id} not found again; left out of the gallery")
+    return images
 
 
 def outcome(true_label: str, prediction: dict | None) -> str:
@@ -144,19 +148,17 @@ def outcome(true_label: str, prediction: dict | None) -> str:
     return "rejected" if predicted == config.UNKNOWN else "false_identity"
 
 
-def analyse(scene: Scene, key: tuple, make_frame, upscale: str = "bicubic"):
+def analyse(scene: Scene, key: tuple, make_frame):
     """Detect and embed all faces in one version of the still.
 
-    `key` names the version of the image (e.g. ("clean",)); detection is done
-    once per image, embedding once per image and upscaling method.
+    `key` names the version of the image (e.g. ("clean",)), so a version that
+    occurs in several conditions is analysed only once.
     """
-    if key not in scene.detections:
+    if key not in scene.analysed:
         frame = make_frame()
-        scene.detections[key] = (frame, detect_faces(frame))
-    frame, faces = scene.detections[key]
-    if (key, upscale) not in scene.embeddings:
-        scene.embeddings[(key, upscale)] = [embed(to_model_input(face.crop, upscale)) for face in faces]
-    return frame, faces, scene.embeddings[(key, upscale)]
+        faces = detect_faces(frame)
+        scene.analysed[key] = (frame, faces, [embed(to_model_input(face.crop)) for face in faces])
+    return scene.analysed[key]
 
 
 def evaluate_scene(experiment: str, variant: str, mitigation: str, level, scene: Scene,
@@ -167,7 +169,8 @@ def evaluate_scene(experiment: str, variant: str, mitigation: str, level, scene:
     matches = match_faces(detected, scene.truth)
 
     base = {"experiment": experiment, "variant": variant, "mitigation": mitigation,
-            "level": level, "gallery": gallery.name, "picture": scene.picture}
+            "level": level, "gallery": gallery.name, "picture": scene.picture,
+            "frame_brightness": round(brightness(frame), 1)}  # how dark the still was
     rows = []
     for position, truth in enumerate(scene.truth.itertuples()):
         if truth.label == "":
@@ -193,7 +196,7 @@ def evaluate_scene(experiment: str, variant: str, mitigation: str, level, scene:
         face = detected[d]
         rows.append({
             **base, "face_id": "", "true_label": config.OTHER_LABEL,
-            "face_px": max(face.w, face.h), "detected": True, **predictions[d],
+            "face_px": round(max(face.w, face.h) * scale, 1), "detected": True, **predictions[d],
             "outcome": outcome(config.OTHER_LABEL, predictions[d]),
             "box": (face.x, face.y, face.w, face.h),
         })
@@ -219,9 +222,29 @@ def summarise(results: pd.DataFrame, by: list[str]) -> pd.DataFrame:
             "extras_named": (extras["outcome"] == "false_identity").mean() if len(extras) else np.nan,
             "precision": ((group["outcome"] == "correct").sum() / named_predictions.sum()
                           if named_predictions.any() else np.nan),
+            # mean grey value of the stills as the system saw them (0-255)
+            "frame_brightness": group.drop_duplicates("picture")["frame_brightness"].mean(),
         })
     return (results.groupby(by, dropna=False, sort=False)[list(results.columns)]
             .apply(scores).round(4).reset_index())
+
+
+def summary_by_identity(results: pd.DataFrame, keys: list[str]) -> pd.DataFrame:
+    """Scores per person.
+
+    recognised/wrong/rejected/missed/closest_correct: over that person's faces.
+    precision: over all faces that were given that person's name, extras
+    included (empty when the name was never given).
+    """
+    named = results[results["true_label"].isin(config.IDENTITIES)]
+    table = (summarise(named, keys + ["true_label"])
+             .drop(columns=["extras_found", "extras_named", "precision", "frame_brightness"])
+             .rename(columns={"true_label": "identity"}))
+    given = results[results["predicted_label"].isin(config.IDENTITIES)]
+    precision = (given.assign(right=given["true_label"] == given["predicted_label"])
+                 .groupby(keys + ["predicted_label"], dropna=False, sort=False)["right"].mean().round(4)
+                 .rename("precision").reset_index().rename(columns={"predicted_label": "identity"}))
+    return table.merge(precision, on=keys + ["identity"], how="left")
 
 
 def report(rows: list[dict], label: str) -> None:
@@ -259,13 +282,15 @@ def main() -> None:
     print(f"{len(scenes)} stills with {n_named} named faces; references: "
           f"{len(personal)} personal + {len(in_character)} in-character faces\n")
 
+    print("Cutting the reference faces from their pictures ...")
     reference_faces = pd.concat([personal, in_character])
-    clean = {row.face_id: to_model_input(read_image(config.EXPERIMENTS_DIR / row.crop_path))
-             for row in reference_faces.itertuples()}
-    clean_clahe = {face_id: apply_clahe(image) for face_id, image in clean.items()}
-    save_image(gallery_overview(reference_faces, clean, "Reference faces (model input)"),
+    clean = reference_images(reference_faces)
+    clean_clahe = reference_images(reference_faces, apply_clahe)  # CLAHE on the whole picture
+    save_image(gallery_overview(reference_faces[reference_faces["face_id"].isin(clean)], clean,
+                                "Reference faces (model input)"),
                config.INTERMEDIATE_DIR / "gallery_overview.jpg")
-    save_image(gallery_overview(reference_faces, clean_clahe, "Reference faces after CLAHE"),
+    save_image(gallery_overview(reference_faces[reference_faces["face_id"].isin(clean_clahe)], clean_clahe,
+                                "Reference faces after CLAHE"),
                config.INTERMEDIATE_DIR / "gallery_overview_clahe.jpg")
 
     print("Embedding reference faces ...")
@@ -297,7 +322,7 @@ def main() -> None:
             rows = []
             for scene in scenes:
                 key = ("clean",) if scale == 1 else ("scale", scale, method)  # scale 1: unchanged
-                analysed = analyse(scene, key, lambda s=scene: reduce_resolution(s.image, scale, method), method)
+                analysed = analyse(scene, key, lambda s=scene: reduce_resolution(s.image, scale, method))
                 rows += evaluate_scene("resolution", "downscaled", method, scale, scene, analysed,
                                        extended, sheets, scale)
             run(f"{method:<8} scale 1/{round(1 / scale)}", rows)
@@ -330,12 +355,11 @@ def main() -> None:
 
     keys = ["experiment", "variant", "mitigation", "level"]
     summary = summarise(results, keys)
-    named = results[results["true_label"].isin(config.IDENTITIES)]
-    by_identity = summarise(named, keys + ["true_label"])
+    by_identity = summary_by_identity(results, keys)
     summary.to_csv(config.RESULTS_DIR / "summary.csv", index=False)
     by_identity.to_csv(config.RESULTS_DIR / "summary_by_identity.csv", index=False)
 
-    plots.make_figures(summary, by_identity)
+    plots.make_figures(summary, by_identity, results)
     print("\nWriting intermediate result images ...")
     sheets.write()
 

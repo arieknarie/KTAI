@@ -27,7 +27,7 @@ import pandas as pd
 import config
 import labels
 from face_model import DetectedFace, detect_faces
-from image_ops import brightness, difference_hash, read_image, to_model_input
+from image_ops import brightness, difference_hash, hamming_distance, read_image
 from intermediate import annotate_detections, save_image
 
 IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png")
@@ -48,7 +48,6 @@ def face_row(face: DetectedFace, face_id: str, source: str, source_path: Path,
         "x": face.x, "y": face.y, "w": face.w, "h": face.h,
         "confidence": round(face.confidence, 4),
         "brightness": round(brightness(face.crop), 1),
-        "face_hash": f"{difference_hash(to_model_input(face.crop)):016x}",
         "label": "",
         "label_source": "",
     }
@@ -57,7 +56,8 @@ def face_row(face: DetectedFace, face_id: str, source: str, source_path: Path,
 def process_pictures() -> list[dict]:
     """Detect faces in all pictures; label single-person pictures automatically."""
     rows = []
-    seen_files: dict[str, Path] = {}  # file content hash -> first file with that content
+    seen_files: dict[str, Path] = {}     # file content hash -> first file with that content
+    seen_pictures: dict[int, Path] = {}  # perceptual hash of the picture -> first file
     for source, folder in (("personal", config.PERSONAL_DIR), ("inCharacter", config.IN_CHARACTER_DIR)):
         for path in sorted(folder.glob("*/*")):
             if path.suffix.lower() not in IMAGE_EXTENSIONS:
@@ -72,7 +72,17 @@ def process_pictures() -> list[dict]:
                 continue
             seen_files[content_hash] = path
 
+            # A still saved again at another size is a copy as well.
             image = read_image(path)
+            picture_hash = difference_hash(image)
+            copy_of = next((first for value, first in seen_pictures.items()
+                            if hamming_distance(value, picture_hash) <= config.DUPLICATE_PICTURE_DISTANCE), None)
+            if copy_of is not None:
+                print(f"  skip {path.relative_to(config.REPO_ROOT)} (near-identical to "
+                      f"{copy_of.relative_to(config.REPO_ROOT)})")
+                continue
+            seen_pictures[picture_hash] = path
+
             faces = detect_faces(image)
             names = labels.identities_in_filename(path)
             # The extension is part of the name: werner4.jpg and werner4.png both exist.
@@ -163,7 +173,6 @@ def main() -> None:
     untouched = old[~old["source"].isin(sources)]
     faces = pd.concat([untouched, new], ignore_index=True)
     faces = labels.keep_manual_labels(faces, old)
-    faces = labels.assign_duplicate_groups(faces)
     labels.save_labels(faces)
 
     unlabelled = faces[faces["label"] == ""]

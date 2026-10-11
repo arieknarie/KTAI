@@ -275,8 +275,8 @@ function renderResult(root) {
     if (a && a !== "unknown") lines.push(`${f.face_id}=${a}`);
   }
   const text = lines.join("\\n") + "\\n";
-  root.innerHTML = `<p>Klaar! Kopieer de antwoorden en plak ze in de chat
-     (of sla ze op en gebruik <code>python label_quiz.py --apply bestand.txt</code>).</p>
+  root.innerHTML = `<p>Klaar! Download de antwoorden (of kopieer ze naar een tekstbestand)
+     en gebruik <code>python label_quiz.py --apply bestand.txt</code>.</p>
      <textarea id="out" readonly></textarea>
      <div class="nav"><button id="copy">Kopieer</button><a id="dl" download="label_quiz_answers.txt">Download</a>
      <button id="back">Terug</button><span id="msg" class="meta"></span></div>`;

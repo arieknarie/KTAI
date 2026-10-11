@@ -123,8 +123,8 @@ def brightness(image: np.ndarray) -> float:
 def difference_hash(image: np.ndarray) -> int:
     """64-bit perceptual hash; near-identical images give near-identical hashes.
 
-    Used to find copies of the same face (e.g. one film still saved twice at
-    different sizes), which must never be compared with each other.
+    Used on whole pictures, to find a still that is stored twice (for
+    example at a different size), so it is never compared with itself.
     """
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     small = cv2.resize(gray, (9, 8), interpolation=cv2.INTER_AREA)
@@ -135,3 +135,33 @@ def difference_hash(image: np.ndarray) -> int:
 def hamming_distance(hash_a: int, hash_b: int) -> int:
     """Number of bits in which two hashes differ."""
     return bin(hash_a ^ hash_b).count("1")
+
+
+def box_overlap(a, b) -> float:
+    """Intersection over union of two (x, y, w, h) boxes: 0 = apart, 1 = identical."""
+    ax, ay, aw, ah = a
+    bx, by, bw, bh = b
+    inter_w = max(0.0, min(ax + aw, bx + bw) - max(ax, bx))
+    inter_h = max(0.0, min(ay + ah, by + bh) - max(ay, by))
+    intersection = inter_w * inter_h
+    union = aw * ah + bw * bh - intersection
+    return intersection / union if union > 0 else 0.0
+
+
+def match_boxes(boxes_a: list, boxes_b: list, min_overlap: float) -> dict[int, int]:
+    """Pair boxes of two lists: {index in boxes_b: index in boxes_a}.
+
+    Greedy: the pair with the largest overlap first, every box used once,
+    pairs with less than `min_overlap` overlap are not made.
+    """
+    pairs = sorted(((box_overlap(a, b), i, j) for i, a in enumerate(boxes_a) for j, b in enumerate(boxes_b)),
+                   reverse=True)
+    matches: dict[int, int] = {}
+    used = set()
+    for overlap, i, j in pairs:
+        if overlap < min_overlap:
+            break
+        if j not in matches and i not in used:
+            matches[j] = i
+            used.add(i)
+    return matches
