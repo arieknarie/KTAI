@@ -1,0 +1,7 @@
+backups/
+.labelapp.lock
+.labelapp.port
+labels_*.tmp
+# De keuzes die de app op deze computer bewaart. Die gaan niet mee naar GitHub: de labelaar stuurt
+# labels.csv naar Marc, en die zet het bestand in de map labels/ (zie README.md, stap 6).
+labels.csv

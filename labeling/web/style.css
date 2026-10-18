@@ -1,0 +1,165 @@
+/* De hele pagina past altijd op één scherm: de pagina zelf scrolt nooit. Het beeld krijgt de
+   ruimte die overblijft en wordt zo groot als daar past; de uitvergroting rechts krijgt de ruimte die
+   in het rechterblok over is (zie fitZoom in app.js). */
+:root {
+  --bg: #f6f6f4; --card: #ffffff; --ink: #1b1b1b; --muted: #5c5b57; --line: #d6d5d0;
+  --active: #e0a100; --done: #1a8f3c; --open: #ffffff; --error: #c62828; --button: #ffffff; --warn: #fff3cd; --drawn: #2b7bff;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; overflow: hidden; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.app { height: 100vh; display: flex; flex-direction: column; }
+
+header { flex: none; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding: 6px 12px;
+         background: var(--card); border-bottom: 1px solid var(--line); }
+h1 { font-size: 17px; margin: 0; }
+.labeler { font-size: 14px; }
+.labeler input { font: inherit; padding: 3px 6px; width: 150px; }
+.status { color: var(--muted); font-size: 13px; min-width: 84px; }
+.status.saved { color: var(--done); }
+.progress { display: flex; flex-wrap: wrap; gap: 5px; margin-left: auto; }
+.progress button { font: inherit; font-size: 12px; border: 1px solid var(--line); background: var(--card); border-radius: 6px;
+                   padding: 2px 6px; cursor: pointer; white-space: nowrap; }
+.progress button.current { border-color: var(--ink); font-weight: 600; }
+.progress .bar { display: inline-block; width: 30px; height: 6px; background: var(--line); border-radius: 3px; margin-left: 4px;
+                 vertical-align: middle; overflow: hidden; }
+.progress .bar span { display: block; height: 100%; background: var(--done); }
+
+.error { flex: none; background: var(--error); color: #fff; padding: 6px 12px; font-weight: 600; font-size: 14px; }
+.done-bar { flex: none; background: var(--done); color: #fff; padding: 6px 12px; font-weight: 600; font-size: 14px; }
+.hidden { display: none !important; }
+
+.main { flex: 1; min-height: 0; display: grid; grid-template-columns: 206px minmax(0, 1fr) 290px; gap: 10px; padding: 10px; }
+
+/* links: de foto's van de acteurs */
+.refs { min-height: 0; overflow: hidden auto; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
+.refs h2 { font-size: 14px; margin: 0; }
+.refs-note { font-size: 12px; color: var(--muted); margin: 0 0 4px; }
+.person { margin-top: 5px; }
+.person b { display: block; font-size: 13px; }
+.person img { height: 44px; width: 35px; object-fit: cover; border-radius: 3px; margin: 2px 2px 0 0; cursor: zoom-in; }
+.ref-big { position: fixed; height: 160px; z-index: 10; border: 2px solid var(--ink); border-radius: 6px; background: #000;
+           pointer-events: none; }
+
+/* midden: het beeld */
+.viewer { min-height: 0; display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line);
+          border-radius: 8px; padding: 8px; }
+.item-head { flex: none; display: flex; gap: 10px; color: var(--muted); font-size: 13px; margin-bottom: 6px; white-space: nowrap;
+             overflow: hidden; }
+#item-title { font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; }
+.last-choice { margin-left: auto; color: var(--done); font-weight: 600; }
+.stage { flex: 1; min-height: 0; display: flex; justify-content: center; align-items: flex-start; overflow: hidden; }
+.frame { position: relative; flex: none; }
+.frame img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.bright #frame img, .bright .zoom { filter: brightness(var(--bright, 1.9)) contrast(1.1); }  /* --bright: zie app.js */
+/* De rand van een kader ligt buiten het gezicht, zodat de rand de rand van een klein gezicht niet bedekt. */
+.box { position: absolute; box-sizing: content-box; margin: -2px; border: 2px dashed var(--open); box-shadow: 0 0 0 1px #000;
+       cursor: pointer; }
+.box.done { border: 2px solid var(--done); }
+.box.active { margin: -4px; border: 4px solid var(--active); z-index: 2; }
+.box span { position: absolute; left: -2px; bottom: 100%; background: #000; color: #fff; font-size: 12px; padding: 0 4px;
+            border-radius: 3px 3px 0 0; white-space: nowrap; }
+.box.active span { background: var(--active); color: #000; font-weight: 700; }
+/* bij een track: andere gezichten die de computer in hetzelfde beeld vond (dun en grijs, niet aan te klikken) */
+.box.other { margin: -1px; border: 1px dashed rgba(255, 255, 255, .75); box-shadow: 0 0 0 1px rgba(0, 0, 0, .5);
+             pointer-events: none; cursor: default; }
+/* getekende gezichten (die had de computer gemist): blauw */
+.box.drawn { border-color: var(--drawn); }
+.box.drawn span { background: var(--drawn); }
+.box.drawn.active { border-color: var(--active); }
+.box.drawn.active span { background: var(--active); }
+.frame.drawing { cursor: crosshair; touch-action: none; user-select: none; }
+.frame.drawing .box { pointer-events: none; }
+.sketch { position: absolute; border: 2px solid var(--drawn); background: rgba(43, 123, 255, .18); pointer-events: none; }
+
+/* rechts: kiezen */
+.panel { min-height: 0; overflow: hidden auto; background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+         padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+.zoom { flex: none; align-self: center; width: 80px; height: 80px; border: 3px solid var(--active); border-radius: 6px;
+        background-color: #000; background-repeat: no-repeat; }
+.instruction { margin: 0; font-size: 13px; }
+.instruction.warn { background: var(--warn); border: 1px solid var(--active); border-radius: 6px; padding: 4px 6px; }
+.brighter { display: block; font-size: 13px; cursor: pointer; }
+.face-tabs { display: flex; flex-wrap: wrap; gap: 4px; }
+.face-tabs:empty { display: none; }
+.face-tabs button { font: inherit; font-size: 13px; min-width: 34px; padding: 3px 6px; border: 2px dashed #9a9a96; border-radius: 6px;
+                    background: var(--button); cursor: pointer; }
+.face-tabs button.done { border: 2px solid var(--done); background: #e8f4ec; }
+.face-tabs button.active { border: 3px solid var(--active); font-weight: 700; }
+.face { border: 2px solid var(--active); border-radius: 6px; padding: 8px; }
+.face .title { font-weight: 600; margin-bottom: 6px; font-size: 14px; }
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.choices button { font: inherit; font-size: 14px; padding: 5px 6px; border: 1px solid var(--line); border-radius: 6px;
+                  background: var(--button); cursor: pointer; text-align: left; }
+.choices button.chosen { background: var(--done); border-color: var(--done); color: #fff; }
+.choices button kbd { font-size: 12px; color: var(--muted); margin-right: 5px; }
+.choices button.chosen kbd { color: #fff; }
+.nav { display: flex; gap: 8px; }
+.nav button, .first-open { flex: 1; font: inherit; font-size: 14px; padding: 7px; border-radius: 6px; border: 1px solid var(--line);
+                           background: var(--button); cursor: pointer; }
+.nav button.primary { background: #1b1b1b; color: #fff; border-color: #1b1b1b; }
+.first-open { flex: none; font-size: 13px; padding: 5px; }
+.draw { flex: none; font: inherit; font-size: 13px; padding: 5px; border-radius: 6px; border: 1px dashed var(--drawn);
+        background: var(--button); color: var(--drawn); cursor: pointer; }
+.draw.on { background: var(--drawn); color: #fff; border-style: solid; }
+.face .title:has(.remove) { display: flex; align-items: center; gap: 6px; }
+.face .title .remove { margin-left: auto; flex: none; font: inherit; font-size: 12px; padding: 0 6px;
+                       border: 1px solid var(--line); border-radius: 5px; background: var(--button); cursor: pointer; }
+.tour-open { font: inherit; font-size: 13px; padding: 2px 10px; border: 1px solid var(--ink); border-radius: 6px;
+             background: var(--button); cursor: pointer; }
+
+/* de rondleiding: alles wordt donker behalve het deel van het scherm waar de uitleg over gaat */
+.tour { position: fixed; inset: 0; z-index: 50; }
+.tour.dim { background: rgba(0, 0, 0, .6); }
+.tour-shade { position: fixed; background: rgba(0, 0, 0, .6); }
+.tour-spot { position: fixed; border-radius: 6px; outline: 3px solid var(--active); pointer-events: none; }
+.tour-bubble { position: fixed; width: 340px; max-width: calc(100vw - 16px); background: var(--card); border-radius: 10px;
+               padding: 12px 14px; box-shadow: 0 6px 24px rgba(0, 0, 0, .35); font-size: 14px; }
+.tour-bubble h2 { font-size: 16px; margin: 2px 0 6px; }
+.tour-bubble p { margin: 0 0 10px; }
+.tour-count { font-size: 12px; color: var(--muted); }
+.tour-buttons { display: flex; gap: 6px; align-items: center; }
+.tour-buttons button { font: inherit; font-size: 13px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 6px;
+                       background: var(--button); cursor: pointer; }
+.tour-buttons .primary { background: #1b1b1b; color: #fff; border-color: #1b1b1b; }
+.tour-skip { margin-right: auto; }
+.hint { color: var(--muted); font-size: 12px; margin: 0; }
+
+/* lage schermen: compacter, en geen uitleg van de sneltoetsen (die staat ook in de knoppen en de tooltips) */
+@media (max-height: 720px) {
+  h1 { display: none; }
+  .hint, .refs-note { display: none; }
+  .error, .done-bar { font-size: 13px; padding: 4px 10px; }
+  .panel { gap: 6px; }
+  .instruction { font-size: 12px; }
+  .face-tabs { gap: 3px; }
+  .face-tabs button { min-width: 28px; padding: 1px 4px; font-size: 12px; }
+  .face { padding: 6px; }
+  .face .title { margin-bottom: 4px; }
+  .choices button { padding: 4px 6px; }
+  .nav button { padding: 5px; }
+  .first-open { padding: 4px; }
+  .draw { padding: 3px; font-size: 12px; }
+}
+
+@media (max-height: 620px) {
+  .others-note { display: none; }   /* staat ook in de uitleg (knop Uitleg) en in de handleiding */
+  .error, .done-bar { font-size: 12px; padding: 3px 10px; }
+  .main { padding: 6px; gap: 6px; }
+  .panel { gap: 4px; padding: 8px; }
+  .instruction { line-height: 1.3; }
+  .zoom { width: 56px; height: 56px; }
+}
+
+/* smalle schermen: de foto's van de acteurs boven het beeld, de knoppen rechts over de hele hoogte */
+@media (max-width: 1150px) {
+  .main { grid-template-columns: minmax(0, 1fr) 270px; grid-template-rows: auto minmax(0, 1fr); }
+  .refs { grid-column: 1; grid-row: 1; padding: 4px 8px; overflow: hidden; }
+  .viewer { grid-column: 1; grid-row: 2; }
+  .panel { grid-column: 2; grid-row: 1 / span 2; }
+  .refs h2, .refs-note { display: none; }
+  #references { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+  .person { margin: 0; display: flex; align-items: center; gap: 2px; }
+  .person b { margin-right: 4px; }
+  .person img { height: 32px; width: 26px; margin: 0; }
+}

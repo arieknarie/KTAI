@@ -1,0 +1,17 @@
+# Dezelfde regeleinden op Mac en Windows, zodat de controlegetallen in checksums.sha256 overal kloppen.
+# Alle tekstbestanden krijgen Mac/Linux-regeleinden; alleen START_WINDOWS.bat krijgt Windows-regeleinden
+# (zie labeling/.gitattributes).
+* text=auto eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.sha256 text eol=lf
+*.mp4 binary
+*.tflite binary
+*.pkl binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.pdf binary

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+data/tracks/raw/
+.DS_Store
+# een nieuwe uitkomst naast een vastgelegd bestand (zie code/frozen.py)
+*.nieuw.*
+# werk van de eerste versie van het project (branch facenet-stress-tests); hoort niet bij deze versie
+experiments/
+data/audit/alle_tracks/

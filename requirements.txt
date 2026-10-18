@@ -1,0 +1,8 @@
+# Python 3.12. Installeren (vanuit de map KTAI):
+#   Mac/Linux: python3.12 -m venv .venv && .venv/bin/pip install -r requirements.txt
+#   Windows:   py -3.12 -m venv .venv && .venv\Scripts\pip install -r requirements.txt
+# De labelapp (labeling/) heeft deze pakketten niet nodig, alleen Python.
+mediapipe==1.1.1
+pandas==3.0.6
+numpy==2.5.4
+opencv-contrib-python==5.0.0.93

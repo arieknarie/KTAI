@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gezichten labelen</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Gezichten labelen</h1>
+    <button id="tour-open" class="tour-open" title="Korte uitleg van de app">Uitleg</button>
+    <label class="labeler">Jouw naam: <input id="labeler" placeholder="naam, daarna Enter" autocomplete="off"></label>
+    <span id="save-status" class="status"></span>
+    <div id="progress" class="progress"></div>
+  </header>
+
+  <div id="error" class="error hidden"></div>
+  <div id="done" class="done-bar hidden"></div>
+
+  <div class="main">
+    <aside class="refs">
+      <h2>De vier personen</h2>
+      <p class="refs-note">Foto's van de acteurs, om mee te vergelijken. Wijs een foto aan met de muis om die foto groter te zien.</p>
+      <div id="references"></div>
+    </aside>
+
+    <section class="viewer">
+      <div class="item-head">
+        <span id="item-counter"></span>
+        <span id="item-title"></span>
+        <span id="last-choice" class="last-choice"></span>
+      </div>
+      <div id="stage" class="stage">
+        <div id="frame" class="frame"><img id="image" alt="" draggable="false"></div>
+      </div>
+    </section>
+
+    <aside class="panel" id="panel">
+      <div id="zoom" class="zoom" title="Het gezicht waarvoor je nu kiest, uitvergroot"></div>
+      <p id="instruction" class="instruction"></p>
+      <label class="brighter"><input type="checkbox" id="brighter"> Beeld lichter (<b>L</b>)</label>
+      <div id="face-tabs" class="face-tabs"></div>
+      <div id="faces"></div>
+      <button id="draw" class="draw" title="Mist de computer een gezicht van een van de vier personen? Teken er zelf een kader omheen (toets T).">+ Gemist gezicht tekenen (<b>T</b>)</button>
+      <div class="nav">
+        <button id="previous" title="Vorige item bekijken (toets ←)">← Vorige</button>
+        <button id="next" class="primary" title="Volgende item (Enter). Bij een foto of still worden gezichten zonder keuze figurant.">Volgende →</button>
+      </div>
+      <button id="first-open" class="first-open">Naar eerste item dat nog niet af is</button>
+      <p class="hint">Sneltoetsen: <b>1</b> t/m <b>7</b> kiezen, <b>Enter</b> = Volgende,
+        <b>←</b> <b>→</b> bladeren zonder te kiezen, <b>T</b> gemist gezicht tekenen, <b>L</b> beeld lichter.</p>
+    </aside>
+  </div>
+</div>
+
+<img id="ref-big" class="ref-big hidden" alt="">
+
+<!-- korte uitleg (rondleiding) die de eerste keer vanzelf opent; later via de knop Uitleg -->
+<div id="tour" class="tour hidden" role="dialog" aria-modal="true" aria-labelledby="tour-title">
+  <div class="tour-shade"></div><div class="tour-shade"></div><div class="tour-shade"></div><div class="tour-shade"></div>
+  <div id="tour-spot" class="tour-spot"></div>
+  <div id="tour-bubble" class="tour-bubble">
+    <div class="tour-count" id="tour-count"></div>
+    <h2 id="tour-title"></h2>
+    <p id="tour-text"></p>
+    <div class="tour-buttons">
+      <button id="tour-skip" class="tour-skip">Uitleg sluiten</button>
+      <button id="tour-back">← Vorige</button>
+      <button id="tour-next" class="primary">Volgende →</button>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

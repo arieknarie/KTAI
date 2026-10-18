@@ -1,0 +1,43 @@
+{
+ "python": "3.12.3",
+ "packages": {
+  "mediapipe": "1.1.1",
+  "opencv-contrib-python": "5.0.0.93",
+  "numpy": "2.5.4",
+  "pandas": "3.0.6"
+ },
+ "settings": {
+  "min_score": 0.3,
+  "low_score": 0.2,
+  "score_thresholds": [
+   0.3,
+   0.5
+  ],
+  "cut_colour": 0.9,
+  "cut_structure": 0.7,
+  "min_overlap": 0.3,
+  "min_place_similarity": 0.6,
+  "flat_std": 6,
+  "max_flat_difference": 6,
+  "max_gap": 12,
+  "cache_version": 5
+ },
+ "inputs": {
+  "models/blaze_face_full_range.tflite": "3698b18f063835bc609069ef052228fbe86d9c9a6dc8dcb7c7c2d69aed2b181b",
+  "movies/Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4": "12cd044455312499fcf9a0f3d3e081091b3ed9c1045cc4c4925f8eafdcdb2df9",
+  "movies/Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4": "c8eefec79b557c6e6f52f1349874f73981e5f50fb75c898563c126f25ab05047",
+  "movies/Go Back Johann [qa3jt_GXMts].mp4": "80f534e89500687c7e365404052e8d9b9c9c7fc15ce7a089dad4f6a82c6281c7"
+ },
+ "frames": {
+  "Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4": 8817,
+  "Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4": 3730,
+  "Go Back Johann [qa3jt_GXMts].mp4": 2565
+ },
+ "outputs": {
+  "data/tracks/frames.csv": "ca7a67922fd97bc96fa731749f7374f128ec80475bc3f6fdfda03cb15897a860",
+  "data/tracks/detections_0.3.csv": "376b16f1f7e99dbff2646c33ebce21ecaa07f3293e31070963ff42b59f6e3777",
+  "data/tracks/tracks_0.3.csv": "b1a04e055f04cfc77d368a866fd0b1f38552514e1ea4fdb09f18c651b9aaaa83",
+  "data/tracks/detections_0.5.csv": "59bdb22d6d5256844925896159d82a6277081342adda6d96d3619da39458e967",
+  "data/tracks/tracks_0.5.csv": "6c916f63d8d44704074b60b7e8a09d350a268f13f425aa938321436cc65b2ebe"
+ }
+}
