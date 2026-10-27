@@ -30,9 +30,18 @@ from pathlib import Path
 from frozen import CHECKSUMS, REPO, frozen, sha256
 
 EXPECTED_FRAMES = {   # zoveel frames leest OpenCV van elke video (zie docs/stap1_gezichten_vinden_en_volgen.md)
-    "Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4": 8817,
-    "Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4": 3730,
-    "Go Back Johann [qa3jt_GXMts].mp4": 2565,
+    "Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4": 1125,
+    "Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4": 647,
+    "Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4": 853,
+    "Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4": 1400,
+    "Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4": 714,
+    "Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4": 786,
+    "Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4": 1525,
+    "Das Boot 6 [ofY2rexjmc4] 3m51s-3m58s.mp4": 168,
+    "Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4": 839,
+    "Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4": 1096,
+    "Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4": 1194,
+    "Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4": 835,
 }
 # de bestanden die vastgelegd worden: invoer (video's, model) en de uitkomsten waar labels en controle bij horen
 PIXELS = REPO / "data" / "tracks" / "video_pixels.sha256"

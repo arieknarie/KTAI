@@ -36,13 +36,13 @@ Er zijn drie soorten beelden:
   om mee te vergelijken.
 - **Stills.** Een still is een losse foto uit de film. Er zijn er 33, met vaak
   meer gezichten op één still.
-- **Stukjes video.** De computer heeft in drie filmfragmenten alles wat op een
+- **Stukjes video.** De computer heeft in acht filmfragmenten alles wat op een
   gezicht leek, gevolgd zolang het in beeld was. Zo'n stukje noemen we een
   **track**. Van elke track zie je één beeld, en jouw keuze geldt voor de hele
-  track. Er zijn 2.896 tracks; de meeste kies je met één toets.
+  track. Er zijn 1.387 tracks; de meeste kies je met één toets.
 
 Elk beeld dat je labelt, heet in de app een **item**. Alles samen zijn het
-2.931 items: 2 foto's, 33 stills en 2.896 tracks. Dat hoeft niet in één keer:
+1.422 items: 2 foto's, 33 stills en 1.387 tracks. Dat hoeft niet in één keer:
 elke keuze wordt meteen bewaard, en je kunt stoppen en later verdergaan waar je
 gebleven was.
 
@@ -254,8 +254,8 @@ eerst om je naam. De app onthoudt je naam voor de volgende keer.
 1. **Jouw naam.** Rechts daarvan staat **Opgeslagen ✓** zodra je keuze bewaard
    is.
 2. **Voortgang.** Bovenaan, rechts, staat voor elk deel hoeveel items al af
-   zijn, bijvoorbeeld *Stills: 3 van 33*. De delen heten *Foto's*, *Stills*,
-   *Video 1*, *Video 2* en *Video 3*. Klik op een deel om naar het eerste item
+   zijn, bijvoorbeeld *Stills: 3 van 33*. De delen heten *Foto's*, *Stills*
+   en *Video 1* tot en met *Video 8*. Klik op een deel om naar het eerste item
    van dat deel te gaan dat nog niet af is.
 3. **De vier personen.** Foto's van de acteurs, om mee te vergelijken. Houd de
    muis op een foto om die foto groter te zien.

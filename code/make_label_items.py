@@ -21,7 +21,7 @@ Wat dit script doet:
    map van de labelaar).
 3. Video's (movies/). Per track (uit code/track_faces.py, detectiescore 0,3)
    wordt één frame getoond: het frame met de hoogste detectiescore x
-   kaderbreedte. De video's heten in de labelapp Video 1, Video 2 en Video 3,
+   kaderbreedte. De video's heten in de labelapp Video 1 tot en met Video 8,
    omdat de titel van een video een naam kan bevatten. Bij elke track staan ook
    de kaders van de andere tracks in hetzelfde frame (others): de labelapp toont
    die dun en grijs, zodat de labelaar ziet welke gezichten de computer daar ook
@@ -98,10 +98,20 @@ CHOICES = [
 ]
 PERSON_NAMES = {c["key"]: c["name"] for c in CHOICES[:4]}
 AUTOMATIC_COLUMNS = ["face", "item", "label", "labeler", "source", "frame", "x", "y", "w", "h"]   # automatic_labels.csv
-VIDEO_GROUPS = {   # neutrale naam per video in de labelapp (een videotitel kan een naam bevatten)
-    "Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4": "Video 1",
-    "Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4": "Video 2",
-    "Go Back Johann [qa3jt_GXMts].mp4": "Video 3",
+VIDEO_GROUPS = {   # neutrale naam per video in de labelapp (een titel kan een naam bevatten), en waar een
+    # geknipt deel (te groot voor GitHub) begint in het hele fragment, in seconden
+    "Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4": ("Video 1", 0),
+    "Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4": ("Video 2", 0),
+    "Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4": ("Video 2", 25.88),
+    "Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4": ("Video 3", 0),
+    "Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4": ("Video 4", 0),
+    "Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4": ("Video 4", 28.56),
+    "Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4": ("Video 5", 0),
+    "Das Boot 6 [ofY2rexjmc4] 3m51s-3m58s.mp4": ("Video 6", 0),
+    "Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4": ("Video 7", 0),
+    "Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4": ("Video 8", 0),
+    "Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4": ("Video 8", 43.84),
+    "Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4": ("Video 8", 91.6),
 }
 STILLS_INDEX = REPO / "data" / "stills_index.csv"
 SAME_FRAME = 0.8   # gelijkenis vanaf waar een still hetzelfde beeld is als een frame uit een testvideo
@@ -142,6 +152,17 @@ def read_image(path):
 
 
 PENDING_IMAGES = {}   # plaatjes die pas aan het eind geschreven worden: {pad: jpeg-bytes}
+
+
+APP_WIDTH = 1920   # breder beeld (4K) wordt voor de labelapp verkleind; de kaders blijven in de maat van de video
+
+
+def for_app(image):
+    """Een beeld voor de labelapp: hoogstens APP_WIDTH breed (de app schaalt de kaders mee met de breedte)."""
+    if image.shape[1] <= APP_WIDTH:
+        return image
+    height = round(image.shape[0] * APP_WIDTH / image.shape[1])
+    return cv2.resize(image, (APP_WIDTH, height), interpolation=cv2.INTER_AREA)
 
 
 def save_image(image, relative):
@@ -341,16 +362,19 @@ def video_tracks():
                 raise SystemExit(f"{video}: frame {frame_index} kon niet gelezen worden. Controleer de installatie met "
                                  "code/check_setup.py.")
             if frame_index in wanted:
-                stored[frame_index] = (save_image(frame, f"frames/{Path(video).stem}/{frame_index:06d}.jpg"), frame.shape)
+                stored[frame_index] = (save_image(for_app(frame), f"frames/{Path(video).stem}/{frame_index:06d}.jpg"),
+                                       frame.shape)
             frame_index += 1
         capture.release()
         for row in sorted(group_rows.itertuples(), key=lambda r: tracks.loc[r.track, "start_s"]):
             image, shape = stored[row.frame]
             info = tracks.loc[row.track]
-            minutes, tenths = divmod(round(float(info["start_s"]) * 10), 600)  # eerst afronden, dan nooit "2:60.0"
+            group, offset = VIDEO_GROUPS.get(video, (video, 0))
+            # eerst afronden, dan nooit "2:60.0"; de tijd telt vanaf het begin van het hele fragment
+            minutes, tenths = divmod(round((float(info["start_s"]) + offset) * 10), 600)
             items.append({
-                "id": f"track:{video}#{row.track}", "kind": "track", "group": VIDEO_GROUPS.get(video, video),
-                "title": f"{VIDEO_GROUPS.get(video, video)}, vanaf {minutes}:{tenths / 10:04.1f}"
+                "id": f"track:{video}#{row.track}", "kind": "track", "group": group,
+                "title": f"{group}, vanaf {minutes}:{tenths / 10:04.1f}"
                          f" ({int(info['faces'])} {'frame' if int(info['faces']) == 1 else 'frames'})",
                 "image": image, "width": shape[1], "height": shape[0],
                 "faces": [{"face": f"{video}#track{row.track}", "box": [int(row.x), int(row.y), int(row.w), int(row.h)],

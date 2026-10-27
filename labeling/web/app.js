@@ -286,9 +286,17 @@ function fitFrame() {
 
 // De uitvergroting zo groot maken als in het rechterblok past: eerst klein, dan meten hoeveel ruimte
 // er onder de knoppen over is, en die ruimte aan de uitvergroting geven. De pagina scrolt nooit.
+// Past het rechterblok zelfs met de kleinste uitvergroting niet (een laag venster, een rode of groene balk,
+// een still met veel gezichten), dan wordt de app stap voor stap compacter: de klassen fit1 tot en met fit3
+// in style.css. Een venster van hoogstens 720 pixels hoog begint bij fit1, van hoogstens 620 pixels bij fit2.
+const FIT_LEVELS = 3;
 function fitZoom() {
-  const panel = $("panel"), zoom = $("zoom");
-  zoom.style.width = zoom.style.height = "";   // de kleinste maat uit style.css
+  const app = document.querySelector(".app"), panel = $("panel"), zoom = $("zoom");
+  for (let level = innerHeight <= 620 ? 2 : innerHeight <= 720 ? 1 : 0; level <= FIT_LEVELS; level++) {
+    for (let n = 1; n <= FIT_LEVELS; n++) app.classList.toggle("fit" + n, n <= level);
+    zoom.style.width = zoom.style.height = "";   // de kleinste maat uit style.css
+    if (panel.scrollHeight <= panel.clientHeight + 1) break;
+  }
   const css = getComputedStyle(panel);
   const inner = panel.clientWidth - parseFloat(css.paddingLeft) - parseFloat(css.paddingRight);
   const top = panel.getBoundingClientRect().top;
@@ -604,10 +612,11 @@ function updateBrightness() {
   const image = $("image"), item = state.data.items[state.index];
   if (!(image.complete && image.naturalWidth && shows(image, item.image))) return;
   const [x, y, w, h] = facesOf(item)[state.activeFace].box;
+  const scale = image.naturalWidth / item.width;   // het plaatje kan kleiner zijn dan de video (bij 4K)
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 32;
   const context = canvas.getContext("2d");
-  context.drawImage(image, x, y, w, h, 0, 0, 32, 32);
+  context.drawImage(image, x * scale, y * scale, w * scale, h * scale, 0, 0, 32, 32);
   const pixels = context.getImageData(0, 0, 32, 32).data;
   let sum = 0;
   for (let i = 0; i < pixels.length; i += 4) sum += 0.299 * pixels[i] + 0.587 * pixels[i + 1] + 0.114 * pixels[i + 2];

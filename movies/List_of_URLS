@@ -1,6 +1,21 @@
-This file contains a list of URLS for the different movie clips
-https://www.youtube.com/watch?v=T-D6e3pjHKQ
-https://www.youtube.com/watch?v=x3HpQejqb0A
-https://www.youtube.com/watch?v=qa3jt_GXMts
-https://www.youtube.com/watch?v=ofY2rexjmc4
-https://www.youtube.com/watch?v=Oqek9Ktuwy8
+De bron van elk fragment in deze map: de video op YouTube en het stuk daaruit (begin - eind).
+
+De videobeelden zijn niet opnieuw gecodeerd: elk bestand bevat het originele videospoor van de bron, zonder geluid,
+precies vanaf het gevraagde begin. Fragment 1 tot en met 5 en fragment 8 zijn 4K (3840 x 2160, VP9). Fragment 6 en 7
+zijn 1080p (AV1); van die twee video's is geen 4K-versie.
+
+GitHub neemt geen bestanden groter dan 100 MB aan. Daarom zijn de fragmenten 2, 4 en 8 in delen geknipt (a, b en c).
+Er is geknipt op een sleutelbeeld van de video, zonder opnieuw te coderen; de delen sluiten precies op elkaar aan.
+De tijden in de bestandsnamen zijn de tijden in de bron, afgerond op hele seconden.
+
+Das Boot 1   https://www.youtube.com/watch?v=Ek2omNPSOYc  00:28:10 - 00:28:55
+Das Boot 2   https://www.youtube.com/watch?v=10EqNLl5ZSM  00:13:15 - 00:14:15
+             deel 2a: 00:13:15 - 00:13:40.88, deel 2b: 00:13:40.88 - 00:14:15
+Das Boot 3   https://www.youtube.com/watch?v=kefBHWylmMk  00:30:08 - 00:31:04
+Das Boot 4   https://www.youtube.com/watch?v=kefBHWylmMk  00:45:35 - 00:46:35
+             deel 4a: 00:45:35 - 00:46:03.56, deel 4b: 00:46:03.56 - 00:46:35
+Das Boot 5   https://www.youtube.com/watch?v=kefBHWylmMk  00:32:05 - 00:33:06
+Das Boot 6   https://www.youtube.com/watch?v=ofY2rexjmc4  00:03:51 - 00:03:58
+Das Boot 7   https://www.youtube.com/watch?v=T-D6e3pjHKQ  00:00:25 - 00:01:00
+Das Boot 8   aangeleverd bestand dasgespenst.mp4 (geen YouTube-video), het hele bestand: 00:00:00 - 00:02:05
+             deel 8a: 00:00:00 - 00:00:43.84, deel 8b: 00:00:43.84 - 00:01:31.60, deel 8c: 00:01:31.60 - 00:02:05

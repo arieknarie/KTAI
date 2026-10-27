@@ -27,7 +27,7 @@ vingerafdrukken maken we in stap 3.
 
 **3. Zoek in een video in elk beeld de gezichten, maak van elk gezicht een
 vingerafdruk, en vergelijk die met de voorbeelden.**
-Wij gebruiken de drie fragmenten uit *Das Boot* als video. De gezichten in de
+Wij gebruiken acht fragmenten uit *Das Boot* als video. De gezichten in de
 fragmenten hebben we al gezocht in stap 1; de vingerafdrukken maken en
 vergelijken doen we in stap 4.
 

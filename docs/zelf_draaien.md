@@ -12,9 +12,10 @@ uitkomsten van stap 1 staan al in het project: de gevonden gezichten en de
 tracks in `data/tracks/` (een track is één gezicht dat we door opeenvolgende
 beelden volgen) en de controle van alle tracks in `data/audit/`. Ook alles wat
 de labelapp voor stap 2 nodig heeft, staat er al, in `labeling/`. Van de
-controle staat één deel niet op GitHub: de 352 vellen met uitsneden waarmee we
-alle tracks met het oog gecontroleerd hebben (de map `data/audit/alle_tracks/`, samen ongeveer
-100 MB). Die vellen maak je zelf opnieuw met `code/check_all_tracks.py` (zie
+controle staat één deel niet op GitHub: de 553 vellen en de 11.182 plaatjes
+waarmee we alle tracks en alle beelden met het oog gecontroleerd hebben (de mappen
+`data/audit/alle_tracks/` en `data/audit/alle_beelden/`, samen ongeveer 1,5 GB).
+Die maak je zelf opnieuw met `code/check_all_tracks.py` (zie
 [De programma's](#de-programmas-in-deze-volgorde)). De labels van de labelaar
 komen tijdens en na het labelen in de map `labels/`.
 
@@ -36,8 +37,8 @@ opnieuw moet.
 Daarom zijn de belangrijke bestanden vastgelegd met een controlegetal (een
 sha256: een lange code die verandert zodra er ook maar iets in het bestand
 verandert). Die controlegetallen staan in het bestand `checksums.sha256`, in
-20 regels: 18 voor bestanden (de drie video's, het model dat de gezichten
-vindt, de uitkomsten van stap 1, de controle en de bestanden van de
+28 regels: 26 voor bestanden (de 12 videobestanden, het model dat de
+gezichten vindt, de uitkomsten van stap 1, de controle en de bestanden van de
 labelapp) en 2 voor mappen met plaatjes (`labeling/images/` en `pictures/`,
 met één controlegetal per map). De programma's gaan zo met de vastgelegde
 bestanden om:
@@ -191,13 +192,12 @@ uitgeprobeerd; het zou daar wel moeten werken.
 ```bash
 .venv/bin/python code/track_faces.py          # stap 1: gezichten zoeken, volgen en knippen (data/tracks/)
 .venv/bin/python code/check_all_tracks.py     # de vellen voor de controle van alle tracks (data/audit/alle_tracks/)
-.venv/bin/python code/detector_steekproef.py  # hoeveel duidelijke gezichten de detector vindt
 .venv/bin/python code/step1_images.py         # de plaatjes in docs/
 .venv/bin/python code/make_label_items.py     # stap 2: alles voor de labelapp (labeling/)
 .venv/bin/python code/check_setup.py          # klopt alles nog met de vastgelegde bestanden?
 ```
 
-- `track_faces.py` zoekt in elk beeld van de drie fragmenten de gezichten en
+- `track_faces.py` zoekt in elk beeld van de acht fragmenten de gezichten en
   maakt de tracks. Het zoeken doet MediaPipe (de detector): die zet een kader
   om elk gezicht dat hij vindt, met een score voor hoe zeker hij is. Een track
   begint bij een kader met een score van 0,3 of hoger. Een zwakker kader vanaf
@@ -220,18 +220,13 @@ uitgeprobeerd; het zou daar wel moeten werken.
   dat nummer. Met `--track <nummer> --van <frame> --tot <frame>` maakt het
   programma een strook met álle kaders van één track tussen twee beelden; zo
   hebben we elke track met een fout of een twijfel uit de eerste
-  controleronde precies nagekeken. Met `--track <nummer> --stappen 36` komen
-  er 36 gelijk verdeelde kaders op, andere dan op het gewone vel; zo zijn de
-  plaatjes voor de tweede, onafhankelijke controle gemaakt. Met
-  `--out <bestand>` kies je waar zo'n strook komt. Hoe de controle ging, staat
+  controleronde precies nagekeken. Met `--out <bestand>` kies je waar zo'n strook
+  komt. Met `--beelden` maakt het programma een plaatje van elk beeld van elk
+  fragment, met alle kaders genummerd (in `data/audit/alle_beelden/`); daarop
+  hebben we elk beeld bekeken. Met `--uitvoer <map>` komen de vellen en de
+  plaatjes in een andere map, bijvoorbeeld buiten iCloud of OneDrive (samen zijn
+  ze ongeveer 1,5 GB). Hoe de controle ging, staat
   in [Controle van het volgen](stap1_controle.md).
-- `detector_steekproef.py` rekent uit hoeveel duidelijk zichtbare gezichten de
-  detector vindt. Dat doet het op een steekproef van 120 beelden waarin we met
-  het oog de gezichten hebben aangewezen (`data/audit/detector_steekproef.csv`
-  en `data/audit/detector_steekproef_beelden.csv`). Het programma schrijft
-  niets weg, maar zet de uitkomst op het scherm. Op de laatste regel moet
-  staan dat de kaders vanaf 0,3 samen met de verlengingen 238 van de 278
-  duidelijke gezichten vinden.
 - `step1_images.py` maakt de plaatjes in de uitleg van stap 1 en van de
   controle.
 - `make_label_items.py` zet alles klaar voor de labelapp: `labeling/items.json`
@@ -246,27 +241,14 @@ Het programma `ffprobe` (uit FFmpeg) hebben we alleen gebruikt om de
 eigenschappen van de fragmenten op te zoeken; de programma's hebben `ffprobe`
 niet nodig.
 
-Bij een eerdere manier van volgen (versie 4) hebben we niet alle tracks
-gecontroleerd, maar alleen een steekproef. De bestanden van die steekproef
-staan nu in `data/audit/eerdere_steekproef/`, samen met het programma
-`audit_tracks.py` dat de plaatjes ervan maakte. Dat programma hoorde bij de
-tracks van die eerdere versie, werkt niet meer met de huidige tracks en hoort
-daarom niet meer bij de programma's in `code/`.
-
-
 ## Waar de data vandaan komt
 
-De drie filmfragmenten komen van YouTube; het stukje tussen haakjes in de
-bestandsnaam is het nummer van de video op YouTube:
-
-| Fragment | YouTube |
-|---|---|
-| *Das Boot – die Auferstehung* | `Oqek9Ktuwy8` |
-| *Mon Gars Filmmusik* | `LnFceG2lL3U` |
-| *Go Back Johann* | `qa3jt_GXMts` |
-
-Het bestand `movies/List_of_URLS` noemt ook drie fragmenten die we niet
-gebruiken, en mist *Mon Gars Filmmusik*.
+Zeven van de acht filmfragmenten komen van YouTube; het stukje tussen haakjes in
+de bestandsnaam is het nummer van de video op YouTube. Het achtste fragment
+(`dasgespenst`) is als bestand aangeleverd. Welk stuk van welke video elk
+bestand is, en hoe de bestanden gemaakt zijn (zonder opnieuw te coderen, en in
+delen als een bestand groter dan 100 MB zou worden), staat in
+`movies/List_of_URLS`.
 
 
 ## Opgelet: de projectmap en clouddiensten

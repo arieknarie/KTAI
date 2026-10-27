@@ -51,18 +51,16 @@ gezichten. De stills staan in mappen met een naam, maar die indeling is
 nooit gecontroleerd en kan fout zijn. Daarom krijgt de labelaar die namen niet
 te zien (zie hieronder).
 
-**2.896 tracks uit de video's.** Een track is één gezicht dat de computer in
+**1.387 tracks uit de video's.** Een track is één gezicht dat de computer in
 stap 1 heeft gevolgd over een reeks beelden na elkaar. Van elke track ziet de
 labelaar één beeld, met een geel kader om het gezicht, en de keuze geldt voor
 de hele track.
 
-Samen zijn dat 2.931 items met 2.991 gezichten. Bij de vorige manier van
-volgen waren het 3.240 items. Sinds de nieuwe manier van volgen in
-[stap 1](stap1_gezichten_vinden_en_volgen.md) (versie 5) mag een track
-doorlopen op een kader waarvan de detector (het programma dat in stap 1 de
-gezichten zocht) minder zeker is: een *verlenging*. Doordat een track nu
-doorloopt, valt een gezicht minder vaak uiteen in losse tracks, en heeft de
-labelaar 309 items minder te doen.
+Samen zijn dat 1.422 items met 1.482 gezichten. Een track mag doorlopen op een
+kader waarvan de detector (het programma dat in stap 1 de gezichten zocht)
+minder zeker is: een *verlenging* (zie
+[stap 1](stap1_gezichten_vinden_en_volgen.md)). Zo valt een gezicht minder vaak
+uiteen in losse tracks, en heeft de labelaar minder items te doen.
 
 Bij elk gezicht kiest de labelaar een van zeven knoppen: een van de vier
 personen (Der Alte, Fritz Grade, Johann of Werner), *Figurant* (iemand
@@ -92,10 +90,10 @@ volgorde die niets met de mappen te maken heeft. Ook in de bestanden van de
 labelapp heet een still alleen `still_01`, `still_02` enzovoort. Welk bestand
 bij welke still hoort, staat niet in de map `labeling/`, maar in
 `data/stills_index.csv`. Om dezelfde reden heten de video's op het scherm van
-de labelapp *Video 1*, *Video 2* en *Video 3*: de titel van een van de
-fragmenten bevat een naam, en die naam zou de labelaar kunnen sturen. Video 1
-is het fragment *die Auferstehung*, Video 2 is *Mon Gars Filmmusik* en Video 3
-is *Go Back Johann*. Dit gaat over wat de labelaar op het scherm ziet. De
+de labelapp *Video 1* tot en met *Video 8*: de titel van een video kan een naam
+bevatten, en die naam zou de labelaar kunnen sturen. Video 1 tot en met 8 zijn
+de fragmenten Das Boot 1 tot en met 8; de delen van een fragment (bijvoorbeeld
+2a en 2b) zijn in de labelapp samen één video. Dit gaat over wat de labelaar op het scherm ziet. De
 labelaar downloadt wel het hele
 project, dus de namen staan ook op de computer van de labelaar: in
 `data/stills_index.csv`, in de mappen van `pictures/inCharacter/` en in de
@@ -127,10 +125,8 @@ automatische figurant `auto` in de kolom `how` (bij een zelf gekozen label
 `chosen`), zodat we later altijd kunnen zien welke figuranten automatisch
 zijn.
 
-**Ook de heel korte tracks.** 937 tracks zijn maar één beeld lang. In zo'n
-korte track kan een echt gezicht staan, maar ook een lamp of een hand. In een
-steekproef bij de vorige manier van volgen was ongeveer 4 van de 10 korte
-tracks (van 1 tot 4 beelden) een echt gezicht (zie
+**Ook de heel korte tracks.** 540 tracks zijn maar één beeld lang. In zo'n
+korte track kan een echt gezicht staan, maar ook een oor of een hand (zie
 [Controle van het volgen](stap1_controle.md#korte-tracks)). Daarom worden alle
 tracks gelabeld, ook de kortste.
 
@@ -145,20 +141,17 @@ moet het herkenningsprogramma vinden, en van hen tellen we hoe vaak ze in
 beeld zijn.
 
 **Drie stills komen uit de fragmenten.** Bij het klaarzetten vergelijkt het
-programma elke still met alle beelden van de drie fragmenten. Drie stills
-blijken (bijna) hetzelfde beeld te zijn als een beeld uit een fragment. Dat
-staat in `data/stills_index.csv` (kolommen `uit_video` en `uit_frame`). Dat is
-belangrijk als we de stills later als extra voorbeeldfoto's willen gebruiken,
-naast de gewone foto's van de acteurs: een still die bijna hetzelfde is als een
-beeld uit een fragment, maakt de test op dat fragment te makkelijk. Zo'n still
-mag dus geen voorbeeld zijn bij het herkennen in datzelfde fragment. Een vierde
-still, `still_14`, is geen beeld uit een fragment, maar wel een andere foto van
-hetzelfde moment als in het fragment *Mon Gars Filmmusik* (Video 2 in de
-labelapp), in het shot van beeld 731 tot en met 1432: dezelfde drie mensen, in
-dezelfde kleding en in dezelfde opstelling als rond beeld 800. Het programma
-voor het klaarzetten ziet dat niet, omdat het alleen hele, verkleinde beelden
-vergelijkt. Ook `still_14` mag dus geen voorbeeld zijn bij het herkennen in dat
-fragment.
+programma elke still met alle beelden van de acht fragmenten. Drie stills
+blijken (bijna) hetzelfde beeld te zijn als een beeld uit een fragment:
+`still_13` (uit Das Boot 5), `still_21` (uit Das Boot 8a) en `still_23` (uit
+Das Boot 8b). Dat staat in `data/stills_index.csv` (kolommen `uit_video` en
+`uit_frame`). Dat is belangrijk als we de stills later als extra voorbeeldfoto's
+willen gebruiken, naast de gewone foto's van de acteurs: een still die bijna
+hetzelfde is als een beeld uit een fragment, maakt de test op dat fragment te
+makkelijk. Zo'n still mag dus geen voorbeeld zijn bij het herkennen in
+datzelfde fragment. Het programma vergelijkt alleen hele, verkleinde beelden;
+een andere foto van hetzelfde moment (dezelfde mensen in dezelfde opstelling)
+ziet het niet.
 
 
 ## Hoe de labelapp werkt
@@ -166,8 +159,8 @@ fragment.
 De labelapp is een klein programma (`labeling/app.py`) dat alleen Python nodig
 heeft: de gratis programmeertaal waarin de app geschreven is. Extra onderdelen
 voor Python zijn niet nodig, en er hoeft verder niets geïnstalleerd te
-worden: alle beelden staan al klaar in `labeling/images/` (2.134 plaatjes,
-78 MB).
+worden: alle beelden staan al klaar in `labeling/images/` (1.180 plaatjes,
+183 MB).
 
 Als de labelaar de app start, start de app een kleine webserver: het deel van
 de app dat de labelpagina aan de browser geeft en de keuzes bewaart. Die
@@ -188,7 +181,7 @@ Zo hoeft de labelaar niet alles uit de handleiding te onthouden.
 
 **Andere gevonden kaders in grijs.** Bij een track geldt de keuze alleen voor
 het gezicht in het gele kader. Vaak heeft de computer in hetzelfde beeld nog
-andere kaders gevonden: bij 2.735 van de 2.896 tracks. Die andere kaders staan
+andere kaders gevonden: bij 1.229 van de 1.387 tracks. Die andere kaders staan
 er als dun grijs stippelkader bij. Ze komen elk in een eigen track aan de
 beurt. Het grijze kader laat de labelaar zien dat de computer daar wel iets
 gevonden heeft, zodat de labelaar dat gezicht niet als gemist gaat tekenen.
@@ -223,10 +216,9 @@ zodat een verkeerde toets opvalt. Die regel staat alleen bij het item direct
 na de keuze; bladert de labelaar verder, dan verdwijnt hij. Een "Beeld
 lichter"-stand maakt donkere gezichten vanzelf lichter; de app meet daarvoor
 hoe donker het kader is van het gezicht dat op dat moment aan de beurt is. Bij
-ongeveer een derde van de tracks (965 van de 2.896) is het gezicht in het
+ongeveer een derde van de tracks (475 van de 1.387) is het gezicht in het
 getoonde beeld namelijk erg donker: gemiddeld minder dan 40 op een schaal van
-0 (zwart) tot 255 (wit). Van alle kaders in de drie fragmenten is zelfs ruim
-de helft (57%) zo donker.
+0 (zwart) tot 255 (wit).
 
 **Veiligheid.** Alleen de eigen labelpagina kan labels bewaren of opvragen;
 een andere website die in dezelfde browser openstaat, kan dat niet. De app
@@ -238,9 +230,9 @@ map altijd maar één app tegelijk, zodat er nooit twee programma's tegelijk in
 `labels.csv` schrijven.
 
 **Getest.** De labelapp is getest in Chrome, met Python 3.12 en (voor de
-webserver) ook Python 3.9, met 194 automatische tests, die allemaal slagen.
-Die tests staan niet in het project, dus een teamlid kan ze niet zelf opnieuw
-draaien. De tests controleerden: kiezen met muis en toetsen (de cijfers 1 tot
+webserver) ook Python 3.9, met 310 automatische tests, die allemaal slagen. De
+tests staan in de map `tests/`; hoe je ze zelf draait, staat in
+[tests/README.md](../tests/README.md). De tests controleren: kiezen met muis en toetsen (de cijfers 1 tot
 7 ook op het aparte cijferblok en op een Frans of Belgisch toetsenbord),
 "Beeld lichter", de automatische figuranten, een gemist gezicht tekenen en
 weghalen, de korte uitleg, terugbladeren en wijzigen, dubbelklikken,
@@ -258,8 +250,7 @@ gebeurt. Geen van deze stappen is al gedaan.
 
 1. **Delen.** De nieuwe versie van het project komt op GitHub, op de branch
    `facenet-stress-tests-v2` (een branch is een aparte versie van het project
-   op GitHub). De labelaar downloadt het project daarvandaan. Zolang die
-   branch niet op GitHub staat, werken de links in de handleiding nog niet.
+   op GitHub). De labelaar downloadt het project daarvandaan.
    Het bestand waarin de labelapp de keuzes bewaart, `labeling/labels.csv`,
    gaat nooit mee naar GitHub: het staat in `labeling/.gitignore`, de lijst
    met bestanden die git overslaat (git is het programma dat de versies van
@@ -298,11 +289,11 @@ gebeurt. Geen van deze stappen is al gedaan.
    personen zijn; twee figuranten in één beeld kan wel. (b) Als de detector
    hetzelfde gezicht twee keer vond (twee kaders van verschillende tracks over
    elkaar), moeten beide tracks hetzelfde label hebben, of is een van beide
-   *Geen gezicht*. Twee kaders over elkaar komen 964 keer voor, bij 379 paren
-   van tracks. (c) De stills `still_21`, `still_23` en `still_30` zijn beelden
+   *Geen gezicht*. Twee kaders over elkaar komen 608 keer voor, bij 238 paren
+   van tracks. (c) De stills `still_13`, `still_21` en `still_23` zijn beelden
    uit de fragmenten (zie *Drie stills komen uit de fragmenten* hierboven).
-   Hun negen gezichten heeft de computer dus ook in de fragmenten gevonden, in
-   tracks. Elk van die negen gezichten hoort hetzelfde label te krijgen als de
+   Hun dertien gezichten heeft de computer dus ook in de fragmenten gevonden, in
+   tracks. Elk van die dertien gezichten hoort hetzelfde label te krijgen als de
    track met hetzelfde gezicht. Welke track dat is, zoeken we na het labelen
    op door de kaders van de still op het beeld uit het fragment te leggen.
 5. **Een tweede labelaar.** Een tweede persoon labelt een deel van de items
@@ -380,7 +371,7 @@ gebeurt. Geen van deze stappen is al gedaan.
    [controle van het volgen](stap1_controle.md) is dat voor elke track van twee
    of meer beelden nagekeken. Waar een track halverwege op een andere persoon
    of op iets anders terechtkwam, is dat stuk losgeknipt tot een eigen track
-   (161 knippen in 123 tracks), dus die stukken krijgen hun eigen label. Bij 26
+   (93 knippen in 44 tracks), dus die stukken krijgen hun eigen label. Bij 2
    tracks was dat niet te zeggen, omdat het beeld te donker of te onduidelijk
    was; daar kiest de labelaar waarschijnlijk *Weet niet*. Een fout die bij de
    controle niet opviel, kan nog in een track zitten.
@@ -388,9 +379,9 @@ gebeurt. Geen van deze stappen is al gedaan.
    en wanneer iemand in beeld is) leggen we vooraf vast wat "in beeld" betekent.
    Een persoon is in een beeld te zien als daar een gezicht met die persoon is
    gevonden, of als dat beeld valt binnen een track van die persoon waarin het
-   gezicht heel even niet gevonden werd. Dat komt vaak voor: in de 2.896
-   tracks ontbreekt het gezicht 1.976 keer heel even (hooguit 12 beelden,
-   ongeveer een halve seconde), samen in 5.351 beelden. De track gaat na zo'n
+   gezicht heel even niet gevonden werd. Dat komt vaak voor: in de 1.387
+   tracks ontbreekt het gezicht 1.409 keer heel even (hooguit 12 beelden,
+   ongeveer een halve seconde), samen in 3.996 beelden. De track gaat na zo'n
    gat verder op hetzelfde gezicht, dus de persoon is er in die korte tijd
    waarschijnlijk nog. We rapporteren beide: alleen de gevonden gezichten, en
    met die korte gaten opgevuld.
@@ -399,7 +390,6 @@ Een beperking die we in het verslag moeten noemen: op het antwoordenblad staan
 alleen de gezichten die de detector gevonden heeft, plus de gezichten van de
 vier personen die de labelaar zelf tekent in het ene beeld per track. Een
 figurant die de detector mist, en een van de vier personen die de detector
-mist in een beeld dat de labelaar niet te zien krijgt, staan er niet op. In een
-steekproef van 120 beelden uit de fragmenten vond de detector (met de
-verlengingen van versie 5) 238 van de 278 duidelijk zichtbare gezichten,
-ongeveer 86%; vooral kleine gezichten op de achtergrond ontbreken (zie [Stap 1](stap1_gezichten_vinden_en_volgen.md#hoeveel-gezichten-mist-de-detector)).
+mist in een beeld dat de labelaar niet te zien krijgt, staan er niet op. Hoe
+vaak de detector een gezicht mist, hebben we in elk beeld geteld (zie
+[Controle van het volgen](stap1_controle.md#de-controle-van-elk-beeld)).

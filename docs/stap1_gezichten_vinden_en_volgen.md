@@ -2,10 +2,10 @@
 
 [← terug naar het overzicht](../README.md)
 
-In deze stap zoekt de computer in alle beelden van de drie filmfragmenten de
+In deze stap zoekt de computer in alle beelden van de acht filmfragmenten de
 gezichten, en volgt de computer elk gezicht van beeld tot beeld. Het doel is
 dat een mens in stap 2 niet bij elk gevonden gezicht in elk beeld hoeft aan te
-geven wie het is (54.599 keer), maar alleen bij elk stukje (2.896 keer). Zo'n
+geven wie het is (37.003 keer), maar alleen bij elk stukje (1.387 keer). Zo'n
 stukje noemen we een **track**: één gezicht dat de computer volgt over een
 reeks beelden na elkaar. Hieronder
 staat hoe dat werkt, waarom we het zo gedaan hebben, en wat eruit kwam.
@@ -13,29 +13,36 @@ staat hoe dat werkt, waarom we het zo gedaan hebben, en wat eruit kwam.
 Het programma voor deze stap is [`code/track_faces.py`](../code/track_faces.py).
 
 
-## De drie filmfragmenten
+## De acht filmfragmenten
 
 Een video is een reeks losse beelden die snel na elkaar getoond worden. Zo'n
-los beeld heet een *frame*. De drie fragmenten zijn:
+los beeld heet een *frame*. We gebruiken acht fragmenten uit *Das Boot*. Zes
+komen van YouTube, in 4K waar de video daar zo groot is; het achtste
+(`dasgespenst`) is een aangeleverd bestand. Waar elk fragment precies vandaan
+komt, staat in `movies/List_of_URLS`. De videobeelden zijn niet opnieuw
+gecodeerd, dus de beelden zijn precies zo scherp als de bron. GitHub neemt geen
+bestanden groter dan 100 MB aan; daarom zijn fragment 2, 4 en 8 in delen
+geknipt (2a en 2b, 4a en 4b, 8a tot en met 8c). Elk deel is voor de computer
+een eigen video. Een track loopt dus nooit over de grens tussen twee delen.
 
 | Fragment | Lengte | Beelden per seconde | Aantal beelden | Grootte van een beeld (in pixels) |
 |---|---|---|---|---|
-| *Das Boot – die Auferstehung* | 5:53 | 25 | 8.817 | 626 × 360 |
-| *Mon Gars Filmmusik* | 2:09 | 29 | 3.730 | 848 × 480 |
-| *Go Back Johann* | 1:47 | 23,98 | 2.565 | 1280 × 720 |
-| samen | ongeveer 10 minuten | | 15.112 | |
+| Das Boot 1 | 0:45 | 25 | 1.125 | 3840 × 2160 |
+| Das Boot 2 (2a en 2b) | 1:00 | 25 | 647 + 853 | 3840 × 2160 |
+| Das Boot 3 | 0:56 | 25 | 1.400 | 3840 × 2160 |
+| Das Boot 4 (4a en 4b) | 1:00 | 25 | 714 + 786 | 3840 × 2160 |
+| Das Boot 5 | 1:01 | 25 | 1.525 | 3840 × 2160 |
+| Das Boot 6 | 0:07 | 23,98 | 168 | 1920 × 1080 |
+| Das Boot 7 | 0:35 | 23,98 | 839 | 1920 × 1080 |
+| Das Boot 8 (8a, 8b en 8c) | 2:05 | 25 | 1.096 + 1.194 + 835 | 3840 × 2160 |
+| samen | ongeveer 7,5 minuut | | 11.182 | |
 
-Het eerste fragment is het langste, maar ook het lastigste: de beelden zijn
-klein (een gezicht is vaak maar 30 tot 50 pixels breed), en veel scènes spelen
-zich af in een donkere onderzeeboot onder rood licht.
+Veel scènes spelen zich af in een donkere onderzeeboot, vaak onder rood licht.
 
-We nummeren de beelden van elk fragment vanaf 0, in de volgorde waarin ze in
-het fragment staan. Onze programma's lezen de fragmenten met OpenCV, een
+We nummeren de beelden van elk bestand vanaf 0, in de volgorde waarin ze in
+het bestand staan. Onze programma's lezen de fragmenten met OpenCV, een
 veelgebruikte gratis verzameling programmacode om beelden en video's te
-bewerken. (Volgens de gegevens in het videobestand heeft het eerste fragment
-8.818 beelden, maar het laatste daarvan is leeg. Een ander programma,
-`ffprobe`, vindt bij het echt uitlezen ook 8.817 beelden, met dezelfde nummers
-als OpenCV.)
+bewerken.
 
 
 ## Hoe de computer gezichten vindt
@@ -72,20 +79,20 @@ aan de rand van het beeld; zo'n kader staat wel goed.
 In de lijst van gevonden gezichten (het bestand `detections_0.3.csv`, zie
 onderaan) herken je zo'n verschoven kader aan x = 0 (het kader begint
 helemaal links) of y = 0 (het kader begint helemaal boven). Dat geldt voor
-796 van de 54.599 kaders (ongeveer 1,5%), verdeeld over 85 tracks. Bij 65 van
-de 2.896 tracks laat de labelapp in stap 2 zo'n kader zien; daar staat het
+264 van de 37.003 kaders (ongeveer 0,7%), verdeeld over 46 tracks. Bij 33 van
+de 1.387 tracks laat de labelapp in stap 2 zo'n kader zien; daar staat het
 kader dus voor een deel naast het gezicht. Bij het herkennen van de gezichten
 in stap 4 moeten we met deze kaders rekening houden.
 
 ### Hoe zeker moet het programma zijn?
 
 Standaard laat MediaPipe alleen kaders door met een score van minstens 0,5. In
-de donkere scènes van deze film mist het programma dan veel gezichten die een
-mens wel ziet. In het voorbeeld hieronder (1 minuut en 13 seconden in het
-eerste fragment, een groep mensen onder rood licht) vindt het programma bij een
-grens van 0,5 vier gezichten. Bij een grens van 0,3 vindt het programma negen
-kaders. (Rechtsboven staan twee kaders half over elkaar; die staan
-waarschijnlijk op hetzelfde hoofd.)
+de donkere en drukke scènes van deze film mist het programma dan veel gezichten
+die een mens wel ziet. In het voorbeeld hieronder (beeld 2 van Das Boot 2a, een
+groep officieren op een feest) vindt het programma bij een grens van 0,5 vier
+gezichten. Bij een grens van 0,3 vindt het programma dertien kaders. (Op een
+paar plekken staan twee kaders half over elkaar; die staan waarschijnlijk op
+hetzelfde hoofd.)
 
 ![Hetzelfde beeld met de grens 0,5 en de grens 0,3](stap1_drempel.jpg)
 
@@ -110,44 +117,25 @@ Zo'n zwak kader noemen we dan een *verlenging* (zie regel 5 bij het volgen).
 ### Hoeveel gezichten mist de detector?
 
 Een gezicht dat de detector (MediaPipe) nooit vindt, krijgt geen kader en
-komt dus ook niet vanzelf op het antwoordenblad. Daarom hebben we gemeten
-hoeveel duidelijk zichtbare gezichten de detector mist. Uit elk fragment zijn
-40 beelden genomen, gelijk verdeeld over het fragment: samen 120 beelden. Op
-elk beeld is met het oog bepaald welke gezichten er duidelijk te zien zijn. Een
-gezicht telt als gevonden als er een kader flink over het gezicht heen ligt:
-het stuk dat kader en gezicht gemeen hebben, is minstens 30 procent van de
-oppervlakte die ze samen bedekken (dezelfde maat als bij regel 2 van het
-volgen, hieronder). Welke beelden en welke gezichten het zijn, staat in
-`data/audit/detector_steekproef_beelden.csv`
-en `data/audit/detector_steekproef.csv`. Het programma
-[`code/detector_steekproef.py`](../code/detector_steekproef.py) rekent de
-uitkomst uit.
-
-In de 120 beelden staan 278 duidelijke gezichten. Hoe groot een gezicht in
-beeld is, bepaalt bijna alles. Daarom tellen we grote en kleine gezichten
-apart. Een gezicht telt als groot als het minstens 6% van de breedte van het
-beeld beslaat (in het eerste fragment is dat ongeveer 38 pixels of breder).
-Er zijn 220 grote en 54 kleine duidelijke gezichten. Van de overige 4 is de
-grootte niet gemeten, omdat de detector er bij geen enkele instelling een
-kader omheen zette.
-
-| Welke kaders meetellen | Gevonden van alle 278 | Gevonden van de 220 grote | Gevonden van de 54 kleine |
-|---|---|---|---|
-| alleen kaders vanaf 0,5 (de standaard van MediaPipe) | 175 (63%) | 167 (76%) | 8 |
-| kaders vanaf 0,3 | 229 (82%) | 206 (94%) | 23 |
-| **kaders vanaf 0,3 plus de verlengingen (regel 5); dit gebruiken we** | **238 (86%)** | **209 (95%)** | **29** |
-
-Met de manier die we gebruiken, vindt de detector dus bijna alle grote
-gezichten, en ongeveer de helft van de kleine. Per fragment vindt de detector
-96% in *die Auferstehung*, 74% in *Mon Gars Filmmusik* (veel kleine gezichten
-van mensen op de achtergrond) en 94% in *Go Back Johann*. Niet elk kader staat
-op een gezicht: in deze beelden stonden ook kaders op bijvoorbeeld een lamp,
-een meter of een hand.
+komt dus ook niet vanzelf op het antwoordenblad. Daarom hebben we elk van de
+11.182 beelden van de acht fragmenten bekeken, en bij elk beeld opgeschreven
+welke gezichten geen kader hebben. Een gezicht telt als er iets van het gezicht
+zelf te zien is (ogen, neus, mond of wang), ook in profiel, donker, onscherp of
+klein. Hoe dat ging en wat eruit kwam, staat in
+[Controle van het volgen](stap1_controle.md#de-controle-van-elk-beeld). In het
+kort: bij die eerste blik zagen we samen 37.659 keer een gezicht, en 10.867
+keer had dat gezicht geen kader (een gezicht dat in 50 beelden na elkaar
+gemist wordt, telt 50 keer). Van de gemiste gezichten die daarna nog eens
+scherp bekeken zijn, klopte ongeveer 3 van de 4. Het gaat om kleine gezichten
+op de achtergrond, maar ook om grote gezichten die donker, onscherp of half van
+opzij in beeld zijn. Niet elk kader staat op een gezicht: 4.691 keer stond er
+een kader op iets anders, zoals een oor, een hand of een pet.
 
 Bij de vorige versie van het volgen (versie 4, zie
 [Hoe we bij deze regels kwamen](#hoe-we-bij-deze-regels-kwamen)) hebben we
-ook andere instellingen van de detector geprobeerd. De getallen in dit lijstje
-komen uit die eerdere meting:
+ook andere instellingen van de detector geprobeerd, op drie eerdere fragmenten.
+De getallen in dit lijstje komen uit een steekproef van 120 beelden uit die
+eerdere fragmenten:
 
 - **Het beeld eerst vergroten** helpt niet (+1 tot +3 gezichten): de detector
   verkleint elk beeld toch eerst tot 192 × 192 pixels.
@@ -165,19 +153,18 @@ komen uit die eerdere meting:
 Gekozen hebben we een lagere grens alleen voor gezichten die al gevolgd
 worden: de verlengingen van regel 5. Een nieuwe track begint alleen bij een
 kader met een score van 0,3 of hoger, maar een track die al loopt, mag ook
-doorgaan met een kader vanaf 0,2. Dat heeft twee voordelen. Er komen meer
-gezichten op het antwoordenblad: de detector vindt 86% van de duidelijke
-gezichten in plaats van 82%. En er is minder labelwerk, omdat losse stukjes
-van hetzelfde gezicht aan elkaar vast komen te zitten. Vóór de controle van
-de tracks (zie verderop) waren het 2.736 tracks; bij versie 4 waren het er
-vóór de controle van toen 3.191. Dat is 455 tracks minder (14%). Een
+doorgaan met een kader vanaf 0,2. Dat heeft twee voordelen. Bij de drie
+eerdere fragmenten, waarop we deze regel hebben uitgeprobeerd, kwamen er meer
+gezichten op het antwoordenblad (86% van de duidelijke gezichten in plaats van
+82%), en waren er 14% minder tracks om te labelen, omdat losse stukjes van
+hetzelfde gezicht aan elkaar vast komen te zitten. Een
 nadeel is dat een verlenging lang niet altijd op een gezicht staat. In een
 eerdere meting stond ongeveer de helft van de extra kaders niet op een gezicht,
 vooral in tracks die toch al geen gezicht zijn, zoals een track op een lamp of
 een meter. Dat is niet erg: zo'n track krijgt in zijn geheel het label *Geen
 gezicht*.
 
-Van de 220 grote gezichten mist de detector er zo nog 11. Ziet de persoon die
+Ziet de persoon die
 labelt in stap 2 in een beeld een gezicht zonder kader van een van de vier
 personen die we willen herkennen, dan tekent die persoon er zelf een kader
 omheen (zie [Stap 2](stap2_labelen.md)). Zo'n getekend gezicht komt als
@@ -264,10 +251,11 @@ gezicht na een beeldwissel begint altijd een nieuwe track.
 
 ![Twee beelden na elkaar met een beeldwissel ertussen](stap1_beeldwissel.jpg)
 
-*Een beeldwissel in Go Back Johann. Tussen beeld 1711 en beeld 1712 springt de
-film naar een ander shot. De kleur zakt naar 0,65 en het licht-donkerpatroon
-(in het plaatje: structuur) naar 0,25. De computer laat hier alle tracks
-stoppen.*
+*Een beeldwissel in Das Boot 5. Tussen beeld 911 en beeld 912 springt de film
+van een brandend schip op zee naar mannen in de onderzeeboot. De kleuren lijken
+nog op elkaar (0,95: beide beelden zijn donker met rood-oranje licht), maar het
+licht-donkerpatroon (in het plaatje: structuur) zakt naar -0,19: onder 0 is het
+patroon zelfs bijna omgekeerd. De computer laat hier alle tracks stoppen.*
 
 **Regel 2: het kader moet bijna op dezelfde plek staan.** Een nieuw kader
 hoort bij een track als het nieuwe kader en het laatste kader van die track
@@ -318,15 +306,19 @@ Zo ziet een goede track eruit:
 
 ![Zes beelden uit één track](stap1_track.jpg)
 
-*Zes beelden uit track 2484 in Go Back Johann. Deze track duurt 145 beelden,
-van 35,1 tot 41,1 seconden. Het groene kader is deze track, de grijze kaders
+*Zes beelden uit track 568 in Das Boot 4b. Deze track duurt 786 beelden, het
+hele bestand, van 0,0 tot 31,4 seconden. Het groene kader is deze track, de grijze kaders
 zijn andere tracks in hetzelfde beeld. Het groene kader blijft op hetzelfde
 gezicht, ook als het gezicht beweegt.*
 
 
 ## Hoe we bij deze regels kwamen
 
-De regels hierboven waren niet in één keer goed. Het is de vijfde versie.
+De regels hierboven hebben we ontwikkeld met drie eerdere fragmenten uit *Das
+Boot*. In oktober 2026 hebben we die door de acht huidige fragmenten vervangen,
+met dezelfde regels. De getallen in dit deel gaan over de eerdere fragmenten.
+
+De regels waren niet in één keer goed. Het is de vijfde versie.
 Telkens hebben we een versie op alle beelden gedraaid, het resultaat bekeken,
 een fout gevonden en de regels aangepast. Het aantal tracks laat goed zien wat
 elke versie deed: veel tracks betekent dat gezichten in losse stukjes zijn
@@ -335,7 +327,7 @@ geknipt (extra werk), weinig tracks betekent dat er veel aan elkaar geplakt is
 
 **Versie 1** keek alleen of het kader op bijna dezelfde plek stond, en of de
 kleur van het gezicht leek op de kleur in het vorige beeld. Dat gaf 2.523
-tracks. Bij het bekijken zagen we een track in Go Back Johann die doorliep over
+tracks. Bij het bekijken zagen we een track in een van de eerdere fragmenten die doorliep over
 twee beeldwissels. Het hele beeld veranderde daar ineens, en het gezicht in het
 kader leek nauwelijks op het gezicht ervoor, maar de kleur van het gezicht
 leek wel genoeg: in deze donkere scènes hebben bijna alle gezichten dezelfde
@@ -382,9 +374,8 @@ toen in stukken geknipt (14 knippen), waardoor het 3.205 tracks werden. We
 leerden daarvan dat een track vooral in drukke scènes, met veel gezichten
 dicht bij elkaar, naar een ander gezicht overspringt, en dat een kader aan het
 begin of het eind van een track op iets anders kan staan, zoals een lamp of een
-achterhoofd. Die steekproef staat als geschiedenis in de map
-`data/audit/eerdere_steekproef/` (zie ook
-[Controle van het volgen](stap1_controle.md#de-eerdere-steekproef)).
+achterhoofd. Die steekproef staat in de geschiedenis van het project op GitHub
+(zie ook [Controle van het volgen](stap1_controle.md#eerdere-controles)).
 
 **Versie 5** is versie 4 plus regel 5: een track die al loopt, mag ook
 doorgaan met een zwak kader (score 0,2 tot 0,3). De gewone kaders bleven
@@ -396,14 +387,14 @@ nummers kregen, hoorde de steekproef van versie 4 niet meer bij de tracks.
 Daarom hebben we daarna alle tracks gecontroleerd, en niet meer een
 steekproef.
 
-**Daarna de correctie uit de controle.** Bij de controle hebben we van elke
-track met twee of meer kaders bekeken of het kader van begin tot eind op
-dezelfde persoon of hetzelfde ding blijft. In 123 tracks stond het kader voor
-een deel op een andere persoon of op iets anders: samen 973 kaders, 1,8% van
-alle kaders. Die 123 tracks zijn op die plekken in stukken geknipt, zodat elk
-stuk een eigen label krijgt. Een stuk na een knip krijgt een nieuw
-tracknummer achter de bestaande nummers; zo houden alle andere tracks hun
-nummer. Door het knippen kwamen er 160 tracks bij: het zijn er nu 2.896. Zie
+**Daarna de correctie uit de controle.** Bij de huidige acht fragmenten hebben
+we elk kader van elke track met twee of meer kaders bekeken: blijft het kader
+van begin tot eind op dezelfde persoon of hetzelfde ding? In 44 tracks stond
+het kader voor een deel op een andere persoon of op iets anders: samen 285
+kaders, 0,8% van alle kaders. Die 44 tracks zijn op die plekken in stukken
+geknipt, zodat elk stuk een eigen label krijgt. Een stuk na een knip krijgt een
+nieuw tracknummer achter de bestaande nummers; zo houden alle andere tracks hun
+nummer. Door het knippen kwamen er 80 tracks bij: het zijn er nu 1.387. Zie
 [Controle van het volgen](stap1_controle.md).
 
 Met de strenge grens van 0,5 (zie boven) ging het aantal tracks op dezelfde
@@ -414,50 +405,58 @@ de computer geen zwakke kaders.
 
 ## Wat eruit kwam
 
-| Fragment | Beeldwissels | Kaders | Waarvan verlengingen | Tracks | Tracks met minstens 5 kaders | Tracks met minstens 25 kaders |
+Per bestand (fragment 2, 4 en 8 staan in delen, zie
+[De acht filmfragmenten](#de-acht-filmfragmenten)):
+
+| Bestand | Beeldwissels | Kaders | Waarvan verlengingen | Tracks | Tracks met minstens 5 kaders | Tracks met minstens 25 kaders |
 |---|---|---|---|---|---|---|
-| *die Auferstehung* | 50 | 31.604 | 6.472 | 741 | 483 | 240 |
-| *Mon Gars Filmmusik* | 51 | 18.415 | 4.287 | 1.832 | 676 | 165 |
-| *Go Back Johann* | 82 | 4.580 | 426 | 323 | 100 | 47 |
-| samen | 183 | 54.599 | 11.185 | 2.896 | 1.259 | 452 |
+| Das Boot 1 | 0 | 7.015 | 1.940 | 117 | 88 | 49 |
+| Das Boot 2a | 2 | 4.118 | 495 | 291 | 75 | 27 |
+| Das Boot 2b | 1 | 4.072 | 354 | 104 | 63 | 26 |
+| Das Boot 3 | 6 | 2.726 | 87 | 84 | 20 | 7 |
+| Das Boot 4a | 0 | 2.716 | 276 | 21 | 16 | 8 |
+| Das Boot 4b | 0 | 3.000 | 255 | 27 | 18 | 11 |
+| Das Boot 5 | 4 | 4.843 | 728 | 106 | 66 | 33 |
+| Das Boot 6 | 0 | 386 | 14 | 13 | 4 | 3 |
+| Das Boot 7 | 3 | 1.989 | 413 | 133 | 43 | 15 |
+| Das Boot 8a | 18 | 2.557 | 369 | 174 | 81 | 32 |
+| Das Boot 8b | 76 | 2.047 | 175 | 248 | 47 | 18 |
+| Das Boot 8c | 2 | 1.534 | 105 | 69 | 22 | 13 |
+| samen | 112 | 37.003 | 5.211 | 1.387 | 543 | 242 |
 
-In alle 15.112 beelden samen vond MediaPipe 43.414 keer een gezicht met een
-score van 0,3 of hoger. Daar komen 11.185 verlengingen bij: zwakke kaders
+In alle 11.182 beelden samen vond MediaPipe 31.792 keer een gezicht met een
+score van 0,3 of hoger. Daar komen 5.211 verlengingen bij: zwakke kaders
 (score 0,2 tot 0,3) die een track verlengen (regel 5). De computer heeft die
-54.599 kaders samengevoegd tot 2.896 tracks (inclusief de correctie uit de
-controle). De persoon die labelt, hoeft in de fragmenten dus 2.896 keer te
-kiezen: 309 keer minder dan bij versie 4 (3.205 tracks). (Met de strenge grens
-van 0,5 zijn het 24.656 kaders in 1.262 tracks. Die tracks hebben geen
-verlengingen en zijn niet gecorrigeerd, omdat de controle alleen op de tracks
-met grens 0,3 gedaan is.)
+37.003 kaders samengevoegd tot 1.387 tracks (inclusief de correctie uit de
+controle). De persoon die labelt, hoeft in de fragmenten dus 1.387 keer te
+kiezen. (Met de strenge grens van 0,5 zijn het 23.396 kaders in 634 tracks. Die
+tracks hebben geen verlengingen en zijn niet gecorrigeerd, omdat de controle
+alleen op de tracks met grens 0,3 gedaan is.)
 
-Opvallend is *Mon Gars Filmmusik*: dat fragment is korter dan het eerste,
-maar heeft meer dan twee keer zoveel tracks. In dat fragment dansen veel
-mensen, vaak klein op de achtergrond: bij 959 van de 1.832 tracks is het
-kader gemiddeld smaller dan 6% van de breedte van het beeld (in het eerste
-fragment bij 53 van de 741 tracks). Zulke kleine gezichten vindt de detector
-maar af en toe (zie hierboven), dus één gezicht valt vaak uiteen in veel korte
-tracks.
+Opvallend zijn Das Boot 2a en Das Boot 8b. In Das Boot 2a staat een feest vol
+mensen, vaak klein op de achtergrond. Zulke kleine gezichten vindt de detector
+maar af en toe, dus één gezicht valt daar uiteen in veel korte tracks: 291
+tracks in 647 beelden. In Das Boot 8b wisselt het beeld heel vaak (76
+beeldwissels in 1.194 beelden), en bij elke beeldwissel stoppen alle tracks.
 
 De tabel hieronder laat zien hoe lang de tracks zijn. We tellen daarvoor per
 track in hoeveel beelden de track een kader heeft (een gewoon kader of een
 verlenging). De beelden waarin het gezicht even weg was (regel 4), tellen
-niet mee. Dat gebeurt binnen de tracks 1.976 keer, samen 5.351 beelden.
+niet mee. Dat gebeurt binnen de tracks 1.409 keer, samen 3.996 beelden.
 
 | In hoeveel beelden de track een kader heeft | Aantal tracks | Kaders in die tracks | Deel van alle kaders |
 |---|---|---|---|
-| 1 beeld | 937 | 937 | 1,7% |
-| 2 beelden | 395 | 790 | 1,4% |
-| 3 of 4 beelden | 305 | 1.047 | 1,9% |
-| 5 tot 9 beelden | 407 | 2.690 | 4,9% |
-| 10 tot 24 beelden | 400 | 6.122 | 11,2% |
-| 25 tot 99 beelden | 330 | 17.222 | 31,5% |
-| 100 beelden of meer | 122 | 25.791 | 47,2% |
+| 1 beeld | 540 | 540 | 1,5% |
+| 2 beelden | 154 | 308 | 0,8% |
+| 3 of 4 beelden | 150 | 520 | 1,4% |
+| 5 tot 9 beelden | 142 | 920 | 2,5% |
+| 10 tot 24 beelden | 159 | 2.433 | 6,6% |
+| 25 tot 99 beelden | 148 | 7.553 | 20,4% |
+| 100 beelden of meer | 94 | 24.729 | 66,8% |
 
-Bijna de helft van alle kaders zit in de 122 lange tracks met 100 of meer
-kaders (ongeveer vier seconden of langer). Er zijn ook veel heel korte tracks:
-937 tracks hebben maar één kader. Of zulke korte tracks echte gezichten zijn,
-en waarom we ze toch allemaal labelen, staat in
+Twee derde van alle kaders zit in de 94 lange tracks met 100 of meer kaders
+(vier seconden of langer). Er zijn ook veel heel korte tracks: 540 tracks hebben
+maar één kader. Waarom we ook die allemaal labelen, staat in
 [Controle van het volgen](stap1_controle.md#korte-tracks).
 
 Of het volgen goed gaat, hebben we daarna bij alle tracks gecontroleerd; zie
@@ -468,7 +467,7 @@ Of het volgen goed gaat, hebben we daarna bij alle tracks gecontroleerd; zie
 
 Het programma `code/track_faces.py` zet alles in `data/tracks/`:
 
-- `detections_0.3.csv` is de lijst van alle 54.599 kaders: in welk fragment,
+- `detections_0.3.csv` is de lijst van alle 37.003 kaders: in welk fragment,
   in welk beeld, op welk moment, waar het kader staat, de score, of het kader
   een verlenging is (kolom `verlengd`, zie regel 5), bij welke track het kader
   hoort, en (kolom `track_ongeknipt`) bij welke track het kader hoorde vóór de
@@ -484,7 +483,7 @@ Het programma `code/track_faces.py` zet alles in `data/tracks/`:
   `verlengd`), hoe breed het kader gemiddeld is, de gemiddelde en hoogste
   score, en (kolom `track_ongeknipt`) het nummer van de track vóór de correctie
   uit de controle.
-- `frames.csv` is een lijst van alle 15.112 beelden: per beeld hoeveel het
+- `frames.csv` is een lijst van alle 11.182 beelden: per beeld hoeveel het
   beeld lijkt op het beeld ervoor, en of het beeld als beeldwissel telt.
 - `run_info.json` zegt waarmee de uitkomsten gemaakt zijn: de versies van de
   programma's, alle instellingen, en de controlegetallen (zie hieronder) van
@@ -499,19 +498,17 @@ Het programma `code/track_faces.py` zet alles in `data/tracks/`:
   MediaPipe of OpenCV, of een instelling waar deze bestanden van afhangen,
   veranderd is. Deze map gaat niet mee naar GitHub.
 
-Bij deze stap horen ook twee programma's die nakijken hoe goed stap 1 werkt.
+Bij deze stap hoort ook een programma waarmee we nagekeken hebben hoe goed stap 1 werkt.
 Hun bestanden staan in `data/audit/`:
 
 - [`code/check_all_tracks.py`](../code/check_all_tracks.py) maakt de
-  controlevellen: plaatjes met per track kleine stukjes beeld rond het kader,
-  waarop we alle tracks gecontroleerd hebben (zie
+  controlevellen (per track alle kaders als kleine stukjes beeld) en de
+  plaatjes van elk beeld, waarop we alle tracks en alle beelden gecontroleerd
+  hebben (zie
   [Controle van het volgen](stap1_controle.md)). De uitkomst van de controle
   staat in `controle_alle_tracks.csv`; `code/track_faces.py` knipt de tracks
-  op de plekken die daarin staan.
-- [`code/detector_steekproef.py`](../code/detector_steekproef.py) rekent uit
-  hoeveel duidelijke gezichten de detector vindt, met de steekproef in
-  `detector_steekproef_beelden.csv` en `detector_steekproef.csv` (zie
-  [Hoeveel gezichten mist de detector?](#hoeveel-gezichten-mist-de-detector)).
+  op de plekken die daarin staan. De uitkomst van de controle van elk beeld
+  staat in `controle_alle_beelden.csv` en `controle_alle_beelden_vondsten.csv`.
 
 **Herhaalbaar.** Op dezelfde computer gaf het programma elke keer dat het
 opnieuw draaide dezelfde uitkomst. Bij versie 4 hebben we dat gecontroleerd

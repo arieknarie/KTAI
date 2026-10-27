@@ -7,10 +7,10 @@ Maakt in docs/:
                            beeldwissel, met de gemeten gelijkenis
     stap1_track.jpg        zes frames uit één track, zodat te zien is dat een
                            track hetzelfde gezicht volgt
-    stap1_controle_wissel.jpg       24 uitsneden van track 1583 (nummer van vóór het knippen), een
-                                    track die van het ene gezicht naar een ander gezicht verschuift
-    stap1_controle_geen_gezicht.jpg 24 uitsneden van track 263, een track die
-                                    nooit op een gezicht staat (een meter)
+    stap1_controle_wissel.jpg       24 uitsneden van track 437 (nummer van vóór het knippen), een
+                                    track die van het ene gezicht naar een ander gezicht verspringt
+    stap1_controle_geen_gezicht.jpg 24 uitsneden van track 84, een track die
+                                    nooit op een gezicht staat (een oor)
 
 Gebruik (vanuit de map KTAI, na code/track_faces.py):
     .venv/bin/python code/step1_images.py
@@ -36,7 +36,7 @@ FONT = cv2.FONT_HERSHEY_SIMPLEX
 def read_frame(video: str, frame_index: int) -> np.ndarray:
     """Frame nummer `frame_index`, gevonden door de video vanaf het begin op volgorde te lezen,
     net als in track_faces.py. Direct naar een frame springen (CAP_PROP_POS_FRAMES) geeft in
-    'die Auferstehung' vanaf frame 4523 het frame ervoor."""
+    een van de eerdere fragmenten vanaf frame 4523 het frame ervoor."""
     capture = cv2.VideoCapture(str(MOVIES / video))
     for _ in range(frame_index + 1):
         ok, frame = capture.read()
@@ -69,35 +69,42 @@ def caption(image: np.ndarray, text: str) -> np.ndarray:
 
 
 def threshold_image() -> None:
-    """Frame 1:13 uit 'die Auferstehung': gezichten bij score 0,5 en bij score 0,3."""
-    video = "Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4"
-    frame_index = 73 * 25  # 1:13, de video heeft 25 frames per seconde
+    """Het frame waarin het verschil tussen score 0,5 en score 0,3 het duidelijkst te zien is: zoveel mogelijk
+    gezichten erbij door de lagere grens, terwijl er bij 0,5 ook al minstens twee gezichten zijn."""
     detections = pd.read_csv(TRACKS / "detections_0.3.csv")
     # alleen de gewone kaders (vanaf 0,3); de verlengingen (0,2 tot 0,3) horen niet bij deze vergelijking
-    faces = detections[(detections["video"] == video) & (detections["frame"] == frame_index) & ~detections["verlengd"]]
+    regular = detections[~detections["verlengd"]]
+    counts = regular.groupby(["video", "frame"])["score"].agg(n03="size", n05=lambda s: int((s >= 0.5).sum()))
+    counts = counts[counts["n05"] >= 2]
+    counts["extra"] = counts["n03"] - counts["n05"]
+    video, frame_index = counts.sort_values(["extra", "n05"], ascending=False).index[0]
+    faces = regular[(regular["video"] == video) & (regular["frame"] == frame_index)]
     frame = read_frame(video, frame_index)
+    scale = 860 / frame.shape[1]   # elk paneel 860 pixels breed, ook bij een video in hoge resolutie
+    frame = cv2.resize(frame, (860, round(frame.shape[0] * scale)), interpolation=cv2.INTER_AREA)
     panels = []
     for threshold in (0.5, 0.3):
         panel = frame.copy()
         shown = faces[faces["score"] >= threshold]
         for face in shown.itertuples():
-            cv2.rectangle(panel, (face.x, face.y), (face.x + face.w, face.y + face.h), GREEN, 2)
-            label(panel, f"{face.score:.2f}", face.x, face.y, GREEN)
+            x, y, w, h = (round(v * scale) for v in (face.x, face.y, face.w, face.h))
+            cv2.rectangle(panel, (x, y), (x + w, y + h), GREEN, 2)
+            label(panel, f"{face.score:.2f}", x, y, GREEN)
         panels.append(caption(panel, f"detectiescore >= {threshold}: {len(shown)} gezichten"))
     gap = np.full((panels[0].shape[0], 10, 3), 255, np.uint8)
     save_jpg(DOCS / "stap1_drempel.jpg", np.hstack([panels[0], gap, panels[1]]), 90)
 
 
 def track_image() -> None:
-    """Zes frames uit een lange, duidelijke track in 'Go Back Johann'."""
-    video = "Go Back Johann [qa3jt_GXMts].mp4"
+    """Zes frames uit de langste duidelijke track."""
     detections = pd.read_csv(TRACKS / "detections_0.3.csv")
     tracks = pd.read_csv(TRACKS / "tracks_0.3.csv")
     # de langste track die in elk frame duidelijk gedetecteerd is (score minstens 0,5), zodat het
     # voorbeeld goed te volgen is
     clear = detections.groupby("track")["score"].min()
-    candidates = tracks[(tracks["video"] == video) & tracks["track"].map(clear).ge(0.5)]
-    longest = candidates.sort_values("faces", ascending=False).iloc[0]
+    candidates = tracks[tracks["track"].map(clear).ge(0.5)]
+    longest = candidates.sort_values(["faces", "track"], ascending=[False, True]).iloc[0]
+    video = longest["video"]
     track_faces = detections[detections["track"] == longest["track"]]
     chosen = track_faces.iloc[np.linspace(0, len(track_faces) - 1, 6).round().astype(int)]
     panels = []
@@ -107,9 +114,9 @@ def track_image() -> None:
         others = detections[(detections["video"] == video) & (detections["frame"] == face.frame)
                             & (detections["track"] != face.track)]
         for other in others.itertuples():
-            cv2.rectangle(frame, (other.x, other.y), (other.x + other.w, other.y + other.h), GREY, 3)
-        cv2.rectangle(frame, (face.x, face.y), (face.x + face.w, face.y + face.h), GREEN, 4)
-        label(frame, f"track {face.track}", face.x, face.y, GREEN, scale=0.9)
+            cv2.rectangle(frame, (other.x, other.y), (other.x + other.w, other.y + other.h), GREY, max(3, frame.shape[1] // 280))
+        cv2.rectangle(frame, (face.x, face.y), (face.x + face.w, face.y + face.h), GREEN, max(4, frame.shape[1] // 200))
+        label(frame, f"track {face.track}", face.x, face.y, GREEN, scale=max(0.9, frame.shape[1] / 900))
         small = cv2.resize(frame, (400, round(frame.shape[0] * 400 / frame.shape[1])), interpolation=cv2.INTER_AREA)
         minutes, seconds = divmod(face.time_s, 60)
         panels.append(caption(small, f"frame {face.frame}  ({int(minutes)}:{seconds:04.1f})"))
@@ -119,12 +126,15 @@ def track_image() -> None:
 
 
 def cut_image() -> None:
-    """Twee opeenvolgende frames rond een gemarkeerde beeldwissel, met de gemeten gelijkenis."""
-    video = "Go Back Johann [qa3jt_GXMts].mp4"
+    """Twee opeenvolgende frames rond een gemarkeerde beeldwissel, met de gemeten gelijkenis: een beeldwissel
+    waarbij de kleuren nauwelijks veranderen (gelijkenis minstens 0,9) maar de structuur het sterkst, zodat te
+    zien is dat ook de structuur meetelt."""
     frames = pd.read_csv(TRACKS / "frames.csv")
-    frames = frames[frames["video"] == video].set_index("frame")
-    frame_index = 1712 if bool(frames.loc[1712, "cut"]) else int(frames.index[frames["cut"]][0])
-    row = frames.loc[frame_index]
+    cuts = frames[frames["cut"]]
+    same_colour = cuts[cuts["colour_similarity"] >= 0.9]
+    row = (same_colour.sort_values(["structure_similarity", "frame"]) if len(same_colour)
+           else cuts.sort_values(["colour_similarity", "frame"], ascending=[False, True])).iloc[0]
+    video, frame_index = row["video"], int(row["frame"])
     panels = []
     for index, title in ((frame_index - 1, f"frame {frame_index - 1}"),
                          (frame_index, f"frame {frame_index}: kleur {row['colour_similarity']:.2f}, "
@@ -157,7 +167,8 @@ def strip_image(track: int, filename: str) -> None:
         top, left = max(0, face.y - margin), max(0, face.x - margin)
         crop = frame[top:face.y + face.h + margin, left:face.x + face.w + margin].astype(np.float32)
         crop = np.clip(crop * (220 / max(20.0, float(np.percentile(crop, 97)))), 0, 255).astype(np.uint8)  # lichter
-        cv2.rectangle(crop, (face.x - left, face.y - top), (face.x - left + face.w, face.y - top + face.h), (0, 255, 0), 1)
+        thick = max(1, crop.shape[1] // 85)   # na het verkleinen tot 170 pixels nog goed te zien, ook bij 4K
+        cv2.rectangle(crop, (face.x - left, face.y - top), (face.x - left + face.w, face.y - top + face.h), (0, 255, 0), thick)
         crop = cv2.resize(crop, (170, 170), interpolation=cv2.INTER_CUBIC)
         label(crop, f"frame {index}", 2, 16, BLACK, scale=0.45)
         tiles.append(crop)
@@ -174,8 +185,8 @@ def main() -> None:
     threshold_image()
     cut_image()
     track_image()
-    strip_image(1583, "stap1_controle_wissel.jpg")
-    strip_image(263, "stap1_controle_geen_gezicht.jpg")
+    strip_image(437, "stap1_controle_wissel.jpg")
+    strip_image(84, "stap1_controle_geen_gezicht.jpg")
     print(f"plaatjes in {DOCS.relative_to(REPO)}/")
 
 

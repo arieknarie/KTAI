@@ -356,6 +356,9 @@ class Handler(SimpleHTTPRequestHandler):
 
 class Server(ThreadingHTTPServer):
     daemon_threads = True
+    # Een browser vraagt veel plaatjes tegelijk op. Standaard wachten er hoogstens 5 verbindingen op hun beurt; op
+    # een drukke computer weigert de app dan soms een plaatje of een keuze.
+    request_queue_size = 64
     # Op Windows zou een tweede programma met deze instelling dezelfde poort kunnen krijgen. (Twee labelapps
     # uit dezelfde map kunnen niet tegelijk draaien: daarvoor zorgt .labelapp.lock.)
     allow_reuse_address = os.name != "nt"

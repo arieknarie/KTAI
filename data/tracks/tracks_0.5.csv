@@ -1,1263 +1,635 @@
 track,video,first_frame,last_frame,start_s,end_s,faces,verlengd,mean_width,mean_score,max_score,track_ongeknipt
-0,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,0,598,0.0,23.917,599,0,64.795,0.819,0.874,0
-1,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,0,68,0.0,2.72,69,0,53.435,0.686,0.741,1
-2,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,0,308,0.0,12.319,272,0,90.511,0.577,0.7,2
-3,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,0,258,0.0,10.319,218,0,47.133,0.552,0.648,3
-4,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,17,49,0.68,1.96,24,0,44.375,0.524,0.542,4
-5,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,80,96,3.2,3.84,5,0,44.8,0.509,0.518,5
-6,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,252,657,10.079,26.277,391,0,63.079,0.734,0.877,6
-7,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,293,499,11.719,19.958,170,0,47.935,0.575,0.671,7
-8,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,302,307,12.079,12.279,6,0,45.167,0.515,0.532,8
-9,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,351,352,14.038,14.078,2,0,47.0,0.507,0.507,9
-10,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,431,561,17.238,22.437,82,0,95.744,0.529,0.589,10
-11,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,516,573,20.638,22.917,37,0,46.838,0.539,0.61,11
-12,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,519,598,20.758,23.917,61,0,42.295,0.542,0.602,12
-13,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,575,592,22.997,23.677,15,0,100.6,0.562,0.632,13
-14,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,600,600,23.997,23.997,1,0,54.0,0.606,0.606,14
-15,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,606,606,24.237,24.237,1,0,56.0,0.522,0.522,15
-16,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,632,633,25.277,25.317,2,0,93.0,0.55,0.552,16
-17,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,648,655,25.917,26.197,7,0,53.429,0.586,0.697,17
-18,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,657,657,26.277,26.277,1,0,92.0,0.537,0.537,18
-19,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,659,659,26.357,26.357,1,0,85.0,0.654,0.654,19
-20,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,659,659,26.357,26.357,1,0,109.0,0.558,0.558,20
-21,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,661,661,26.437,26.437,1,0,36.0,0.521,0.521,21
-22,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,680,680,27.197,27.197,1,0,53.0,0.522,0.522,22
-23,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,687,688,27.477,27.517,2,0,68.0,0.659,0.726,23
-24,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,689,692,27.557,27.677,3,0,46.333,0.557,0.605,24
-25,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,696,698,27.837,27.917,3,0,50.0,0.529,0.573,25
-26,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,709,763,28.357,30.517,43,0,58.256,0.604,0.718,26
-27,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,709,709,28.357,28.357,1,0,60.0,0.514,0.514,27
-28,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,715,718,28.597,28.717,4,0,66.25,0.633,0.691,28
-29,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,719,719,28.757,28.757,1,0,69.0,0.751,0.751,29
-30,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,720,720,28.797,28.797,1,0,76.0,0.69,0.69,30
-31,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,721,721,28.837,28.837,1,0,75.0,0.735,0.735,31
-32,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,721,725,28.837,28.997,5,0,52.8,0.547,0.616,32
-33,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,722,723,28.877,28.917,2,0,73.5,0.579,0.649,33
-34,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,724,724,28.957,28.957,1,0,63.0,0.528,0.528,34
-35,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,725,725,28.997,28.997,1,0,39.0,0.509,0.509,35
-36,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,728,728,29.117,29.117,1,0,43.0,0.518,0.518,36
-37,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,729,814,29.157,32.556,81,0,61.049,0.704,0.84,37
-38,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,741,741,29.637,29.637,1,0,32.0,0.535,0.535,38
-39,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,742,782,29.677,31.276,39,0,41.205,0.711,0.833,39
-40,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,786,787,31.436,31.476,2,0,53.0,0.608,0.635,40
-41,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,789,795,31.556,31.796,6,0,45.0,0.563,0.645,41
-42,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,792,1427,31.676,57.074,636,0,45.184,0.72,0.907,42
-43,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,827,837,33.076,33.476,11,0,51.364,0.59,0.68,43
-44,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,870,1035,34.796,41.395,147,0,52.905,0.66,0.84,44
-45,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,879,879,35.156,35.156,1,0,49.0,0.504,0.504,45
-46,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,887,945,35.476,37.796,48,0,61.875,0.659,0.823,46
-47,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,895,895,35.796,35.796,1,0,37.0,0.5,0.5,47
-48,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,941,961,37.636,38.436,10,0,46.6,0.556,0.622,48
-49,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,951,1117,38.036,44.675,113,0,57.265,0.61,0.774,49
-50,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,976,992,39.036,39.676,9,0,48.222,0.557,0.632,50
-51,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1034,1034,41.355,41.355,1,0,43.0,0.501,0.501,51
-52,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1052,1052,42.075,42.075,1,0,47.0,0.538,0.538,52
-53,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1053,1053,42.115,42.115,1,0,33.0,0.577,0.577,53
-54,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1057,1057,42.275,42.275,1,0,76.0,0.508,0.508,54
-55,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1065,1093,42.595,43.715,29,0,48.897,0.717,0.84,55
-56,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1095,1122,43.795,44.875,14,0,60.071,0.537,0.569,56
-57,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1132,1134,45.275,45.355,2,0,65.5,0.519,0.538,57
-58,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1149,1178,45.955,47.115,24,0,59.625,0.574,0.653,58
-59,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1159,1192,46.355,47.675,28,0,42.571,0.608,0.675,59
-60,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1159,1163,46.355,46.515,5,0,50.2,0.549,0.572,60
-61,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1163,1427,46.515,57.074,265,0,51.294,0.752,0.832,61
-62,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1164,1178,46.555,47.115,11,0,50.636,0.539,0.577,62
-63,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1183,1183,47.315,47.315,1,0,67.0,0.504,0.504,63
-64,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1186,1200,47.435,47.995,10,0,43.5,0.517,0.534,64
-65,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1219,1219,48.754,48.754,1,0,58.0,0.506,0.506,65
-66,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1229,1422,49.154,56.874,188,0,48.09,0.597,0.725,66
-67,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1245,1427,49.794,57.074,141,0,43.709,0.588,0.725,67
-68,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1254,1255,50.154,50.194,2,0,47.0,0.527,0.53,68
-69,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1257,1281,50.274,51.234,24,0,44.917,0.525,0.552,69
-70,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1284,1286,51.354,51.434,3,0,46.0,0.594,0.597,70
-71,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1370,1416,54.794,56.634,46,0,59.674,0.589,0.672,71
-72,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1394,1397,55.754,55.874,2,0,44.5,0.518,0.534,72
-73,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1428,1480,57.114,59.193,45,0,131.889,0.623,0.756,73
-74,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1453,1453,58.113,58.113,1,0,70.0,0.511,0.511,74
-75,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1496,1524,59.833,60.953,22,0,120.5,0.621,0.744,75
-76,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1528,1629,61.113,65.153,102,0,139.735,0.743,0.897,76
-77,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1630,1726,65.193,69.032,97,0,46.165,0.836,0.896,77
-78,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1630,1726,65.193,69.032,97,0,52.464,0.807,0.822,78
-79,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1630,1726,65.193,69.032,83,0,42.53,0.542,0.626,79
-80,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1645,1718,65.793,68.712,58,0,50.741,0.59,0.688,80
-81,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1660,1672,66.392,66.872,8,0,62.0,0.511,0.52,81
-82,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1661,1685,66.432,67.392,17,0,41.941,0.526,0.567,82
-83,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1670,1723,66.792,68.912,47,0,46.298,0.565,0.646,83
-84,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1805,1889,72.192,75.551,85,0,46.882,0.854,0.881,84
-85,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1805,1889,72.192,75.551,85,0,58.141,0.687,0.804,85
-86,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1805,1889,72.192,75.551,85,0,55.694,0.78,0.816,86
-87,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1805,1805,72.192,72.192,1,0,46.0,0.566,0.566,87
-88,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1805,1889,72.192,75.551,78,0,45.513,0.548,0.58,88
-89,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1823,1823,72.912,72.912,1,0,88.0,0.52,0.52,89
-90,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1861,1868,74.432,74.712,8,0,41.0,0.504,0.506,90
-91,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1961,2083,78.431,83.311,123,0,46.033,0.789,0.849,91
-92,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1961,2083,78.431,83.311,123,0,52.813,0.813,0.852,92
-93,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1962,1999,78.471,79.951,23,0,42.696,0.521,0.546,93
-94,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,1965,2009,78.591,80.351,26,0,45.346,0.516,0.543,94
-95,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2015,2076,80.591,83.031,39,0,44.513,0.526,0.576,95
-96,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2052,2066,82.071,82.631,12,0,61.583,0.517,0.53,96
-97,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2228,2409,89.11,96.349,182,0,46.698,0.797,0.884,97
-98,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2228,2409,89.11,96.349,182,0,53.324,0.795,0.922,98
-99,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2281,2298,91.23,91.91,18,0,43.389,0.546,0.598,99
-100,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2283,2289,91.31,91.55,7,0,60.0,0.539,0.555,100
-101,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2299,2299,91.95,91.95,1,0,50.0,0.51,0.51,101
-102,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2319,2319,92.749,92.749,1,0,85.0,0.563,0.563,102
-103,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2353,2377,94.109,95.069,25,0,52.12,0.556,0.614,103
-104,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2377,2385,95.069,95.389,6,0,43.333,0.532,0.576,104
-105,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2391,2407,95.629,96.269,17,0,56.235,0.556,0.587,105
-106,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2408,2408,96.309,96.309,1,0,46.0,0.504,0.504,106
-107,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2649,3038,105.948,121.506,390,0,46.813,0.785,0.88,107
-108,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2649,2893,105.948,115.707,243,0,53.502,0.756,0.873,108
-109,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2649,3038,105.948,121.506,389,0,46.645,0.732,0.84,109
-110,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2649,2910,105.948,116.387,225,0,41.582,0.58,0.708,110
-111,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2651,2670,106.028,106.788,20,0,46.5,0.653,0.722,111
-112,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2687,2973,107.468,118.907,257,0,47.833,0.648,0.781,112
-113,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2688,2750,107.508,109.988,51,0,54.157,0.556,0.675,113
-114,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2978,3030,119.106,121.186,27,0,48.37,0.536,0.591,114
-115,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,2979,3015,119.146,120.586,32,0,38.5,0.561,0.63,115
-116,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3009,3017,120.346,120.666,8,0,50.0,0.519,0.533,116
-117,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3034,3038,121.346,121.506,5,0,49.4,0.543,0.595,117
-118,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3128,3271,125.106,130.825,144,0,50.549,0.733,0.896,118
-119,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3128,3233,125.106,129.305,79,0,45.823,0.689,0.897,119
-120,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3128,3313,125.106,132.505,177,0,42.825,0.777,0.894,120
-121,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3138,3149,125.506,125.946,12,0,52.583,0.609,0.666,121
-122,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3144,3152,125.746,126.066,7,0,46.857,0.506,0.512,122
-123,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3158,3172,126.306,126.866,12,0,49.5,0.517,0.559,123
-124,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3199,3216,127.945,128.625,13,0,46.308,0.546,0.613,124
-125,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3209,3230,128.345,129.185,10,0,48.6,0.563,0.702,125
-126,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3236,3255,129.425,130.185,13,0,48.615,0.616,0.709,126
-127,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3238,3240,129.505,129.585,3,0,42.0,0.514,0.537,127
-128,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3244,3376,129.745,135.025,122,0,55.189,0.701,0.864,128
-129,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3288,3304,131.505,132.145,13,0,42.846,0.573,0.652,129
-130,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3289,3310,131.545,132.385,22,0,44.909,0.578,0.814,130
-131,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3316,3316,132.625,132.625,1,0,43.0,0.524,0.524,131
-132,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3327,3376,133.065,135.025,50,0,44.72,0.765,0.848,132
-133,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3328,3376,133.105,135.025,49,0,49.469,0.785,0.901,133
-134,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3333,3376,133.305,135.025,41,0,43.902,0.604,0.681,134
-135,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3335,3365,133.385,134.585,21,0,44.19,0.56,0.657,135
-136,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3631,4053,145.224,162.102,406,0,68.101,0.756,0.876,136
-137,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3631,3995,145.224,159.782,365,0,58.129,0.746,0.899,137
-138,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3631,3712,145.224,148.463,82,0,63.488,0.646,0.724,138
-139,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3631,3857,145.224,154.263,220,0,75.005,0.756,0.923,139
-140,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3631,3658,145.224,146.303,24,0,83.958,0.633,0.731,140
-141,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3631,3644,145.224,145.743,7,0,71.286,0.548,0.574,141
-142,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3673,3673,146.903,146.903,1,0,79.0,0.549,0.549,142
-143,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3695,4002,147.783,160.062,307,0,94.502,0.709,0.894,143
-144,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3737,3737,149.463,149.463,1,0,75.0,0.517,0.517,144
-145,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3756,3772,150.223,150.863,6,0,57.5,0.524,0.562,145
-146,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3801,3801,152.023,152.023,1,0,47.0,0.516,0.516,146
-147,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3860,3861,154.382,154.422,2,0,65.5,0.533,0.538,147
-148,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3861,3944,154.422,157.742,56,0,55.482,0.58,0.702,148
-149,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3869,3935,154.742,157.382,55,0,68.291,0.639,0.789,149
-150,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3871,3871,154.822,154.822,1,0,47.0,0.527,0.527,150
-151,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3902,3938,156.062,157.502,29,0,45.207,0.595,0.729,151
-152,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3927,3932,157.062,157.262,6,0,47.667,0.549,0.601,152
-153,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,3975,3976,158.982,159.022,2,0,40.0,0.555,0.562,153
-154,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4019,4033,160.742,161.302,6,0,50.5,0.534,0.614,154
-155,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4048,4192,161.902,167.661,141,0,91.163,0.814,0.921,155
-156,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4067,4093,162.662,163.701,13,0,35.308,0.545,0.609,156
-157,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4073,4073,162.902,162.902,1,0,47.0,0.516,0.516,157
-158,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4124,4128,164.941,165.101,5,0,58.2,0.551,0.573,158
-159,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4131,4131,165.221,165.221,1,0,47.0,0.524,0.524,159
-160,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4146,4471,165.821,178.82,299,0,57.284,0.711,0.886,160
-161,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4158,4160,166.301,166.381,3,0,61.333,0.623,0.693,161
-162,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4162,4162,166.461,166.461,1,0,57.0,0.608,0.608,162
-163,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4164,4167,166.541,166.661,2,0,49.5,0.524,0.526,163
-164,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4177,4273,167.061,170.901,94,0,71.723,0.771,0.884,164
-165,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4205,4681,168.181,187.219,470,0,94.557,0.731,0.88,165
-166,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4260,4682,170.381,187.259,418,0,54.029,0.805,0.918,166
-167,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4283,4283,171.301,171.301,1,0,47.0,0.503,0.503,167
-168,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4296,4296,171.821,171.821,1,0,44.0,0.508,0.508,168
-169,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4302,4302,172.06,172.06,1,0,40.0,0.556,0.556,169
-170,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4322,4322,172.86,172.86,1,0,42.0,0.51,0.51,170
-171,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4334,4353,173.34,174.1,20,0,50.8,0.631,0.718,171
-172,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4337,4339,173.46,173.54,3,0,66.667,0.555,0.593,172
-173,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4338,4682,173.5,187.259,336,0,54.527,0.736,0.889,173
-174,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4340,4390,173.58,175.58,37,0,110.162,0.577,0.655,174
-175,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4359,4384,174.34,175.34,8,0,86.375,0.543,0.606,175
-176,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4362,4362,174.46,174.46,1,0,49.0,0.561,0.561,176
-177,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4371,4379,174.82,175.14,9,0,53.556,0.593,0.639,177
-178,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4380,4380,175.18,175.18,1,0,38.0,0.505,0.505,178
-179,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4404,4480,176.14,179.18,37,0,114.054,0.542,0.608,179
-180,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4409,4409,176.34,176.34,1,0,84.0,0.518,0.518,180
-181,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4438,4441,177.5,177.62,4,0,91.25,0.527,0.544,181
-182,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4471,4682,178.82,187.259,197,0,48.203,0.688,0.789,182
-183,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4480,4500,179.18,179.98,16,0,39.938,0.601,0.703,183
-184,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4485,4487,179.38,179.46,3,0,70.0,0.508,0.514,184
-185,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4492,4570,179.66,182.779,47,0,57.191,0.586,0.811,185
-186,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4501,4501,180.02,180.02,1,0,75.0,0.505,0.505,186
-187,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4506,4507,180.22,180.26,2,0,106.5,0.568,0.604,187
-188,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4515,4594,180.58,183.739,51,0,79.941,0.563,0.623,188
-189,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4522,4646,180.859,185.819,107,0,111.075,0.582,0.696,189
-190,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4610,4682,184.379,187.259,57,0,49.86,0.593,0.682,190
-191,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,4670,4677,186.779,187.059,8,0,106.75,0.527,0.551,191
-192,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5586,5597,223.415,223.855,10,0,93.6,0.53,0.554,192
-193,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5591,5601,223.615,224.015,2,0,68.5,0.526,0.53,193
-194,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5598,5599,223.895,223.935,2,0,57.0,0.512,0.515,194
-195,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5659,5659,226.334,226.334,1,0,113.0,0.527,0.527,195
-196,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5664,5715,226.534,228.574,33,0,68.242,0.659,0.793,196
-197,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5664,5683,226.534,227.294,17,0,92.412,0.723,0.842,197
-198,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5665,5665,226.574,226.574,1,0,84.0,0.542,0.542,198
-199,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5684,5685,227.334,227.374,2,0,73.0,0.565,0.566,199
-200,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5735,5735,229.374,229.374,1,0,78.0,0.505,0.505,200
-201,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5736,5753,229.414,230.094,8,0,73.875,0.522,0.588,201
-202,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5759,5780,230.334,231.174,14,0,85.143,0.553,0.663,202
-203,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5790,5809,231.574,232.334,18,0,74.833,0.624,0.686,203
-204,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5799,5802,231.934,232.054,2,0,77.0,0.526,0.526,204
-205,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5828,5836,233.094,233.414,8,0,73.375,0.602,0.703,205
-206,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5852,5910,234.053,236.373,47,0,97.17,0.655,0.842,206
-207,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5862,5868,234.453,234.693,3,0,59.667,0.536,0.573,207
-208,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5892,5902,235.653,236.053,7,0,77.571,0.546,0.575,208
-209,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5922,5924,236.853,236.933,3,0,71.667,0.532,0.549,209
-210,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5942,5942,237.653,237.653,1,0,54.0,0.525,0.525,210
-211,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5973,5974,238.893,238.933,2,0,66.5,0.53,0.542,211
-212,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5983,6032,239.293,241.253,31,0,67.097,0.541,0.601,212
-213,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,5993,5994,239.693,239.733,2,0,60.0,0.551,0.566,213
-214,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6011,6033,240.413,241.293,18,0,63.889,0.554,0.646,214
-215,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6067,6069,242.652,242.732,2,0,87.5,0.595,0.631,215
-216,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6074,6107,242.932,244.252,31,0,96.065,0.614,0.729,216
-217,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6075,6075,242.972,242.972,1,0,57.0,0.511,0.511,217
-218,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6082,6084,243.252,243.332,3,0,91.667,0.568,0.608,218
-219,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6111,6111,244.412,244.412,1,0,59.0,0.523,0.523,219
-220,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6116,6176,244.612,247.012,53,0,107.792,0.633,0.776,220
-221,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6162,6225,246.452,248.972,64,0,114.234,0.721,0.854,221
-222,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6167,6167,246.652,246.652,1,0,98.0,0.501,0.501,222
-223,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6184,6211,247.332,248.412,18,0,107.722,0.562,0.628,223
-224,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6204,6204,248.132,248.132,1,0,90.0,0.514,0.514,224
-225,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6228,6233,249.092,249.292,3,0,125.0,0.544,0.565,225
-226,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6228,6244,249.092,249.732,15,0,81.0,0.606,0.696,226
-227,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6231,6249,249.212,249.932,18,0,87.833,0.643,0.736,227
-228,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6237,6238,249.452,249.492,2,0,37.0,0.569,0.601,228
-229,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6256,6266,250.212,250.612,9,0,73.556,0.564,0.691,229
-230,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6267,6267,250.652,250.652,1,0,107.0,0.557,0.557,230
-231,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6276,6276,251.012,251.012,1,0,36.0,0.526,0.526,231
-232,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6278,6278,251.092,251.092,1,0,53.0,0.559,0.559,232
-233,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6287,6289,251.451,251.531,2,0,55.0,0.531,0.531,233
-234,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6300,6300,251.971,251.971,1,0,43.0,0.516,0.516,234
-235,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6307,6309,252.251,252.331,2,0,90.5,0.513,0.515,235
-236,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6310,6385,252.371,255.371,70,0,54.557,0.633,0.765,236
-237,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6369,6369,254.731,254.731,1,0,63.0,0.533,0.533,237
-238,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6391,6429,255.611,257.131,33,0,56.303,0.564,0.656,238
-239,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6397,6436,255.851,257.411,32,0,91.062,0.745,0.836,239
-240,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6437,6486,257.451,259.411,50,0,116.08,0.726,0.81,240
-241,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6487,6553,259.451,262.09,67,0,90.582,0.712,0.81,241
-242,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6515,6516,260.57,260.61,2,0,40.0,0.509,0.513,242
-243,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6545,6561,261.77,262.41,8,0,43.25,0.538,0.572,243
-244,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6568,6585,262.69,263.37,17,0,67.353,0.584,0.632,244
-245,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6602,6602,264.05,264.05,1,0,78.0,0.501,0.501,245
-246,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6610,6610,264.37,264.37,1,0,60.0,0.527,0.527,246
-247,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6646,6667,265.81,266.65,14,0,61.071,0.524,0.552,247
-248,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6692,6729,267.65,269.129,28,0,51.893,0.579,0.662,248
-249,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6753,6844,270.089,273.729,51,0,51.02,0.59,0.698,249
-250,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6830,6893,273.169,275.689,54,0,91.611,0.671,0.782,250
-251,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6864,6864,274.529,274.529,1,0,51.0,0.501,0.501,251
-252,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6879,6881,275.129,275.209,3,0,50.333,0.505,0.506,252
-253,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6907,6944,276.249,277.729,38,0,102.263,0.717,0.861,253
-254,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,6945,7068,277.768,282.688,124,0,128.113,0.751,0.867,254
-255,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7069,7088,282.728,283.488,19,0,164.0,0.649,0.847,255
-256,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7069,7076,282.728,283.008,6,0,75.333,0.527,0.544,256
-257,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7070,7070,282.768,282.768,1,0,49.0,0.518,0.518,257
-258,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7082,7088,283.248,283.488,6,0,74.667,0.574,0.605,258
-259,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7084,7086,283.328,283.408,2,0,53.5,0.625,0.628,259
-260,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7089,7089,283.528,283.528,1,0,71.0,0.529,0.529,260
-261,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7090,7090,283.568,283.568,1,0,74.0,0.544,0.544,261
-262,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7091,7091,283.608,283.608,1,0,90.0,0.632,0.632,262
-263,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7098,7098,283.888,283.888,1,0,183.0,0.521,0.521,263
-264,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7099,7127,283.928,285.048,29,0,193.483,0.742,0.826,264
-265,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7128,7204,285.088,288.127,77,0,117.0,0.739,0.885,265
-266,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7205,7324,288.167,292.927,86,0,111.779,0.617,0.812,266
-267,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7233,7280,289.287,291.167,38,0,73.632,0.649,0.796,267
-268,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7445,7522,297.766,300.846,78,0,74.821,0.707,0.82,268
-269,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7445,7457,297.766,298.246,13,0,77.385,0.585,0.67,269
-270,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7473,7522,298.886,300.846,45,0,88.844,0.603,0.774,270
-271,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7519,7519,300.726,300.726,1,0,84.0,0.501,0.501,271
-272,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7541,7542,301.606,301.646,2,0,45.5,0.546,0.561,272
-273,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7546,7648,301.806,305.885,102,0,50.5,0.632,0.746,273
-274,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7566,7566,302.606,302.606,1,0,42.0,0.553,0.553,274
-275,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7568,7568,302.686,302.686,1,0,50.0,0.533,0.533,275
-276,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7569,7570,302.726,302.766,2,0,49.5,0.6,0.62,276
-277,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7571,7596,302.806,303.806,26,0,45.0,0.605,0.701,277
-278,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7611,7651,304.405,306.005,25,0,47.52,0.566,0.654,278
-279,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7676,7683,307.005,307.285,3,0,40.0,0.523,0.543,279
-280,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7678,7684,307.085,307.325,5,0,41.4,0.524,0.552,280
-281,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7719,7719,308.725,308.725,1,0,83.0,0.52,0.52,281
-282,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7719,7793,308.725,311.685,69,0,52.739,0.618,0.714,282
-283,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7782,7782,311.245,311.245,1,0,58.0,0.557,0.557,283
-284,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7839,7839,313.524,313.524,1,0,34.0,0.598,0.598,284
-285,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7871,7871,314.804,314.804,1,0,43.0,0.513,0.513,285
-286,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7900,7914,315.964,316.524,6,0,52.333,0.52,0.537,286
-287,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7952,7967,318.044,318.644,13,0,92.154,0.563,0.64,287
-288,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7952,7952,318.044,318.044,1,0,96.0,0.504,0.504,288
-289,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7957,7957,318.244,318.244,1,0,199.0,0.521,0.521,289
-290,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7963,7969,318.484,318.724,2,0,40.0,0.583,0.6,290
-291,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7964,7971,318.524,318.804,4,0,92.25,0.605,0.734,291
-292,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7973,7978,318.884,319.084,6,0,96.333,0.676,0.79,292
-293,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7973,7973,318.884,318.884,1,0,41.0,0.505,0.505,293
-294,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7980,7980,319.164,319.164,1,0,69.0,0.619,0.619,294
-295,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7981,7982,319.204,319.244,2,0,62.5,0.617,0.646,295
-296,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7988,7991,319.484,319.604,4,0,113.0,0.59,0.636,296
-297,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7990,7990,319.564,319.564,1,0,116.0,0.535,0.535,297
-298,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7993,8006,319.684,320.204,14,0,85.071,0.62,0.74,298
-299,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7993,7996,319.684,319.804,3,0,81.333,0.545,0.596,299
-300,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,7993,7993,319.684,319.684,1,0,106.0,0.516,0.516,300
-301,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8005,8014,320.164,320.524,10,0,124.6,0.618,0.702,301
-302,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8007,8021,320.244,320.804,11,0,76.545,0.607,0.733,302
-303,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8010,8012,320.364,320.444,3,0,79.333,0.525,0.538,303
-304,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8012,8012,320.444,320.444,1,0,45.0,0.547,0.547,304
-305,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8118,8135,324.683,325.363,16,0,68.188,0.63,0.711,305
-306,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8118,8275,324.683,330.962,153,0,79.66,0.648,0.825,306
-307,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8138,8281,325.483,331.202,137,0,69.19,0.647,0.775,307
-308,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8282,8283,331.242,331.282,2,0,75.5,0.546,0.59,308
-309,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8293,8293,331.682,331.682,1,0,58.0,0.558,0.558,309
-310,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8307,8307,332.242,332.242,1,0,64.0,0.544,0.544,310
-311,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8312,8321,332.442,332.802,9,0,65.222,0.589,0.654,311
-312,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8338,8389,333.482,335.522,39,0,69.513,0.649,0.814,312
-313,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8344,8344,333.722,333.722,1,0,56.0,0.556,0.556,313
-314,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8368,8370,334.682,334.762,3,0,66.667,0.521,0.536,314
-315,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8374,8376,334.922,335.002,2,0,65.5,0.516,0.533,315
-316,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8384,8388,335.322,335.482,5,0,60.2,0.535,0.568,316
-317,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8391,8495,335.602,339.761,104,0,70.404,0.641,0.774,317
-318,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8562,8573,342.441,342.881,7,0,68.571,0.565,0.616,318
-319,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8562,8562,342.441,342.441,1,0,62.0,0.501,0.501,319
-320,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8602,8602,344.041,344.041,1,0,64.0,0.534,0.534,320
-321,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8620,8627,344.761,345.041,7,0,73.143,0.546,0.586,321
-322,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8630,8650,345.161,345.961,18,0,62.278,0.636,0.794,322
-323,Das Boot - die Auferstehung [Oqek9Ktuwy8].mp4,8633,8633,345.281,345.281,1,0,73.0,0.527,0.527,323
-324,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,0,160,0.0,5.517,146,0,53.363,0.704,0.85,324
-325,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1,16,0.034,0.552,15,0,47.2,0.562,0.679,325
-326,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1,2,0.034,0.069,2,0,37.0,0.519,0.525,326
-327,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,11,13,0.379,0.448,3,0,62.0,0.511,0.513,327
-328,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,14,21,0.483,0.724,5,0,44.2,0.523,0.532,328
-329,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,35,101,1.207,3.483,29,0,39.379,0.568,0.639,329
-330,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,38,38,1.31,1.31,1,0,42.0,0.686,0.686,330
-331,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,38,61,1.31,2.103,21,0,43.143,0.569,0.634,331
-332,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,72,109,2.483,3.759,18,0,38.611,0.561,0.648,332
-333,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,76,77,2.621,2.655,2,0,41.0,0.513,0.52,333
-334,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,85,85,2.931,2.931,1,0,37.0,0.598,0.598,334
-335,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,85,96,2.931,3.31,3,0,37.0,0.542,0.56,335
-336,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,91,91,3.138,3.138,1,0,40.0,0.528,0.528,336
-337,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,114,114,3.931,3.931,1,0,35.0,0.573,0.573,337
-338,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,132,166,4.552,5.724,23,0,43.348,0.555,0.628,338
-339,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,136,137,4.69,4.724,2,0,36.0,0.599,0.601,339
-340,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,138,157,4.759,5.414,10,0,33.2,0.599,0.678,340
-341,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,141,142,4.862,4.897,2,0,34.0,0.52,0.522,341
-342,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,150,151,5.172,5.207,2,0,44.5,0.554,0.605,342
-343,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,151,152,5.207,5.241,2,0,32.0,0.528,0.529,343
-344,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,158,159,5.448,5.483,2,0,47.0,0.567,0.576,344
-345,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,159,159,5.483,5.483,1,0,44.0,0.63,0.63,345
-346,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,160,162,5.517,5.586,3,0,35.0,0.599,0.638,346
-347,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,163,166,5.621,5.724,4,0,42.25,0.546,0.592,347
-348,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,167,171,5.759,5.897,5,0,41.2,0.644,0.73,348
-349,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,172,179,5.931,6.172,5,0,79.2,0.585,0.647,349
-350,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,190,192,6.552,6.621,3,0,41.333,0.599,0.613,350
-351,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,193,200,6.655,6.897,3,0,63.0,0.644,0.703,351
-352,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,197,222,6.793,7.655,17,0,79.647,0.652,0.734,352
-353,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,202,208,6.966,7.172,6,0,58.5,0.526,0.572,353
-354,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,214,215,7.379,7.414,2,0,51.0,0.508,0.51,354
-355,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,218,218,7.517,7.517,1,0,54.0,0.519,0.519,355
-356,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,228,239,7.862,8.241,11,0,76.182,0.579,0.717,356
-357,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,228,229,7.862,7.897,2,0,51.0,0.532,0.536,357
-358,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,235,235,8.103,8.103,1,0,52.0,0.529,0.529,358
-359,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,242,244,8.345,8.414,3,0,64.667,0.518,0.528,359
-360,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,248,249,8.552,8.586,2,0,53.0,0.593,0.594,360
-361,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,257,259,8.862,8.931,3,0,72.333,0.533,0.545,361
-362,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,269,271,9.276,9.345,3,0,49.667,0.535,0.546,362
-363,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,272,274,9.379,9.448,3,0,73.0,0.565,0.571,363
-364,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,284,288,9.793,9.931,2,0,72.5,0.589,0.617,364
-365,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,293,294,10.103,10.138,2,0,45.0,0.521,0.534,365
-366,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,300,302,10.345,10.414,3,0,43.667,0.522,0.55,366
-367,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,314,314,10.828,10.828,1,0,42.0,0.547,0.547,367
-368,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,318,321,10.966,11.069,4,0,82.75,0.654,0.734,368
-369,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,339,345,11.69,11.897,5,0,49.6,0.536,0.59,369
-370,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,346,347,11.931,11.966,2,0,62.5,0.505,0.508,370
-371,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,353,353,12.172,12.172,1,0,65.0,0.504,0.504,371
-372,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,357,357,12.31,12.31,1,0,40.0,0.525,0.525,372
-373,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,361,361,12.448,12.448,1,0,50.0,0.58,0.58,373
-374,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,364,365,12.552,12.586,2,0,41.0,0.528,0.534,374
-375,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,382,382,13.172,13.172,1,0,39.0,0.503,0.503,375
-376,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,403,404,13.897,13.931,2,0,38.0,0.547,0.566,376
-377,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,426,426,14.69,14.69,1,0,42.0,0.52,0.52,377
-378,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,432,452,14.897,15.586,13,0,59.462,0.596,0.672,378
-379,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,434,442,14.966,15.241,7,0,35.857,0.519,0.555,379
-380,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,441,442,15.207,15.241,2,0,67.0,0.505,0.506,380
-381,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,448,448,15.448,15.448,1,0,46.0,0.544,0.544,381
-382,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,455,462,15.69,15.931,7,0,48.714,0.569,0.605,382
-383,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,459,459,15.828,15.828,1,0,41.0,0.528,0.528,383
-384,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,466,471,16.069,16.241,5,0,36.2,0.551,0.579,384
-385,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,467,467,16.103,16.103,1,0,39.0,0.53,0.53,385
-386,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,468,473,16.138,16.31,6,0,44.0,0.532,0.631,386
-387,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,469,473,16.172,16.31,2,0,41.5,0.522,0.539,387
-388,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,472,474,16.276,16.345,3,0,42.333,0.536,0.554,388
-389,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,475,477,16.379,16.448,3,0,36.0,0.567,0.576,389
-390,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,475,479,16.379,16.517,5,0,40.6,0.526,0.542,390
-391,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,480,481,16.552,16.586,2,0,45.0,0.508,0.511,391
-392,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,484,484,16.69,16.69,1,0,40.0,0.534,0.534,392
-393,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,485,492,16.724,16.966,5,0,38.6,0.526,0.537,393
-394,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,487,489,16.793,16.862,3,0,45.667,0.542,0.59,394
-395,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,498,498,17.172,17.172,1,0,50.0,0.555,0.555,395
-396,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,498,498,17.172,17.172,1,0,37.0,0.524,0.524,396
-397,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,501,501,17.276,17.276,1,0,52.0,0.531,0.531,397
-398,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,511,511,17.621,17.621,1,0,30.0,0.638,0.638,398
-399,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,513,516,17.69,17.793,4,0,37.25,0.559,0.58,399
-400,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,516,516,17.793,17.793,1,0,67.0,0.523,0.523,400
-401,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,525,525,18.103,18.103,1,0,44.0,0.581,0.581,401
-402,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,533,541,18.379,18.655,3,0,51.333,0.532,0.547,402
-403,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,535,545,18.448,18.793,10,0,50.0,0.546,0.582,403
-404,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,541,541,18.655,18.655,1,0,44.0,0.54,0.54,404
-405,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,545,553,18.793,19.069,7,0,44.714,0.58,0.638,405
-406,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,547,547,18.862,18.862,1,0,45.0,0.518,0.518,406
-407,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,552,552,19.034,19.034,1,0,36.0,0.549,0.549,407
-408,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,554,554,19.103,19.103,1,0,43.0,0.503,0.503,408
-409,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,559,651,19.276,22.448,86,0,48.035,0.608,0.743,409
-410,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,562,563,19.379,19.414,2,0,41.0,0.516,0.517,410
-411,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,574,578,19.793,19.931,4,0,43.5,0.548,0.592,411
-412,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,596,605,20.552,20.862,7,0,38.857,0.518,0.537,412
-413,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,599,612,20.655,21.103,14,0,44.286,0.611,0.661,413
-414,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,603,605,20.793,20.862,3,0,44.333,0.54,0.566,414
-415,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,605,605,20.862,20.862,1,0,39.0,0.501,0.501,415
-416,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,610,610,21.034,21.034,1,0,38.0,0.616,0.616,416
-417,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,614,636,21.172,21.931,8,0,42.625,0.526,0.555,417
-418,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,635,636,21.897,21.931,2,0,49.0,0.525,0.539,418
-419,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,652,723,22.483,24.931,68,0,71.559,0.685,0.839,419
-420,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,668,670,23.034,23.103,3,0,56.333,0.578,0.595,420
-421,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,672,672,23.172,23.172,1,0,56.0,0.516,0.516,421
-422,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,681,689,23.483,23.759,9,0,52.778,0.617,0.69,422
-423,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,682,703,23.517,24.241,19,0,53.947,0.567,0.659,423
-424,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,695,695,23.966,23.966,1,0,54.0,0.52,0.52,424
-425,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,724,724,24.966,24.966,1,0,69.0,0.619,0.619,425
-426,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,725,725,25.0,25.0,1,0,78.0,0.578,0.578,426
-427,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,730,730,25.172,25.172,1,0,174.0,0.64,0.64,427
-428,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,731,737,25.207,25.414,7,0,162.429,0.777,0.875,428
-429,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,738,742,25.448,25.586,5,0,172.6,0.736,0.862,429
-430,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,738,758,25.448,26.138,17,0,73.588,0.568,0.694,430
-431,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,741,748,25.552,25.793,8,0,90.5,0.582,0.634,431
-432,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,743,743,25.621,25.621,1,0,157.0,0.682,0.682,432
-433,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,744,744,25.655,25.655,1,0,127.0,0.72,0.72,433
-434,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,751,1001,25.897,34.517,243,0,123.712,0.735,0.922,434
-435,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,761,761,26.241,26.241,1,0,76.0,0.558,0.558,435
-436,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,764,870,26.345,30.0,95,0,101.811,0.715,0.901,436
-437,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,792,792,27.31,27.31,1,0,94.0,0.517,0.517,437
-438,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,797,801,27.483,27.621,5,0,91.2,0.564,0.634,438
-439,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,807,808,27.828,27.862,2,0,98.0,0.536,0.542,439
-440,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,822,822,28.345,28.345,1,0,95.0,0.564,0.564,440
-441,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,828,847,28.552,29.207,14,0,92.714,0.558,0.671,441
-442,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,864,888,29.793,30.621,25,0,99.92,0.737,0.809,442
-443,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,884,1057,30.483,36.448,174,0,108.908,0.713,0.886,443
-444,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,896,897,30.897,30.931,2,0,102.0,0.745,0.747,444
-445,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,898,908,30.966,31.31,11,0,99.909,0.742,0.804,445
-446,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,921,931,31.759,32.103,11,0,89.091,0.729,0.868,446
-447,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,933,933,32.172,32.172,1,0,86.0,0.571,0.571,447
-448,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,934,934,32.207,32.207,1,0,90.0,0.634,0.634,448
-449,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,935,936,32.241,32.276,2,0,93.0,0.706,0.706,449
-450,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,937,937,32.31,32.31,1,0,91.0,0.718,0.718,450
-451,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,938,938,32.345,32.345,1,0,89.0,0.618,0.618,451
-452,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1002,1038,34.552,35.793,35,0,106.2,0.641,0.774,452
-453,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1041,1043,35.897,35.966,3,0,86.333,0.592,0.627,453
-454,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1044,1050,36.0,36.207,7,0,69.857,0.592,0.775,454
-455,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1054,1054,36.345,36.345,1,0,65.0,0.614,0.614,455
-456,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1058,1058,36.483,36.483,1,0,53.0,0.542,0.542,456
-457,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1060,1060,36.552,36.552,1,0,66.0,0.549,0.549,457
-458,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1061,1061,36.586,36.586,1,0,50.0,0.519,0.519,458
-459,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1067,1067,36.793,36.793,1,0,68.0,0.512,0.512,459
-460,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1075,1076,37.069,37.103,2,0,76.0,0.563,0.565,460
-461,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1079,1081,37.207,37.276,3,0,82.333,0.587,0.631,461
-462,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1084,1084,37.379,37.379,1,0,77.0,0.557,0.557,462
-463,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1087,1087,37.483,37.483,1,0,45.0,0.612,0.612,463
-464,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1089,1089,37.552,37.552,1,0,46.0,0.564,0.564,464
-465,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1090,1090,37.586,37.586,1,0,45.0,0.67,0.67,465
-466,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1091,1091,37.621,37.621,1,0,44.0,0.564,0.564,466
-467,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1092,1092,37.655,37.655,1,0,44.0,0.642,0.642,467
-468,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1093,1093,37.69,37.69,1,0,43.0,0.583,0.583,468
-469,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1094,1095,37.724,37.759,2,0,43.0,0.565,0.567,469
-470,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1096,1096,37.793,37.793,1,0,45.0,0.562,0.562,470
-471,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1097,1097,37.828,37.828,1,0,44.0,0.519,0.519,471
-472,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1098,1098,37.862,37.862,1,0,43.0,0.512,0.512,472
-473,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1101,1101,37.966,37.966,1,0,40.0,0.506,0.506,473
-474,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1102,1102,38.0,38.0,1,0,43.0,0.525,0.525,474
-475,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1103,1103,38.034,38.034,1,0,42.0,0.657,0.657,475
-476,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1103,1108,38.034,38.207,6,0,45.5,0.603,0.657,476
-477,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1106,1106,38.138,38.138,1,0,41.0,0.554,0.554,477
-478,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1107,1107,38.172,38.172,1,0,42.0,0.611,0.611,478
-479,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1108,1108,38.207,38.207,1,0,46.0,0.732,0.732,479
-480,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1108,1108,38.207,38.207,1,0,70.0,0.603,0.603,480
-481,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1109,1110,38.241,38.276,2,0,44.0,0.703,0.703,481
-482,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1111,1111,38.31,38.31,1,0,45.0,0.699,0.699,482
-483,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1112,1112,38.345,38.345,1,0,42.0,0.729,0.729,483
-484,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1113,1113,38.379,38.379,1,0,41.0,0.756,0.756,484
-485,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1114,1115,38.414,38.448,2,0,45.0,0.692,0.693,485
-486,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1116,1116,38.483,38.483,1,0,45.0,0.641,0.641,486
-487,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1117,1117,38.517,38.517,1,0,44.0,0.759,0.759,487
-488,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1118,1118,38.552,38.552,1,0,43.0,0.669,0.669,488
-489,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1118,1219,38.552,42.034,101,0,75.198,0.69,0.822,489
-490,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1119,1120,38.586,38.621,2,0,44.0,0.782,0.788,490
-491,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1120,1120,38.621,38.621,1,0,42.0,0.524,0.524,491
-492,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1121,1121,38.655,38.655,1,0,41.0,0.637,0.637,492
-493,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1122,1149,38.69,39.621,28,0,41.714,0.655,0.773,493
-494,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1132,1132,39.034,39.034,1,0,60.0,0.623,0.623,494
-495,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1136,1136,39.172,39.172,1,0,46.0,0.522,0.522,495
-496,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1137,1137,39.207,39.207,1,0,46.0,0.606,0.606,496
-497,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1141,1144,39.345,39.448,4,0,67.25,0.636,0.719,497
-498,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1141,1141,39.345,39.345,1,0,46.0,0.507,0.507,498
-499,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1142,1142,39.379,39.379,1,0,46.0,0.622,0.622,499
-500,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1143,1147,39.414,39.552,5,0,48.2,0.678,0.799,500
-501,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1143,1144,39.414,39.448,2,0,55.0,0.515,0.516,501
-502,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1145,1145,39.483,39.483,1,0,54.0,0.596,0.596,502
-503,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1146,1146,39.517,39.517,1,0,58.0,0.605,0.605,503
-504,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1147,1147,39.552,39.552,1,0,60.0,0.569,0.569,504
-505,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1147,1147,39.552,39.552,1,0,60.0,0.555,0.555,505
-506,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1148,1150,39.586,39.655,3,0,49.0,0.562,0.57,506
-507,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1148,1149,39.586,39.621,2,0,57.5,0.545,0.549,507
-508,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1150,1150,39.655,39.655,1,0,59.0,0.589,0.589,508
-509,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1151,1151,39.69,39.69,1,0,55.0,0.593,0.593,509
-510,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1151,1159,39.69,39.966,9,0,58.556,0.627,0.708,510
-511,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1151,1154,39.69,39.793,4,0,54.25,0.526,0.553,511
-512,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1152,1153,39.724,39.759,2,0,56.0,0.596,0.597,512
-513,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1154,1154,39.793,39.793,1,0,56.0,0.625,0.625,513
-514,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1155,1155,39.828,39.828,1,0,48.0,0.68,0.68,514
-515,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1155,1155,39.828,39.828,1,0,56.0,0.532,0.532,515
-516,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1156,1168,39.862,40.276,13,0,50.154,0.715,0.834,516
-517,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1156,1156,39.862,39.862,1,0,58.0,0.695,0.695,517
-518,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1156,1156,39.862,39.862,1,0,52.0,0.619,0.619,518
-519,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1159,1159,39.966,39.966,1,0,63.0,0.522,0.522,519
-520,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1160,1160,40.0,40.0,1,0,45.0,0.536,0.536,520
-521,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1165,1165,40.172,40.172,1,0,41.0,0.54,0.54,521
-522,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1165,1165,40.172,40.172,1,0,59.0,0.525,0.525,522
-523,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1166,1166,40.207,40.207,1,0,49.0,0.639,0.639,523
-524,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1167,1168,40.241,40.276,2,0,52.0,0.597,0.599,524
-525,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1169,1169,40.31,40.31,1,0,63.0,0.581,0.581,525
-526,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1169,1173,40.31,40.448,5,0,45.0,0.547,0.567,526
-527,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1170,1173,40.345,40.448,4,0,64.75,0.538,0.564,527
-528,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1175,1175,40.517,40.517,1,0,68.0,0.561,0.561,528
-529,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1176,1176,40.552,40.552,1,0,65.0,0.722,0.722,529
-530,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1181,1182,40.724,40.759,2,0,60.0,0.587,0.587,530
-531,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1181,1199,40.724,41.345,16,0,53.75,0.597,0.689,531
-532,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1183,1183,40.793,40.793,1,0,60.0,0.516,0.516,532
-533,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1184,1184,40.828,40.828,1,0,42.0,0.516,0.516,533
-534,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1185,1185,40.862,40.862,1,0,41.0,0.594,0.594,534
-535,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1193,1195,41.138,41.207,3,0,39.667,0.528,0.545,535
-536,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1196,1229,41.241,42.379,34,0,39.588,0.637,0.78,536
-537,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1199,1212,41.345,41.793,4,0,39.5,0.525,0.553,537
-538,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1200,1202,41.379,41.448,3,0,44.0,0.623,0.642,538
-539,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1201,1202,41.414,41.448,2,0,50.0,0.571,0.572,539
-540,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1203,1203,41.483,41.483,1,0,45.0,0.518,0.518,540
-541,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1206,1207,41.586,41.621,2,0,48.0,0.564,0.565,541
-542,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1208,1208,41.655,41.655,1,0,50.0,0.54,0.54,542
-543,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1210,1210,41.724,41.724,1,0,49.0,0.507,0.507,543
-544,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1212,1233,41.793,42.517,13,0,49.154,0.533,0.588,544
-545,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1212,1213,41.793,41.828,2,0,48.5,0.566,0.58,545
-546,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1218,1227,42.0,42.31,10,0,40.0,0.582,0.64,546
-547,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1223,1227,42.172,42.31,5,0,46.0,0.6,0.668,547
-548,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1223,1271,42.172,43.828,44,0,73.523,0.665,0.829,548
-549,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1229,1233,42.379,42.517,5,0,47.2,0.544,0.555,549
-550,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1229,1229,42.379,42.379,1,0,38.0,0.534,0.534,550
-551,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1230,1232,42.414,42.483,3,0,40.667,0.626,0.665,551
-552,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1230,1231,42.414,42.448,2,0,39.0,0.504,0.504,552
-553,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1233,1233,42.517,42.517,1,0,40.0,0.544,0.544,553
-554,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1235,1237,42.586,42.655,3,0,39.333,0.667,0.669,554
-555,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1243,1243,42.862,42.862,1,0,46.0,0.511,0.511,555
-556,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1244,1247,42.897,43.0,4,0,49.25,0.579,0.664,556
-557,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1246,1246,42.966,42.966,1,0,49.0,0.518,0.518,557
-558,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1249,1251,43.069,43.138,3,0,69.333,0.606,0.632,558
-559,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1261,1261,43.483,43.483,1,0,46.0,0.534,0.534,559
-560,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1265,1285,43.621,44.31,19,0,46.895,0.647,0.752,560
-561,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1267,1270,43.69,43.793,4,0,45.25,0.532,0.55,561
-562,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1271,1310,43.828,45.172,38,0,47.974,0.623,0.746,562
-563,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1275,1277,43.966,44.034,3,0,62.333,0.537,0.562,563
-564,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1288,1290,44.414,44.483,3,0,48.667,0.511,0.516,564
-565,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1292,1315,44.552,45.345,21,0,48.381,0.592,0.662,565
-566,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1300,1300,44.828,44.828,1,0,65.0,0.512,0.512,566
-567,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1311,1311,45.207,45.207,1,0,50.0,0.567,0.567,567
-568,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1312,1313,45.241,45.276,2,0,56.0,0.555,0.555,568
-569,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1314,1329,45.31,45.828,16,0,49.375,0.645,0.756,569
-570,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1314,1314,45.31,45.31,1,0,55.0,0.5,0.5,570
-571,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1315,1315,45.345,45.345,1,0,58.0,0.521,0.521,571
-572,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1317,1318,45.414,45.448,2,0,50.0,0.613,0.616,572
-573,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1317,1320,45.414,45.517,3,0,42.667,0.526,0.536,573
-574,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1319,1319,45.483,45.483,1,0,48.0,0.62,0.62,574
-575,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1320,1320,45.517,45.517,1,0,55.0,0.621,0.621,575
-576,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1321,1321,45.552,45.552,1,0,55.0,0.668,0.668,576
-577,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1322,1323,45.586,45.621,2,0,53.5,0.591,0.591,577
-578,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1324,1324,45.655,45.655,1,0,56.0,0.681,0.681,578
-579,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1325,1325,45.69,45.69,1,0,55.0,0.685,0.685,579
-580,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1326,1326,45.724,45.724,1,0,54.0,0.611,0.611,580
-581,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1326,1326,45.724,45.724,1,0,77.0,0.606,0.606,581
-582,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1327,1328,45.759,45.793,2,0,45.0,0.621,0.621,582
-583,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1327,1328,45.759,45.793,2,0,50.0,0.566,0.567,583
-584,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1329,1329,45.828,45.828,1,0,47.0,0.599,0.599,584
-585,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1329,1329,45.828,45.828,1,0,55.0,0.566,0.566,585
-586,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1330,1340,45.862,46.207,11,0,50.182,0.661,0.749,586
-587,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1330,1330,45.862,45.862,1,0,53.0,0.619,0.619,587
-588,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1330,1330,45.862,45.862,1,0,46.0,0.55,0.55,588
-589,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1330,1330,45.862,45.862,1,0,68.0,0.532,0.532,589
-590,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1331,1332,45.897,45.931,2,0,51.0,0.74,0.741,590
-591,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1331,1332,45.897,45.931,2,0,54.0,0.718,0.718,591
-592,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1331,1332,45.897,45.931,2,0,41.0,0.56,0.56,592
-593,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1333,1333,45.966,45.966,1,0,54.0,0.747,0.747,593
-594,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1333,1353,45.966,46.655,16,0,54.562,0.574,0.67,594
-595,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1333,1333,45.966,45.966,1,0,72.0,0.632,0.632,595
-596,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1334,1334,46.0,46.0,1,0,53.0,0.644,0.644,596
-597,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1334,1334,46.0,46.0,1,0,77.0,0.545,0.545,597
-598,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1334,1334,46.0,46.0,1,0,38.0,0.504,0.504,598
-599,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1335,1335,46.034,46.034,1,0,56.0,0.581,0.581,599
-600,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1336,1337,46.069,46.103,2,0,72.0,0.566,0.566,600
-601,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1336,1337,46.069,46.103,2,0,42.0,0.557,0.557,601
-602,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1338,1338,46.138,46.138,1,0,72.0,0.547,0.547,602
-603,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1338,1338,46.138,46.138,1,0,49.0,0.524,0.524,603
-604,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1339,1339,46.172,46.172,1,0,73.0,0.64,0.64,604
-605,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1339,1339,46.172,46.172,1,0,50.0,0.602,0.602,605
-606,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1340,1340,46.207,46.207,1,0,70.0,0.636,0.636,606
-607,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1340,1340,46.207,46.207,1,0,47.0,0.589,0.589,607
-608,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1340,1340,46.207,46.207,1,0,47.0,0.522,0.522,608
-609,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1341,1342,46.241,46.276,2,0,52.0,0.502,0.502,609
-610,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1343,1343,46.31,46.31,1,0,43.0,0.552,0.552,610
-611,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1345,1345,46.379,46.379,1,0,49.0,0.509,0.509,611
-612,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1351,1353,46.586,46.655,3,0,51.667,0.548,0.571,612
-613,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1351,1352,46.586,46.621,2,0,65.0,0.549,0.55,613
-614,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1353,1353,46.655,46.655,1,0,64.0,0.574,0.574,614
-615,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1356,1398,46.759,48.207,41,0,61.22,0.66,0.803,615
-616,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1358,1358,46.828,46.828,1,0,43.0,0.509,0.509,616
-617,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1358,1358,46.828,46.828,1,0,58.0,0.506,0.506,617
-618,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1394,1429,48.069,49.276,18,0,84.389,0.559,0.666,618
-619,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1400,1405,48.276,48.448,4,0,56.0,0.529,0.56,619
-620,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1406,1406,48.483,48.483,1,0,51.0,0.567,0.567,620
-621,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1409,1410,48.586,48.621,2,0,59.5,0.537,0.539,621
-622,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1413,1427,48.724,49.207,12,0,69.667,0.62,0.75,622
-623,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1416,1419,48.828,48.931,4,0,121.75,0.648,0.745,623
-624,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1420,1425,48.966,49.138,6,0,147.833,0.773,0.805,624
-625,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1425,1425,49.138,49.138,1,0,59.0,0.59,0.59,625
-626,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1425,1425,49.138,49.138,1,0,45.0,0.5,0.5,626
-627,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1426,1426,49.172,49.172,1,0,156.0,0.893,0.893,627
-628,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1427,1427,49.207,49.207,1,0,164.0,0.746,0.746,628
-629,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1428,1429,49.241,49.276,2,0,82.5,0.732,0.739,629
-630,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1433,1434,49.414,49.448,2,0,97.0,0.642,0.678,630
-631,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1435,1435,49.483,49.483,1,0,94.0,0.699,0.699,631
-632,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1436,1436,49.517,49.517,1,0,105.0,0.763,0.763,632
-633,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1440,1454,49.655,50.138,15,0,80.067,0.812,0.912,633
-634,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1440,1476,49.655,50.897,22,0,58.636,0.617,0.73,634
-635,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1445,1545,49.828,53.276,101,0,111.158,0.772,0.867,635
-636,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1452,1464,50.069,50.483,13,0,42.077,0.555,0.655,636
-637,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1454,1464,50.138,50.483,7,0,52.857,0.565,0.623,637
-638,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1467,1513,50.586,52.172,34,0,85.176,0.624,0.723,638
-639,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1472,1479,50.759,51.0,6,0,43.333,0.58,0.665,639
-640,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1474,1474,50.828,50.828,1,0,48.0,0.519,0.519,640
-641,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1476,1479,50.897,51.0,4,0,42.0,0.618,0.643,641
-642,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1477,1479,50.931,51.0,3,0,41.333,0.558,0.575,642
-643,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1480,1497,51.034,51.621,18,0,45.278,0.609,0.705,643
-644,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1480,1483,51.034,51.138,2,0,52.0,0.527,0.53,644
-645,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1483,1487,51.138,51.276,4,0,64.25,0.519,0.529,645
-646,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1488,1489,51.31,51.345,2,0,43.0,0.562,0.622,646
-647,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1494,1495,51.517,51.552,2,0,43.5,0.516,0.525,647
-648,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1501,1526,51.759,52.621,23,0,49.826,0.607,0.693,648
-649,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1501,1502,51.759,51.793,2,0,49.0,0.554,0.556,649
-650,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1503,1503,51.828,51.828,1,0,46.0,0.5,0.5,650
-651,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1505,1511,51.897,52.103,6,0,47.667,0.589,0.65,651
-652,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1508,1508,52.0,52.0,1,0,44.0,0.531,0.531,652
-653,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1508,1523,52.0,52.517,8,0,79.625,0.539,0.59,653
-654,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1510,1513,52.069,52.172,4,0,58.75,0.545,0.592,654
-655,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1513,1524,52.172,52.552,12,0,50.5,0.587,0.632,655
-656,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1519,1522,52.379,52.483,4,0,61.5,0.535,0.553,656
-657,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1529,1534,52.724,52.897,6,0,82.0,0.559,0.619,657
-658,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1539,1548,53.069,53.379,9,0,86.556,0.599,0.665,658
-659,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1543,1554,53.207,53.586,3,0,56.0,0.548,0.582,659
-660,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1554,1600,53.586,55.172,37,0,59.297,0.599,0.732,660
-661,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1557,1557,53.69,53.69,1,0,81.0,0.507,0.507,661
-662,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1564,1569,53.931,54.103,3,0,75.667,0.536,0.542,662
-663,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1570,1765,54.138,60.862,187,0,84.668,0.728,0.926,663
-664,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1576,1582,54.345,54.552,5,0,57.2,0.587,0.631,664
-665,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1580,1580,54.483,54.483,1,0,58.0,0.509,0.509,665
-666,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1590,1598,54.828,55.103,7,0,58.286,0.572,0.621,666
-667,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1601,1601,55.207,55.207,1,0,70.0,0.504,0.504,667
-668,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1605,1639,55.345,56.517,34,0,67.559,0.608,0.689,668
-669,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1605,1605,55.345,55.345,1,0,50.0,0.512,0.512,669
-670,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1621,1621,55.897,55.897,1,0,46.0,0.53,0.53,670
-671,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1625,1625,56.034,56.034,1,0,42.0,0.525,0.525,671
-672,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1630,1630,56.207,56.207,1,0,52.0,0.522,0.522,672
-673,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1633,1634,56.31,56.345,2,0,53.0,0.507,0.51,673
-674,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1636,1638,56.414,56.483,3,0,50.333,0.53,0.541,674
-675,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1639,1639,56.517,56.517,1,0,52.0,0.615,0.615,675
-676,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1641,1746,56.586,60.207,105,0,109.705,0.8,0.932,676
-677,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1643,1643,56.655,56.655,1,0,53.0,0.57,0.57,677
-678,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1644,1649,56.69,56.862,6,0,50.5,0.572,0.613,678
-679,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1651,1658,56.931,57.172,8,0,51.875,0.642,0.727,679
-680,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1659,1688,57.207,58.207,30,0,56.933,0.714,0.852,680
-681,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1667,1667,57.483,57.483,1,0,35.0,0.539,0.539,681
-682,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1680,1681,57.931,57.966,2,0,48.0,0.545,0.548,682
-683,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1682,1686,58.0,58.138,5,0,44.4,0.588,0.654,683
-684,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1683,1683,58.034,58.034,1,0,50.0,0.577,0.577,684
-685,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1684,1688,58.069,58.207,5,0,53.8,0.677,0.721,685
-686,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1689,1716,58.241,59.172,28,0,69.071,0.729,0.828,686
-687,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1689,1700,58.241,58.621,12,0,54.25,0.647,0.76,687
-688,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1766,1766,60.897,60.897,1,0,145.0,0.807,0.807,688
-689,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1766,1766,60.897,60.897,1,0,38.0,0.594,0.594,689
-690,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1767,1768,60.931,60.966,2,0,148.5,0.695,0.699,690
-691,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1767,1768,60.931,60.966,2,0,74.5,0.539,0.544,691
-692,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1769,1769,61.0,61.0,1,0,157.0,0.716,0.716,692
-693,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1769,1769,61.0,61.0,1,0,40.0,0.634,0.634,693
-694,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1769,1769,61.0,61.0,1,0,107.0,0.507,0.507,694
-695,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1770,1770,61.034,61.034,1,0,170.0,0.792,0.792,695
-696,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1770,1770,61.034,61.034,1,0,129.0,0.69,0.69,696
-697,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1770,1770,61.034,61.034,1,0,42.0,0.523,0.523,697
-698,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1771,1771,61.069,61.069,1,0,123.0,0.766,0.766,698
-699,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1771,1771,61.069,61.069,1,0,156.0,0.674,0.674,699
-700,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1772,1773,61.103,61.138,2,0,121.0,0.699,0.702,700
-701,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1772,1773,61.103,61.138,2,0,176.0,0.682,0.682,701
-702,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1774,1774,61.172,61.172,1,0,113.0,0.788,0.788,702
-703,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1774,1774,61.172,61.172,1,0,110.0,0.636,0.636,703
-704,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1774,1774,61.172,61.172,1,0,183.0,0.59,0.59,704
-705,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1775,1775,61.207,61.207,1,0,110.0,0.823,0.823,705
-706,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1775,1775,61.207,61.207,1,0,184.0,0.654,0.654,706
-707,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1775,1775,61.207,61.207,1,0,103.0,0.624,0.624,707
-708,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1776,1776,61.241,61.241,1,0,105.0,0.822,0.822,708
-709,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1776,1776,61.241,61.241,1,0,117.0,0.671,0.671,709
-710,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1777,1778,61.276,61.31,2,0,106.5,0.838,0.841,710
-711,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1777,1778,61.276,61.31,2,0,117.5,0.527,0.531,711
-712,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1779,1779,61.345,61.345,1,0,107.0,0.876,0.876,712
-713,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1779,1779,61.345,61.345,1,0,118.0,0.804,0.804,713
-714,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1780,1780,61.379,61.379,1,0,111.0,0.826,0.826,714
-715,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1780,1780,61.379,61.379,1,0,121.0,0.688,0.688,715
-716,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1781,1782,61.414,61.448,2,0,113.0,0.873,0.874,716
-717,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1781,1782,61.414,61.448,2,0,111.5,0.749,0.75,717
-718,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1783,1783,61.483,61.483,1,0,114.0,0.802,0.802,718
-719,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1783,1783,61.483,61.483,1,0,108.0,0.724,0.724,719
-720,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1784,1784,61.517,61.517,1,0,115.0,0.88,0.88,720
-721,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1784,1784,61.517,61.517,1,0,110.0,0.744,0.744,721
-722,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1785,1785,61.552,61.552,1,0,113.0,0.832,0.832,722
-723,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1785,1785,61.552,61.552,1,0,108.0,0.759,0.759,723
-724,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1786,1787,61.586,61.621,2,0,107.0,0.761,0.762,724
-725,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1786,1787,61.586,61.621,2,0,114.0,0.664,0.666,725
-726,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1786,1787,61.586,61.621,2,0,78.0,0.587,0.587,726
-727,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1788,1788,61.655,61.655,1,0,111.0,0.817,0.817,727
-728,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1788,1788,61.655,61.655,1,0,102.0,0.766,0.766,728
-729,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1788,1788,61.655,61.655,1,0,59.0,0.646,0.646,729
-730,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1788,1788,61.655,61.655,1,0,80.0,0.526,0.526,730
-731,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1789,1789,61.69,61.69,1,0,103.0,0.818,0.818,731
-732,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1789,1789,61.69,61.69,1,0,63.0,0.765,0.765,732
-733,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1789,1789,61.69,61.69,1,0,113.0,0.644,0.644,733
-734,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1789,1789,61.69,61.69,1,0,77.0,0.64,0.64,734
-735,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1790,1790,61.724,61.724,1,0,107.0,0.828,0.828,735
-736,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1790,1790,61.724,61.724,1,0,62.0,0.707,0.707,736
-737,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1790,1790,61.724,61.724,1,0,91.0,0.605,0.605,737
-738,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1791,1792,61.759,61.793,2,0,107.0,0.778,0.781,738
-739,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1791,1792,61.759,61.793,2,0,88.5,0.622,0.626,739
-740,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1791,1792,61.759,61.793,2,0,63.0,0.611,0.617,740
-741,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1793,1793,61.828,61.828,1,0,114.0,0.777,0.777,741
-742,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1793,1793,61.828,61.828,1,0,58.0,0.765,0.765,742
-743,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1793,1793,61.828,61.828,1,0,86.0,0.703,0.703,743
-744,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1794,1794,61.862,61.862,1,0,57.0,0.769,0.769,744
-745,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1794,1794,61.862,61.862,1,0,100.0,0.726,0.726,745
-746,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1794,1794,61.862,61.862,1,0,80.0,0.676,0.676,746
-747,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1795,1795,61.897,61.897,1,0,58.0,0.818,0.818,747
-748,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1795,1795,61.897,61.897,1,0,77.0,0.706,0.706,748
-749,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1796,1797,61.931,61.966,2,0,57.0,0.834,0.836,749
-750,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1796,1797,61.931,61.966,2,0,83.5,0.608,0.612,750
-751,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1798,1798,62.0,62.0,1,0,54.0,0.73,0.73,751
-752,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1798,1798,62.0,62.0,1,0,82.0,0.694,0.694,752
-753,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1799,1799,62.034,62.034,1,0,56.0,0.799,0.799,753
-754,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1799,1799,62.034,62.034,1,0,85.0,0.765,0.765,754
-755,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1800,1800,62.069,62.069,1,0,59.0,0.792,0.792,755
-756,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1800,1800,62.069,62.069,1,0,81.0,0.78,0.78,756
-757,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1800,1800,62.069,62.069,1,0,62.0,0.515,0.515,757
-758,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1801,1802,62.103,62.138,2,0,60.0,0.813,0.814,758
-759,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1801,1802,62.103,62.138,2,0,84.0,0.786,0.788,759
-760,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1803,1803,62.172,62.172,1,0,59.0,0.858,0.858,760
-761,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1803,1803,62.172,62.172,1,0,76.0,0.661,0.661,761
-762,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1803,1803,62.172,62.172,1,0,66.0,0.61,0.61,762
-763,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1804,1804,62.207,62.207,1,0,61.0,0.858,0.858,763
-764,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1804,1804,62.207,62.207,1,0,80.0,0.64,0.64,764
-765,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1804,1804,62.207,62.207,1,0,67.0,0.636,0.636,765
-766,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1805,1805,62.241,62.241,1,0,62.0,0.86,0.86,766
-767,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1805,1805,62.241,62.241,1,0,70.0,0.754,0.754,767
-768,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1805,1805,62.241,62.241,1,0,82.0,0.663,0.663,768
-769,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1806,1807,62.276,62.31,2,0,60.5,0.772,0.782,769
-770,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1806,1807,62.276,62.31,2,0,68.0,0.741,0.748,770
-771,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1806,1807,62.276,62.31,2,0,77.5,0.731,0.736,771
-772,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1806,1807,62.276,62.31,2,0,42.0,0.533,0.538,772
-773,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1808,1808,62.345,62.345,1,0,63.0,0.816,0.816,773
-774,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1808,1808,62.345,62.345,1,0,77.0,0.652,0.652,774
-775,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1808,1808,62.345,62.345,1,0,64.0,0.556,0.556,775
-776,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1809,1809,62.379,62.379,1,0,58.0,0.787,0.787,776
-777,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1809,1809,62.379,62.379,1,0,59.0,0.731,0.731,777
-778,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1809,1809,62.379,62.379,1,0,79.0,0.726,0.726,778
-779,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1809,1809,62.379,62.379,1,0,43.0,0.604,0.604,779
-780,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1810,1811,62.414,62.448,2,0,60.0,0.87,0.872,780
-781,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1810,1811,62.414,62.448,2,0,73.5,0.746,0.754,781
-782,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1810,1811,62.414,62.448,2,0,62.0,0.605,0.615,782
-783,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1810,1811,62.414,62.448,2,0,44.0,0.54,0.546,783
-784,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1812,1812,62.483,62.483,1,0,59.0,0.794,0.794,784
-785,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1812,1812,62.483,62.483,1,0,63.0,0.707,0.707,785
-786,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1812,1812,62.483,62.483,1,0,78.0,0.598,0.598,786
-787,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1812,1812,62.483,62.483,1,0,44.0,0.569,0.569,787
-788,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1813,1813,62.517,62.517,1,0,58.0,0.848,0.848,788
-789,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1813,1813,62.517,62.517,1,0,84.0,0.685,0.685,789
-790,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1813,1813,62.517,62.517,1,0,64.0,0.676,0.676,790
-791,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1814,1814,62.552,62.552,1,0,58.0,0.82,0.82,791
-792,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1814,1814,62.552,62.552,1,0,65.0,0.784,0.784,792
-793,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1814,1814,62.552,62.552,1,0,84.0,0.737,0.737,793
-794,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1814,1814,62.552,62.552,1,0,52.0,0.66,0.66,794
-795,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1814,1814,62.552,62.552,1,0,41.0,0.519,0.519,795
-796,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1815,1816,62.586,62.621,2,0,86.0,0.834,0.835,796
-797,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1815,1816,62.586,62.621,2,0,62.0,0.786,0.787,797
-798,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1815,1816,62.586,62.621,2,0,58.0,0.737,0.742,798
-799,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1815,1816,62.586,62.621,2,0,49.5,0.583,0.603,799
-800,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1815,1816,62.586,62.621,2,0,41.0,0.587,0.587,800
-801,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1817,1817,62.655,62.655,1,0,82.0,0.856,0.856,801
-802,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1817,1817,62.655,62.655,1,0,60.0,0.839,0.839,802
-803,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1817,1817,62.655,62.655,1,0,66.0,0.812,0.812,803
-804,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1818,1818,62.69,62.69,1,0,67.0,0.842,0.842,804
-805,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1818,1818,62.69,62.69,1,0,89.0,0.809,0.809,805
-806,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1818,1818,62.69,62.69,1,0,57.0,0.742,0.742,806
-807,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1818,1818,62.69,62.69,1,0,38.0,0.501,0.501,807
-808,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1819,1819,62.724,62.724,1,0,63.0,0.839,0.839,808
-809,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1819,1819,62.724,62.724,1,0,59.0,0.775,0.775,809
-810,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1819,1819,62.724,62.724,1,0,86.0,0.729,0.729,810
-811,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1820,1821,62.759,62.793,2,0,60.0,0.866,0.867,811
-812,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1820,1821,62.759,62.793,2,0,63.0,0.828,0.829,812
-813,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1820,1821,62.759,62.793,2,0,80.5,0.596,0.598,813
-814,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1822,1822,62.828,62.828,1,0,62.0,0.866,0.866,814
-815,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1822,1822,62.828,62.828,1,0,61.0,0.77,0.77,815
-816,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1822,1822,62.828,62.828,1,0,56.0,0.71,0.71,816
-817,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1823,1823,62.862,62.862,1,0,59.0,0.861,0.861,817
-818,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1823,1823,62.862,62.862,1,0,59.0,0.773,0.773,818
-819,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1823,1823,62.862,62.862,1,0,63.0,0.681,0.681,819
-820,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1824,1824,62.897,62.897,1,0,59.0,0.806,0.806,820
-821,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1824,1824,62.897,62.897,1,0,60.0,0.723,0.723,821
-822,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1824,1824,62.897,62.897,1,0,57.0,0.686,0.686,822
-823,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1825,1826,62.931,62.966,2,0,58.0,0.829,0.839,823
-824,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1825,1826,62.931,62.966,2,0,61.5,0.796,0.797,824
-825,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1825,1826,62.931,62.966,2,0,54.5,0.703,0.706,825
-826,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1827,1827,63.0,63.0,1,0,59.0,0.825,0.825,826
-827,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1827,1827,63.0,63.0,1,0,51.0,0.76,0.76,827
-828,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1827,1827,63.0,63.0,1,0,64.0,0.744,0.744,828
-829,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1828,1828,63.034,63.034,1,0,59.0,0.819,0.819,829
-830,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1828,1828,63.034,63.034,1,0,60.0,0.775,0.775,830
-831,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1828,1828,63.034,63.034,1,0,51.0,0.67,0.67,831
-832,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1829,1829,63.069,63.069,1,0,64.0,0.696,0.696,832
-833,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1829,1829,63.069,63.069,1,0,54.0,0.646,0.646,833
-834,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1829,1829,63.069,63.069,1,0,66.0,0.646,0.646,834
-835,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1830,1831,63.103,63.138,2,0,56.5,0.736,0.74,835
-836,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1830,1831,63.103,63.138,2,0,60.0,0.739,0.74,836
-837,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1830,1831,63.103,63.138,2,0,62.0,0.644,0.644,837
-838,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1832,1832,63.172,63.172,1,0,62.0,0.769,0.769,838
-839,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1832,1832,63.172,63.172,1,0,55.0,0.685,0.685,839
-840,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1832,1832,63.172,63.172,1,0,63.0,0.649,0.649,840
-841,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1833,1833,63.207,63.207,1,0,59.0,0.71,0.71,841
-842,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1833,1833,63.207,63.207,1,0,68.0,0.634,0.634,842
-843,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1833,1833,63.207,63.207,1,0,62.0,0.59,0.59,843
-844,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1834,1834,63.241,63.241,1,0,54.0,0.724,0.724,844
-845,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1834,1834,63.241,63.241,1,0,61.0,0.711,0.711,845
-846,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1834,1834,63.241,63.241,1,0,61.0,0.677,0.677,846
-847,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1835,1836,63.276,63.31,2,0,65.0,0.852,0.855,847
-848,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1835,1836,63.276,63.31,2,0,70.0,0.715,0.716,848
-849,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1837,1837,63.345,63.345,1,0,67.0,0.795,0.795,849
-850,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1837,1837,63.345,63.345,1,0,59.0,0.754,0.754,850
-851,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1838,1838,63.379,63.379,1,0,71.0,0.727,0.727,851
-852,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1838,1838,63.379,63.379,1,0,69.0,0.71,0.71,852
-853,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1839,1840,63.414,63.448,2,0,69.0,0.776,0.781,853
-854,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1839,1840,63.414,63.448,2,0,64.5,0.649,0.651,854
-855,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1839,1839,63.414,63.414,1,0,65.0,0.506,0.506,855
-856,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1841,1841,63.483,63.483,1,0,66.0,0.746,0.746,856
-857,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1841,1841,63.483,63.483,1,0,61.0,0.734,0.734,857
-858,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1841,1841,63.483,63.483,1,0,64.0,0.501,0.501,858
-859,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1842,1842,63.517,63.517,1,0,60.0,0.79,0.79,859
-860,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1842,1842,63.517,63.517,1,0,59.0,0.73,0.73,860
-861,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1842,1842,63.517,63.517,1,0,60.0,0.512,0.512,861
-862,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1843,1843,63.552,63.552,1,0,63.0,0.779,0.779,862
-863,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1843,1843,63.552,63.552,1,0,57.0,0.568,0.568,863
-864,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1844,1845,63.586,63.621,2,0,62.5,0.778,0.781,864
-865,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1844,1845,63.586,63.621,2,0,64.0,0.577,0.579,865
-866,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1846,1846,63.655,63.655,1,0,60.0,0.787,0.787,866
-867,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1847,1847,63.69,63.69,1,0,61.0,0.726,0.726,867
-868,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1847,1847,63.69,63.69,1,0,61.0,0.574,0.574,868
-869,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1848,1848,63.724,63.724,1,0,62.0,0.717,0.717,869
-870,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1849,1850,63.759,63.793,2,0,64.0,0.634,0.635,870
-871,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1849,1850,63.759,63.793,2,0,57.5,0.634,0.636,871
-872,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1849,1851,63.759,63.828,3,0,69.333,0.552,0.562,872
-873,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1851,1851,63.828,63.828,1,0,56.0,0.718,0.718,873
-874,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1851,1851,63.828,63.828,1,0,65.0,0.694,0.694,874
-875,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1852,1857,63.862,64.034,6,0,61.333,0.713,0.764,875
-876,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1852,1852,63.862,63.862,1,0,62.0,0.625,0.625,876
-877,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1852,1852,63.862,63.862,1,0,57.0,0.53,0.53,877
-878,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1853,1853,63.897,63.897,1,0,60.0,0.547,0.547,878
-879,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1854,1860,63.931,64.138,5,0,67.6,0.601,0.636,879
-880,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1854,1870,63.931,64.483,14,0,63.286,0.588,0.668,880
-881,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1856,1874,64.0,64.621,15,0,66.467,0.6,0.666,881
-882,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1856,1857,64.0,64.034,2,0,65.0,0.512,0.521,882
-883,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1862,1867,64.207,64.379,6,0,57.667,0.655,0.738,883
-884,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1868,1879,64.414,64.793,12,0,51.25,0.637,0.707,884
-885,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1877,1877,64.724,64.724,1,0,58.0,0.514,0.514,885
-886,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1883,1910,64.931,65.862,28,0,55.643,0.65,0.763,886
-887,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1890,1890,65.172,65.172,1,0,46.0,0.587,0.587,887
-888,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1892,1892,65.241,65.241,1,0,52.0,0.558,0.558,888
-889,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1898,1919,65.448,66.172,14,0,70.786,0.57,0.623,889
-890,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1902,1903,65.586,65.621,2,0,53.0,0.604,0.604,890
-891,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1902,1911,65.586,65.897,7,0,55.857,0.541,0.605,891
-892,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1910,1910,65.862,65.862,1,0,32.0,0.552,0.552,892
-893,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1915,1930,66.034,66.552,11,0,55.182,0.577,0.643,893
-894,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1917,1925,66.103,66.379,9,0,55.111,0.634,0.749,894
-895,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1917,1919,66.103,66.172,3,0,56.333,0.524,0.55,895
-896,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1919,1919,66.172,66.172,1,0,49.0,0.538,0.538,896
-897,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1927,1928,66.448,66.483,2,0,51.0,0.552,0.582,897
-898,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1927,1927,66.448,66.448,1,0,54.0,0.541,0.541,898
-899,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1931,1932,66.586,66.621,2,0,50.0,0.564,0.565,899
-900,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1934,1934,66.69,66.69,1,0,41.0,0.534,0.534,900
-901,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1934,1934,66.69,66.69,1,0,49.0,0.527,0.527,901
-902,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1934,1934,66.69,66.69,1,0,67.0,0.503,0.503,902
-903,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1935,1938,66.724,66.828,4,0,52.25,0.527,0.547,903
-904,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1935,1935,66.724,66.724,1,0,43.0,0.508,0.508,904
-905,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1936,1937,66.759,66.793,2,0,45.0,0.596,0.596,905
-906,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1938,1938,66.828,66.828,1,0,50.0,0.526,0.526,906
-907,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1939,1939,66.862,66.862,1,0,56.0,0.513,0.513,907
-908,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1940,1940,66.897,66.897,1,0,52.0,0.575,0.575,908
-909,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1941,1942,66.931,66.966,2,0,57.5,0.591,0.598,909
-910,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1941,1942,66.931,66.966,2,0,56.0,0.573,0.575,910
-911,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1945,1945,67.069,67.069,1,0,57.0,0.526,0.526,911
-912,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1949,1954,67.207,67.379,5,0,59.2,0.551,0.575,912
-913,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1958,1958,67.517,67.517,1,0,79.0,0.517,0.517,913
-914,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1960,1963,67.586,67.69,4,0,72.0,0.586,0.602,914
-915,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1965,1978,67.759,68.207,7,0,58.429,0.548,0.573,915
-916,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1968,1981,67.862,68.31,14,0,53.071,0.57,0.614,916
-917,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1975,1977,68.103,68.172,3,0,53.667,0.52,0.54,917
-918,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1982,1982,68.345,68.345,1,0,59.0,0.735,0.735,918
-919,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1983,1983,68.379,68.379,1,0,61.0,0.702,0.702,919
-920,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1985,1986,68.448,68.483,2,0,57.0,0.534,0.535,920
-921,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1987,1987,68.517,68.517,1,0,57.0,0.646,0.646,921
-922,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1988,1988,68.552,68.552,1,0,47.0,0.53,0.53,922
-923,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,1988,1988,68.552,68.552,1,0,51.0,0.502,0.502,923
-924,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2008,2008,69.241,69.241,1,0,56.0,0.542,0.542,924
-925,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2009,2076,69.276,71.586,68,0,105.382,0.862,0.948,925
-926,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2009,2076,69.276,71.586,68,0,106.25,0.905,0.925,926
-927,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2009,2076,69.276,71.586,68,0,73.735,0.737,0.869,927
-928,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2065,2068,71.207,71.31,4,0,49.25,0.545,0.557,928
-929,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2077,2107,71.621,72.655,31,0,71.29,0.749,0.942,929
-930,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2094,2094,72.207,72.207,1,0,57.0,0.576,0.576,930
-931,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2104,2104,72.552,72.552,1,0,124.0,0.55,0.55,931
-932,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2108,2117,72.69,73.0,10,0,106.7,0.897,0.974,932
-933,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2118,2118,73.034,73.034,1,0,104.0,0.96,0.96,933
-934,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2119,2119,73.069,73.069,1,0,106.0,0.874,0.874,934
-935,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2120,2121,73.103,73.138,2,0,109.0,0.94,0.94,935
-936,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2122,2122,73.172,73.172,1,0,109.0,0.918,0.918,936
-937,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2123,2123,73.207,73.207,1,0,117.0,0.929,0.929,937
-938,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2124,2137,73.241,73.69,14,0,119.929,0.809,0.891,938
-939,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2129,2129,73.414,73.414,1,0,81.0,0.568,0.568,939
-940,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2133,2134,73.552,73.586,2,0,76.5,0.573,0.611,940
-941,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2137,2137,73.69,73.69,1,0,86.0,0.65,0.65,941
-942,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2137,2137,73.69,73.69,1,0,60.0,0.526,0.526,942
-943,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2138,2204,73.724,76.0,67,0,89.313,0.868,0.93,943
-944,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2138,2146,73.724,74.0,9,0,123.222,0.792,0.881,944
-945,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2147,2147,74.034,74.034,1,0,135.0,0.809,0.809,945
-946,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2148,2148,74.069,74.069,1,0,133.0,0.876,0.876,946
-947,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2149,2150,74.103,74.138,2,0,139.5,0.821,0.821,947
-948,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2151,2204,74.172,76.0,54,0,136.667,0.819,0.924,948
-949,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2180,2190,75.172,75.517,8,0,46.0,0.585,0.648,949
-950,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2205,2278,76.034,78.552,74,0,106.986,0.844,0.933,950
-951,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2205,2278,76.034,78.552,74,0,100.946,0.828,0.891,951
-952,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2205,2278,76.034,78.552,74,0,79.216,0.841,0.919,952
-953,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2205,2242,76.034,77.31,34,0,51.824,0.567,0.694,953
-954,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2207,2225,76.103,76.724,18,0,64.944,0.616,0.706,954
-955,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2249,2278,77.552,78.552,29,0,66.517,0.709,0.837,955
-956,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2258,2258,77.862,77.862,1,0,61.0,0.502,0.502,956
-957,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2279,2334,78.586,80.483,56,0,140.018,0.834,0.865,957
-958,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2279,2334,78.586,80.483,56,0,77.768,0.887,0.923,958
-959,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2292,2330,79.034,80.345,29,0,45.414,0.628,0.749,959
-960,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2298,2309,79.241,79.621,2,0,45.0,0.523,0.532,960
-961,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2335,2346,80.517,80.897,12,0,81.75,0.855,0.916,961
-962,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2335,2704,80.517,93.241,370,0,77.776,0.859,0.934,962
-963,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2335,2704,80.517,93.241,370,0,107.305,0.8,0.896,963
-964,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2335,2704,80.517,93.241,370,0,105.649,0.848,0.935,964
-965,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2335,2359,80.517,81.345,20,0,65.65,0.575,0.642,965
-966,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2366,2400,81.586,82.759,27,0,60.407,0.57,0.67,966
-967,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2417,2418,83.345,83.379,2,0,56.0,0.519,0.523,967
-968,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2439,2508,84.103,86.483,55,0,64.273,0.621,0.768,968
-969,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2472,2472,85.241,85.241,1,0,46.0,0.617,0.617,969
-970,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2476,2486,85.379,85.724,11,0,50.364,0.697,0.749,970
-971,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2515,2518,86.724,86.828,3,0,49.333,0.529,0.554,971
-972,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2520,2520,86.897,86.897,1,0,48.0,0.586,0.586,972
-973,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2522,2522,86.966,86.966,1,0,46.0,0.533,0.533,973
-974,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2525,2525,87.069,87.069,1,0,48.0,0.531,0.531,974
-975,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2526,2578,87.103,88.897,49,0,51.306,0.569,0.789,975
-976,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2530,2704,87.241,93.241,148,0,59.101,0.598,0.769,976
-977,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2582,2582,89.034,89.034,1,0,50.0,0.511,0.511,977
-978,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2591,2598,89.345,89.586,8,0,47.0,0.612,0.674,978
-979,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2705,2811,93.276,96.931,107,0,179.327,0.888,0.945,979
-980,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2717,2811,93.69,96.931,39,0,54.538,0.536,0.603,980
-981,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2732,2736,94.207,94.345,5,0,48.8,0.576,0.638,981
-982,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2742,2761,94.552,95.207,19,0,50.368,0.597,0.678,982
-983,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2765,2765,95.345,95.345,1,0,49.0,0.514,0.514,983
-984,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2777,2800,95.759,96.552,4,0,50.25,0.517,0.522,984
-985,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2812,2867,96.966,98.862,56,0,92.321,0.777,0.908,985
-986,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2812,2944,96.966,101.517,133,0,107.06,0.867,0.952,986
-987,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2812,2871,96.966,99.0,60,0,80.117,0.859,0.944,987
-988,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2812,2829,96.966,97.552,18,0,63.611,0.626,0.716,988
-989,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2872,2872,99.034,99.034,1,0,97.0,0.593,0.593,989
-990,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2873,2873,99.069,99.069,1,0,85.0,0.509,0.509,990
-991,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2874,2874,99.103,99.103,1,0,94.0,0.742,0.742,991
-992,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2875,2876,99.138,99.172,2,0,94.0,0.642,0.644,992
-993,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2877,2886,99.207,99.517,9,0,76.444,0.615,0.72,993
-994,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2877,2908,99.207,100.276,32,0,55.812,0.734,0.837,994
-995,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2885,2900,99.483,100.0,9,0,44.111,0.544,0.622,995
-996,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2887,2887,99.552,99.552,1,0,71.0,0.524,0.524,996
-997,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2888,2915,99.586,100.517,28,0,70.786,0.746,0.892,997
-998,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2889,2890,99.621,99.655,2,0,48.0,0.512,0.513,998
-999,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2912,2927,100.414,100.931,16,0,56.75,0.693,0.789,999
-1000,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2927,2927,100.931,100.931,1,0,46.0,0.539,0.539,1000
-1001,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2930,2942,101.034,101.448,13,0,53.308,0.606,0.808,1001
-1002,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2945,2970,101.552,102.414,26,0,122.423,0.896,0.964,1002
-1003,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2945,2945,101.552,101.552,1,0,70.0,0.509,0.509,1003
-1004,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2945,2949,101.552,101.69,3,0,59.333,0.558,0.617,1004
-1005,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2951,2954,101.759,101.862,4,0,59.25,0.573,0.655,1005
-1006,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2970,2974,102.414,102.552,5,0,257.8,0.599,0.735,1006
-1007,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2975,2977,102.586,102.655,3,0,231.333,0.596,0.719,1007
-1008,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2978,2978,102.69,102.69,1,0,118.0,0.541,0.541,1008
-1009,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2979,3106,102.724,107.103,128,0,112.43,0.768,0.94,1009
-1010,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2981,2982,102.793,102.828,2,0,202.0,0.564,0.573,1010
-1011,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,2983,2983,102.862,102.862,1,0,164.0,0.618,0.618,1011
-1012,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3046,3046,105.034,105.034,1,0,54.0,0.604,0.604,1012
-1013,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3047,3047,105.069,105.069,1,0,61.0,0.556,0.556,1013
-1014,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3052,3052,105.241,105.241,1,0,97.0,0.71,0.71,1014
-1015,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3053,3053,105.276,105.276,1,0,85.0,0.609,0.609,1015
-1016,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3054,3055,105.31,105.345,2,0,91.0,0.74,0.741,1016
-1017,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3056,3056,105.379,105.379,1,0,91.0,0.77,0.77,1017
-1018,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3057,3057,105.414,105.414,1,0,81.0,0.774,0.774,1018
-1019,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3058,3058,105.448,105.448,1,0,91.0,0.763,0.763,1019
-1020,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3059,3060,105.483,105.517,2,0,90.0,0.849,0.85,1020
-1021,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3061,3061,105.552,105.552,1,0,85.0,0.767,0.767,1021
-1022,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3062,3062,105.586,105.586,1,0,81.0,0.837,0.837,1022
-1023,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3063,3063,105.621,105.621,1,0,74.0,0.833,0.833,1023
-1024,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3064,3064,105.655,105.655,1,0,74.0,0.752,0.752,1024
-1025,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3065,3065,105.69,105.69,1,0,69.0,0.758,0.758,1025
-1026,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3066,3066,105.724,105.724,1,0,65.0,0.699,0.699,1026
-1027,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3067,3067,105.759,105.759,1,0,74.0,0.705,0.705,1027
-1028,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3068,3069,105.793,105.828,2,0,82.0,0.746,0.747,1028
-1029,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3070,3070,105.862,105.862,1,0,74.0,0.788,0.788,1029
-1030,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3071,3071,105.897,105.897,1,0,69.0,0.747,0.747,1030
-1031,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3073,3074,105.966,106.0,2,0,72.0,0.702,0.707,1031
-1032,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3075,3075,106.034,106.034,1,0,70.0,0.772,0.772,1032
-1033,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3076,3077,106.069,106.103,2,0,77.5,0.751,0.819,1033
-1034,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3080,3080,106.207,106.207,1,0,83.0,0.615,0.615,1034
-1035,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3080,3080,106.207,106.207,1,0,42.0,0.538,0.538,1035
-1036,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3081,3081,106.241,106.241,1,0,93.0,0.718,0.718,1036
-1037,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3082,3082,106.276,106.276,1,0,98.0,0.816,0.816,1037
-1038,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3083,3084,106.31,106.345,2,0,94.5,0.796,0.798,1038
-1039,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3085,3085,106.379,106.379,1,0,90.0,0.695,0.695,1039
-1040,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3086,3086,106.414,106.414,1,0,85.0,0.73,0.73,1040
-1041,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3087,3087,106.448,106.448,1,0,82.0,0.782,0.782,1041
-1042,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3087,3087,106.448,106.448,1,0,66.0,0.567,0.567,1042
-1043,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3088,3089,106.483,106.517,2,0,84.0,0.841,0.842,1043
-1044,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3090,3090,106.552,106.552,1,0,94.0,0.771,0.771,1044
-1045,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3091,3091,106.586,106.586,1,0,92.0,0.753,0.753,1045
-1046,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3091,3091,106.586,106.586,1,0,69.0,0.516,0.516,1046
-1047,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3092,3092,106.621,106.621,1,0,94.0,0.751,0.751,1047
-1048,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3093,3100,106.655,106.897,8,0,89.875,0.784,0.844,1048
-1049,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3097,3098,106.793,106.828,2,0,75.0,0.517,0.517,1049
-1050,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3099,3099,106.862,106.862,1,0,73.0,0.655,0.655,1050
-1051,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3100,3100,106.897,106.897,1,0,67.0,0.687,0.687,1051
-1052,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3101,3139,106.931,108.241,39,0,86.256,0.793,0.879,1052
-1053,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3101,3101,106.931,106.931,1,0,63.0,0.563,0.563,1053
-1054,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3102,3103,106.966,107.0,2,0,59.0,0.57,0.57,1054
-1055,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3104,3104,107.034,107.034,1,0,58.0,0.651,0.651,1055
-1056,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3105,3105,107.069,107.069,1,0,52.0,0.665,0.665,1056
-1057,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3105,3105,107.069,107.069,1,0,53.0,0.571,0.571,1057
-1058,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3105,3108,107.069,107.172,4,0,63.75,0.537,0.556,1058
-1059,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3106,3106,107.103,107.103,1,0,55.0,0.628,0.628,1059
-1060,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3107,3108,107.138,107.172,2,0,63.0,0.645,0.648,1060
-1061,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3109,3109,107.207,107.207,1,0,62.0,0.585,0.585,1061
-1062,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3110,3110,107.241,107.241,1,0,52.0,0.527,0.527,1062
-1063,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3112,3113,107.31,107.345,2,0,58.0,0.683,0.683,1063
-1064,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3112,3118,107.31,107.517,6,0,62.0,0.587,0.64,1064
-1065,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3114,3114,107.379,107.379,1,0,60.0,0.7,0.7,1065
-1066,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3115,3115,107.414,107.414,1,0,59.0,0.652,0.652,1066
-1067,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3116,3116,107.448,107.448,1,0,65.0,0.798,0.798,1067
-1068,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3117,3120,107.483,107.586,4,0,63.75,0.704,0.773,1068
-1069,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3135,3135,108.103,108.103,1,0,47.0,0.542,0.542,1069
-1070,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3140,3140,108.276,108.276,1,0,80.0,0.818,0.818,1070
-1071,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3140,3140,108.276,108.276,1,0,44.0,0.501,0.501,1071
-1072,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3141,3147,108.31,108.517,7,0,74.286,0.741,0.84,1072
-1073,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3141,3143,108.31,108.379,3,0,46.333,0.529,0.53,1073
-1074,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3144,3144,108.414,108.414,1,0,41.0,0.522,0.522,1074
-1075,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3144,3144,108.414,108.414,1,0,60.0,0.512,0.512,1075
-1076,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3145,3145,108.448,108.448,1,0,65.0,0.647,0.647,1076
-1077,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3145,3148,108.448,108.552,4,0,37.75,0.572,0.608,1077
-1078,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3145,3145,108.448,108.448,1,0,46.0,0.559,0.559,1078
-1079,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3146,3147,108.483,108.517,2,0,63.0,0.704,0.705,1079
-1080,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3148,3153,108.552,108.724,6,0,71.667,0.625,0.688,1080
-1081,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3148,3148,108.552,108.552,1,0,56.0,0.659,0.659,1081
-1082,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3149,3150,108.586,108.621,2,0,65.0,0.712,0.727,1082
-1083,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3151,3153,108.655,108.724,3,0,32.667,0.55,0.569,1083
-1084,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3154,3251,108.759,112.103,86,0,59.384,0.679,0.785,1084
-1085,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3154,3166,108.759,109.172,7,0,66.571,0.577,0.613,1085
-1086,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3157,3158,108.862,108.897,2,0,38.5,0.526,0.533,1086
-1087,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3175,3186,109.483,109.862,10,0,35.7,0.597,0.662,1087
-1088,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3175,3176,109.483,109.517,2,0,43.0,0.536,0.542,1088
-1089,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3175,3179,109.483,109.621,3,0,43.0,0.534,0.559,1089
-1090,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3177,3181,109.552,109.69,4,0,60.5,0.579,0.654,1090
-1091,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3178,3251,109.586,112.103,62,0,67.613,0.628,0.75,1091
-1092,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3180,3182,109.655,109.724,3,0,52.333,0.517,0.537,1092
-1093,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3183,3183,109.759,109.759,1,0,62.0,0.5,0.5,1093
-1094,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3186,3186,109.862,109.862,1,0,43.0,0.511,0.511,1094
-1095,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3187,3251,109.897,112.103,64,0,69.188,0.707,0.825,1095
-1096,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3194,3210,110.138,110.69,15,0,43.533,0.569,0.629,1096
-1097,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3197,3213,110.241,110.793,15,0,41.067,0.579,0.653,1097
-1098,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3198,3201,110.276,110.379,3,0,50.333,0.531,0.576,1098
-1099,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3250,3250,112.069,112.069,1,0,50.0,0.511,0.511,1099
-1100,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3252,3357,112.138,115.759,106,0,170.462,0.796,0.92,1100
-1101,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3370,3370,116.207,116.207,1,0,133.0,0.528,0.528,1101
-1102,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3390,3482,116.897,120.069,91,0,117.604,0.69,0.801,1102
-1103,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3410,3514,117.586,121.172,105,0,199.419,0.806,0.925,1103
-1104,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3491,3491,120.379,120.379,1,0,103.0,0.563,0.563,1104
-1105,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3501,3505,120.724,120.862,5,0,100.0,0.532,0.539,1105
-1106,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3515,3603,121.207,124.241,89,0,132.202,0.887,0.957,1106
-1107,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3604,3618,124.276,124.759,8,0,42.25,0.621,0.722,1107
-1108,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3604,3621,124.276,124.862,10,0,37.1,0.599,0.672,1108
-1109,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3605,3685,124.31,127.069,60,0,35.683,0.588,0.686,1109
-1110,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3608,3626,124.414,125.034,11,0,31.182,0.524,0.568,1110
-1111,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3636,3638,125.379,125.448,3,0,31.0,0.529,0.543,1111
-1112,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3665,3676,126.379,126.759,3,0,34.0,0.526,0.533,1112
-1113,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3675,3691,126.724,127.276,14,0,41.071,0.6,0.718,1113
-1114,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3697,3698,127.483,127.517,2,0,30.0,0.516,0.517,1114
-1115,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3699,3721,127.552,128.31,21,0,41.952,0.595,0.714,1115
-1116,Das Boot Mon Gars Filmmusik [LnFceG2lL3U].mp4,3717,3719,128.172,128.241,3,0,35.333,0.536,0.546,1116
-1117,Go Back Johann [qa3jt_GXMts].mp4,0,1,0.0,0.042,2,0,79.0,0.569,0.569,1117
-1118,Go Back Johann [qa3jt_GXMts].mp4,19,31,0.792,1.293,6,0,130.5,0.557,0.598,1118
-1119,Go Back Johann [qa3jt_GXMts].mp4,52,52,2.169,2.169,1,0,84.0,0.51,0.51,1119
-1120,Go Back Johann [qa3jt_GXMts].mp4,56,113,2.336,4.713,58,0,85.879,0.709,0.847,1120
-1121,Go Back Johann [qa3jt_GXMts].mp4,131,215,5.464,8.967,85,0,210.212,0.814,0.929,1121
-1122,Go Back Johann [qa3jt_GXMts].mp4,216,283,9.009,11.803,48,0,95.812,0.583,0.642,1122
-1123,Go Back Johann [qa3jt_GXMts].mp4,237,283,9.885,11.803,45,0,110.022,0.658,0.806,1123
-1124,Go Back Johann [qa3jt_GXMts].mp4,284,404,11.845,16.85,121,0,321.488,0.722,0.856,1124
-1125,Go Back Johann [qa3jt_GXMts].mp4,405,429,16.892,17.893,24,0,161.917,0.546,0.597,1125
-1126,Go Back Johann [qa3jt_GXMts].mp4,405,456,16.892,19.019,42,0,108.381,0.57,0.645,1126
-1127,Go Back Johann [qa3jt_GXMts].mp4,431,441,17.976,18.393,11,0,122.545,0.612,0.691,1127
-1128,Go Back Johann [qa3jt_GXMts].mp4,454,477,18.936,19.895,18,0,106.556,0.557,0.604,1128
-1129,Go Back Johann [qa3jt_GXMts].mp4,473,478,19.728,19.937,2,0,86.5,0.534,0.564,1129
-1130,Go Back Johann [qa3jt_GXMts].mp4,481,548,20.062,22.856,50,0,281.46,0.597,0.719,1130
-1131,Go Back Johann [qa3jt_GXMts].mp4,561,562,23.398,23.44,2,0,330.0,0.619,0.631,1131
-1132,Go Back Johann [qa3jt_GXMts].mp4,568,568,23.69,23.69,1,0,244.0,0.627,0.627,1132
-1133,Go Back Johann [qa3jt_GXMts].mp4,573,578,23.899,24.107,5,0,358.6,0.525,0.538,1133
-1134,Go Back Johann [qa3jt_GXMts].mp4,582,590,24.274,24.608,5,0,383.8,0.548,0.592,1134
-1135,Go Back Johann [qa3jt_GXMts].mp4,596,596,24.858,24.858,1,0,416.0,0.543,0.543,1135
-1136,Go Back Johann [qa3jt_GXMts].mp4,598,604,24.942,25.192,5,0,315.8,0.539,0.586,1136
-1137,Go Back Johann [qa3jt_GXMts].mp4,606,606,25.275,25.275,1,0,249.0,0.503,0.503,1137
-1138,Go Back Johann [qa3jt_GXMts].mp4,608,611,25.359,25.484,4,0,250.25,0.6,0.65,1138
-1139,Go Back Johann [qa3jt_GXMts].mp4,616,626,25.692,26.109,11,0,221.091,0.684,0.776,1139
-1140,Go Back Johann [qa3jt_GXMts].mp4,627,627,26.151,26.151,1,0,195.0,0.726,0.726,1140
-1141,Go Back Johann [qa3jt_GXMts].mp4,628,628,26.193,26.193,1,0,198.0,0.724,0.724,1141
-1142,Go Back Johann [qa3jt_GXMts].mp4,629,629,26.235,26.235,1,0,196.0,0.712,0.712,1142
-1143,Go Back Johann [qa3jt_GXMts].mp4,630,630,26.276,26.276,1,0,193.0,0.629,0.629,1143
-1144,Go Back Johann [qa3jt_GXMts].mp4,631,631,26.318,26.318,1,0,172.0,0.587,0.587,1144
-1145,Go Back Johann [qa3jt_GXMts].mp4,632,632,26.36,26.36,1,0,190.0,0.604,0.604,1145
-1146,Go Back Johann [qa3jt_GXMts].mp4,633,633,26.401,26.401,1,0,181.0,0.623,0.623,1146
-1147,Go Back Johann [qa3jt_GXMts].mp4,634,636,26.443,26.526,3,0,187.0,0.524,0.534,1147
-1148,Go Back Johann [qa3jt_GXMts].mp4,635,635,26.485,26.485,1,0,188.0,0.58,0.58,1148
-1149,Go Back Johann [qa3jt_GXMts].mp4,638,651,26.61,27.152,14,0,201.714,0.618,0.784,1149
-1150,Go Back Johann [qa3jt_GXMts].mp4,653,655,27.236,27.319,3,0,134.667,0.571,0.64,1150
-1151,Go Back Johann [qa3jt_GXMts].mp4,654,654,27.277,27.277,1,0,65.0,0.523,0.523,1151
-1152,Go Back Johann [qa3jt_GXMts].mp4,656,656,27.361,27.361,1,0,132.0,0.543,0.543,1152
-1153,Go Back Johann [qa3jt_GXMts].mp4,657,657,27.402,27.402,1,0,130.0,0.541,0.541,1153
-1154,Go Back Johann [qa3jt_GXMts].mp4,657,657,27.402,27.402,1,0,59.0,0.519,0.519,1154
-1155,Go Back Johann [qa3jt_GXMts].mp4,664,666,27.694,27.778,3,0,74.667,0.527,0.538,1155
-1156,Go Back Johann [qa3jt_GXMts].mp4,667,667,27.819,27.819,1,0,99.0,0.575,0.575,1156
-1157,Go Back Johann [qa3jt_GXMts].mp4,670,673,27.945,28.07,2,0,93.5,0.506,0.51,1157
-1158,Go Back Johann [qa3jt_GXMts].mp4,680,818,28.362,34.117,111,0,234.955,0.621,0.822,1158
-1159,Go Back Johann [qa3jt_GXMts].mp4,690,840,28.779,35.035,142,0,103.458,0.827,0.946,1159
-1160,Go Back Johann [qa3jt_GXMts].mp4,771,771,32.157,32.157,1,0,73.0,0.506,0.506,1160
-1161,Go Back Johann [qa3jt_GXMts].mp4,841,985,35.077,41.083,145,0,209.4,0.738,0.894,1161
-1162,Go Back Johann [qa3jt_GXMts].mp4,849,877,35.41,36.578,18,0,148.167,0.561,0.632,1162
-1163,Go Back Johann [qa3jt_GXMts].mp4,903,949,37.663,39.581,34,0,206.265,0.605,0.759,1163
-1164,Go Back Johann [qa3jt_GXMts].mp4,986,1057,41.124,44.086,72,0,496.75,0.791,0.852,1164
-1165,Go Back Johann [qa3jt_GXMts].mp4,986,1057,41.124,44.086,72,0,313.889,0.589,0.656,1165
-1166,Go Back Johann [qa3jt_GXMts].mp4,986,1057,41.124,44.086,58,0,124.534,0.596,0.667,1166
-1167,Go Back Johann [qa3jt_GXMts].mp4,1002,1011,41.792,42.167,9,0,118.667,0.556,0.632,1167
-1168,Go Back Johann [qa3jt_GXMts].mp4,1057,1057,44.086,44.086,1,0,113.0,0.523,0.523,1168
-1169,Go Back Johann [qa3jt_GXMts].mp4,1058,1150,44.127,47.965,93,0,279.161,0.747,0.89,1169
-1170,Go Back Johann [qa3jt_GXMts].mp4,1088,1089,45.379,45.42,2,0,121.0,0.515,0.528,1170
-1171,Go Back Johann [qa3jt_GXMts].mp4,1159,1205,48.34,50.259,47,0,159.468,0.852,0.908,1171
-1172,Go Back Johann [qa3jt_GXMts].mp4,1201,1205,50.092,50.259,5,0,68.4,0.563,0.6,1172
-1173,Go Back Johann [qa3jt_GXMts].mp4,1206,1246,50.3,51.969,40,0,256.625,0.69,0.806,1173
-1174,Go Back Johann [qa3jt_GXMts].mp4,1250,1265,52.135,52.761,16,0,266.875,0.652,0.726,1174
-1175,Go Back Johann [qa3jt_GXMts].mp4,1267,1286,52.844,53.637,20,0,228.05,0.651,0.764,1175
-1176,Go Back Johann [qa3jt_GXMts].mp4,1287,1287,53.679,53.679,1,0,193.0,0.92,0.92,1176
-1177,Go Back Johann [qa3jt_GXMts].mp4,1288,1288,53.72,53.72,1,0,186.0,0.836,0.836,1177
-1178,Go Back Johann [qa3jt_GXMts].mp4,1288,1288,53.72,53.72,1,0,100.0,0.59,0.59,1178
-1179,Go Back Johann [qa3jt_GXMts].mp4,1289,1291,53.762,53.845,3,0,166.333,0.749,0.874,1179
-1180,Go Back Johann [qa3jt_GXMts].mp4,1289,1304,53.762,54.388,10,0,94.0,0.609,0.777,1180
-1181,Go Back Johann [qa3jt_GXMts].mp4,1292,1292,53.887,53.887,1,0,152.0,0.591,0.591,1181
-1182,Go Back Johann [qa3jt_GXMts].mp4,1298,1301,54.137,54.263,3,0,61.667,0.582,0.67,1182
-1183,Go Back Johann [qa3jt_GXMts].mp4,1304,1304,54.388,54.388,1,0,63.0,0.572,0.572,1183
-1184,Go Back Johann [qa3jt_GXMts].mp4,1306,1308,54.471,54.554,3,0,58.333,0.582,0.689,1184
-1185,Go Back Johann [qa3jt_GXMts].mp4,1307,1330,54.513,55.472,22,0,96.227,0.62,0.752,1185
-1186,Go Back Johann [qa3jt_GXMts].mp4,1310,1311,54.638,54.68,2,0,57.5,0.531,0.552,1186
-1187,Go Back Johann [qa3jt_GXMts].mp4,1340,1344,55.889,56.056,4,0,112.75,0.546,0.579,1187
-1188,Go Back Johann [qa3jt_GXMts].mp4,1345,1347,56.098,56.181,3,0,111.333,0.593,0.626,1188
-1189,Go Back Johann [qa3jt_GXMts].mp4,1348,1348,56.223,56.223,1,0,96.0,0.515,0.515,1189
-1190,Go Back Johann [qa3jt_GXMts].mp4,1364,1364,56.89,56.89,1,0,421.0,0.514,0.514,1190
-1191,Go Back Johann [qa3jt_GXMts].mp4,1367,1367,57.015,57.015,1,0,118.0,0.524,0.524,1191
-1192,Go Back Johann [qa3jt_GXMts].mp4,1369,1369,57.099,57.099,1,0,165.0,0.641,0.641,1192
-1193,Go Back Johann [qa3jt_GXMts].mp4,1372,1372,57.224,57.224,1,0,198.0,0.503,0.503,1193
-1194,Go Back Johann [qa3jt_GXMts].mp4,1381,1381,57.599,57.599,1,0,79.0,0.545,0.545,1194
-1195,Go Back Johann [qa3jt_GXMts].mp4,1388,1389,57.891,57.933,2,0,117.0,0.545,0.558,1195
-1196,Go Back Johann [qa3jt_GXMts].mp4,1390,1390,57.975,57.975,1,0,112.0,0.584,0.584,1196
-1197,Go Back Johann [qa3jt_GXMts].mp4,1393,1393,58.1,58.1,1,0,160.0,0.687,0.687,1197
-1198,Go Back Johann [qa3jt_GXMts].mp4,1394,1394,58.141,58.141,1,0,135.0,0.664,0.664,1198
-1199,Go Back Johann [qa3jt_GXMts].mp4,1395,1397,58.183,58.267,3,0,56.0,0.718,0.765,1199
-1200,Go Back Johann [qa3jt_GXMts].mp4,1398,1398,58.308,58.308,1,0,92.0,0.61,0.61,1200
-1201,Go Back Johann [qa3jt_GXMts].mp4,1400,1400,58.392,58.392,1,0,192.0,0.504,0.504,1201
-1202,Go Back Johann [qa3jt_GXMts].mp4,1402,1402,58.475,58.475,1,0,147.0,0.554,0.554,1202
-1203,Go Back Johann [qa3jt_GXMts].mp4,1403,1406,58.517,58.642,4,0,183.75,0.67,0.758,1203
-1204,Go Back Johann [qa3jt_GXMts].mp4,1427,1427,59.518,59.518,1,0,342.0,0.504,0.504,1204
-1205,Go Back Johann [qa3jt_GXMts].mp4,1430,1430,59.643,59.643,1,0,385.0,0.54,0.54,1205
-1206,Go Back Johann [qa3jt_GXMts].mp4,1437,1437,59.935,59.935,1,0,161.0,0.537,0.537,1206
-1207,Go Back Johann [qa3jt_GXMts].mp4,1451,1453,60.519,60.602,3,0,106.0,0.564,0.596,1207
-1208,Go Back Johann [qa3jt_GXMts].mp4,1460,1460,60.894,60.894,1,0,124.0,0.554,0.554,1208
-1209,Go Back Johann [qa3jt_GXMts].mp4,1461,1461,60.936,60.936,1,0,105.0,0.598,0.598,1209
-1210,Go Back Johann [qa3jt_GXMts].mp4,1512,1514,63.063,63.146,3,0,105.333,0.538,0.554,1210
-1211,Go Back Johann [qa3jt_GXMts].mp4,1516,1526,63.23,63.647,7,0,81.429,0.588,0.647,1211
-1212,Go Back Johann [qa3jt_GXMts].mp4,1537,1537,64.106,64.106,1,0,209.0,0.581,0.581,1212
-1213,Go Back Johann [qa3jt_GXMts].mp4,1544,1546,64.398,64.481,3,0,181.667,0.584,0.633,1213
-1214,Go Back Johann [qa3jt_GXMts].mp4,1554,1572,64.815,65.566,9,0,194.556,0.627,0.688,1214
-1215,Go Back Johann [qa3jt_GXMts].mp4,1557,1562,64.94,65.148,4,0,243.0,0.532,0.55,1215
-1216,Go Back Johann [qa3jt_GXMts].mp4,1588,1590,66.233,66.316,3,0,160.667,0.615,0.686,1216
-1217,Go Back Johann [qa3jt_GXMts].mp4,1594,1595,66.483,66.525,2,0,193.5,0.68,0.757,1217
-1218,Go Back Johann [qa3jt_GXMts].mp4,1599,1599,66.692,66.692,1,0,265.0,0.723,0.723,1218
-1219,Go Back Johann [qa3jt_GXMts].mp4,1601,1601,66.775,66.775,1,0,374.0,0.611,0.611,1219
-1220,Go Back Johann [qa3jt_GXMts].mp4,1604,1604,66.9,66.9,1,0,405.0,0.678,0.678,1220
-1221,Go Back Johann [qa3jt_GXMts].mp4,1606,1606,66.984,66.984,1,0,437.0,0.705,0.705,1221
-1222,Go Back Johann [qa3jt_GXMts].mp4,1607,1622,67.025,67.651,16,0,419.75,0.862,0.931,1222
-1223,Go Back Johann [qa3jt_GXMts].mp4,1623,1624,67.693,67.734,2,0,109.5,0.62,0.666,1223
-1224,Go Back Johann [qa3jt_GXMts].mp4,1625,1711,67.776,71.363,87,0,378.977,0.733,0.901,1224
-1225,Go Back Johann [qa3jt_GXMts].mp4,1628,1630,67.901,67.985,3,0,114.667,0.625,0.642,1225
-1226,Go Back Johann [qa3jt_GXMts].mp4,1629,1629,67.943,67.943,1,0,102.0,0.504,0.504,1226
-1227,Go Back Johann [qa3jt_GXMts].mp4,1633,1637,68.11,68.277,5,0,172.2,0.605,0.647,1227
-1228,Go Back Johann [qa3jt_GXMts].mp4,1664,1664,69.403,69.403,1,0,202.0,0.554,0.554,1228
-1229,Go Back Johann [qa3jt_GXMts].mp4,1668,1711,69.569,71.363,44,0,219.545,0.724,0.823,1229
-1230,Go Back Johann [qa3jt_GXMts].mp4,1712,1792,71.405,74.741,81,0,398.0,0.821,0.909,1230
-1231,Go Back Johann [qa3jt_GXMts].mp4,1793,1893,74.783,78.954,100,0,363.7,0.675,0.813,1231
-1232,Go Back Johann [qa3jt_GXMts].mp4,1797,1804,74.95,75.242,8,0,214.875,0.57,0.619,1232
-1233,Go Back Johann [qa3jt_GXMts].mp4,1824,1893,76.076,78.954,56,0,140.482,0.573,0.675,1233
-1234,Go Back Johann [qa3jt_GXMts].mp4,1894,1991,78.996,83.041,98,0,365.49,0.76,0.855,1234
-1235,Go Back Johann [qa3jt_GXMts].mp4,1993,1994,83.125,83.166,2,0,127.0,0.595,0.625,1235
-1236,Go Back Johann [qa3jt_GXMts].mp4,2004,2004,83.584,83.584,1,0,159.0,0.527,0.527,1236
-1237,Go Back Johann [qa3jt_GXMts].mp4,2007,2014,83.709,84.001,7,0,234.0,0.604,0.718,1237
-1238,Go Back Johann [qa3jt_GXMts].mp4,2014,2014,84.001,84.001,1,0,166.0,0.511,0.511,1238
-1239,Go Back Johann [qa3jt_GXMts].mp4,2016,2016,84.084,84.084,1,0,275.0,0.524,0.524,1239
-1240,Go Back Johann [qa3jt_GXMts].mp4,2019,2019,84.209,84.209,1,0,155.0,0.547,0.547,1240
-1241,Go Back Johann [qa3jt_GXMts].mp4,2023,2034,84.376,84.835,12,0,190.75,0.665,0.765,1241
-1242,Go Back Johann [qa3jt_GXMts].mp4,2035,2035,84.876,84.876,1,0,195.0,0.577,0.577,1242
-1243,Go Back Johann [qa3jt_GXMts].mp4,2036,2036,84.918,84.918,1,0,183.0,0.625,0.625,1243
-1244,Go Back Johann [qa3jt_GXMts].mp4,2037,2047,84.96,85.377,10,0,176.1,0.678,0.772,1244
-1245,Go Back Johann [qa3jt_GXMts].mp4,2049,2049,85.46,85.46,1,0,272.0,0.533,0.533,1245
-1246,Go Back Johann [qa3jt_GXMts].mp4,2052,2053,85.585,85.627,2,0,169.5,0.539,0.569,1246
-1247,Go Back Johann [qa3jt_GXMts].mp4,2056,2056,85.752,85.752,1,0,167.0,0.563,0.563,1247
-1248,Go Back Johann [qa3jt_GXMts].mp4,2063,2063,86.044,86.044,1,0,240.0,0.51,0.51,1248
-1249,Go Back Johann [qa3jt_GXMts].mp4,2088,2088,87.087,87.087,1,0,158.0,0.577,0.577,1249
-1250,Go Back Johann [qa3jt_GXMts].mp4,2090,2090,87.17,87.17,1,0,161.0,0.513,0.513,1250
-1251,Go Back Johann [qa3jt_GXMts].mp4,2091,2091,87.212,87.212,1,0,133.0,0.606,0.606,1251
-1252,Go Back Johann [qa3jt_GXMts].mp4,2092,2092,87.254,87.254,1,0,162.0,0.661,0.661,1252
-1253,Go Back Johann [qa3jt_GXMts].mp4,2093,2166,87.296,90.34,74,0,154.27,0.761,0.883,1253
-1254,Go Back Johann [qa3jt_GXMts].mp4,2188,2188,91.258,91.258,1,0,232.0,0.564,0.564,1254
-1255,Go Back Johann [qa3jt_GXMts].mp4,2204,2453,91.925,102.311,235,0,142.128,0.733,0.901,1255
-1256,Go Back Johann [qa3jt_GXMts].mp4,2454,2564,102.352,106.94,111,0,132.937,0.792,0.881,1256
-1257,Go Back Johann [qa3jt_GXMts].mp4,2454,2564,102.352,106.94,111,0,178.018,0.63,0.716,1257
-1258,Go Back Johann [qa3jt_GXMts].mp4,2454,2564,102.352,106.94,111,0,136.441,0.681,0.774,1258
-1259,Go Back Johann [qa3jt_GXMts].mp4,2465,2536,102.811,105.772,71,0,91.085,0.576,0.668,1259
-1260,Go Back Johann [qa3jt_GXMts].mp4,2500,2564,104.271,106.94,48,0,84.083,0.56,0.649,1260
-1261,Go Back Johann [qa3jt_GXMts].mp4,2556,2564,106.606,106.94,9,0,91.556,0.557,0.606,1261
+0,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,0,1124,0.0,44.96,1095,0,364.247,0.794,0.921,0
+1,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,0,18,0.0,0.72,19,0,656.474,0.672,0.755,1
+2,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,0,186,0.0,7.44,161,0,332.739,0.615,0.73,2
+3,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,9,9,0.36,0.36,1,0,269.0,0.526,0.526,3
+4,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,25,43,1.0,1.72,7,0,303.714,0.532,0.574,4
+5,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,61,75,2.44,3.0,9,0,254.778,0.552,0.622,5
+6,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,65,65,2.6,2.6,1,0,235.0,0.552,0.552,6
+7,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,81,285,3.24,11.4,195,0,624.662,0.669,0.84,7
+8,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,149,155,5.96,6.2,2,0,280.5,0.502,0.503,8
+9,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,179,451,7.16,18.04,260,0,394.019,0.748,0.899,9
+10,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,188,188,7.52,7.52,1,0,274.0,0.582,0.582,10
+11,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,272,273,10.88,10.92,2,0,229.5,0.524,0.535,11
+12,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,282,287,11.28,11.48,2,0,216.5,0.504,0.508,12
+13,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,299,299,11.96,11.96,1,0,230.0,0.547,0.547,13
+14,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,310,348,12.4,13.92,35,0,585.314,0.65,0.767,14
+15,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,352,355,14.08,14.2,4,0,244.25,0.571,0.617,15
+16,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,354,360,14.16,14.4,5,0,198.6,0.515,0.534,16
+17,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,411,411,16.44,16.44,1,0,230.0,0.506,0.506,17
+18,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,425,431,17.0,17.24,6,0,320.5,0.569,0.627,18
+19,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,428,432,17.12,17.28,5,0,247.4,0.519,0.528,19
+20,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,432,508,17.28,20.32,64,0,236.391,0.594,0.699,20
+21,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,447,597,17.88,23.88,124,0,568.548,0.621,0.817,21
+22,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,469,574,18.76,22.96,47,0,253.085,0.546,0.644,22
+23,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,499,511,19.96,20.44,9,0,236.778,0.576,0.609,23
+24,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,504,534,20.16,21.36,11,0,267.364,0.539,0.599,24
+25,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,514,528,20.56,21.12,3,0,269.333,0.536,0.552,25
+26,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,523,558,20.92,22.32,9,0,238.889,0.527,0.556,26
+27,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,526,527,21.04,21.08,2,0,202.0,0.542,0.582,27
+28,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,544,544,21.76,21.76,1,0,242.0,0.524,0.524,28
+29,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,569,569,22.76,22.76,1,0,264.0,0.628,0.628,29
+30,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,572,655,22.88,26.2,31,0,227.226,0.531,0.574,30
+31,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,592,679,23.68,27.16,59,0,260.61,0.569,0.659,31
+32,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,602,603,24.08,24.12,2,0,306.0,0.504,0.507,32
+33,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,605,605,24.2,24.2,1,0,291.0,0.508,0.508,33
+34,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,608,619,24.32,24.76,5,0,210.4,0.543,0.595,34
+35,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,617,624,24.68,24.96,3,0,247.667,0.526,0.554,35
+36,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,620,776,24.8,31.04,138,0,663.928,0.683,0.852,36
+37,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,630,630,25.2,25.2,1,0,206.0,0.502,0.502,37
+38,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,631,654,25.24,26.16,10,0,322.4,0.566,0.628,38
+39,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,651,656,26.04,26.24,6,0,239.333,0.596,0.69,39
+40,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,673,676,26.92,27.04,4,0,144.25,0.556,0.591,40
+41,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,677,681,27.08,27.24,2,0,204.0,0.524,0.53,41
+42,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,679,679,27.16,27.16,1,0,304.0,0.507,0.507,42
+43,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,686,686,27.44,27.44,1,0,176.0,0.543,0.543,43
+44,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,694,695,27.76,27.8,2,0,344.5,0.548,0.556,44
+45,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,698,698,27.92,27.92,1,0,216.0,0.501,0.501,45
+46,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,702,749,28.08,29.96,12,0,237.167,0.551,0.646,46
+47,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,710,712,28.4,28.48,3,0,220.0,0.52,0.534,47
+48,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,723,727,28.92,29.08,4,0,220.75,0.537,0.58,48
+49,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,768,768,30.72,30.72,1,0,234.0,0.505,0.505,49
+50,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,776,789,31.04,31.56,5,0,222.4,0.53,0.564,50
+51,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,781,781,31.24,31.24,1,0,256.0,0.517,0.517,51
+52,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,787,943,31.48,37.72,145,0,304.083,0.636,0.809,52
+53,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,789,799,31.56,31.96,4,0,220.5,0.506,0.514,53
+54,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,795,798,31.8,31.92,4,0,260.0,0.561,0.601,54
+55,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,817,817,32.68,32.68,1,0,232.0,0.516,0.516,55
+56,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,834,835,33.36,33.4,2,0,262.5,0.669,0.684,56
+57,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,841,873,33.64,34.92,16,0,272.875,0.543,0.602,57
+58,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,905,905,36.2,36.2,1,0,298.0,0.515,0.515,58
+59,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,921,1124,36.84,44.96,188,0,363.521,0.72,0.873,59
+60,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,922,924,36.88,36.96,2,0,267.5,0.522,0.543,60
+61,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,958,958,38.32,38.32,1,0,266.0,0.534,0.534,61
+62,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,978,1043,39.12,41.72,24,0,311.542,0.533,0.586,62
+63,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,1073,1105,42.92,44.2,13,0,319.231,0.565,0.616,63
+64,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,1112,1112,44.48,44.48,1,0,238.0,0.511,0.511,64
+65,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,1117,1124,44.68,44.96,4,0,234.0,0.541,0.559,65
+66,Das Boot 1 [Ek2omNPSOYc] 28m10s-28m55s.mp4,1123,1124,44.92,44.96,2,0,229.5,0.546,0.59,66
+67,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,0,59,0.0,2.36,60,0,225.733,0.738,0.805,67
+68,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,0,59,0.0,2.36,60,0,182.333,0.756,0.816,68
+69,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,0,59,0.0,2.36,48,0,178.896,0.641,0.766,69
+70,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,0,59,0.0,2.36,59,0,193.237,0.614,0.715,70
+71,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,0,59,0.0,2.36,45,0,200.889,0.56,0.638,71
+72,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,0,15,0.0,0.6,14,0,164.429,0.582,0.69,72
+73,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,21,21,0.84,0.84,1,0,177.0,0.501,0.501,73
+74,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,23,23,0.92,0.92,1,0,164.0,0.71,0.71,74
+75,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,31,47,1.24,1.88,15,0,167.267,0.573,0.621,75
+76,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,60,143,2.4,5.72,84,0,443.571,0.839,0.929,76
+77,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,60,146,2.4,5.84,87,0,487.494,0.728,0.904,77
+78,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,60,140,2.4,5.6,81,0,395.086,0.846,0.927,78
+79,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,60,123,2.4,4.92,64,0,353.078,0.785,0.882,79
+80,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,60,146,2.4,5.84,87,0,426.172,0.839,0.951,80
+81,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,147,182,5.88,7.28,34,0,180.765,0.681,0.78,81
+82,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,147,296,5.88,11.84,147,0,330.027,0.828,0.943,82
+83,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,147,203,5.88,8.12,57,0,204.702,0.657,0.791,83
+84,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,147,164,5.88,6.56,14,0,167.429,0.624,0.694,84
+85,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,147,186,5.88,7.44,40,0,182.35,0.67,0.777,85
+86,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,147,207,5.88,8.28,61,0,189.934,0.697,0.871,86
+87,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,158,158,6.32,6.32,1,0,166.0,0.546,0.546,87
+88,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,158,159,6.32,6.36,2,0,181.0,0.551,0.573,88
+89,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,164,164,6.56,6.56,1,0,181.0,0.537,0.537,89
+90,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,166,172,6.64,6.88,7,0,175.0,0.564,0.637,90
+91,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,167,167,6.68,6.68,1,0,175.0,0.511,0.511,91
+92,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,176,176,7.04,7.04,1,0,189.0,0.535,0.535,92
+93,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,179,179,7.16,7.16,1,0,207.0,0.507,0.507,93
+94,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,181,184,7.24,7.36,4,0,182.0,0.534,0.559,94
+95,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,183,183,7.32,7.32,1,0,182.0,0.66,0.66,95
+96,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,183,183,7.32,7.32,1,0,174.0,0.531,0.531,96
+97,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,184,184,7.36,7.36,1,0,182.0,0.716,0.716,97
+98,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,185,185,7.4,7.4,1,0,168.0,0.683,0.683,98
+99,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,186,186,7.44,7.44,1,0,157.0,0.654,0.654,99
+100,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,187,187,7.48,7.48,1,0,157.0,0.614,0.614,100
+101,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,188,191,7.52,7.64,4,0,183.5,0.64,0.707,101
+102,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,189,189,7.56,7.56,1,0,144.0,0.649,0.649,102
+103,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,190,190,7.6,7.6,1,0,186.0,0.643,0.643,103
+104,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,191,191,7.64,7.64,1,0,204.0,0.638,0.638,104
+105,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,192,192,7.68,7.68,1,0,192.0,0.703,0.703,105
+106,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,193,194,7.72,7.76,2,0,192.0,0.676,0.723,106
+107,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,193,193,7.72,7.72,1,0,183.0,0.707,0.707,107
+108,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,194,194,7.76,7.76,1,0,205.0,0.808,0.808,108
+109,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,195,195,7.8,7.8,1,0,204.0,0.542,0.542,109
+110,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,196,204,7.84,8.16,9,0,191.778,0.584,0.688,110
+111,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,196,196,7.84,7.84,1,0,201.0,0.613,0.613,111
+112,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,197,197,7.88,7.88,1,0,212.0,0.661,0.661,112
+113,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,198,198,7.92,7.92,1,0,214.0,0.726,0.726,113
+114,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,199,199,7.96,7.96,1,0,230.0,0.712,0.712,114
+115,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,200,200,8.0,8.0,1,0,231.0,0.705,0.705,115
+116,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,201,201,8.04,8.04,1,0,227.0,0.765,0.765,116
+117,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,202,202,8.08,8.08,1,0,239.0,0.593,0.593,117
+118,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,203,203,8.12,8.12,1,0,206.0,0.575,0.575,118
+119,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,204,205,8.16,8.2,2,0,222.5,0.611,0.613,119
+120,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,204,204,8.16,8.16,1,0,218.0,0.538,0.538,120
+121,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,206,206,8.24,8.24,1,0,218.0,0.634,0.634,121
+122,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,206,206,8.24,8.24,1,0,196.0,0.531,0.531,122
+123,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,207,207,8.28,8.28,1,0,196.0,0.712,0.712,123
+124,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,207,207,8.28,8.28,1,0,221.0,0.709,0.709,124
+125,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,208,208,8.32,8.32,1,0,180.0,0.811,0.811,125
+126,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,208,208,8.32,8.32,1,0,216.0,0.633,0.633,126
+127,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,208,208,8.32,8.32,1,0,207.0,0.605,0.605,127
+128,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,209,209,8.36,8.36,1,0,194.0,0.628,0.628,128
+129,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,209,209,8.36,8.36,1,0,186.0,0.598,0.598,129
+130,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,209,209,8.36,8.36,1,0,175.0,0.57,0.57,130
+131,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,209,209,8.36,8.36,1,0,209.0,0.525,0.525,131
+132,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,210,210,8.4,8.4,1,0,191.0,0.722,0.722,132
+133,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,210,210,8.4,8.4,1,0,183.0,0.661,0.661,133
+134,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,210,210,8.4,8.4,1,0,188.0,0.555,0.555,134
+135,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,211,211,8.44,8.44,1,0,197.0,0.681,0.681,135
+136,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,211,211,8.44,8.44,1,0,189.0,0.612,0.612,136
+137,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,211,211,8.44,8.44,1,0,215.0,0.55,0.55,137
+138,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,212,212,8.48,8.48,1,0,196.0,0.698,0.698,138
+139,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,212,212,8.48,8.48,1,0,209.0,0.572,0.572,139
+140,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,212,212,8.48,8.48,1,0,213.0,0.503,0.503,140
+141,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,213,213,8.52,8.52,1,0,208.0,0.621,0.621,141
+142,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,213,213,8.52,8.52,1,0,185.0,0.618,0.618,142
+143,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,214,214,8.56,8.56,1,0,217.0,0.625,0.625,143
+144,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,214,214,8.56,8.56,1,0,204.0,0.599,0.599,144
+145,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,214,214,8.56,8.56,1,0,235.0,0.564,0.564,145
+146,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,215,215,8.6,8.6,1,0,202.0,0.618,0.618,146
+147,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,215,215,8.6,8.6,1,0,190.0,0.501,0.501,147
+148,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,216,217,8.64,8.68,2,0,222.0,0.632,0.675,148
+149,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,216,216,8.64,8.64,1,0,213.0,0.633,0.633,149
+150,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,216,216,8.64,8.64,1,0,245.0,0.518,0.518,150
+151,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,217,217,8.68,8.68,1,0,224.0,0.564,0.564,151
+152,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,217,217,8.68,8.68,1,0,203.0,0.534,0.534,152
+153,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,218,218,8.72,8.72,1,0,245.0,0.679,0.679,153
+154,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,218,218,8.72,8.72,1,0,197.0,0.557,0.557,154
+155,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,218,218,8.72,8.72,1,0,189.0,0.535,0.535,155
+156,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,218,218,8.72,8.72,1,0,228.0,0.523,0.523,156
+157,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,219,219,8.76,8.76,1,0,203.0,0.66,0.66,157
+158,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,219,219,8.76,8.76,1,0,197.0,0.604,0.604,158
+159,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,219,219,8.76,8.76,1,0,233.0,0.578,0.578,159
+160,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,221,221,8.84,8.84,1,0,201.0,0.517,0.517,160
+161,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,223,223,8.92,8.92,1,0,211.0,0.536,0.536,161
+162,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,224,224,8.96,8.96,1,0,231.0,0.583,0.583,162
+163,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,225,225,9.0,9.0,1,0,210.0,0.548,0.548,163
+164,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,226,226,9.04,9.04,1,0,218.0,0.55,0.55,164
+165,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,227,227,9.08,9.08,1,0,217.0,0.679,0.679,165
+166,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,228,228,9.12,9.12,1,0,202.0,0.559,0.559,166
+167,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,229,229,9.16,9.16,1,0,194.0,0.591,0.591,167
+168,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,230,230,9.2,9.2,1,0,213.0,0.549,0.549,168
+169,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,231,231,9.24,9.24,1,0,215.0,0.651,0.651,169
+170,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,232,232,9.28,9.28,1,0,207.0,0.501,0.501,170
+171,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,235,235,9.4,9.4,1,0,197.0,0.515,0.515,171
+172,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,243,243,9.72,9.72,1,0,186.0,0.593,0.593,172
+173,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,246,246,9.84,9.84,1,0,201.0,0.664,0.664,173
+174,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,249,249,9.96,9.96,1,0,203.0,0.638,0.638,174
+175,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,265,646,10.6,25.84,382,0,352.503,0.833,0.926,175
+176,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,288,646,11.52,25.84,359,0,468.919,0.808,0.93,176
+177,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,298,392,11.92,15.68,91,0,323.275,0.666,0.867,177
+178,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,298,298,11.92,11.92,1,0,254.0,0.516,0.516,178
+179,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,299,299,11.96,11.96,1,0,253.0,0.868,0.868,179
+180,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,300,300,12.0,12.0,1,0,257.0,0.751,0.751,180
+181,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,301,301,12.04,12.04,1,0,256.0,0.778,0.778,181
+182,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,302,302,12.08,12.08,1,0,256.0,0.749,0.749,182
+183,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,303,387,12.12,15.48,80,0,247.575,0.709,0.862,183
+184,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,313,314,12.52,12.56,2,0,282.0,0.576,0.625,184
+185,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,316,336,12.64,13.44,21,0,266.667,0.651,0.776,185
+186,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,334,646,13.36,25.84,301,0,269.817,0.674,0.844,186
+187,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,343,528,13.72,21.12,151,0,252.318,0.632,0.818,187
+188,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,416,446,16.64,17.84,30,0,323.267,0.585,0.714,188
+189,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,464,487,18.56,19.48,22,0,300.545,0.578,0.63,189
+190,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,506,507,20.24,20.28,2,0,283.5,0.53,0.554,190
+191,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,509,646,20.36,25.84,134,0,239.246,0.694,0.849,191
+192,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,515,646,20.6,25.84,128,0,384.938,0.741,0.848,192
+193,Das Boot 2a [10EqNLl5ZSM] 13m15s-13m41s.mp4,594,646,23.76,25.84,52,0,254.462,0.691,0.775,193
+194,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,0,331,0.0,13.24,332,0,312.37,0.815,0.932,194
+195,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,0,314,0.0,12.56,315,0,450.587,0.74,0.869,195
+196,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,0,320,0.0,12.8,321,0,408.452,0.764,0.898,196
+197,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,0,78,0.0,3.12,64,0,249.234,0.588,0.784,197
+198,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,0,80,0.0,3.2,77,0,233.026,0.649,0.778,198
+199,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,0,298,0.0,11.92,299,0,280.017,0.755,0.875,199
+200,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,90,90,3.6,3.6,1,0,240.0,0.516,0.516,200
+201,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,100,105,4.0,4.2,6,0,250.5,0.543,0.576,201
+202,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,100,280,4.0,11.2,132,0,234.591,0.585,0.829,202
+203,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,146,149,5.84,5.96,4,0,251.0,0.519,0.531,203
+204,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,165,168,6.6,6.72,4,0,256.25,0.523,0.538,204
+205,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,231,231,9.24,9.24,1,0,271.0,0.529,0.529,205
+206,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,304,318,12.16,12.72,14,0,250.643,0.743,0.86,206
+207,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,317,317,12.68,12.68,1,0,405.0,0.56,0.56,207
+208,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,326,439,13.04,17.56,107,0,391.43,0.765,0.931,208
+209,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,361,361,14.44,14.44,1,0,266.0,0.505,0.505,209
+210,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,368,368,14.72,14.72,1,0,283.0,0.573,0.573,210
+211,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,372,376,14.88,15.04,4,0,263.5,0.592,0.678,211
+212,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,378,467,15.12,18.68,72,0,625.875,0.639,0.79,212
+213,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,382,387,15.28,15.48,4,0,277.25,0.562,0.592,213
+214,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,398,719,15.92,28.76,322,0,475.643,0.791,0.93,214
+215,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,407,407,16.28,16.28,1,0,239.0,0.538,0.538,215
+216,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,409,462,16.36,18.48,47,0,658.638,0.645,0.834,216
+217,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,433,435,17.32,17.4,3,0,348.667,0.546,0.607,217
+218,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,444,530,17.76,21.2,65,0,306.538,0.634,0.764,218
+219,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,464,466,18.56,18.64,3,0,304.333,0.584,0.651,219
+220,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,483,606,19.32,24.24,115,0,385.896,0.767,0.952,220
+221,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,524,560,20.96,22.4,25,0,448.36,0.598,0.787,221
+222,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,548,561,21.92,22.44,10,0,308.8,0.637,0.764,222
+223,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,609,609,24.36,24.36,1,0,582.0,0.514,0.514,223
+224,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,619,649,24.76,25.96,22,0,484.182,0.598,0.698,224
+225,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,650,728,26.0,29.12,79,0,490.924,0.749,0.898,225
+226,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,661,661,26.44,26.44,1,0,387.0,0.517,0.517,226
+227,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,702,704,28.08,28.16,3,0,150.0,0.538,0.555,227
+228,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,705,714,28.2,28.56,10,0,246.3,0.7,0.798,228
+229,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,712,735,28.48,29.4,14,0,265.214,0.567,0.676,229
+230,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,714,715,28.56,28.6,2,0,295.5,0.558,0.569,230
+231,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,723,754,28.92,30.16,32,0,314.375,0.732,0.843,231
+232,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,723,748,28.92,29.92,23,0,255.739,0.629,0.736,232
+233,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,727,830,29.08,33.2,100,0,685.86,0.717,0.837,233
+234,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,734,751,29.36,30.04,14,0,381.786,0.616,0.72,234
+235,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,752,793,30.08,31.72,40,0,833.825,0.655,0.782,235
+236,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,757,769,30.28,30.76,3,0,240.0,0.546,0.559,236
+237,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,762,830,30.48,33.2,67,0,250.746,0.754,0.9,237
+238,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,783,783,31.32,31.32,1,0,252.0,0.553,0.553,238
+239,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,785,804,31.4,32.16,20,0,277.9,0.663,0.807,239
+240,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,786,787,31.44,31.48,2,0,245.0,0.574,0.584,240
+241,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,795,806,31.8,32.24,7,0,252.286,0.541,0.569,241
+242,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,801,830,32.04,33.2,24,0,448.125,0.616,0.741,242
+243,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,802,802,32.08,32.08,1,0,246.0,0.535,0.535,243
+244,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,806,830,32.24,33.2,24,0,310.042,0.679,0.804,244
+245,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,818,818,32.72,32.72,1,0,461.0,0.527,0.527,245
+246,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,819,829,32.76,33.16,8,0,265.25,0.583,0.648,246
+247,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,831,838,33.24,33.52,8,0,308.0,0.86,0.904,247
+248,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,832,832,33.28,33.28,1,0,202.0,0.504,0.504,248
+249,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,833,833,33.32,33.32,1,0,203.0,0.515,0.515,249
+250,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,835,852,33.4,34.08,18,0,218.389,0.692,0.792,250
+251,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,837,837,33.48,33.48,1,0,218.0,0.544,0.544,251
+252,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,839,852,33.56,34.08,14,0,298.429,0.879,0.941,252
+253,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,839,839,33.56,33.56,1,0,174.0,0.5,0.5,253
+254,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,840,840,33.6,33.6,1,0,188.0,0.534,0.534,254
+255,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,845,845,33.8,33.8,1,0,177.0,0.503,0.503,255
+256,Das Boot 2b [10EqNLl5ZSM] 13m41s-14m15s.mp4,850,850,34.0,34.0,1,0,227.0,0.547,0.547,256
+257,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,1,21,0.04,0.84,6,0,1039.0,0.55,0.583,257
+258,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,49,49,1.96,1.96,1,0,1270.0,0.52,0.52,258
+259,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,56,56,2.24,2.24,1,0,806.0,0.581,0.581,259
+260,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,72,72,2.88,2.88,1,0,363.0,0.519,0.519,260
+261,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,72,72,2.88,2.88,1,0,197.0,0.508,0.508,261
+262,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,75,77,3.0,3.08,3,0,247.0,0.528,0.552,262
+263,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,75,76,3.0,3.04,2,0,211.5,0.546,0.547,263
+264,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,94,94,3.76,3.76,1,0,308.0,0.533,0.533,264
+265,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,110,110,4.4,4.4,1,0,324.0,0.509,0.509,265
+266,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,117,164,4.68,6.56,32,0,672.312,0.667,0.836,266
+267,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,131,135,5.24,5.4,4,0,412.75,0.546,0.566,267
+268,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,145,150,5.8,6.0,5,0,572.0,0.547,0.572,268
+269,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,151,154,6.04,6.16,4,0,533.75,0.542,0.609,269
+270,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,155,156,6.2,6.24,2,0,557.5,0.611,0.613,270
+271,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,157,157,6.28,6.28,1,0,571.0,0.638,0.638,271
+272,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,162,162,6.48,6.48,1,0,589.0,0.531,0.531,272
+273,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,163,163,6.52,6.52,1,0,838.0,0.508,0.508,273
+274,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,168,168,6.72,6.72,1,0,641.0,0.531,0.531,274
+275,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,170,170,6.8,6.8,1,0,534.0,0.51,0.51,275
+276,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,189,198,7.56,7.92,10,0,803.2,0.563,0.643,276
+277,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,202,1205,8.08,48.2,1001,0,763.468,0.79,0.924,277
+278,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,255,1205,10.2,48.2,950,0,954.079,0.793,0.911,278
+279,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,1206,1399,48.24,55.96,194,0,783.639,0.854,0.925,279
+280,Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4,1206,1399,48.24,55.96,194,0,894.634,0.784,0.884,280
+281,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,0,713,0.0,28.52,708,0,315.716,0.727,0.892,281
+282,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,0,256,0.0,10.24,238,0,275.853,0.647,0.797,282
+283,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,0,534,0.0,21.36,483,0,375.551,0.731,0.889,283
+284,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,34,45,1.36,1.8,12,0,384.333,0.607,0.719,284
+285,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,60,60,2.4,2.4,1,0,382.0,0.61,0.61,285
+286,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,78,79,3.12,3.16,2,0,358.5,0.66,0.689,286
+287,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,102,108,4.08,4.32,5,0,334.6,0.541,0.614,287
+288,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,144,145,5.76,5.8,2,0,401.5,0.566,0.593,288
+289,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,164,240,6.56,9.6,41,0,361.512,0.6,0.773,289
+290,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,335,348,13.4,13.92,3,0,290.667,0.557,0.573,290
+291,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,371,713,14.84,28.52,323,0,270.331,0.697,0.842,291
+292,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,412,414,16.48,16.56,2,0,376.0,0.503,0.504,292
+293,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,462,462,18.48,18.48,1,0,376.0,0.507,0.507,293
+294,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,524,529,20.96,21.16,5,0,318.8,0.582,0.624,294
+295,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,548,713,21.92,28.52,138,0,319.283,0.695,0.845,295
+296,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,614,617,24.56,24.68,2,0,362.0,0.63,0.654,296
+297,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,634,667,25.36,26.68,20,0,337.5,0.573,0.672,297
+298,Das Boot 4a [kefBHWylmMk] 45m35s-46m04s.mp4,682,713,27.28,28.52,16,0,337.688,0.628,0.784,298
+299,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,0,785,0.0,31.4,786,0,468.427,0.77,0.864,299
+300,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,0,72,0.0,2.88,44,0,336.795,0.623,0.762,300
+301,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,0,275,0.0,11.0,260,0,303.435,0.611,0.844,301
+302,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,0,785,0.0,31.4,752,0,310.508,0.699,0.886,302
+303,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,115,127,4.6,5.08,2,0,314.0,0.542,0.552,303
+304,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,166,181,6.64,7.24,3,0,317.667,0.506,0.509,304
+305,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,220,234,8.8,9.36,7,0,358.0,0.545,0.635,305
+306,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,279,785,11.16,31.4,377,0,308.363,0.604,0.759,306
+307,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,330,357,13.2,14.28,14,0,360.786,0.569,0.655,307
+308,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,415,444,16.6,17.76,21,0,334.048,0.637,0.719,308
+309,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,490,493,19.6,19.72,4,0,311.5,0.54,0.575,309
+310,Das Boot 4b [kefBHWylmMk] 46m04s-46m35s.mp4,532,532,21.28,21.28,1,0,364.0,0.611,0.611,310
+311,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,5,330,0.2,13.2,317,0,349.319,0.729,0.862,311
+312,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,120,576,4.8,23.04,420,0,305.071,0.692,0.855,312
+313,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,134,134,5.36,5.36,1,0,181.0,0.536,0.536,313
+314,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,188,189,7.52,7.56,2,0,183.0,0.508,0.514,314
+315,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,250,305,10.0,12.2,46,0,268.37,0.656,0.794,315
+316,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,293,327,11.72,13.08,23,0,185.522,0.547,0.601,316
+317,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,306,316,12.24,12.64,11,0,237.091,0.661,0.724,317
+318,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,317,519,12.68,20.76,188,0,244.176,0.689,0.824,318
+319,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,318,318,12.72,12.72,1,0,235.0,0.763,0.763,319
+320,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,319,319,12.76,12.76,1,0,246.0,0.583,0.583,320
+321,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,320,320,12.8,12.8,1,0,235.0,0.716,0.716,321
+322,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,340,341,13.6,13.64,2,0,227.0,0.595,0.655,322
+323,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,349,382,13.96,15.28,15,0,357.933,0.586,0.693,323
+324,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,364,687,14.56,27.48,322,0,294.376,0.858,0.953,324
+325,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,412,687,16.48,27.48,251,0,355.606,0.678,0.842,325
+326,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,459,499,18.36,19.96,26,0,258.808,0.557,0.648,326
+327,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,461,468,18.44,18.72,4,0,193.75,0.53,0.538,327
+328,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,475,488,19.0,19.52,6,0,171.167,0.535,0.583,328
+329,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,488,488,19.52,19.52,1,0,187.0,0.55,0.55,329
+330,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,493,503,19.72,20.12,7,0,160.0,0.576,0.646,330
+331,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,507,507,20.28,20.28,1,0,166.0,0.5,0.5,331
+332,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,523,523,20.92,20.92,1,0,317.0,0.535,0.535,332
+333,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,533,534,21.32,21.36,2,0,171.0,0.552,0.554,333
+334,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,545,545,21.8,21.8,1,0,291.0,0.52,0.52,334
+335,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,553,562,22.12,22.48,4,0,165.5,0.525,0.527,335
+336,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,618,620,24.72,24.8,2,0,182.0,0.511,0.516,336
+337,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,620,647,24.8,25.88,28,0,209.929,0.641,0.769,337
+338,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,626,648,25.04,25.92,19,0,252.211,0.583,0.727,338
+339,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,659,682,26.36,27.28,19,0,214.737,0.548,0.587,339
+340,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,661,686,26.44,27.44,21,0,215.143,0.575,0.645,340
+341,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,662,682,26.48,27.28,11,0,263.0,0.517,0.534,341
+342,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,665,684,26.6,27.36,11,0,252.0,0.574,0.705,342
+343,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,668,687,26.72,27.48,20,0,245.7,0.586,0.67,343
+344,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,690,690,27.6,27.6,1,0,1081.0,0.505,0.505,344
+345,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,756,756,30.24,30.24,1,0,468.0,0.505,0.505,345
+346,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,799,808,31.96,32.32,2,0,530.0,0.512,0.52,346
+347,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,878,894,35.12,35.76,3,0,261.0,0.589,0.63,347
+348,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,885,905,35.4,36.2,14,0,232.571,0.594,0.768,348
+349,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,911,911,36.44,36.44,1,0,190.0,0.512,0.512,349
+350,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,912,1016,36.48,40.64,105,0,1073.876,0.847,0.912,350
+351,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,912,1016,36.48,40.64,105,0,922.857,0.832,0.925,351
+352,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,922,929,36.88,37.16,8,0,570.375,0.616,0.696,352
+353,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,987,991,39.48,39.64,5,0,428.8,0.545,0.58,353
+354,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1024,1040,40.96,41.6,4,0,377.75,0.519,0.532,354
+355,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1073,1226,42.92,49.04,144,0,367.069,0.59,0.697,355
+356,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1234,1358,49.36,54.32,125,0,517.648,0.796,0.885,356
+357,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1234,1295,49.36,51.8,62,0,537.29,0.737,0.84,357
+358,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1234,1274,49.36,50.96,40,0,625.725,0.81,0.91,358
+359,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1274,1274,50.96,50.96,1,0,313.0,0.52,0.52,359
+360,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1291,1297,51.64,51.88,7,0,418.714,0.607,0.653,360
+361,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1310,1524,52.4,60.96,215,0,489.577,0.83,0.949,361
+362,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1334,1334,53.36,53.36,1,0,274.0,0.5,0.5,362
+363,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1338,1504,53.52,60.16,150,0,552.867,0.779,0.9,363
+364,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1363,1375,54.52,55.0,11,0,382.0,0.588,0.665,364
+365,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1374,1374,54.96,54.96,1,0,189.0,0.547,0.547,365
+366,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1379,1379,55.16,55.16,1,0,352.0,0.512,0.512,366
+367,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1380,1394,55.2,55.76,9,0,210.778,0.549,0.629,367
+368,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1438,1524,57.52,60.96,87,0,499.54,0.826,0.906,368
+369,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1440,1440,57.6,57.6,1,0,228.0,0.511,0.511,369
+370,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1480,1480,59.2,59.2,1,0,213.0,0.567,0.567,370
+371,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1490,1490,59.6,59.6,1,0,360.0,0.564,0.564,371
+372,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1513,1517,60.52,60.68,5,0,357.6,0.55,0.662,372
+373,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1520,1520,60.8,60.8,1,0,222.0,0.534,0.534,373
+374,Das Boot 5 [kefBHWylmMk] 32m05s-33m06s.mp4,1522,1524,60.88,60.96,3,0,369.667,0.604,0.641,374
+375,Das Boot 6 [ofY2rexjmc4] 3m51s-3m58s.mp4,0,167,0.0,6.965,166,0,229.084,0.803,0.908,375
+376,Das Boot 6 [ofY2rexjmc4] 3m51s-3m58s.mp4,0,167,0.0,6.965,168,0,135.81,0.699,0.835,376
+377,Das Boot 6 [ofY2rexjmc4] 3m51s-3m58s.mp4,114,123,4.755,5.13,9,0,135.111,0.553,0.605,377
+378,Das Boot 6 [ofY2rexjmc4] 3m51s-3m58s.mp4,138,138,5.756,5.756,1,0,136.0,0.528,0.528,378
+379,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,3,3,0.125,0.125,1,0,89.0,0.576,0.576,379
+380,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,5,9,0.209,0.375,3,0,108.0,0.563,0.575,380
+381,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,11,14,0.459,0.584,3,0,130.0,0.612,0.623,381
+382,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,14,14,0.584,0.584,1,0,105.0,0.522,0.522,382
+383,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,17,17,0.709,0.709,1,0,95.0,0.537,0.537,383
+384,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,19,20,0.792,0.834,2,0,94.5,0.592,0.611,384
+385,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,27,31,1.126,1.293,4,0,119.25,0.546,0.591,385
+386,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,28,28,1.168,1.168,1,0,98.0,0.538,0.538,386
+387,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,33,44,1.376,1.835,11,0,113.364,0.56,0.65,387
+388,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,35,35,1.46,1.46,1,0,123.0,0.501,0.501,388
+389,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,37,38,1.543,1.585,2,0,122.0,0.571,0.632,389
+390,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,39,39,1.627,1.627,1,0,110.0,0.538,0.538,390
+391,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,44,45,1.835,1.877,2,0,119.0,0.63,0.646,391
+392,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,45,45,1.877,1.877,1,0,135.0,0.623,0.623,392
+393,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,46,217,1.919,9.051,172,0,256.692,0.926,0.962,393
+394,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,46,217,1.919,9.051,170,0,330.7,0.789,0.934,394
+395,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,46,217,1.919,9.051,172,0,372.634,0.888,0.943,395
+396,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,287,287,11.97,11.97,1,0,272.0,0.504,0.504,396
+397,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,596,598,24.858,24.942,2,0,106.5,0.564,0.592,397
+398,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,601,801,25.067,33.408,189,0,140.937,0.742,0.854,398
+399,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,620,649,25.859,27.069,19,0,158.105,0.568,0.666,399
+400,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,628,657,26.193,27.402,29,0,117.207,0.658,0.745,400
+401,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,651,651,27.152,27.152,1,0,127.0,0.618,0.618,401
+402,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,661,665,27.569,27.736,5,0,123.6,0.636,0.725,402
+403,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,684,827,28.528,34.493,141,0,124.922,0.687,0.795,403
+404,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,693,702,28.904,29.279,7,0,147.714,0.543,0.574,404
+405,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,802,802,33.45,33.45,1,0,132.0,0.738,0.738,405
+406,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,803,803,33.492,33.492,1,0,151.0,0.753,0.753,406
+407,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,804,804,33.533,33.533,1,0,142.0,0.677,0.677,407
+408,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,805,805,33.575,33.575,1,0,135.0,0.766,0.766,408
+409,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,806,806,33.617,33.617,1,0,150.0,0.659,0.659,409
+410,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,807,808,33.659,33.7,2,0,163.5,0.766,0.77,410
+411,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,809,810,33.742,33.784,2,0,166.5,0.755,0.797,411
+412,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,811,812,33.825,33.867,2,0,163.0,0.614,0.632,412
+413,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,821,821,34.243,34.243,1,0,155.0,0.594,0.594,413
+414,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,823,824,34.326,34.368,2,0,164.0,0.577,0.58,414
+415,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,829,829,34.576,34.576,1,0,131.0,0.544,0.544,415
+416,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,830,832,34.618,34.701,3,0,165.667,0.56,0.585,416
+417,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,833,835,34.743,34.826,3,0,154.333,0.59,0.686,417
+418,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,836,836,34.868,34.868,1,0,158.0,0.604,0.604,418
+419,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,837,837,34.91,34.91,1,0,170.0,0.71,0.71,419
+420,Das Boot 7 [T-D6e3pjHKQ] 0m25s-1m00s.mp4,838,838,34.952,34.952,1,0,163.0,0.673,0.673,420
+421,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,0,47,0.0,1.88,48,0,384.312,0.742,0.873,421
+422,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,0,43,0.0,1.72,44,0,331.682,0.703,0.856,422
+423,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,6,21,0.24,0.84,10,0,353.9,0.558,0.658,423
+424,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,46,52,1.84,2.08,7,0,334.143,0.594,0.672,424
+425,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,53,53,2.12,2.12,1,0,320.0,0.809,0.809,425
+426,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,53,55,2.12,2.2,3,0,338.667,0.599,0.638,426
+427,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,55,55,2.2,2.2,1,0,308.0,0.56,0.56,427
+428,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,56,56,2.24,2.24,1,0,333.0,0.585,0.585,428
+429,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,65,146,2.6,5.84,82,0,412.537,0.727,0.909,429
+430,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,93,95,3.72,3.8,2,0,345.5,0.532,0.562,430
+431,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,104,105,4.16,4.2,2,0,320.5,0.595,0.651,431
+432,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,105,105,4.2,4.2,1,0,326.0,0.561,0.561,432
+433,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,108,110,4.32,4.4,3,0,333.333,0.62,0.663,433
+434,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,114,143,4.56,5.72,29,0,400.103,0.744,0.871,434
+435,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,148,204,5.92,8.16,54,0,473.352,0.729,0.897,435
+436,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,169,169,6.76,6.76,1,0,474.0,0.646,0.646,436
+437,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,175,307,7.0,12.28,130,0,476.531,0.77,0.927,437
+438,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,181,183,7.24,7.32,3,0,315.667,0.548,0.57,438
+439,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,208,208,8.32,8.32,1,0,413.0,0.609,0.609,439
+440,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,210,210,8.4,8.4,1,0,390.0,0.62,0.62,440
+441,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,213,216,8.52,8.64,4,0,422.5,0.583,0.636,441
+442,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,219,222,8.76,8.88,3,0,405.333,0.57,0.59,442
+443,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,225,243,9.0,9.72,16,0,423.375,0.634,0.778,443
+444,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,232,232,9.28,9.28,1,0,353.0,0.523,0.523,444
+445,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,250,252,10.0,10.08,2,0,468.0,0.558,0.616,445
+446,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,259,283,10.36,11.32,25,0,448.12,0.713,0.862,446
+447,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,291,296,11.64,11.84,6,0,429.333,0.585,0.693,447
+448,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,300,307,12.0,12.28,8,0,395.125,0.616,0.67,448
+449,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,337,339,13.48,13.56,2,0,228.5,0.546,0.591,449
+450,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,362,395,14.48,15.8,23,0,239.087,0.587,0.66,450
+451,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,366,374,14.64,14.96,4,0,230.5,0.523,0.543,451
+452,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,411,421,16.44,16.84,9,0,304.444,0.553,0.621,452
+453,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,430,432,17.2,17.28,3,0,188.667,0.601,0.648,453
+454,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,452,460,18.08,18.4,9,0,237.333,0.637,0.745,454
+455,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,461,461,18.44,18.44,1,0,235.0,0.719,0.719,455
+456,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,462,464,18.48,18.56,3,0,238.333,0.692,0.72,456
+457,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,465,507,18.6,20.28,43,0,246.372,0.708,0.822,457
+458,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,495,500,19.8,20.0,3,0,351.0,0.539,0.583,458
+459,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,508,508,20.32,20.32,1,0,221.0,0.668,0.668,459
+460,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,508,508,20.32,20.32,1,0,239.0,0.575,0.575,460
+461,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,523,610,20.92,24.4,88,0,601.375,0.783,0.918,461
+462,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,611,676,24.44,27.04,52,0,269.462,0.657,0.82,462
+463,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,611,637,24.44,25.48,15,0,222.0,0.565,0.688,463
+464,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,621,678,24.84,27.12,55,0,334.091,0.675,0.835,464
+465,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,621,637,24.84,25.48,14,0,423.214,0.583,0.636,465
+466,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,626,628,25.04,25.12,2,0,249.0,0.528,0.541,466
+467,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,651,652,26.04,26.08,2,0,219.5,0.53,0.539,467
+468,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,679,799,27.16,31.96,115,0,899.096,0.695,0.89,468
+469,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,800,844,32.0,33.76,44,0,456.273,0.65,0.734,469
+470,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,801,873,32.04,34.92,53,0,277.189,0.592,0.748,470
+471,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,805,872,32.2,34.88,61,0,300.557,0.594,0.76,471
+472,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,818,849,32.72,33.96,19,0,433.579,0.576,0.684,472
+473,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,821,873,32.84,34.92,33,0,235.758,0.634,0.755,473
+474,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,861,864,34.44,34.56,4,0,251.25,0.552,0.595,474
+475,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,864,873,34.56,34.92,5,0,446.0,0.524,0.555,475
+476,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,874,943,34.96,37.72,52,0,854.462,0.587,0.698,476
+477,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,969,974,38.76,38.96,4,0,1099.5,0.556,0.583,477
+478,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,979,980,39.16,39.2,2,0,1160.0,0.532,0.54,478
+479,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,981,981,39.24,39.24,1,0,613.0,0.665,0.665,479
+480,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,983,985,39.32,39.4,3,0,1257.0,0.541,0.562,480
+481,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,989,989,39.56,39.56,1,0,596.0,0.582,0.582,481
+482,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,990,990,39.6,39.6,1,0,1135.0,0.536,0.536,482
+483,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,992,994,39.68,39.76,3,0,1080.333,0.523,0.535,483
+484,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,998,1000,39.92,40.0,2,0,919.5,0.548,0.577,484
+485,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1001,1001,40.04,40.04,1,0,653.0,0.646,0.646,485
+486,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1002,1002,40.08,40.08,1,0,857.0,0.576,0.576,486
+487,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1010,1010,40.4,40.4,1,0,707.0,0.502,0.502,487
+488,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1011,1021,40.44,40.84,11,0,613.727,0.709,0.794,488
+489,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1022,1022,40.88,40.88,1,0,562.0,0.741,0.741,489
+490,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1023,1023,40.92,40.92,1,0,535.0,0.831,0.831,490
+491,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1024,1024,40.96,40.96,1,0,540.0,0.726,0.726,491
+492,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1025,1025,41.0,41.0,1,0,566.0,0.734,0.734,492
+493,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1026,1026,41.04,41.04,1,0,578.0,0.663,0.663,493
+494,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1027,1027,41.08,41.08,1,0,617.0,0.701,0.701,494
+495,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1028,1028,41.12,41.12,1,0,613.0,0.653,0.653,495
+496,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1029,1030,41.16,41.2,2,0,576.0,0.53,0.553,496
+497,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1032,1054,41.28,42.16,23,0,536.522,0.677,0.786,497
+498,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1054,1095,42.16,43.8,32,0,738.938,0.589,0.716,498
+499,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1060,1064,42.4,42.56,5,0,289.2,0.571,0.633,499
+500,Das Boot 8a [dasgespenst] 0m00s-0m44s.mp4,1092,1092,43.68,43.68,1,0,282.0,0.5,0.5,500
+501,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,0,78,0.0,3.12,71,0,682.056,0.66,0.793,501
+502,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,0,18,0.0,0.72,14,0,279.0,0.589,0.682,502
+503,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,23,139,0.92,5.56,117,0,324.333,0.81,0.922,503
+504,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,95,137,3.8,5.48,34,0,677.882,0.589,0.69,504
+505,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,140,284,5.6,11.36,145,0,613.386,0.743,0.901,505
+506,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,169,173,6.76,6.92,4,0,387.0,0.568,0.616,506
+507,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,175,259,7.0,10.36,62,0,591.548,0.657,0.864,507
+508,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,248,248,9.92,9.92,1,0,272.0,0.541,0.541,508
+509,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,285,356,11.4,14.24,72,0,1536.556,0.826,0.893,509
+510,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,285,356,11.4,14.24,72,0,888.917,0.705,0.788,510
+511,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,357,447,14.28,17.88,90,0,772.778,0.726,0.879,511
+512,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,449,457,17.96,18.28,8,0,622.0,0.598,0.714,512
+513,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,458,504,18.32,20.16,47,0,470.426,0.852,0.918,513
+514,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,505,564,20.2,22.56,60,0,744.917,0.676,0.847,514
+515,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,566,585,22.64,23.4,20,0,660.0,0.658,0.768,515
+516,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,586,586,23.44,23.44,1,0,550.0,0.925,0.925,516
+517,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,586,586,23.44,23.44,1,0,346.0,0.568,0.568,517
+518,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,587,587,23.48,23.48,1,0,535.0,0.834,0.834,518
+519,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,588,590,23.52,23.6,3,0,506.0,0.791,0.841,519
+520,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,589,595,23.56,23.8,6,0,343.667,0.649,0.679,520
+521,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,591,591,23.64,23.64,1,0,430.0,0.778,0.778,521
+522,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,595,595,23.8,23.8,1,0,441.0,0.515,0.515,522
+523,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,599,625,23.96,25.0,27,0,304.889,0.745,0.874,523
+524,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,605,605,24.2,24.2,1,0,184.0,0.508,0.508,524
+525,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,609,611,24.36,24.44,2,0,184.5,0.564,0.598,525
+526,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,628,628,25.12,25.12,1,0,293.0,0.694,0.694,526
+527,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,629,631,25.16,25.24,2,0,260.0,0.602,0.683,527
+528,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,641,643,25.64,25.72,3,0,308.333,0.615,0.684,528
+529,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,644,645,25.76,25.8,2,0,374.5,0.715,0.809,529
+530,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,666,666,26.64,26.64,1,0,402.0,0.624,0.624,530
+531,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,668,668,26.72,26.72,1,0,426.0,0.508,0.508,531
+532,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,677,677,27.08,27.08,1,0,252.0,0.539,0.539,532
+533,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,680,680,27.2,27.2,1,0,250.0,0.569,0.569,533
+534,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,684,684,27.36,27.36,1,0,250.0,0.551,0.551,534
+535,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,687,687,27.48,27.48,1,0,417.0,0.517,0.517,535
+536,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,690,690,27.6,27.6,1,0,465.0,0.596,0.596,536
+537,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,691,691,27.64,27.64,1,0,439.0,0.632,0.632,537
+538,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,692,692,27.68,27.68,1,0,469.0,0.805,0.805,538
+539,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,693,693,27.72,27.72,1,0,457.0,0.64,0.64,539
+540,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,694,696,27.76,27.84,3,0,171.333,0.683,0.781,540
+541,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,694,694,27.76,27.76,1,0,324.0,0.608,0.608,541
+542,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,697,697,27.88,27.88,1,0,290.0,0.553,0.553,542
+543,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,698,698,27.92,27.92,1,0,426.0,0.588,0.588,543
+544,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,699,699,27.96,27.96,1,0,489.0,0.622,0.622,544
+545,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,700,700,28.0,28.0,1,0,429.0,0.715,0.715,545
+546,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,701,701,28.04,28.04,1,0,391.0,0.683,0.683,546
+547,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,702,707,28.08,28.28,6,0,451.5,0.71,0.812,547
+548,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,702,702,28.08,28.08,1,0,326.0,0.511,0.511,548
+549,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,717,717,28.68,28.68,1,0,644.0,0.596,0.596,549
+550,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,721,721,28.84,28.84,1,0,559.0,0.645,0.645,550
+551,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,722,722,28.88,28.88,1,0,768.0,0.618,0.618,551
+552,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,723,723,28.92,28.92,1,0,772.0,0.508,0.508,552
+553,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,726,726,29.04,29.04,1,0,884.0,0.528,0.528,553
+554,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,727,727,29.08,29.08,1,0,1034.0,0.546,0.546,554
+555,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,731,731,29.24,29.24,1,0,701.0,0.517,0.517,555
+556,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,736,737,29.44,29.48,2,0,389.5,0.547,0.585,556
+557,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,739,740,29.56,29.6,2,0,876.5,0.546,0.578,557
+558,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,742,742,29.68,29.68,1,0,202.0,0.526,0.526,558
+559,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,757,757,30.28,30.28,1,0,217.0,0.655,0.655,559
+560,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,784,785,31.36,31.4,2,0,486.0,0.656,0.678,560
+561,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,786,786,31.44,31.44,1,0,436.0,0.56,0.56,561
+562,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,787,787,31.48,31.48,1,0,495.0,0.509,0.509,562
+563,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,792,792,31.68,31.68,1,0,405.0,0.639,0.639,563
+564,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,793,795,31.72,31.8,3,0,317.0,0.534,0.568,564
+565,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,808,809,32.32,32.36,2,0,299.0,0.53,0.531,565
+566,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,812,812,32.48,32.48,1,0,304.0,0.521,0.521,566
+567,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,815,824,32.6,32.96,7,0,257.286,0.601,0.686,567
+568,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,842,854,33.68,34.16,8,0,481.75,0.578,0.76,568
+569,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,854,854,34.16,34.16,1,0,602.0,0.525,0.525,569
+570,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,870,875,34.8,35.0,6,0,528.667,0.654,0.748,570
+571,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,877,877,35.08,35.08,1,0,377.0,0.575,0.575,571
+572,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,893,893,35.72,35.72,1,0,565.0,0.716,0.716,572
+573,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,894,894,35.76,35.76,1,0,610.0,0.67,0.67,573
+574,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,895,895,35.8,35.8,1,0,641.0,0.622,0.622,574
+575,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,896,896,35.84,35.84,1,0,676.0,0.521,0.521,575
+576,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,899,899,35.96,35.96,1,0,961.0,0.775,0.775,576
+577,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,902,902,36.08,36.08,1,0,1204.0,0.619,0.619,577
+578,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,903,903,36.12,36.12,1,0,998.0,0.757,0.757,578
+579,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,904,921,36.16,36.84,18,0,1195.889,0.858,0.938,579
+580,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,922,922,36.88,36.88,1,0,324.0,0.525,0.525,580
+581,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,923,923,36.92,36.92,1,0,369.0,0.583,0.583,581
+582,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,924,1010,36.96,40.4,87,0,1090.448,0.74,0.859,582
+583,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,926,926,37.04,37.04,1,0,286.0,0.597,0.597,583
+584,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,927,929,37.08,37.16,3,0,365.667,0.755,0.801,584
+585,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,930,930,37.2,37.2,1,0,376.0,0.608,0.608,585
+586,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,931,931,37.24,37.24,1,0,430.0,0.509,0.509,586
+587,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,932,932,37.28,37.28,1,0,439.0,0.598,0.598,587
+588,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,933,940,37.32,37.6,7,0,487.714,0.687,0.817,588
+589,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,946,960,37.84,38.4,4,0,428.75,0.635,0.708,589
+590,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,952,952,38.08,38.08,1,0,380.0,0.601,0.601,590
+591,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,957,970,38.28,38.8,14,0,533.571,0.61,0.663,591
+592,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,964,1010,38.56,40.4,47,0,636.362,0.766,0.877,592
+593,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,1003,1003,40.12,40.12,1,0,543.0,0.524,0.524,593
+594,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,1011,1091,40.44,43.64,81,0,1107.222,0.853,0.931,594
+595,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,1092,1193,43.68,47.72,93,0,480.301,0.657,0.82,595
+596,Das Boot 8b [dasgespenst] 0m44s-1m32s.mp4,1092,1193,43.68,47.72,102,0,1109.108,0.693,0.848,596
+597,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,0,97,0.0,3.88,98,0,1023.316,0.794,0.93,597
+598,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,107,108,4.28,4.32,2,0,739.5,0.541,0.577,598
+599,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,110,112,4.4,4.48,3,0,360.333,0.609,0.622,599
+600,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,110,110,4.4,4.4,1,0,460.0,0.512,0.512,600
+601,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,115,121,4.6,4.84,5,0,687.8,0.586,0.636,601
+602,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,124,124,4.96,4.96,1,0,277.0,0.504,0.504,602
+603,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,126,127,5.04,5.08,2,0,304.0,0.596,0.631,603
+604,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,127,140,5.08,5.6,13,0,497.923,0.666,0.799,604
+605,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,141,141,5.64,5.64,1,0,621.0,0.693,0.693,605
+606,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,142,142,5.68,5.68,1,0,520.0,0.712,0.712,606
+607,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,143,143,5.72,5.72,1,0,543.0,0.736,0.736,607
+608,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,144,164,5.76,6.56,21,0,544.571,0.72,0.862,608
+609,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,173,173,6.92,6.92,1,0,757.0,0.557,0.557,609
+610,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,173,178,6.92,7.12,2,0,406.0,0.559,0.572,610
+611,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,175,175,7.0,7.0,1,0,821.0,0.559,0.559,611
+612,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,196,196,7.84,7.84,1,0,521.0,0.671,0.671,612
+613,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,197,197,7.88,7.88,1,0,461.0,0.554,0.554,613
+614,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,198,198,7.92,7.92,1,0,355.0,0.768,0.768,614
+615,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,199,199,7.96,7.96,1,0,413.0,0.768,0.768,615
+616,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,200,200,8.0,8.0,1,0,389.0,0.768,0.768,616
+617,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,201,273,8.04,10.92,73,0,391.479,0.757,0.859,617
+618,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,207,207,8.28,8.28,1,0,395.0,0.502,0.502,618
+619,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,290,296,11.6,11.84,3,0,443.0,0.516,0.526,619
+620,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,311,544,12.44,21.76,222,0,428.653,0.775,0.895,620
+621,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,311,311,12.44,12.44,1,0,271.0,0.535,0.535,621
+622,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,313,313,12.52,12.52,1,0,255.0,0.517,0.517,622
+623,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,506,506,20.24,20.24,1,0,320.0,0.539,0.539,623
+624,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,519,560,20.76,22.4,29,0,370.931,0.739,0.788,624
+625,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,561,673,22.44,26.92,113,0,391.788,0.753,0.879,625
+626,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,561,673,22.44,26.92,113,0,376.788,0.741,0.823,626
+627,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,561,673,22.44,26.92,113,0,505.965,0.654,0.747,627
+628,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,561,673,22.44,26.92,107,0,231.692,0.615,0.733,628
+629,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,561,574,22.44,22.96,9,0,259.111,0.534,0.633,629
+630,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,599,673,23.96,26.92,52,0,262.481,0.586,0.707,630
+631,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,629,633,25.16,25.32,2,0,264.0,0.541,0.55,631
+632,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,658,672,26.32,26.88,5,0,249.2,0.533,0.568,632
+633,Das Boot 8c [dasgespenst] 1m32s-2m05s.mp4,674,834,26.96,33.36,161,0,387.124,0.688,0.808,633
