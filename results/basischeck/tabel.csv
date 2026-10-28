@@ -1,0 +1,5 @@
+acteur,ground_truth,ai_voorspelling,foutmarge_procent
+Der Alte,7671,80,99.0
+Fritz Grade,4779,236,95.1
+Johann,775,0,100.0
+Werner,6247,549,91.2
