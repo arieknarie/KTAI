@@ -18,10 +18,16 @@ Uitvoer in results/basischeck/:
     tabel.csv, tabel.png  visualisatie 1: per persoon in hoeveel beelden die persoon te zien is
     tijdlijn.png        visualisatie 2: de tijd (x) tegen de personen (y), per fragment
 
+Met --kostuum komen er voorbeelden bij: de gezichten van de vier personen op de stills (beelden uit de film, met de
+personen in kostuum, in pictures/inCharacter/), zoals de labelaar ze aanwees. De drie stills die (bijna) een beeld
+uit een van de fragmenten zijn (data/stills_index.csv, kolom uit_video), doen niet mee: een beeld uit de video mag
+geen voorbeeld zijn. De uitvoer komt dan in results/basischeck_kostuum/.
+
 Gebruik (vanuit de map KTAI, met de pakketten uit requirements_herkenning.txt):
-    .venv-herkenning/bin/python code/basischeck.py
+    .venv-herkenning/bin/python code/basischeck.py [--kostuum]
 """
 
+import argparse
 import os
 from pathlib import Path
 
@@ -38,6 +44,7 @@ from deepface import DeepFace
 
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "results" / "basischeck"
+TITLE = "voorbeelden: foto's"
 PERSONS = {"DerAlte": "Der Alte", "FritzGrade": "Fritz Grade", "Johann": "Johann", "Werner": "Werner"}
 OTHER = "iemand anders"
 DREMPEL = 0.80   # de grens die deepface voor FaceNet met de genormaliseerde Euclidische afstand gebruikt
@@ -72,12 +79,19 @@ def embed(faces: list) -> np.ndarray:
     return vectors / np.linalg.norm(vectors, axis=1, keepdims=True)
 
 
-def examples() -> tuple:
+def examples(kostuum: bool = False) -> tuple:
     """De voorbeelden: naam van de persoon per foto, en de embeddings."""
     auto = pd.read_csv(REPO / "labeling" / "automatic_labels.csv")
     labels = pd.read_csv(REPO / "labels" / "labels.csv")
     chosen = labels[labels["item"].str.startswith("photo:") & labels["label"].isin(PERSONS)]
     rows = pd.concat([auto, chosen])[["source", "label", "x", "y", "w", "h"]]
+    if kostuum:   # de gezichten op de stills, behalve de stills die een beeld uit een fragment zijn
+        stills = pd.read_csv(REPO / "data" / "stills_index.csv").set_index("still")
+        faces = labels[labels["item"].str.startswith("still:") & labels["label"].isin(PERSONS)].copy()
+        faces["still"] = faces["item"].str.removeprefix("still:")
+        faces = faces[stills.loc[faces["still"], "uit_video"].isna().to_numpy()]
+        faces["source"] = stills.loc[faces["still"], "bestand"].to_numpy()
+        rows = pd.concat([rows, faces[["source", "label", "x", "y", "w", "h"]]])
     faces = [cut(cv2.imread(str(REPO / r.source)), r.x, r.y, r.w, r.h) for r in rows.itertuples()]
     print(f"{len(faces)} voorbeelden: " + ", ".join(f"{PERSONS[k]} {n}" for k, n in rows["label"].value_counts().items()))
     return rows["label"].map(PERSONS).tolist(), embed(faces)
@@ -154,7 +168,7 @@ def table(truth: pd.DataFrame, ai: pd.DataFrame) -> pd.DataFrame:
     grid = ax.table(cellText=cells, colLabels=["Acteur", "Ground truth (beelden)", "AI-voorspelling (beelden)",
                                                "Foutmarge"], loc="center", cellLoc="center")
     grid.scale(1, 1.6)
-    ax.set_title("Visualisatie 1: in hoeveel beelden elke acteur te zien is (alle acht fragmenten)", fontsize=10)
+    ax.set_title(f"Visualisatie 1: in hoeveel beelden elke acteur te zien is (alle acht fragmenten; {TITLE})", fontsize=10)
     fig.savefig(OUT / "tabel.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
     return result
@@ -187,15 +201,21 @@ def timeline(truth: pd.DataFrame, ai: pd.DataFrame) -> None:
     axes[-1, 0].set_xlabel("tijd in het fragment (seconden)")
     fig.legend(handles=[plt.Rectangle((0, 0), 1, 1, color="#333333"), plt.Rectangle((0, 0), 1, 1, color="#d1495b")],
                labels=["ground truth (labelaar)", "AI-voorspelling (FaceNet)"], loc="upper right", fontsize=8)
-    fig.suptitle("Visualisatie 2: wanneer elke acteur te zien is", x=0.01, ha="left", fontsize=10)
+    fig.suptitle(f"Visualisatie 2: wanneer elke acteur te zien is ({TITLE})", x=0.01, ha="left", fontsize=10)
     fig.tight_layout(rect=(0, 0, 1, 0.97))
     fig.savefig(OUT / "tijdlijn.png", dpi=130)
     plt.close(fig)
 
 
 def main() -> None:
+    global OUT, TITLE
+    parser = argparse.ArgumentParser(description="Basischeck: FaceNet-herkenning naast de labels")
+    parser.add_argument("--kostuum", action="store_true", help="ook de gezichten op de stills (in kostuum) als voorbeeld")
+    args = parser.parse_args()
+    if args.kostuum:
+        OUT, TITLE = REPO / "results" / "basischeck_kostuum", "voorbeelden: foto's + stills in kostuum"
     OUT.mkdir(parents=True, exist_ok=True)
-    names, refs = examples()
+    names, refs = examples(args.kostuum)
     found = recognise(names, refs)
     found.to_csv(OUT / "voorspellingen.csv", index=False, lineterminator="\n")
     truth, ai = per_frame(found, "labelaar"), per_frame(found, "facenet")
