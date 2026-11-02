@@ -3,10 +3,11 @@
 Het programma laat achter elkaar zien:
 1. elk beeld van elk fragment in movies/ (alle 11.182, ook de beelden zonder kader);
 2. elke foto en elke still die de labelaar gelabeld heeft (labels/labels.csv).
-Om elk gezicht staat het kader met de keuze van de labelaar uit labels/labels.csv. Bij een beeld uit een fragment is
-dat de keuze voor de track van het kader (data/tracks/detections_0.3.csv). Staat een van de vier personen meer dan
-één keer in hetzelfde beeld (bijvoorbeeld twee kaders op één hoofd), dan worden die kaders samen één groot kader. Bij
-figurant, geen gezicht en weet niet gebeurt dat alleen met kaders die over elkaar liggen.
+Alleen de vier personen krijgen een kader: om elk gezicht dat de labelaar als een van de vier aanwees (labels/labels.csv;
+bij een beeld uit een fragment de keuze voor de track van het kader, data/tracks/detections_0.3.csv), met de naam
+erbij. Staat een persoon meer dan één keer in hetzelfde beeld (bijvoorbeeld twee kaders op één hoofd), dan worden die
+kaders samen één groot kader. Was een persoon in het vorige beeld van het fragment wel te zien en in dit beeld niet,
+dan staat er bovenin een waarschuwing.
 
 Toetsen: pijltje links = goed, pijltje rechts = fout, Backspace = een beeld terug.
 Elk oordeel komt meteen in labels/controle_labels.csv. Geef je een beeld twee keer een oordeel, dan telt het laatste.
@@ -38,38 +39,19 @@ PORT = 8020
 WIDTH = 1920     # zo breed (in pixels) gaat een beeld hoogstens naar de browser
 CACHE = 400      # zoveel beelden blijven klaarliggen, zodat een paar beelden terug meteen kan
 AHEAD = 25       # zoveel beelden leest het programma alvast vooruit
-NAMES = {"DerAlte": "Der Alte", "FritzGrade": "Fritz Grade", "Johann": "Johann", "Werner": "Werner",
-         "other": "figurant", "no_face": "geen gezicht", "unknown": "weet niet"}
-
-
-PERSONS = ("Der Alte", "Fritz Grade", "Johann", "Werner")
-
-
-def together(a: list, b: list) -> bool:
-    """Worden twee kaders (naam, x, y, w, h) één kader: dezelfde persoon, of dezelfde andere keuze en over elkaar?"""
-    if a[0] != b[0]:
-        return False
-    w = min(a[1] + a[3], b[1] + b[3]) - max(a[1], b[1])
-    h = min(a[2] + a[4], b[2] + b[4]) - max(a[2], b[2])
-    return a[0] in PERSONS or (w > 0 and h > 0)
+NAMES = {"DerAlte": "Der Alte", "FritzGrade": "Fritz Grade", "Johann": "Johann", "Werner": "Werner"}
 
 
 def merge(boxes: list) -> list:
-    """Kaders die samen één kader worden (zie together) worden één kader om allemaal heen."""
-    boxes = [list(b) for b in boxes]
-    i = 0
-    while i < len(boxes):
-        for j in range(i + 1, len(boxes)):
-            a, b = boxes[i], boxes[j]
-            if together(a, b):
-                x0, y0 = min(a[1], b[1]), min(a[2], b[2])
-                x1, y1 = max(a[1] + a[3], b[1] + b[3]), max(a[2] + a[4], b[2] + b[4])
-                boxes[i] = [a[0], x0, y0, x1 - x0, y1 - y0]
-                del boxes[j]
-                i = -1                                   # opnieuw beginnen: het grote kader kan weer andere raken
-                break
-        i += 1
-    return boxes
+    """Per persoon één kader (naam, x, y, w, h), om al de kaders van die persoon in het beeld heen."""
+    found = {}
+    for name, x, y, w, h in boxes:
+        if name in found:
+            a = found[name]
+            x0, y0 = min(a[0], x), min(a[1], y)
+            x, y, w, h = x0, y0, max(a[0] + a[2], x + w) - x0, max(a[1] + a[3], y + h) - y0
+        found[name] = [x, y, w, h]
+    return [[name, *box] for name, box in found.items()]
 
 
 def items() -> list:
@@ -80,19 +62,26 @@ def items() -> list:
     frames = pd.read_csv(REPO / "data" / "tracks" / "frames.csv")
     boxes = {}
     for b in detections.itertuples():
-        name = NAMES.get(choice.get(f"{b.video}#track{b.track}"), "geen label")
-        boxes.setdefault((b.video, int(b.frame)), []).append((name, b.x, b.y, b.w, b.h))
+        name = NAMES.get(choice.get(f"{b.video}#track{b.track}"))
+        if name:
+            boxes.setdefault((b.video, int(b.frame)), []).append((name, b.x, b.y, b.w, b.h))
     for b in labels[labels["how"] == "getekend"].itertuples():      # gezichten die de labelaar zelf tekende
-        boxes.setdefault((b.source, int(b.frame)), []).append((NAMES.get(b.label, b.label), b.x, b.y, b.w, b.h))
-    result = []
+        if b.label in NAMES:
+            boxes.setdefault((b.source, int(b.frame)), []).append((NAMES[b.label], b.x, b.y, b.w, b.h))
+    result, before = [], (None, set())
     for video, f in frames.groupby("video", sort=True):
         capture = cv2.VideoCapture(str(REPO / "movies" / video))
         w, h = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH)), int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
         capture.release()
+        fragment = video.split(" [")[0].rstrip("abc")     # Das Boot 2a en 2b zijn samen één fragment
         for frame in sorted(f["frame"]):
+            here = merge(boxes.get((video, int(frame)), []))
+            names = {b[0] for b in here}
+            gone = sorted(before[1] - names) if before[0] == fragment else []
             result.append({"key": f"{video}#beeld{frame}", "video": video, "frame": int(frame),
                            "title": f"{video.split(' [')[0]}, beeld {frame + 1} van {len(f)}", "w": w, "h": h,
-                           "boxes": merge(boxes.get((video, int(frame)), []))})
+                           "boxes": here, "gone": gone})
+            before = (fragment, names)
     stills = pd.read_csv(REPO / "data" / "stills_index.csv").set_index("still")["bestand"]
     rest = labels[~labels["item"].str.startswith("track:") & (labels["how"] != "getekend")]
     kinds = rest["item"].drop_duplicates().str.split(":").str[0]
@@ -104,7 +93,8 @@ def items() -> list:
         h, w = cv2.imread(str(path)).shape[:2]
         result.append({"key": item, "path": str(path), "w": w, "h": h,
                        "title": f"{'foto' if kind == 'photo' else 'still'} {number[kind]} van {(kinds == kind).sum()}",
-                       "boxes": merge([(NAMES.get(b.label, b.label), b.x, b.y, b.w, b.h) for b in g.itertuples()])})
+                       "boxes": merge([(NAMES[b.label], b.x, b.y, b.w, b.h) for b in g.itertuples() if b.label in NAMES]),
+                       "gone": []})
     return result
 
 
@@ -191,9 +181,12 @@ PAGE = """<!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><title>Controle labels</title>
 <style>
   html, body { margin: 0; height: 100%; overflow: hidden; background: #111; color: #eee; font: 15px system-ui, sans-serif; }
-  #bar { height: 44px; display: flex; align-items: center; gap: 24px; padding: 0 16px; box-sizing: border-box; }
+  #bar { min-height: 44px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; padding: 6px 16px; box-sizing: border-box; }
+  #bar span { white-space: nowrap; }
   #title { font-weight: 600; }
   #before { color: #ffd11a; }
+  #gone { background: #d1495b; color: #fff; font-weight: 600; padding: 4px 10px; border-radius: 4px; }
+  #gone:empty { display: none; }
   #hint { margin-left: auto; color: #aaa; }
   #stage { position: relative; margin: 0 auto; }
   #stage.loading { opacity: 0.3; }
@@ -202,18 +195,17 @@ PAGE = """<!doctype html>
   .box span { position: absolute; left: -3px; bottom: 100%; padding: 1px 6px; font-weight: 600; white-space: nowrap; color: #111; }
   .box.top span { bottom: auto; top: 0; }
 </style></head><body>
-<div id="bar"><span id="title">laden…</span><span id="count"></span><span id="before"></span>
+<div id="bar"><span id="title">laden…</span><span id="count"></span><span id="before"></span><span id="gone"></span>
 <span id="hint">← goed &nbsp;&nbsp; → fout &nbsp;&nbsp; Backspace terug</span></div>
 <div id="stage" class="loading"><img id="img" alt=""></div>
 <script>
-const COLOURS = { "Der Alte": "#ff4d4d", "Fritz Grade": "#4da6ff", "Johann": "#ffd11a", "Werner": "#33cc66",
-                  "figurant": "#bbbbbb", "geen gezicht": "#ff66ff", "weet niet": "#ff9933" };
+const COLOURS = { "Der Alte": "#ff4d4d", "Fritz Grade": "#4da6ff", "Johann": "#ffd11a", "Werner": "#33cc66" };
 const $ = id => document.getElementById(id);
 let items = [], done = {}, i = 0, ready = false;
 
 function fit() {
   if (i >= items.length) return;
-  const t = items[i], s = Math.min(innerWidth / t.w, (innerHeight - 44) / t.h);
+  const t = items[i], s = Math.min(innerWidth / t.w, (innerHeight - $("bar").offsetHeight) / t.h);
   $("stage").style.width = t.w * s + "px";
   $("stage").style.height = t.h * s + "px";
 }
@@ -231,6 +223,7 @@ function show() {
     $("title").textContent = "Klaar: alles is nagelopen (Backspace = terug)";
     $("stage").style.display = "none";
     $("before").textContent = "";
+    $("gone").textContent = "";
     return;
   }
   const t = items[i];
@@ -238,6 +231,8 @@ function show() {
   $("stage").className = "loading";
   $("title").textContent = t.title + " (laden…)";
   $("before").textContent = done[t.key] ? "eerder: " + done[t.key] : "";
+  const g = t.gone.length > 1 ? t.gone.slice(0, -1).join(", ") + " en " + t.gone.at(-1) : t.gone[0];
+  $("gone").textContent = g ? `Let op: ${g} ${t.gone.length > 1 ? "stonden" : "stond"} in het vorige beeld wel, nu niet` : "";
   fit();
   $("img").onload = () => {
     for (const [name, x, y, w, h] of t.boxes) {
@@ -292,7 +287,7 @@ fetch("/items").then(r => r.json()).then(d => {
 def main() -> None:
     todo = items()
     images = Images(todo)
-    listing = json.dumps([{k: t[k] for k in ("key", "title", "w", "h", "boxes")} for t in todo],
+    listing = json.dumps([{k: t[k] for k in ("key", "title", "w", "h", "boxes", "gone")} for t in todo],
                          default=int).encode()
     write = threading.Lock()
 

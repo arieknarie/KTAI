@@ -55,9 +55,12 @@ in [het overzicht](../README.md#hoe-het-antwoordenblad-eruitziet).
 
 Met `code/check_labels.py` kijken we na of de labels kloppen. Het programma
 laat elk beeld van elk fragment zien (alle 11.182, ook de beelden zonder
-kader), en daarna elke gelabelde foto en still. Om elk gezicht staat het kader
-met de naam die de labelaar koos. Staat een van de vier personen meer dan één
-keer in hetzelfde beeld, dan worden die kaders samen één groot kader.
+kader), en daarna elke gelabelde foto en still. Alleen de vier personen
+krijgen een kader: om elk gezicht dat de labelaar als een van de vier
+aanwees, met de naam erbij. Staat een persoon meer dan één keer in hetzelfde
+beeld, dan worden die kaders samen één groot kader. Was een persoon in het
+vorige beeld wel te zien en in dit beeld niet, dan staat er bovenin een rode
+waarschuwing.
 
 Per beeld druk je op pijltje links als de labels goed zijn en op pijltje
 rechts als er iets fout is. Met Backspace ga je een beeld terug. Elk oordeel
