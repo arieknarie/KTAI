@@ -49,3 +49,18 @@ In `labels.csv` staat per track de keuze van de labelaar. Elk gevonden gezicht
 krijgt de keuze van zijn track. Elk getekend gezicht wordt één extra rij op het
 antwoordenblad, voor dat ene beeld. Een voorbeeld van het antwoordenblad staat
 in [het overzicht](../README.md#hoe-het-antwoordenblad-eruitziet).
+
+
+## De labels nakijken
+
+Met `code/check_labels.py` kijken we na of de labels kloppen. Het programma
+laat elk beeld van elk fragment zien (alle 11.182, ook de beelden zonder
+kader), en daarna elke gelabelde foto en still. Om elk gezicht staat het kader
+met de naam die de labelaar koos. Staat een van de vier personen meer dan één
+keer in hetzelfde beeld, dan worden die kaders samen één groot kader.
+
+Per beeld druk je op pijltje links als de labels goed zijn en op pijltje
+rechts als er iets fout is. Met Backspace ga je een beeld terug. Elk oordeel
+komt meteen in `labels/controle_labels.csv`. Wie stopt en later weer start,
+gaat verder bij het eerste beeld zonder oordeel. Starten (vanuit de map KTAI):
+`.venv/bin/python code/check_labels.py`. De controle opent dan in de browser.
