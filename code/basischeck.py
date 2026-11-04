@@ -9,6 +9,10 @@ resultaat naast de keuzes van de labelaar (het antwoordenblad).
    kader krijgt de naam van het voorbeeld met de kleinste genormaliseerde Euclidische afstand, als die afstand
    kleiner is dan DREMPEL; anders is het "iemand anders".
 3. Antwoordenblad. Elk kader krijgt de keuze die de labelaar voor zijn track maakte (labels/labels.csv).
+3b. Nagekeken antwoordenblad. Elk beeld is daarna nagekeken (code/check_labels.py, labels/controle_labels.csv). Een
+   beeld dat goed kreeg, houdt de keuzes van de labelaar; bij een beeld dat fout kreeg, gelden de verbeterde kaders
+   (code/fix_labels.py, labels/correcties.csv). Dat nagekeken antwoordenblad is de ground truth in de tabel en de
+   tijdlijn.
 4. Per beeld. Een persoon is in een beeld te zien als minstens één kader in dat beeld die persoon is: volgens de
    labelaar, en apart volgens FaceNet. Twee kaders op hetzelfde hoofd tellen zo maar één keer.
 
@@ -24,7 +28,9 @@ uit een van de fragmenten zijn (data/stills_index.csv, kolom uit_video), doen ni
 geen voorbeeld zijn. De uitvoer komt dan in results/basischeck_kostuum/.
 
 Gebruik (vanuit de map KTAI, met de pakketten uit requirements_herkenning.txt):
-    .venv-herkenning/bin/python code/basischeck.py [--kostuum]
+    .venv-herkenning/bin/python code/basischeck.py [--kostuum] [--grafieken]
+Met --grafieken herkent FaceNet niet opnieuw: de tabel en de tijdlijn worden opnieuw gemaakt uit de bestaande
+voorspellingen.csv, met het nagekeken antwoordenblad.
 """
 
 import argparse
@@ -152,6 +158,28 @@ def per_frame(found: pd.DataFrame, column: str) -> pd.DataFrame:
         .rename(columns={column: "persoon"})
 
 
+def checked_truth(found: pd.DataFrame) -> pd.DataFrame:
+    """Het nagekeken antwoordenblad: welke persoon in welk beeld te zien is (zie stap 3b bovenaan)."""
+    verdict = pd.read_csv(REPO / "labels" / "controle_labels.csv").drop_duplicates("item", keep="last")
+    wrong = set(verdict.loc[verdict["oordeel"] == "fout", "item"])
+    fixes = pd.read_csv(REPO / "labels" / "correcties.csv")
+    fixes = fixes[fixes["tijd"] == fixes.groupby("item")["tijd"].transform("max")]   # de laatste keer opslaan telt
+    fixes = fixes[fixes["persoon"].isin(PERSONS.values())]
+    truth = per_frame(found, "labelaar")
+    truth = truth[~(truth["bestand"] + "#beeld" + truth["beeld"].astype(str)).isin(wrong)]
+    frames = pd.read_csv(REPO / "data" / "tracks" / "frames.csv")
+    parts = fragments(frames).set_index("video")
+    rows = []
+    for r in fixes[fixes["item"].isin(wrong)].itertuples():
+        if "#beeld" not in r.item:                       # een foto of still: hoort niet bij de fragmenten
+            continue
+        video, frame = r.item.split("#beeld")
+        time = frames.loc[(frames["video"] == video) & (frames["frame"] == int(frame)), "time_s"].iloc[0]
+        rows.append({"fragment": parts.loc[video, "fragment"], "bestand": video, "beeld": int(frame),
+                     "tijd_s": round(float(time) + parts.loc[video, "offset"], 3), "persoon": r.persoon})
+    return pd.concat([truth, pd.DataFrame(rows)]).drop_duplicates(["bestand", "beeld", "persoon"])
+
+
 def table(truth: pd.DataFrame, ai: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for person in PERSONS.values():
@@ -200,7 +228,7 @@ def timeline(truth: pd.DataFrame, ai: pd.DataFrame) -> None:
         ax.tick_params(axis="x", labelsize=8)
     axes[-1, 0].set_xlabel("tijd in het fragment (seconden)")
     fig.legend(handles=[plt.Rectangle((0, 0), 1, 1, color="#333333"), plt.Rectangle((0, 0), 1, 1, color="#d1495b")],
-               labels=["ground truth (labelaar)", "AI-voorspelling (FaceNet)"], loc="upper right", fontsize=8)
+               labels=["ground truth (labelaar, nagekeken en verbeterd)", "AI-voorspelling (FaceNet)"], loc="upper right", fontsize=8)
     fig.suptitle(f"Visualisatie 2: wanneer elke acteur te zien is ({TITLE})", x=0.01, ha="left", fontsize=10)
     fig.tight_layout(rect=(0, 0, 1, 0.97))
     fig.savefig(OUT / "tijdlijn.png", dpi=130)
@@ -211,14 +239,18 @@ def main() -> None:
     global OUT, TITLE
     parser = argparse.ArgumentParser(description="Basischeck: FaceNet-herkenning naast de labels")
     parser.add_argument("--kostuum", action="store_true", help="ook de gezichten op de stills (in kostuum) als voorbeeld")
+    parser.add_argument("--grafieken", action="store_true", help="niet opnieuw herkennen; alleen tabel en tijdlijn")
     args = parser.parse_args()
     if args.kostuum:
         OUT, TITLE = REPO / "results" / "basischeck_kostuum", "voorbeelden: foto's + stills in kostuum"
     OUT.mkdir(parents=True, exist_ok=True)
-    names, refs = examples(args.kostuum)
-    found = recognise(names, refs)
-    found.to_csv(OUT / "voorspellingen.csv", index=False, lineterminator="\n")
-    truth, ai = per_frame(found, "labelaar"), per_frame(found, "facenet")
+    if args.grafieken:
+        found = pd.read_csv(OUT / "voorspellingen.csv")
+    else:
+        names, refs = examples(args.kostuum)
+        found = recognise(names, refs)
+        found.to_csv(OUT / "voorspellingen.csv", index=False, lineterminator="\n")
+    truth, ai = checked_truth(found), per_frame(found, "facenet")
     print(table(truth, ai).to_string(index=False))
     timeline(truth, ai)
     print(f"klaar: {OUT.relative_to(REPO)}/")
