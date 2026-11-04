@@ -7,8 +7,9 @@ staan vier knoppen, één per persoon; de knop staat aan als die persoon al in h
   kader is het kader dat de computer daar vond; vond de computer daar niets, dan een kader zo groot als het kader van
   die persoon in het laatste goede beeld.
 - Knop uit zetten: het kader van die persoon gaat weg.
-- Stond een persoon in het laatste goede beeld en ontbreekt die in het foute beeld, dan staat zijn kader er al op
-  dezelfde plek (op het kader dat de computer daar vond, als dat er is). Klopt dat niet, zet dan de knop uit.
+- Is het laatste goede beeld een beeld dat hier verbeterd is, dan staan de kaders van dat beeld er precies zo op
+  (dezelfde personen op dezelfde plek). Anders: stond een persoon in het laatste goede beeld en ontbreekt die in het
+  foute beeld, dan staat zijn kader er al op dezelfde plek (op het kader dat de computer daar vond, als dat er is).
 - Enter (of de knop Opslaan): opslaan en naar het volgende foute beeld. Backspace: terug naar het vorige foute beeld.
 Elk opgeslagen beeld komt in labels/correcties.csv: per persoon in het beeld één rij met het kader (in pixels van het
 originele beeld); een beeld zonder een van de vier krijgt één rij zonder persoon. Bij een tweede keer opslaan telt de
@@ -193,7 +194,10 @@ function show() {
   boxes = JSON.parse(JSON.stringify(fixes[t.key] || t.boxes));
   active = null;
   good = lastGood(i);
-  if (!(t.key in fixes) && good >= 0) carry(i, fixes[items[good].key] || items[good].boxes);
+  if (!(t.key in fixes) && good >= 0) {
+    if (items[good].key in fixes) boxes = JSON.parse(JSON.stringify(fixes[items[good].key]));   // net verbeterd: precies overnemen
+    else carry(i, items[good].boxes);
+  }
   $("title").textContent = t.title + (t.key in fixes ? " (al verbeterd)" : "");
   const leftW = $("left").clientWidth;
   size($("big"), t, innerWidth - leftW - 36, innerHeight - 52);
