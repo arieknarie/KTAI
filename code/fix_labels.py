@@ -7,6 +7,8 @@ staan vier knoppen, één per persoon; de knop staat aan als die persoon al in h
   kader is het kader dat de computer daar vond; vond de computer daar niets, dan een kader zo groot als het kader van
   die persoon in het laatste goede beeld.
 - Knop uit zetten: het kader van die persoon gaat weg.
+- Stond een persoon in het laatste goede beeld en ontbreekt die in het foute beeld, dan staat zijn kader er al op
+  dezelfde plek (op het kader dat de computer daar vond, als dat er is). Klopt dat niet, zet dan de knop uit.
 - Enter (of de knop Opslaan): opslaan en naar het volgende foute beeld. Backspace: terug naar het vorige foute beeld.
 Elk opgeslagen beeld komt in labels/correcties.csv: per persoon in het beeld één rij met het kader (in pixels van het
 originele beeld); een beeld zonder een van de vier krijgt één rij zonder persoon. Bij een tweede keer opslaan telt de
@@ -167,6 +169,21 @@ function lastGood(i) {
   return -1;
 }
 
+function overlap(a, b) {
+  const w = Math.min(a[0] + a[2], b[0] + b[2]) - Math.max(a[0], b[0]), h = Math.min(a[1] + a[3], b[1] + b[3]) - Math.max(a[1], b[1]);
+  return w > 0 && h > 0 ? w * h / (a[2] * a[3] + b[2] * b[3] - w * h) : 0;
+}
+
+function carry(i, before) {
+  // Wie in het laatste goede beeld stond en hier ontbreekt, komt op dezelfde plek: op het kader dat de computer daar
+  // vond, of anders precies waar het in het goede beeld stond.
+  for (const [name, ...box] of before) {
+    if (boxes.some(b => b[0] === name)) continue;
+    const best = (found[i] || []).map(f => [overlap(f, box), f]).sort((a, b) => b[0] - a[0])[0];
+    boxes.push([name, ...(best && best[0] > 0.3 ? best[1] : box)]);
+  }
+}
+
 function show() {
   ready = false;
   $("count").textContent = `fout beeld ${Math.min(n + 1, wrong.length)} van ${wrong.length}, verbeterd ${wrong.filter(i => items[i].key in fixes).length}`;
@@ -176,6 +193,7 @@ function show() {
   boxes = JSON.parse(JSON.stringify(fixes[t.key] || t.boxes));
   active = null;
   good = lastGood(i);
+  if (!(t.key in fixes) && good >= 0) carry(i, fixes[items[good].key] || items[good].boxes);
   $("title").textContent = t.title + (t.key in fixes ? " (al verbeterd)" : "");
   const leftW = $("left").clientWidth;
   size($("big"), t, innerWidth - leftW - 36, innerHeight - 52);
