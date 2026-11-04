@@ -67,3 +67,15 @@ rechts als er iets fout is. Met Backspace ga je een beeld terug. Elk oordeel
 komt meteen in `labels/controle_labels.csv`. Wie stopt en later weer start,
 gaat verder bij het eerste beeld zonder oordeel. Starten (vanuit de map KTAI):
 `.venv/bin/python code/check_labels.py`. De controle opent dan in de browser.
+
+
+## De foute beelden verbeteren
+
+Met `code/fix_labels.py` verbeteren we elk beeld dat bij het nakijken fout
+kreeg. Rechts staat groot het foute beeld, linksboven het laatste goede beeld
+ervoor (of het laatste beeld dat al verbeterd is), en daaronder een knop per
+persoon. Een knop staat aan als die persoon al in het beeld staat. Zet je een
+knop aan en klik je op een gezicht, dan komt om dat gezicht een kader met die
+naam. Zet je een knop uit, dan gaat het kader weg. Enter slaat op en gaat naar
+het volgende foute beeld. Alles komt in `labels/correcties.csv`. Starten
+(vanuit de map KTAI): `.venv/bin/python code/fix_labels.py`.
