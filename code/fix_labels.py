@@ -10,10 +10,11 @@ staan vier knoppen, één per persoon; de knop staat aan als die persoon al in h
 - Is het laatste goede beeld een beeld dat hier verbeterd is, dan staan de kaders van dat beeld er precies zo op
   (dezelfde personen op dezelfde plek). Anders: stond een persoon in het laatste goede beeld en ontbreekt die in het
   foute beeld, dan staat zijn kader er al op dezelfde plek (op het kader dat de computer daar vond, als dat er is).
-- Enter (of de knop Opslaan): opslaan en naar het volgende foute beeld. Backspace: terug naar het vorige foute beeld.
+- Enter (of de knop Opslaan): opslaan en naar het volgende foute beeld. Backspace: terug naar het vorige foute beeld;
+  de verbeteringen van dat beeld en van alle beelden erna worden dan gewist, zodat je vanaf daar opnieuw verbetert.
 Elk opgeslagen beeld komt in labels/correcties.csv: per persoon in het beeld één rij met het kader (in pixels van het
 originele beeld); een beeld zonder een van de vier krijgt één rij zonder persoon. Bij een tweede keer opslaan telt de
-laatste keer. Wie stopt en later weer start, gaat verder bij het eerste foute beeld dat nog niet verbeterd is.
+laatste keer; een rij met persoon "-" wist de verbetering van dat beeld. Wie stopt en later weer start, gaat verder bij het eerste foute beeld dat nog niet verbeterd is.
 
 Gebruik (vanuit de map KTAI):
     .venv/bin/python code/fix_labels.py
@@ -56,11 +57,20 @@ def corrected() -> dict:
     with open(OUT, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
             last = rows.setdefault(r["item"], {"tijd": r["tijd"], "boxes": []})
+            if r["persoon"] == "-":                         # gewist met Backspace
+                del rows[r["item"]]
+                continue
             if r["tijd"] != last["tijd"]:                    # een nieuwere keer opslaan vervangt de oudere
                 last["tijd"], last["boxes"] = r["tijd"], []
             if r["persoon"]:
                 last["boxes"].append([r["persoon"], int(r["x"]), int(r["y"]), int(r["w"]), int(r["h"])])
     return {item: r["boxes"] for item, r in rows.items()}
+
+
+def erase(keys: list) -> None:
+    now = datetime.datetime.now().isoformat(timespec="seconds")
+    with open(OUT, "a", newline="", encoding="utf-8") as f:
+        csv.writer(f, lineterminator="\n").writerows([[key, "-", "", "", "", "", now] for key in keys])
 
 
 def save(item: str, boxes: list) -> None:
@@ -96,7 +106,7 @@ PAGE = """<!doctype html>
   #save { grid-column: span 2; background: #2a6; border-color: #2a6; color: #fff; }
 </style></head><body>
 <div id="bar"><b id="title">laden…</b><span id="count"></span>
-<span style="margin-left:auto;color:#aaa">knop aan + klik op gezicht = kader &nbsp; Enter = opslaan &nbsp; Backspace = vorige</span></div>
+<span style="margin-left:auto;color:#aaa">knop aan + klik op gezicht = kader &nbsp; Enter = opslaan &nbsp; Backspace = vorige (wist vanaf daar)</span></div>
 <div id="main">
   <div id="left">
     <div class="note" id="goodtitle"></div>
@@ -247,7 +257,19 @@ function save() {
 
 addEventListener("keydown", e => {
   if (e.key === "Enter") { e.preventDefault(); if (!e.repeat) save(); }
-  if (e.key === "Backspace") { e.preventDefault(); if (n > 0) { n--; show(); } }
+  if (e.key === "Backspace") {
+    e.preventDefault();
+    if (n === 0) return;
+    n--;
+    const gone = wrong.slice(n).map(i => items[i].key).filter(key => key in fixes);   // dit beeld en alles erna wissen
+    if (gone.length) {
+      gone.forEach(key => delete fixes[key]);
+      fetch("/wissen", { method: "POST", body: JSON.stringify({ items: gone }) })
+        .then(r => { if (!r.ok) throw new Error(); })
+        .catch(() => alert("Het wissen is NIET opgeslagen. Draait het programma nog?"));
+    }
+    show();
+  }
 });
 addEventListener("resize", () => n < wrong.length && show());
 
@@ -292,6 +314,10 @@ def main() -> None:
 
         def do_POST(self) -> None:
             data = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
+            if self.path == "/wissen":
+                with write:
+                    erase([str(key) for key in data["items"]])
+                return self.send(b"ok", "text/plain")
             if self.path != "/correctie":
                 return self.send(b"onbekend", "text/plain", 400)
             boxes = [[str(b[0])] + [int(v) for v in b[1:5]] for b in data["boxes"]]
