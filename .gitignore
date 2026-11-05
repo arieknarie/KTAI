@@ -10,3 +10,5 @@ data/audit/alle_tracks/
 data/audit/alle_beelden/
 # embeddings van alle kaders (code/facenet_configuraties.py maakt ze opnieuw)
 data/embeddings/
+# de video met de herkende personen (code/maak_video.py maakt hem opnieuw)
+results/video/
