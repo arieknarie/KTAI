@@ -25,12 +25,14 @@ Uitvoer in results/configuraties/:
     f1_drempel.png             F1 tegen de drempel, per model en afstand (met de beste andere keuzes)
     per_filmpje.png            F1 per filmpje: algemeen beste configuratie tegen de beste voor dat filmpje
     tabel.png, tijdlijn.png    visualisatie 1 en 2 (zoals in de basischeck) met de algemeen beste configuratie
+De plaatjes komen ook in results/experimenten/facenet_configuraties/.
 
 Gebruik (vanuit de map KTAI, met de pakketten uit requirements_herkenning.txt):
     .venv-herkenning/bin/python code/facenet_configuraties.py
 """
 
 import itertools
+import shutil
 
 import cv2
 import matplotlib
@@ -233,6 +235,10 @@ def main() -> None:
 
     figures(top, per_video, curves, winner, keys)
     visualisations(kept[" | ".join(str(winner[k]) for k in keys)] < winner["drempel"], truth, todo, frames, winner)
+    folder = REPO / "results" / "experimenten" / "facenet_configuraties"   # de plaatjes van dit experiment bij elkaar
+    folder.mkdir(parents=True, exist_ok=True)
+    for name in ("beste_algemeen", "beste_per_filmpje", "per_filmpje", "f1_drempel", "tabel", "tijdlijn"):
+        shutil.copyfile(OUT / f"{name}.png", folder / f"{name}.png")
     print(f"klaar: {OUT.relative_to(REPO)}/")
 
 

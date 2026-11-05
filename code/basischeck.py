@@ -21,7 +21,7 @@ Uitvoer in results/basischeck/:
                         voorspelling van FaceNet, het dichtstbijzijnde voorbeeld en de afstand
     tabel.csv, tabel.png  visualisatie 1: per persoon in hoeveel beelden die persoon te zien is
     tijdlijn.png        visualisatie 2: de tijd (x) tegen de personen (y), per fragment
-De twee grafiekjes komen ook in results/grafieken/ (tabel_fotos.png, tijdlijn_fotos.png, en met --kostuum
+De twee grafiekjes komen ook in results/experimenten/basis/ (tabel_fotos.png, tijdlijn_fotos.png, en met --kostuum
 tabel_fotos_en_kostuum.png, tijdlijn_fotos_en_kostuum.png), zodat ze van beide versies bij elkaar staan.
 
 Met --kostuum komen er voorbeelden bij: de gezichten van de vier personen op de stills (beelden uit de film, met de
@@ -262,7 +262,7 @@ def main() -> None:
     truth, ai = checked_truth(found), per_frame(found, "facenet")
     print(table(truth, ai).to_string(index=False))
     timeline(truth, ai)
-    folder, kind = REPO / "results" / "grafieken", "fotos_en_kostuum" if args.kostuum else "fotos"
+    folder, kind = REPO / "results" / "experimenten" / "basis", "fotos_en_kostuum" if args.kostuum else "fotos"
     folder.mkdir(exist_ok=True)
     for name in ("tabel", "tijdlijn"):                   # de grafiekjes van beide versies samen in één map
         shutil.copyfile(OUT / f"{name}.png", folder / f"{name}_{kind}.png")
