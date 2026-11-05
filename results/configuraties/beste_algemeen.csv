@@ -1,0 +1,11 @@
+model,marge,voorbeelden,afstand,per_persoon,toewijzen,drempel,f1,precisie,recall
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,1.0547,0.801,0.817,0.787
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,0.5562,0.801,0.817,0.787
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,0.5005,0.798,0.777,0.82
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,1.0005,0.798,0.777,0.82
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,20.4597,0.796,0.736,0.866
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,1.2848,0.78,0.713,0.86
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,0.8253,0.78,0.713,0.86
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,0.8529,0.773,0.751,0.795
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,1.3061,0.773,0.751,0.795
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,25.5701,0.771,0.816,0.73

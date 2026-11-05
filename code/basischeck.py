@@ -88,8 +88,8 @@ def embed(faces: list) -> np.ndarray:
     return vectors / np.linalg.norm(vectors, axis=1, keepdims=True)
 
 
-def examples(kostuum: bool = False) -> tuple:
-    """De voorbeelden: naam van de persoon per foto, en de embeddings."""
+def example_rows(kostuum: bool = False) -> pd.DataFrame:
+    """De voorbeelden: per gezicht het bestand (source), de persoon (label) en het kader (x, y, w, h)."""
     auto = pd.read_csv(REPO / "labeling" / "automatic_labels.csv")
     labels = pd.read_csv(REPO / "labels" / "labels.csv")
     chosen = labels[labels["item"].str.startswith("photo:") & labels["label"].isin(PERSONS)]
@@ -101,6 +101,12 @@ def examples(kostuum: bool = False) -> tuple:
         faces = faces[stills.loc[faces["still"], "uit_video"].isna().to_numpy()]
         faces["source"] = stills.loc[faces["still"], "bestand"].to_numpy()
         rows = pd.concat([rows, faces[["source", "label", "x", "y", "w", "h"]]])
+    return rows
+
+
+def examples(kostuum: bool = False) -> tuple:
+    """De voorbeelden: naam van de persoon per foto, en de embeddings."""
+    rows = example_rows(kostuum)
     faces = [cut(cv2.imread(str(REPO / r.source)), r.x, r.y, r.w, r.h) for r in rows.itertuples()]
     print(f"{len(faces)} voorbeelden: " + ", ".join(f"{PERSONS[k]} {n}" for k, n in rows["label"].value_counts().items()))
     return rows["label"].map(PERSONS).tolist(), embed(faces)
