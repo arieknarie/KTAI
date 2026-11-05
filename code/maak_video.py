@@ -34,14 +34,10 @@ def predictions(detections: pd.DataFrame, best: pd.Series) -> np.ndarray:
     faces = [fc.crop(cv2.imread(str(REPO / r.source)), r.x, r.y, r.w, r.h, margin) for r in rows.itertuples()]
     names = rows["label"].map(fc.PERSONS).to_numpy()
     d = fc.distances(boxes, names, fc.represent(faces, best["model"]), best["afstand"], best["per_persoon"])
-    who = np.array(fc.NAMES, dtype=object)[d.argmin(axis=1)]
-    who[d.min(axis=1) >= best["drempel"]] = None
-    if best["toewijzen"] == "uniek":                      # per beeld elke persoon hoogstens één keer
-        keep = np.zeros(len(d), dtype=bool)
-        for _, g in detections.assign(d=d.min(axis=1), who=who).dropna(subset=["who"]).sort_values("d") \
-                .groupby(["video", "frame", "who"]):
-            keep[g.index[0]] = True
-        who[~keep] = None
+    frame_id = detections.groupby(["video", "frame"], sort=False).ngroup().to_numpy()
+    person, dist = fc.assigned(d, frame_id, best["toewijzen"])
+    who = np.array(fc.NAMES, dtype=object)[np.maximum(person, 0)]
+    who[dist >= best["drempel"]] = None
     return who
 
 

@@ -1,865 +1,865 @@
 model,marge,voorbeelden,afstand,per_persoon,toewijzen,fragment,drempel,f1,precisie,recall,f1_bij_algemene_drempel
-Facenet,0%,foto's,cosine,dichtstbij,los,alle,0.7167,0.565,0.662,0.493,
-Facenet,0%,foto's,cosine,dichtstbij,los,Video 1,0.7167,0.623,0.997,0.453,0.623
-Facenet,0%,foto's,cosine,dichtstbij,los,Video 2,0.6904,0.775,0.75,0.802,0.775
-Facenet,0%,foto's,cosine,dichtstbij,los,Video 3,0.666,0.61,0.842,0.478,0.61
-Facenet,0%,foto's,cosine,dichtstbij,los,Video 4,0.673,0.687,0.975,0.53,0.687
-Facenet,0%,foto's,cosine,dichtstbij,los,Video 5,0.6396,0.259,0.255,0.263,0.251
-Facenet,0%,foto's,cosine,dichtstbij,los,Video 6,0.7167,0.527,0.951,0.365,0.527
-Facenet,0%,foto's,cosine,dichtstbij,los,Video 7,0.6257,0.753,0.897,0.649,0.719
-Facenet,0%,foto's,cosine,dichtstbij,los,Video 8,0.6611,0.274,0.291,0.259,0.273
-Facenet,0%,foto's,cosine,dichtstbij,uniek,alle,0.7779,0.666,0.585,0.773,
-Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 1,0.7779,0.887,0.821,0.965,0.887
-Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 2,0.63,0.796,0.757,0.838,0.752
-Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 3,0.665,0.608,0.838,0.477,0.475
-Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 4,0.7838,0.876,0.83,0.927,0.874
-Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 5,0.7719,0.456,0.317,0.812,0.455
-Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 6,0.9786,0.762,0.852,0.69,0.753
-Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 7,0.7911,0.801,0.718,0.906,0.78
-Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 8,0.9786,0.39,0.33,0.476,0.383
-Facenet,0%,foto's,cosine,gemiddelde,los,alle,0.791,0.5,0.627,0.417,
-Facenet,0%,foto's,cosine,gemiddelde,los,Video 1,0.791,0.502,0.995,0.336,0.502
-Facenet,0%,foto's,cosine,gemiddelde,los,Video 2,0.9169,0.682,0.667,0.698,0.681
-Facenet,0%,foto's,cosine,gemiddelde,los,Video 3,0.6888,0.617,0.871,0.478,0.617
-Facenet,0%,foto's,cosine,gemiddelde,los,Video 4,0.727,0.557,0.977,0.39,0.557
-Facenet,0%,foto's,cosine,gemiddelde,los,Video 5,0.6736,0.272,0.283,0.262,0.261
-Facenet,0%,foto's,cosine,gemiddelde,los,Video 6,0.7496,0.521,1.0,0.352,0.521
-Facenet,0%,foto's,cosine,gemiddelde,los,Video 7,0.6718,0.727,0.905,0.607,0.685
-Facenet,0%,foto's,cosine,gemiddelde,los,Video 8,0.7367,0.248,0.269,0.229,0.247
-Facenet,0%,foto's,cosine,gemiddelde,uniek,alle,0.9409,0.712,0.606,0.865,
-Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 1,0.9409,0.857,0.758,0.985,0.857
-Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 2,0.9031,0.739,0.601,0.959,0.737
-Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 3,0.8574,0.935,0.919,0.951,0.926
-Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 4,0.8679,0.848,0.79,0.915,0.837
-Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 5,0.8271,0.606,0.459,0.892,0.475
-Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 6,0.8613,0.817,0.971,0.704,0.8
-Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 7,0.9409,0.781,0.672,0.931,0.781
-Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 8,1.1056,0.431,0.365,0.527,0.431
-Facenet,0%,foto's,euclidean,dichtstbij,los,alle,15.4235,0.417,0.555,0.334,
-Facenet,0%,foto's,euclidean,dichtstbij,los,Video 1,12.0868,0.619,0.999,0.449,0.619
-Facenet,0%,foto's,euclidean,dichtstbij,los,Video 2,15.4235,0.719,0.824,0.638,0.719
-Facenet,0%,foto's,euclidean,dichtstbij,los,Video 3,6.1823,0.0,0.0,0.0,0.0
-Facenet,0%,foto's,euclidean,dichtstbij,los,Video 4,10.3969,0.503,0.995,0.337,0.503
-Facenet,0%,foto's,euclidean,dichtstbij,los,Video 5,6.1823,0.0,0.0,0.0,0.0
-Facenet,0%,foto's,euclidean,dichtstbij,los,Video 6,7.9341,0.453,0.869,0.306,0.453
-Facenet,0%,foto's,euclidean,dichtstbij,los,Video 7,10.2661,0.575,0.746,0.467,0.575
-Facenet,0%,foto's,euclidean,dichtstbij,los,Video 8,13.2768,0.295,0.333,0.265,0.295
-Facenet,0%,foto's,euclidean,dichtstbij,uniek,alle,11.5418,0.744,0.678,0.823,
-Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 1,11.6903,0.999,0.998,0.999,0.999
-Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 2,11.3278,0.868,0.784,0.972,0.864
-Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 3,10.7836,0.48,0.469,0.492,0.48
-Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 4,11.6903,0.982,0.99,0.974,0.981
-Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 5,10.7219,0.54,0.386,0.902,0.53
-Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 6,11.1257,0.829,0.93,0.748,0.829
-Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 7,11.8672,0.856,0.773,0.959,0.852
-Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 8,11.6903,0.452,0.394,0.529,0.45
-Facenet,0%,foto's,euclidean,gemiddelde,los,alle,11.7051,0.583,0.641,0.534,
-Facenet,0%,foto's,euclidean,gemiddelde,los,Video 1,10.5267,0.644,0.998,0.475,0.644
-Facenet,0%,foto's,euclidean,gemiddelde,los,Video 2,10.7973,0.81,0.819,0.801,0.804
-Facenet,0%,foto's,euclidean,gemiddelde,los,Video 3,9.595,0.527,0.658,0.439,0.524
-Facenet,0%,foto's,euclidean,gemiddelde,los,Video 4,12.047,0.78,1.0,0.639,0.779
-Facenet,0%,foto's,euclidean,gemiddelde,los,Video 5,9.5418,0.242,0.23,0.255,0.21
-Facenet,0%,foto's,euclidean,gemiddelde,los,Video 6,9.7625,0.695,0.953,0.547,0.695
-Facenet,0%,foto's,euclidean,gemiddelde,los,Video 7,9.6433,0.744,0.891,0.639,0.72
-Facenet,0%,foto's,euclidean,gemiddelde,los,Video 8,12.4114,0.319,0.315,0.322,0.316
-Facenet,0%,foto's,euclidean,gemiddelde,uniek,alle,10.5136,0.716,0.66,0.782,
-Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 1,10.6641,0.988,0.995,0.981,0.981
-Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 2,10.3573,0.831,0.778,0.892,0.825
-Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 3,9.5881,0.508,0.631,0.425,0.477
-Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 4,10.4825,0.956,0.982,0.931,0.955
-Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 5,10.5136,0.488,0.343,0.844,0.488
-Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 6,10.6286,0.834,0.935,0.753,0.833
-Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 7,10.6641,0.862,0.784,0.956,0.852
-Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 8,12.5953,0.408,0.346,0.498,0.407
-Facenet,0%,foto's,euclidean_l2,dichtstbij,los,alle,1.1973,0.565,0.662,0.493,
-Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 1,1.1973,0.623,0.997,0.453,0.623
-Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 2,1.1751,0.775,0.75,0.802,0.775
-Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 3,1.1542,0.61,0.842,0.478,0.61
-Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 4,1.1602,0.687,0.975,0.53,0.687
-Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 5,1.131,0.259,0.255,0.263,0.251
-Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 6,1.1973,0.527,0.951,0.365,0.527
-Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 7,1.1195,0.753,0.894,0.65,0.719
-Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 8,1.1499,0.274,0.291,0.259,0.273
-Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,alle,1.2474,0.666,0.585,0.773,
-Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 1,1.2474,0.887,0.821,0.965,0.887
-Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 2,1.1226,0.795,0.757,0.838,0.752
-Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 3,1.1533,0.608,0.838,0.477,0.475
-Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 4,1.2521,0.876,0.83,0.927,0.874
-Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 5,1.2474,0.456,0.315,0.821,0.456
-Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 6,1.399,0.762,0.852,0.69,0.753
-Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 7,1.2559,0.801,0.719,0.904,0.78
-Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 8,1.399,0.39,0.33,0.476,0.383
-Facenet,0%,foto's,euclidean_l2,gemiddelde,los,alle,1.2579,0.5,0.627,0.417,
-Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 1,1.2579,0.502,0.995,0.336,0.502
-Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 2,1.3542,0.682,0.667,0.698,0.681
-Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 3,1.1738,0.617,0.871,0.478,0.617
-Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 4,1.2059,0.557,0.977,0.39,0.557
-Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 5,1.1603,0.273,0.285,0.262,0.261
-Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 6,1.2245,0.521,1.0,0.352,0.521
-Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 7,1.1582,0.726,0.906,0.606,0.685
-Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 8,1.2139,0.248,0.269,0.23,0.247
-Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,alle,1.3718,0.712,0.606,0.865,
-Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 1,1.3718,0.857,0.758,0.985,0.857
-Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 2,1.344,0.739,0.601,0.959,0.737
-Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 3,1.3096,0.935,0.919,0.951,0.926
-Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 4,1.3176,0.848,0.79,0.915,0.837
-Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 5,1.2862,0.606,0.459,0.892,0.475
-Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 6,1.3125,0.817,0.971,0.704,0.8
-Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 7,1.3718,0.781,0.672,0.931,0.781
-Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 8,1.4871,0.431,0.365,0.527,0.431
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,alle,0.4445,0.647,0.643,0.65,
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 1,0.401,0.837,0.804,0.872,0.837
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 2,0.4445,0.707,0.667,0.753,0.707
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 3,0.0416,0.724,0.871,0.62,0.699
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 4,0.4197,0.605,0.691,0.537,0.605
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 5,0.0259,0.737,0.748,0.726,0.647
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 6,0.1547,0.636,0.847,0.509,0.636
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 7,0.4445,0.771,0.722,0.828,0.771
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 8,0.4197,0.407,0.381,0.438,0.407
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,alle,0.5442,0.693,0.591,0.839,
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 1,0.4134,0.852,0.754,0.978,0.85
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 2,0.5442,0.746,0.613,0.954,0.746
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 3,0.0515,0.756,0.771,0.743,0.735
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 4,0.5442,0.814,0.743,0.899,0.814
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 5,0.0238,0.73,0.737,0.723,0.513
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 6,0.166,0.716,0.801,0.648,0.716
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 7,0.5109,0.776,0.668,0.924,0.773
-Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 8,0.3371,0.45,0.393,0.526,0.445
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,alle,0.533,0.526,0.625,0.453,
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 1,0.6694,0.763,0.995,0.619,0.757
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 2,0.4809,0.797,0.837,0.761,0.793
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 3,0.4134,0.003,0.007,0.002,0.002
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 4,0.5501,0.698,0.997,0.537,0.698
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 5,0.1923,0.0,0.0,0.0,0.0
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 6,0.4901,0.455,0.87,0.308,0.455
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 7,0.59,0.77,0.82,0.725,0.769
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 8,0.638,0.362,0.39,0.337,0.361
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,alle,0.936,0.636,0.54,0.775,
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 1,0.936,0.854,0.752,0.988,0.854
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 2,0.4757,0.811,0.806,0.816,0.735
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 3,0.5318,0.456,0.448,0.463,0.452
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 4,0.7325,0.813,0.742,0.899,0.813
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 5,0.6535,0.341,0.23,0.662,0.341
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 6,0.5486,0.768,0.931,0.654,0.749
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 7,0.5182,0.789,0.785,0.794,0.784
-Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 8,0.669,0.397,0.337,0.484,0.397
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,alle,12.6444,0.636,0.632,0.64,
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 1,9.5756,0.836,0.801,0.874,0.836
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 2,12.6444,0.682,0.639,0.732,0.682
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 3,1.1225,0.735,0.877,0.633,0.709
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 4,8.8291,0.602,0.686,0.536,0.602
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 5,0.848,0.739,0.754,0.724,0.652
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 6,2.1819,0.645,0.86,0.516,0.645
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 7,8.8291,0.738,0.697,0.783,0.738
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 8,9.1404,0.384,0.356,0.416,0.383
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,alle,12.6488,0.69,0.585,0.84,
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 1,12.6488,0.852,0.75,0.985,0.852
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 2,12.6488,0.736,0.594,0.968,0.736
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 3,1.225,0.782,0.799,0.765,0.76
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 4,9.9393,0.812,0.74,0.898,0.812
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 5,0.8425,0.733,0.735,0.732,0.513
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 6,2.2721,0.716,0.801,0.648,0.716
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 7,12.6488,0.755,0.644,0.911,0.755
-Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 8,8.6781,0.427,0.362,0.519,0.426
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,alle,13.4007,0.484,0.598,0.406,
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 1,9.3071,0.718,0.997,0.56,0.718
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 2,9.7021,0.771,0.835,0.716,0.77
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 3,4.5451,0.0,0.0,0.0,0.0
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 4,9.3071,0.594,0.996,0.424,0.594
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 5,4.5451,0.0,0.0,0.0,0.0
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 6,5.0826,0.453,0.869,0.306,0.453
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 7,8.3484,0.725,0.806,0.658,0.725
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 8,10.1123,0.33,0.368,0.3,0.33
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,alle,7.2553,0.674,0.626,0.728,
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 1,7.2553,0.941,0.963,0.919,0.941
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 2,7.3106,0.758,0.732,0.785,0.756
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 3,7.3106,0.459,0.448,0.471,0.459
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 4,7.326,0.921,0.936,0.908,0.916
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 5,7.1779,0.457,0.318,0.808,0.442
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 6,7.363,0.834,0.935,0.753,0.828
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 7,12.5677,0.805,0.688,0.971,0.783
-Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 8,9.9896,0.402,0.341,0.489,0.391
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,alle,0.9429,0.647,0.643,0.65,
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 1,0.8956,0.837,0.804,0.872,0.837
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 2,0.9429,0.707,0.667,0.753,0.707
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 3,0.2884,0.724,0.871,0.62,0.699
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 4,0.9162,0.605,0.691,0.537,0.605
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 5,0.2275,0.737,0.748,0.726,0.647
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 6,0.5563,0.636,0.847,0.509,0.636
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 7,0.9429,0.771,0.722,0.828,0.771
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 8,0.9162,0.407,0.381,0.438,0.407
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,alle,1.0433,0.693,0.591,0.839,
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 1,0.9093,0.852,0.754,0.978,0.85
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 2,1.0433,0.746,0.613,0.954,0.746
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 3,0.3211,0.756,0.771,0.743,0.735
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 4,1.0433,0.814,0.743,0.899,0.814
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 5,0.218,0.73,0.737,0.723,0.513
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 6,0.5762,0.716,0.801,0.648,0.716
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 7,1.0109,0.776,0.668,0.924,0.773
-Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 8,0.8211,0.45,0.393,0.526,0.445
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,alle,1.0325,0.526,0.625,0.453,
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 1,1.1571,0.763,0.995,0.619,0.757
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 2,0.9808,0.797,0.837,0.761,0.793
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 3,0.9094,0.003,0.007,0.002,0.002
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 4,1.049,0.698,0.997,0.537,0.698
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 5,0.6202,0.0,0.0,0.0,0.0
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 6,0.9901,0.455,0.87,0.308,0.455
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 7,1.0863,0.77,0.82,0.725,0.769
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 8,1.1297,0.362,0.39,0.337,0.361
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,alle,1.3683,0.636,0.54,0.775,
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 1,1.3683,0.854,0.752,0.988,0.854
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 2,0.9775,0.811,0.804,0.819,0.735
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 3,1.0313,0.456,0.448,0.463,0.452
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 4,1.2105,0.813,0.742,0.899,0.813
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 5,1.1433,0.341,0.23,0.662,0.341
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 6,1.0475,0.768,0.931,0.654,0.749
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 7,1.0181,0.79,0.786,0.794,0.784
-Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 8,1.1568,0.397,0.337,0.484,0.397
-Facenet,20%,foto's,cosine,dichtstbij,los,alle,0.6411,0.556,0.66,0.481,
-Facenet,20%,foto's,cosine,dichtstbij,los,Video 1,0.6083,0.614,0.99,0.445,0.613
-Facenet,20%,foto's,cosine,dichtstbij,los,Video 2,0.5329,0.778,0.828,0.733,0.755
-Facenet,20%,foto's,cosine,dichtstbij,los,Video 3,0.6377,0.611,0.844,0.479,0.611
-Facenet,20%,foto's,cosine,dichtstbij,los,Video 4,0.6902,0.587,0.86,0.446,0.585
-Facenet,20%,foto's,cosine,dichtstbij,los,Video 5,0.6164,0.272,0.27,0.273,0.268
-Facenet,20%,foto's,cosine,dichtstbij,los,Video 6,0.6719,0.519,0.988,0.352,0.5
-Facenet,20%,foto's,cosine,dichtstbij,los,Video 7,0.5694,0.816,0.956,0.712,0.772
-Facenet,20%,foto's,cosine,dichtstbij,los,Video 8,0.8412,0.312,0.33,0.297,0.303
-Facenet,20%,foto's,cosine,dichtstbij,uniek,alle,1.0139,0.688,0.584,0.838,
-Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 1,1.0139,0.855,0.753,0.989,0.855
-Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 2,0.5323,0.783,0.822,0.747,0.728
-Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 3,0.7877,0.815,0.799,0.833,0.811
-Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 4,1.0139,0.821,0.749,0.908,0.821
-Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 5,0.7478,0.479,0.338,0.826,0.44
-Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 6,0.6693,0.519,0.988,0.352,0.501
-Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 7,0.5748,0.825,0.947,0.731,0.759
-Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 8,1.0139,0.444,0.376,0.542,0.444
-Facenet,20%,foto's,cosine,gemiddelde,los,alle,0.7507,0.528,0.643,0.447,
-Facenet,20%,foto's,cosine,gemiddelde,los,Video 1,0.6954,0.55,0.996,0.38,0.55
-Facenet,20%,foto's,cosine,gemiddelde,los,Video 2,0.5669,0.81,0.909,0.73,0.756
-Facenet,20%,foto's,cosine,gemiddelde,los,Video 3,0.6558,0.626,0.873,0.488,0.625
-Facenet,20%,foto's,cosine,gemiddelde,los,Video 4,0.789,0.526,0.907,0.37,0.525
-Facenet,20%,foto's,cosine,gemiddelde,los,Video 5,0.6314,0.301,0.341,0.269,0.269
-Facenet,20%,foto's,cosine,gemiddelde,los,Video 6,0.7217,0.523,1.0,0.354,0.523
-Facenet,20%,foto's,cosine,gemiddelde,los,Video 7,0.6295,0.796,0.918,0.703,0.763
-Facenet,20%,foto's,cosine,gemiddelde,los,Video 8,0.9598,0.25,0.271,0.231,0.249
-Facenet,20%,foto's,cosine,gemiddelde,uniek,alle,1.2634,0.696,0.591,0.848,
-Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 1,1.2634,0.852,0.75,0.986,0.852
-Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 2,0.5676,0.811,0.907,0.734,0.732
-Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 3,0.887,0.923,0.905,0.941,0.917
-Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 4,1.2634,0.804,0.734,0.889,0.804
-Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 5,0.8244,0.557,0.407,0.88,0.467
-Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 6,1.2634,0.535,0.598,0.484,0.535
-Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 7,0.6295,0.801,0.919,0.711,0.763
-Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 8,1.2634,0.426,0.361,0.52,0.426
-Facenet,20%,foto's,euclidean,dichtstbij,los,alle,14.6696,0.469,0.588,0.39,
-Facenet,20%,foto's,euclidean,dichtstbij,los,Video 1,11.5115,0.738,0.999,0.586,0.738
-Facenet,20%,foto's,euclidean,dichtstbij,los,Video 2,14.6696,0.735,0.799,0.681,0.735
-Facenet,20%,foto's,euclidean,dichtstbij,los,Video 3,6.7101,0.0,0.0,0.0,0.0
-Facenet,20%,foto's,euclidean,dichtstbij,los,Video 4,12.2459,0.55,0.995,0.38,0.55
-Facenet,20%,foto's,euclidean,dichtstbij,los,Video 5,6.7101,0.0,0.0,0.0,0.0
-Facenet,20%,foto's,euclidean,dichtstbij,los,Video 6,8.9448,0.453,0.869,0.306,0.453
-Facenet,20%,foto's,euclidean,dichtstbij,los,Video 7,11.2897,0.769,0.82,0.724,0.769
-Facenet,20%,foto's,euclidean,dichtstbij,los,Video 8,9.8066,0.31,0.364,0.27,0.306
-Facenet,20%,foto's,euclidean,dichtstbij,uniek,alle,11.3489,0.694,0.64,0.758,
-Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 1,11.3331,0.974,0.969,0.98,0.972
-Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 2,11.159,0.818,0.766,0.879,0.812
-Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 3,11.445,0.47,0.459,0.482,0.468
-Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 4,11.3958,0.908,0.949,0.871,0.904
-Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 5,11.3331,0.484,0.34,0.838,0.483
-Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 6,11.512,0.801,0.921,0.709,0.778
-Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 7,11.3194,0.844,0.774,0.927,0.842
-Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 8,13.3513,0.397,0.336,0.485,0.38
-Facenet,20%,foto's,euclidean,gemiddelde,los,alle,11.2813,0.54,0.667,0.454,
-Facenet,20%,foto's,euclidean,gemiddelde,los,Video 1,11.9071,0.57,1.0,0.399,0.57
-Facenet,20%,foto's,euclidean,gemiddelde,los,Video 2,10.734,0.803,0.807,0.798,0.799
-Facenet,20%,foto's,euclidean,gemiddelde,los,Video 3,9.6692,0.634,0.884,0.494,0.634
-Facenet,20%,foto's,euclidean,gemiddelde,los,Video 4,11.1498,0.549,0.977,0.381,0.549
-Facenet,20%,foto's,euclidean,gemiddelde,los,Video 5,9.0747,0.3,0.345,0.266,0.266
-Facenet,20%,foto's,euclidean,gemiddelde,los,Video 6,9.6692,0.525,0.994,0.356,0.523
-Facenet,20%,foto's,euclidean,gemiddelde,los,Video 7,11.0451,0.765,0.803,0.73,0.765
-Facenet,20%,foto's,euclidean,gemiddelde,los,Video 8,13.5991,0.244,0.266,0.226,0.243
-Facenet,20%,foto's,euclidean,gemiddelde,uniek,alle,10.1679,0.71,0.666,0.76,
-Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 1,10.1679,0.977,0.991,0.963,0.977
-Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 2,10.1679,0.842,0.796,0.893,0.842
-Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 3,9.562,0.664,0.88,0.533,0.545
-Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 4,10.226,0.899,0.944,0.857,0.898
-Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 5,10.0572,0.488,0.344,0.843,0.482
-Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 6,10.4325,0.836,0.938,0.755,0.809
-Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 7,10.0377,0.831,0.801,0.864,0.83
-Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 8,12.9706,0.41,0.347,0.5,0.394
-Facenet,20%,foto's,euclidean_l2,dichtstbij,los,alle,1.1324,0.556,0.66,0.481,
-Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 1,1.1031,0.614,0.99,0.445,0.613
-Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 2,1.0324,0.778,0.828,0.733,0.755
-Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 3,1.1294,0.611,0.844,0.479,0.611
-Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 4,1.175,0.587,0.86,0.446,0.585
-Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 5,1.1104,0.272,0.27,0.273,0.268
-Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 6,1.1593,0.519,0.988,0.352,0.502
-Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 7,1.0672,0.816,0.956,0.712,0.772
-Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 8,1.2971,0.312,0.33,0.297,0.303
-Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,alle,1.4241,0.688,0.584,0.838,
-Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 1,1.4241,0.855,0.753,0.989,0.855
-Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 2,1.0319,0.783,0.821,0.747,0.728
-Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 3,1.2552,0.815,0.799,0.833,0.811
-Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 4,1.4241,0.821,0.749,0.908,0.821
-Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 5,1.223,0.479,0.338,0.826,0.44
-Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 6,1.1571,0.519,0.988,0.352,0.501
-Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 7,1.0722,0.826,0.947,0.732,0.759
-Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 8,1.4241,0.444,0.376,0.542,0.444
-Facenet,20%,foto's,euclidean_l2,gemiddelde,los,alle,1.2253,0.528,0.643,0.447,
-Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 1,1.1794,0.55,0.996,0.38,0.55
-Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 2,1.0649,0.81,0.909,0.73,0.756
-Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 3,1.1453,0.626,0.873,0.488,0.625
-Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 4,1.2562,0.526,0.907,0.37,0.525
-Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 5,1.1238,0.301,0.341,0.269,0.269
-Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 6,1.2015,0.523,1.0,0.354,0.523
-Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 7,1.1221,0.796,0.918,0.703,0.763
-Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 8,1.3856,0.25,0.271,0.231,0.249
-Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,alle,1.5897,0.696,0.591,0.848,
-Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 1,1.5897,0.852,0.75,0.986,0.852
-Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 2,1.0655,0.811,0.907,0.734,0.732
-Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 3,1.3319,0.923,0.905,0.941,0.917
-Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 4,1.5897,0.804,0.734,0.889,0.804
-Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 5,1.2841,0.557,0.407,0.881,0.467
-Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 6,1.5897,0.535,0.598,0.484,0.535
-Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 7,1.1221,0.801,0.919,0.711,0.763
-Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 8,1.5897,0.426,0.361,0.52,0.426
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,alle,0.4197,0.611,0.619,0.603,
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 1,0.4592,0.822,0.784,0.864,0.821
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 2,0.3936,0.741,0.713,0.77,0.739
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 3,0.0362,0.677,0.97,0.52,0.571
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 4,0.4821,0.417,0.514,0.351,0.415
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 5,0.0321,0.731,0.766,0.699,0.662
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 6,0.1068,0.72,0.916,0.593,0.718
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 7,0.6888,0.766,0.742,0.792,0.761
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 8,0.6888,0.442,0.422,0.466,0.44
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,alle,0.8471,0.673,0.571,0.82,
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 1,0.5569,0.851,0.749,0.984,0.851
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 2,0.8471,0.734,0.592,0.965,0.734
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 3,0.0356,0.676,0.968,0.52,0.515
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 4,0.8471,0.794,0.724,0.878,0.794
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 5,0.0316,0.727,0.761,0.696,0.511
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 6,0.1116,0.783,0.89,0.698,0.776
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 7,0.8471,0.76,0.649,0.918,0.76
-Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 8,0.6054,0.489,0.414,0.598,0.489
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,alle,0.8574,0.597,0.66,0.546,
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 1,0.8574,0.781,0.991,0.644,0.781
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 2,0.4777,0.814,0.912,0.735,0.781
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 3,0.543,0.626,0.861,0.492,0.625
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 4,0.6613,0.595,0.818,0.467,0.595
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 5,0.5196,0.303,0.34,0.272,0.254
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 6,0.6613,0.547,0.963,0.382,0.547
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 7,0.6429,0.813,0.804,0.822,0.804
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 8,0.6978,0.34,0.348,0.333,0.34
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,alle,0.6456,0.677,0.592,0.791,
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 1,0.5998,0.939,0.937,0.942,0.892
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 2,0.5305,0.817,0.806,0.828,0.773
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 3,0.5426,0.626,0.858,0.492,0.488
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 4,0.652,0.861,0.82,0.906,0.859
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 5,0.652,0.378,0.256,0.728,0.378
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 6,0.6852,0.841,0.943,0.759,0.813
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 7,0.603,0.868,0.801,0.946,0.852
-Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 8,0.9817,0.452,0.383,0.552,0.446
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,alle,12.4925,0.6,0.601,0.599,
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 1,10.008,0.814,0.775,0.856,0.814
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 2,12.4925,0.694,0.617,0.792,0.694
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 3,1.0461,0.677,0.97,0.52,0.572
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 4,9.7093,0.396,0.498,0.329,0.396
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 5,1.0962,0.737,0.753,0.721,0.667
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 6,1.7667,0.72,0.916,0.593,0.717
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 7,9.0522,0.733,0.707,0.76,0.733
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 8,10.8337,0.447,0.428,0.467,0.447
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,alle,12.9333,0.673,0.571,0.82,
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 1,10.5534,0.851,0.75,0.984,0.85
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 2,12.9333,0.731,0.59,0.961,0.731
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 3,1.0362,0.677,0.969,0.52,0.515
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 4,10.0793,0.794,0.725,0.878,0.794
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 5,0.9808,0.73,0.76,0.704,0.512
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 6,1.8402,0.786,0.895,0.7,0.779
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 7,11.3051,0.76,0.649,0.916,0.76
-Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 8,10.5534,0.493,0.417,0.602,0.493
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,alle,12.1127,0.565,0.643,0.504,
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 1,9.492,0.785,0.999,0.647,0.785
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 2,9.492,0.806,0.796,0.817,0.799
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 3,6.4214,0.006,0.009,0.005,0.006
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 4,9.2528,0.743,0.994,0.593,0.743
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 5,5.7463,0.006,0.013,0.004,0.004
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 6,6.1287,0.453,0.869,0.306,0.453
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 7,9.2528,0.845,0.841,0.85,0.845
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 8,12.1127,0.427,0.455,0.402,0.427
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,alle,9.1174,0.716,0.628,0.833,
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 1,7.3073,0.969,0.994,0.946,0.877
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 2,9.2992,0.805,0.709,0.931,0.804
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 3,7.131,0.48,0.469,0.492,0.48
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 4,8.5671,0.952,0.923,0.983,0.948
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 5,6.9511,0.538,0.381,0.914,0.473
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 6,7.3846,0.829,0.93,0.748,0.827
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 7,8.4581,0.84,0.75,0.955,0.836
-Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 8,10.9094,0.514,0.436,0.628,0.509
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,alle,0.9163,0.611,0.619,0.603,
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 1,0.9583,0.822,0.784,0.864,0.821
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 2,0.8872,0.741,0.713,0.77,0.738
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 3,0.269,0.677,0.97,0.52,0.571
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 4,0.982,0.417,0.514,0.351,0.415
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 5,0.2533,0.731,0.766,0.699,0.662
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 6,0.4623,0.72,0.916,0.593,0.718
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 7,1.1738,0.766,0.742,0.792,0.761
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 8,1.1738,0.442,0.422,0.466,0.44
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,alle,1.3017,0.673,0.571,0.82,
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 1,1.0555,0.851,0.749,0.984,0.851
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 2,1.3017,0.734,0.592,0.965,0.734
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 3,0.2668,0.676,0.968,0.52,0.515
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 4,1.3017,0.794,0.724,0.878,0.794
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 5,0.2512,0.727,0.761,0.696,0.511
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 6,0.4724,0.783,0.89,0.698,0.776
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 7,1.3017,0.76,0.649,0.918,0.76
-Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 8,1.1004,0.489,0.414,0.598,0.489
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,alle,1.3096,0.597,0.66,0.546,
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 1,1.3096,0.781,0.991,0.644,0.781
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 2,0.9775,0.814,0.912,0.735,0.781
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 3,1.0406,0.626,0.862,0.492,0.625
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 4,1.1501,0.595,0.818,0.467,0.595
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 5,1.0195,0.303,0.34,0.272,0.254
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 6,1.1501,0.547,0.963,0.382,0.547
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 7,1.122,0.813,0.805,0.821,0.804
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 8,1.1814,0.34,0.348,0.333,0.34
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,alle,1.1364,0.677,0.592,0.791,
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 1,1.0953,0.939,0.937,0.942,0.892
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 2,1.029,0.817,0.808,0.826,0.773
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 3,1.0418,0.626,0.858,0.492,0.488
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 4,1.142,0.861,0.82,0.906,0.859
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 5,1.142,0.378,0.256,0.728,0.378
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 6,1.1707,0.841,0.943,0.759,0.813
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 7,1.0982,0.868,0.801,0.946,0.852
-Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 8,1.4013,0.452,0.383,0.552,0.446
-Facenet512,0%,foto's,cosine,dichtstbij,los,alle,0.9292,0.684,0.688,0.679,
-Facenet512,0%,foto's,cosine,dichtstbij,los,Video 1,0.8548,0.824,0.996,0.703,0.824
-Facenet512,0%,foto's,cosine,dichtstbij,los,Video 2,0.6493,0.826,0.804,0.85,0.819
-Facenet512,0%,foto's,cosine,dichtstbij,los,Video 3,0.9292,0.634,0.693,0.584,0.634
-Facenet512,0%,foto's,cosine,dichtstbij,los,Video 4,0.8136,0.874,0.98,0.788,0.874
-Facenet512,0%,foto's,cosine,dichtstbij,los,Video 5,0.715,0.351,0.296,0.431,0.335
-Facenet512,0%,foto's,cosine,dichtstbij,los,Video 6,0.9292,0.676,0.944,0.526,0.676
-Facenet512,0%,foto's,cosine,dichtstbij,los,Video 7,0.6772,0.846,0.944,0.766,0.79
-Facenet512,0%,foto's,cosine,dichtstbij,los,Video 8,0.9292,0.432,0.422,0.442,0.432
-Facenet512,0%,foto's,cosine,dichtstbij,uniek,alle,0.8902,0.715,0.637,0.814,
-Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 1,0.8245,0.912,0.953,0.873,0.898
-Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 2,0.644,0.831,0.805,0.859,0.76
-Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 3,0.7976,0.616,0.686,0.558,0.606
-Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 4,0.8043,0.933,0.958,0.91,0.929
-Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 5,1.0244,0.434,0.293,0.834,0.407
-Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 6,0.9478,0.807,0.929,0.713,0.802
-Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 7,0.6771,0.873,0.941,0.815,0.843
-Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 8,1.1553,0.508,0.43,0.62,0.495
-Facenet512,0%,foto's,cosine,gemiddelde,los,alle,1.0227,0.7,0.714,0.686,
-Facenet512,0%,foto's,cosine,gemiddelde,los,Video 1,1.0227,0.777,0.973,0.647,0.777
-Facenet512,0%,foto's,cosine,gemiddelde,los,Video 2,0.6796,0.823,0.842,0.805,0.804
-Facenet512,0%,foto's,cosine,gemiddelde,los,Video 3,1.0227,0.759,0.894,0.659,0.759
-Facenet512,0%,foto's,cosine,gemiddelde,los,Video 4,1.0227,0.89,0.982,0.813,0.89
-Facenet512,0%,foto's,cosine,gemiddelde,los,Video 5,0.7467,0.424,0.413,0.436,0.38
-Facenet512,0%,foto's,cosine,gemiddelde,los,Video 6,0.9275,0.75,0.967,0.612,0.75
-Facenet512,0%,foto's,cosine,gemiddelde,los,Video 7,0.7369,0.868,0.97,0.785,0.8
-Facenet512,0%,foto's,cosine,gemiddelde,los,Video 8,1.0227,0.43,0.428,0.431,0.43
-Facenet512,0%,foto's,cosine,gemiddelde,uniek,alle,0.9484,0.728,0.659,0.814,
-Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 1,0.9347,0.887,0.903,0.872,0.885
-Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 2,0.6799,0.825,0.841,0.81,0.754
-Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 3,0.9347,0.726,0.785,0.676,0.722
-Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 4,0.902,0.949,0.952,0.946,0.944
-Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 5,1.0612,0.438,0.297,0.832,0.412
-Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 6,0.9511,0.782,0.941,0.669,0.78
-Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 7,0.7388,0.877,0.968,0.802,0.834
-Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 8,1.3207,0.521,0.441,0.636,0.499
-Facenet512,0%,foto's,euclidean,dichtstbij,los,alle,28.2,0.671,0.702,0.643,
-Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 1,28.6645,0.774,0.996,0.633,0.774
-Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 2,26.1173,0.832,0.798,0.87,0.826
-Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 3,28.2,0.7,0.772,0.641,0.7
-Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 4,29.2304,0.827,0.969,0.721,0.827
-Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 5,25.3337,0.342,0.282,0.435,0.34
-Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 6,24.4655,0.697,0.96,0.547,0.697
-Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 7,22.118,0.807,0.921,0.718,0.788
-Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 8,32.7093,0.39,0.394,0.385,0.383
-Facenet512,0%,foto's,euclidean,dichtstbij,uniek,alle,27.8701,0.709,0.62,0.827,
-Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 1,29.81,0.864,0.763,0.995,0.859
-Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 2,25.755,0.807,0.729,0.904,0.788
-Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 3,28.6712,0.654,0.638,0.672,0.653
-Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 4,27.3188,0.91,0.904,0.915,0.907
-Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 5,29.81,0.412,0.278,0.796,0.41
-Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 6,23.3782,0.77,0.959,0.644,0.765
-Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 7,31.365,0.809,0.704,0.951,0.807
-Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 8,30.7703,0.491,0.416,0.598,0.484
-Facenet512,0%,foto's,euclidean,gemiddelde,los,alle,31.5217,0.679,0.679,0.679,
-Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 1,27.4893,0.825,0.979,0.713,0.825
-Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 2,25.17,0.837,0.81,0.866,0.807
-Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 3,27.8904,0.5,0.554,0.456,0.5
-Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 4,31.5217,0.906,0.973,0.849,0.906
-Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 5,24.8416,0.313,0.246,0.428,0.311
-Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 6,22.9368,0.61,0.909,0.459,0.61
-Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 7,26.1328,0.826,0.796,0.858,0.826
-Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 8,31.5217,0.457,0.443,0.473,0.457
-Facenet512,0%,foto's,euclidean,gemiddelde,uniek,alle,26.9275,0.695,0.609,0.809,
-Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 1,31.5173,0.859,0.756,0.993,0.849
-Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 2,24.0344,0.807,0.764,0.855,0.777
-Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 3,27.9811,0.515,0.502,0.529,0.509
-Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 4,25.4951,0.927,0.922,0.932,0.918
-Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 5,29.8328,0.418,0.281,0.811,0.409
-Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 6,21.2214,0.754,0.927,0.635,0.738
-Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 7,26.3745,0.826,0.729,0.953,0.826
-Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 8,32.9432,0.518,0.439,0.632,0.5
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,alle,1.3633,0.684,0.688,0.679,
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 1,1.3076,0.824,0.996,0.703,0.824
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 2,1.1397,0.826,0.804,0.85,0.819
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 3,1.3633,0.634,0.693,0.584,0.634
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 4,1.2757,0.874,0.98,0.788,0.874
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 5,1.1959,0.351,0.296,0.431,0.335
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 6,1.3633,0.676,0.944,0.526,0.676
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 7,1.1638,0.846,0.944,0.766,0.79
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 8,1.3633,0.432,0.422,0.442,0.432
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,alle,1.3344,0.714,0.637,0.814,
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 1,1.2842,0.912,0.953,0.874,0.897
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 2,1.135,0.831,0.805,0.859,0.76
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 3,1.263,0.616,0.686,0.558,0.606
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 4,1.271,0.933,0.957,0.911,0.929
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 5,1.4314,0.434,0.293,0.834,0.407
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 6,1.3769,0.807,0.929,0.713,0.802
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 7,1.1637,0.873,0.941,0.815,0.843
-Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 8,1.5201,0.508,0.43,0.62,0.495
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,alle,1.4302,0.7,0.714,0.686,
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 1,1.4302,0.777,0.973,0.647,0.777
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 2,1.1659,0.823,0.842,0.805,0.804
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 3,1.4302,0.759,0.894,0.659,0.759
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 4,1.4302,0.89,0.982,0.813,0.89
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 5,1.2221,0.424,0.413,0.436,0.38
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 6,1.3621,0.75,0.967,0.612,0.75
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 7,1.2141,0.868,0.97,0.785,0.8
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 8,1.4302,0.43,0.428,0.431,0.43
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,alle,1.3773,0.728,0.659,0.814,
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 1,1.3697,0.887,0.9,0.875,0.885
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 2,1.1662,0.825,0.841,0.81,0.754
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 3,1.3673,0.726,0.784,0.676,0.722
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 4,1.3432,0.949,0.952,0.946,0.944
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 5,1.4569,0.438,0.297,0.832,0.412
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 6,1.3793,0.782,0.941,0.669,0.78
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 7,1.2157,0.877,0.968,0.802,0.834
-Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 8,1.6253,0.521,0.441,0.636,0.499
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,alle,0.5795,0.691,0.669,0.714,
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 1,0.6155,0.847,0.82,0.875,0.847
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 2,0.5222,0.819,0.761,0.887,0.808
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 3,0.3661,0.57,0.81,0.44,0.547
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 4,0.6155,0.703,0.727,0.68,0.702
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 5,0.3126,0.686,0.697,0.675,0.583
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 6,0.78,0.516,0.934,0.356,0.514
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 7,0.78,0.805,0.771,0.843,0.804
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 8,0.5795,0.548,0.519,0.58,0.548
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,alle,0.6891,0.7,0.596,0.847,
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 1,0.5129,0.866,0.782,0.971,0.859
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 2,0.5052,0.805,0.73,0.898,0.749
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 3,0.3709,0.583,0.765,0.47,0.544
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 4,1.0337,0.823,0.751,0.91,0.818
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 5,0.2262,0.772,0.687,0.881,0.507
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 6,0.4422,0.845,0.953,0.759,0.844
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 7,0.4223,0.808,0.754,0.872,0.782
-Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 8,1.0337,0.56,0.474,0.684,0.559
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,alle,0.8098,0.732,0.724,0.741,
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 1,0.9673,0.879,0.989,0.791,0.875
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 2,0.629,0.869,0.884,0.854,0.83
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 3,0.9673,0.786,0.887,0.705,0.783
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 4,0.9673,0.919,0.973,0.87,0.919
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 5,0.651,0.298,0.247,0.375,0.281
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 6,0.8098,0.705,0.934,0.566,0.705
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 7,0.745,0.837,0.8,0.878,0.835
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 8,0.8356,0.506,0.485,0.529,0.506
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,alle,0.7574,0.732,0.687,0.784,
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 1,0.7005,0.904,0.958,0.856,0.887
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 2,0.6291,0.869,0.881,0.858,0.826
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 3,0.799,0.765,0.835,0.707,0.727
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 4,0.7334,0.929,0.924,0.934,0.924
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 5,1.2978,0.388,0.262,0.754,0.262
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 6,0.881,0.78,0.913,0.681,0.769
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 7,0.7574,0.851,0.781,0.935,0.851
-Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 8,1.2978,0.549,0.465,0.671,0.532
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,alle,24.6057,0.636,0.632,0.64,
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 1,23.929,0.795,0.789,0.801,0.795
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 2,24.6057,0.769,0.694,0.863,0.769
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 3,11.4379,0.654,0.912,0.51,0.567
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 4,23.929,0.535,0.6,0.483,0.535
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 5,8.0492,0.719,0.742,0.698,0.605
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 6,9.0424,0.507,0.965,0.344,0.505
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 7,20.9265,0.79,0.765,0.816,0.789
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 8,23.4098,0.492,0.473,0.513,0.492
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,alle,25.2973,0.694,0.59,0.842,
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 1,28.5728,0.854,0.752,0.988,0.854
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 2,22.2722,0.748,0.651,0.879,0.744
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 3,12.0586,0.68,0.814,0.584,0.598
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 4,28.5728,0.799,0.729,0.883,0.798
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 5,5.7443,0.79,0.703,0.901,0.506
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 6,9.9905,0.86,0.971,0.771,0.86
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 7,20.558,0.788,0.698,0.905,0.778
-Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 8,23.4942,0.527,0.446,0.643,0.527
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,alle,23.7353,0.67,0.69,0.65,
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 1,22.8123,0.874,0.996,0.778,0.874
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 2,21.2089,0.861,0.865,0.857,0.843
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 3,22.8123,0.308,0.343,0.28,0.308
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 4,25.0311,0.882,0.983,0.8,0.882
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 5,20.7799,0.169,0.146,0.201,0.168
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 6,19.8004,0.457,0.871,0.31,0.457
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 7,21.2089,0.86,0.827,0.895,0.86
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 8,27.3707,0.523,0.516,0.531,0.519
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,alle,22.9051,0.697,0.61,0.814,
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 1,26.191,0.861,0.766,0.985,0.85
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 2,20.9505,0.818,0.765,0.879,0.797
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 3,23.2655,0.458,0.446,0.47,0.457
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 4,22.0266,0.908,0.867,0.953,0.907
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 5,26.191,0.399,0.269,0.774,0.388
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 6,17.1092,0.729,0.858,0.633,0.728
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 7,21.3116,0.834,0.736,0.962,0.833
-Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 8,27.1544,0.553,0.468,0.675,0.546
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,alle,1.0766,0.691,0.669,0.714,
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 1,1.1096,0.847,0.82,0.875,0.847
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 2,1.022,0.819,0.761,0.887,0.808
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 3,0.8557,0.57,0.81,0.44,0.547
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 4,1.1096,0.703,0.727,0.68,0.702
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 5,0.7907,0.686,0.697,0.675,0.583
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 6,1.249,0.516,0.934,0.356,0.514
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 7,1.249,0.805,0.771,0.843,0.804
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 8,1.0766,0.548,0.519,0.58,0.548
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,alle,1.174,0.7,0.596,0.847,
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 1,1.0363,0.866,0.779,0.976,0.859
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 2,1.0052,0.805,0.73,0.898,0.749
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 3,0.8613,0.583,0.765,0.47,0.544
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 4,1.4379,0.823,0.751,0.91,0.818
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 5,0.6727,0.772,0.687,0.881,0.507
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 6,0.9405,0.845,0.953,0.759,0.844
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 7,0.9191,0.808,0.754,0.872,0.782
-Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 8,1.4379,0.56,0.474,0.684,0.559
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,alle,1.2727,0.732,0.724,0.741,
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 1,1.391,0.879,0.989,0.791,0.875
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 2,1.1217,0.869,0.883,0.854,0.83
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 3,1.391,0.786,0.887,0.705,0.783
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 4,1.391,0.919,0.973,0.87,0.919
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 5,1.1411,0.298,0.247,0.375,0.281
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 6,1.2727,0.705,0.934,0.566,0.705
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 7,1.2207,0.837,0.8,0.878,0.835
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 8,1.2928,0.506,0.485,0.529,0.506
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,alle,1.2308,0.732,0.687,0.784,
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 1,1.1837,0.904,0.958,0.856,0.887
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 2,1.1217,0.87,0.881,0.858,0.826
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 3,1.2642,0.765,0.835,0.707,0.727
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 4,1.2112,0.929,0.924,0.934,0.924
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 5,1.6112,0.388,0.262,0.754,0.262
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 6,1.3275,0.78,0.913,0.681,0.769
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 7,1.2308,0.851,0.781,0.935,0.851
-Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 8,1.6112,0.549,0.465,0.671,0.532
-Facenet512,20%,foto's,cosine,dichtstbij,los,alle,0.825,0.729,0.732,0.726,
-Facenet512,20%,foto's,cosine,dichtstbij,los,Video 1,0.8444,0.782,0.942,0.668,0.781
-Facenet512,20%,foto's,cosine,dichtstbij,los,Video 2,0.5978,0.841,0.86,0.824,0.814
-Facenet512,20%,foto's,cosine,dichtstbij,los,Video 3,0.7952,0.912,0.93,0.894,0.911
-Facenet512,20%,foto's,cosine,dichtstbij,los,Video 4,0.7952,0.859,0.965,0.774,0.859
-Facenet512,20%,foto's,cosine,dichtstbij,los,Video 5,0.714,0.444,0.432,0.455,0.389
-Facenet512,20%,foto's,cosine,dichtstbij,los,Video 6,0.8041,0.649,0.807,0.543,0.648
-Facenet512,20%,foto's,cosine,dichtstbij,los,Video 7,0.6794,0.873,0.934,0.819,0.807
-Facenet512,20%,foto's,cosine,dichtstbij,los,Video 8,0.9587,0.503,0.495,0.512,0.5
-Facenet512,20%,foto's,cosine,dichtstbij,uniek,alle,0.797,0.737,0.702,0.776,
-Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 1,0.9545,0.861,0.767,0.982,0.836
-Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 2,0.5966,0.841,0.86,0.823,0.771
-Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 3,0.7938,0.912,0.92,0.903,0.911
-Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 4,0.7938,0.897,0.943,0.854,0.896
-Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 5,0.714,0.439,0.424,0.455,0.363
-Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 6,0.8572,0.698,0.803,0.616,0.681
-Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 7,0.6802,0.872,0.929,0.822,0.82
-Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 8,1.1939,0.556,0.471,0.679,0.513
-Facenet512,20%,foto's,cosine,gemiddelde,los,alle,1.0807,0.751,0.745,0.757,
-Facenet512,20%,foto's,cosine,gemiddelde,los,Video 1,1.0807,0.806,0.951,0.699,0.806
-Facenet512,20%,foto's,cosine,gemiddelde,los,Video 2,0.6784,0.85,0.854,0.847,0.825
-Facenet512,20%,foto's,cosine,gemiddelde,los,Video 3,0.8526,0.914,0.937,0.892,0.913
-Facenet512,20%,foto's,cosine,gemiddelde,los,Video 4,1.0807,0.927,0.993,0.869,0.927
-Facenet512,20%,foto's,cosine,gemiddelde,los,Video 5,0.7378,0.403,0.409,0.398,0.373
-Facenet512,20%,foto's,cosine,gemiddelde,los,Video 6,0.8846,0.788,0.972,0.662,0.787
-Facenet512,20%,foto's,cosine,gemiddelde,los,Video 7,0.7548,0.88,0.938,0.828,0.812
-Facenet512,20%,foto's,cosine,gemiddelde,los,Video 8,1.0807,0.507,0.498,0.517,0.507
-Facenet512,20%,foto's,cosine,gemiddelde,uniek,alle,0.8544,0.758,0.733,0.784,
-Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 1,0.8988,0.867,0.898,0.837,0.853
-Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 2,0.6789,0.853,0.853,0.853,0.8
-Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 3,0.8544,0.919,0.93,0.909,0.919
-Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 4,0.9018,0.952,0.953,0.952,0.943
-Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 5,1.3009,0.429,0.289,0.832,0.357
-Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 6,0.9762,0.819,0.938,0.727,0.807
-Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 7,0.7543,0.881,0.934,0.834,0.83
-Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 8,1.3009,0.561,0.475,0.685,0.504
-Facenet512,20%,foto's,euclidean,dichtstbij,los,alle,28.7258,0.712,0.732,0.693,
-Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 1,28.7258,0.759,0.942,0.636,0.759
-Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 2,25.5567,0.827,0.798,0.858,0.81
-Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 3,26.499,0.916,0.937,0.895,0.916
-Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 4,31.9008,0.81,0.919,0.723,0.809
-Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 5,26.8839,0.421,0.369,0.489,0.421
-Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 6,24.1195,0.631,0.817,0.514,0.626
-Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 7,26.8839,0.805,0.791,0.82,0.805
-Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 8,31.9008,0.455,0.455,0.454,0.452
-Facenet512,20%,foto's,euclidean,dichtstbij,uniek,alle,28.9521,0.727,0.63,0.86,
-Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 1,33.5463,0.853,0.751,0.986,0.85
-Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 2,23.5173,0.79,0.805,0.775,0.757
-Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 3,26.5817,0.895,0.872,0.919,0.895
-Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 4,29.2512,0.874,0.847,0.902,0.873
-Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 5,32.4279,0.424,0.286,0.823,0.422
-Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 6,24.0989,0.673,0.774,0.595,0.667
-Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 7,21.1448,0.803,0.929,0.707,0.79
-Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 8,30.2372,0.527,0.447,0.64,0.525
-Facenet512,20%,foto's,euclidean,gemiddelde,los,alle,28.1935,0.719,0.726,0.712,
-Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 1,32.2545,0.809,0.962,0.698,0.808
-Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 2,24.0086,0.852,0.849,0.855,0.834
-Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 3,26.195,0.864,0.913,0.819,0.864
-Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 4,27.0914,0.857,0.976,0.763,0.857
-Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 5,26.7494,0.301,0.238,0.41,0.301
-Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 6,24.4446,0.722,0.949,0.583,0.722
-Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 7,25.4016,0.817,0.78,0.857,0.817
-Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 8,32.2545,0.489,0.478,0.5,0.486
-Facenet512,20%,foto's,euclidean,gemiddelde,uniek,alle,27.363,0.728,0.643,0.84,
-Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 1,33.0292,0.86,0.758,0.993,0.843
-Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 2,23.8103,0.83,0.792,0.872,0.793
-Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 3,26.2051,0.844,0.822,0.867,0.844
-Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 4,26.2051,0.879,0.895,0.864,0.877
-Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 5,33.0292,0.413,0.278,0.801,0.406
-Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 6,25.8541,0.751,0.839,0.679,0.751
-Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 7,28.1661,0.825,0.718,0.97,0.824
-Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 8,30.8303,0.537,0.456,0.653,0.521
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,alle,1.2846,0.729,0.732,0.726,
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 1,1.2996,0.782,0.942,0.668,0.781
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 2,1.1009,0.841,0.851,0.832,0.814
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 3,1.2612,0.912,0.93,0.894,0.911
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 4,1.2612,0.859,0.965,0.774,0.859
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 5,1.1951,0.444,0.432,0.455,0.389
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 6,1.2682,0.649,0.807,0.543,0.648
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 7,1.1657,0.873,0.934,0.819,0.807
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 8,1.3848,0.503,0.495,0.512,0.5
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,alle,1.2626,0.737,0.702,0.776,
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 1,1.3817,0.861,0.767,0.982,0.836
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 2,1.0924,0.841,0.86,0.823,0.771
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 3,1.2601,0.912,0.92,0.903,0.911
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 4,1.2601,0.897,0.943,0.854,0.896
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 5,1.195,0.439,0.425,0.455,0.363
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 6,1.3094,0.698,0.803,0.616,0.681
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 7,1.1642,0.873,0.931,0.822,0.82
-Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 8,1.5453,0.556,0.471,0.679,0.513
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,alle,1.4703,0.751,0.745,0.757,
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 1,1.4703,0.806,0.951,0.699,0.806
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 2,1.1649,0.85,0.854,0.847,0.825
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 3,1.3059,0.914,0.937,0.892,0.913
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 4,1.4703,0.927,0.993,0.869,0.927
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 5,1.2148,0.403,0.409,0.398,0.373
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 6,1.3302,0.788,0.972,0.662,0.787
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 7,1.2287,0.88,0.938,0.828,0.812
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 8,1.4703,0.507,0.498,0.517,0.507
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,alle,1.3073,0.758,0.733,0.785,
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 1,1.3408,0.867,0.898,0.837,0.853
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 2,1.1653,0.853,0.853,0.853,0.8
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 3,1.3073,0.919,0.93,0.909,0.919
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 4,1.3431,0.952,0.953,0.952,0.943
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 5,1.6131,0.429,0.289,0.832,0.358
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 6,1.3973,0.819,0.938,0.727,0.808
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 7,1.2283,0.881,0.934,0.834,0.83
-Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 8,1.6131,0.561,0.475,0.685,0.504
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,alle,0.5562,0.801,0.817,0.787,
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 1,0.7354,0.945,0.964,0.927,0.941
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 2,0.4977,0.86,0.839,0.881,0.851
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 3,0.5761,0.676,0.924,0.533,0.676
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 4,0.5928,0.943,0.993,0.898,0.942
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 5,0.3773,0.677,0.669,0.685,0.626
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 6,0.5212,0.735,0.982,0.587,0.735
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 7,0.566,0.825,0.821,0.828,0.824
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 8,0.6201,0.628,0.617,0.64,0.624
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,alle,0.5005,0.798,0.777,0.82,
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 1,0.4761,0.958,0.95,0.965,0.952
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 2,0.4817,0.849,0.825,0.876,0.847
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 3,0.745,0.812,0.793,0.831,0.659
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 4,0.5747,0.968,0.977,0.96,0.946
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 5,0.3985,0.724,0.618,0.872,0.658
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 6,0.6459,0.853,0.963,0.765,0.816
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 7,0.5665,0.794,0.707,0.906,0.782
-Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 8,0.5886,0.636,0.559,0.737,0.62
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,alle,0.8529,0.773,0.751,0.795,
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 1,0.8529,0.888,0.986,0.808,0.888
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 2,0.6402,0.882,0.9,0.865,0.838
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 3,0.8529,0.921,0.925,0.917,0.921
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 4,0.9478,0.929,0.996,0.87,0.928
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 5,0.6767,0.364,0.348,0.382,0.34
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 6,0.9478,0.763,0.956,0.635,0.762
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 7,0.6382,0.877,0.967,0.802,0.836
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 8,0.6673,0.574,0.674,0.5,0.57
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,alle,0.8253,0.78,0.713,0.86,
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 1,0.8289,0.925,0.886,0.967,0.924
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 2,0.6387,0.885,0.901,0.869,0.813
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 3,0.8494,0.915,0.913,0.917,0.903
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 4,0.7591,0.96,0.977,0.944,0.951
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 5,1.2762,0.425,0.286,0.825,0.347
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 6,1.2762,0.83,0.927,0.751,0.785
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 7,0.6363,0.875,0.965,0.801,0.851
-Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 8,1.2762,0.596,0.505,0.728,0.585
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,alle,25.5701,0.771,0.816,0.73,
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 1,24.7797,0.917,0.981,0.86,0.917
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 2,21.0898,0.841,0.868,0.816,0.839
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 3,13.4764,0.678,0.969,0.521,0.671
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 4,24.0159,0.876,1.0,0.779,0.876
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 5,14.1626,0.723,0.717,0.728,0.677
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 6,16.2338,0.654,0.979,0.491,0.654
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 7,21.4263,0.811,0.822,0.801,0.811
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 8,24.0159,0.562,0.576,0.549,0.562
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,alle,20.4597,0.796,0.736,0.866,
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 1,18.717,0.937,0.954,0.921,0.921
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 2,21.0628,0.841,0.818,0.865,0.834
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 3,20.9316,0.912,0.902,0.923,0.909
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 4,22.254,0.963,0.977,0.95,0.95
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 5,9.9681,0.763,0.682,0.867,0.557
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 6,18.3188,0.872,0.979,0.786,0.871
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 7,19.9111,0.804,0.74,0.881,0.802
-Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 8,22.4368,0.601,0.514,0.723,0.58
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,alle,23.5963,0.767,0.754,0.779,
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 1,22.7821,0.879,0.98,0.797,0.879
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 2,20.8912,0.881,0.885,0.877,0.861
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 3,20.5025,0.908,0.908,0.907,0.907
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 4,23.5963,0.908,0.992,0.838,0.908
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 5,19.8915,0.312,0.243,0.435,0.31
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 6,18.0306,0.7,0.934,0.56,0.699
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 7,21.512,0.843,0.793,0.9,0.843
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 8,29.0201,0.577,0.539,0.622,0.574
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,alle,22.2978,0.767,0.684,0.873,
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 1,30.1281,0.861,0.759,0.995,0.85
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 2,20.184,0.852,0.824,0.882,0.833
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 3,19.7707,0.889,0.868,0.911,0.888
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 4,22.2978,0.944,0.922,0.967,0.944
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 5,24.5851,0.419,0.283,0.812,0.413
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 6,18.4077,0.813,0.927,0.723,0.806
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 7,19.9378,0.834,0.742,0.951,0.83
-Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 8,23.9712,0.593,0.508,0.712,0.582
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,alle,1.0547,0.801,0.817,0.787,
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 1,1.2128,0.945,0.964,0.927,0.941
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 2,0.9978,0.86,0.839,0.881,0.851
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 3,1.0734,0.676,0.924,0.533,0.676
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 4,1.0889,0.943,0.993,0.898,0.942
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 5,0.8688,0.677,0.669,0.685,0.626
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 6,1.021,0.735,0.982,0.587,0.735
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 7,1.064,0.825,0.821,0.828,0.824
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 8,1.1137,0.628,0.617,0.64,0.624
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,alle,1.0005,0.798,0.777,0.82,
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 1,0.9734,0.958,0.953,0.963,0.952
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 2,0.9816,0.849,0.824,0.876,0.847
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 3,1.2207,0.812,0.793,0.831,0.659
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 4,1.0721,0.968,0.977,0.96,0.946
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 5,0.8927,0.724,0.618,0.872,0.658
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 6,1.1366,0.853,0.963,0.765,0.816
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 7,1.0644,0.794,0.707,0.906,0.782
-Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 8,1.0851,0.636,0.559,0.737,0.62
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,alle,1.3061,0.773,0.751,0.795,
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 1,1.3061,0.888,0.986,0.808,0.888
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 2,1.1316,0.882,0.9,0.865,0.838
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 3,1.3061,0.921,0.925,0.917,0.921
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 4,1.3769,0.929,0.996,0.87,0.928
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 5,1.1634,0.364,0.348,0.382,0.34
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 6,1.3769,0.763,0.956,0.635,0.762
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 7,1.1132,0.877,0.984,0.791,0.836
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 8,1.1553,0.574,0.673,0.5,0.57
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,alle,1.2848,0.78,0.713,0.86,
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 1,1.2877,0.925,0.886,0.967,0.924
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 2,1.1303,0.885,0.901,0.869,0.813
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 3,1.3034,0.915,0.913,0.917,0.903
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 4,1.2322,0.96,0.977,0.944,0.951
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 5,1.5977,0.425,0.286,0.825,0.347
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 6,1.5977,0.83,0.927,0.751,0.785
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 7,1.1282,0.875,0.965,0.801,0.851
-Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 8,1.5977,0.596,0.505,0.728,0.585
+Facenet,0%,foto's,cosine,dichtstbij,los,alle,0.5911,0.26,0.356,0.205,
+Facenet,0%,foto's,cosine,dichtstbij,los,Video 1,0.5417,0.351,0.595,0.249,0.336
+Facenet,0%,foto's,cosine,dichtstbij,los,Video 2,0.5203,0.431,0.48,0.39,0.391
+Facenet,0%,foto's,cosine,dichtstbij,los,Video 3,0.6779,0.456,0.445,0.467,0.0
+Facenet,0%,foto's,cosine,dichtstbij,los,Video 4,0.6608,0.195,0.176,0.22,0.166
+Facenet,0%,foto's,cosine,dichtstbij,los,Video 5,0.6499,0.126,0.085,0.243,0.0
+Facenet,0%,foto's,cosine,dichtstbij,los,Video 6,0.7364,0.369,0.415,0.333,0.0
+Facenet,0%,foto's,cosine,dichtstbij,los,Video 7,0.5511,0.605,0.868,0.465,0.584
+Facenet,0%,foto's,cosine,dichtstbij,los,Video 8,0.6023,0.196,0.277,0.152,0.191
+Facenet,0%,foto's,cosine,dichtstbij,uniek,alle,0.5976,0.273,0.442,0.198,
+Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 1,0.6909,0.431,0.54,0.359,0.409
+Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 2,0.58,0.461,0.481,0.443,0.458
+Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 3,0.6673,0.065,0.09,0.051,0.0
+Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 4,0.6982,0.17,0.192,0.153,0.158
+Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 5,0.7719,0.057,0.04,0.101,0.0
+Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 6,0.7406,0.231,0.332,0.177,0.0
+Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 7,0.5579,0.6,0.868,0.459,0.583
+Facenet,0%,foto's,cosine,dichtstbij,uniek,Video 8,0.5976,0.178,0.287,0.129,0.178
+Facenet,0%,foto's,cosine,gemiddelde,los,alle,0.6285,0.282,0.424,0.212,
+Facenet,0%,foto's,cosine,gemiddelde,los,Video 1,0.5602,0.376,0.754,0.25,0.333
+Facenet,0%,foto's,cosine,gemiddelde,los,Video 2,0.5511,0.508,0.749,0.385,0.446
+Facenet,0%,foto's,cosine,gemiddelde,los,Video 3,0.6978,0.457,0.447,0.467,0.001
+Facenet,0%,foto's,cosine,gemiddelde,los,Video 4,0.6463,0.285,0.442,0.21,0.257
+Facenet,0%,foto's,cosine,gemiddelde,los,Video 5,0.6744,0.142,0.102,0.23,0.0
+Facenet,0%,foto's,cosine,gemiddelde,los,Video 6,0.753,0.398,0.449,0.358,0.0
+Facenet,0%,foto's,cosine,gemiddelde,los,Video 7,0.5836,0.615,0.915,0.463,0.584
+Facenet,0%,foto's,cosine,gemiddelde,los,Video 8,0.6544,0.18,0.235,0.145,0.165
+Facenet,0%,foto's,cosine,gemiddelde,uniek,alle,0.8534,0.323,0.294,0.357,
+Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 1,0.7822,0.431,0.618,0.331,0.376
+Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 2,0.5879,0.536,0.731,0.424,0.463
+Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 3,0.8169,0.202,0.241,0.174,0.195
+Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 4,0.8741,0.37,0.343,0.401,0.357
+Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 5,0.8349,0.157,0.116,0.239,0.146
+Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 6,0.8516,0.469,0.568,0.399,0.468
+Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 7,0.5842,0.619,0.94,0.462,0.542
+Facenet,0%,foto's,cosine,gemiddelde,uniek,Video 8,0.913,0.204,0.177,0.239,0.2
+Facenet,0%,foto's,euclidean,dichtstbij,los,alle,11.7106,0.226,0.18,0.302,
+Facenet,0%,foto's,euclidean,dichtstbij,los,Video 1,11.7106,0.308,0.234,0.453,0.308
+Facenet,0%,foto's,euclidean,dichtstbij,los,Video 2,10.8448,0.356,0.266,0.537,0.352
+Facenet,0%,foto's,euclidean,dichtstbij,los,Video 3,6.5204,0.0,0.0,0.0,0.0
+Facenet,0%,foto's,euclidean,dichtstbij,los,Video 4,8.0025,0.315,0.305,0.326,0.292
+Facenet,0%,foto's,euclidean,dichtstbij,los,Video 5,6.5204,0.0,0.0,0.0,0.0
+Facenet,0%,foto's,euclidean,dichtstbij,los,Video 6,7.8688,0.138,0.205,0.104,0.115
+Facenet,0%,foto's,euclidean,dichtstbij,los,Video 7,10.2382,0.305,0.256,0.378,0.305
+Facenet,0%,foto's,euclidean,dichtstbij,los,Video 8,13.6893,0.184,0.154,0.227,0.182
+Facenet,0%,foto's,euclidean,dichtstbij,uniek,alle,11.6903,0.261,0.241,0.286,
+Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 1,11.6903,0.298,0.308,0.287,0.298
+Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 2,11.3278,0.347,0.314,0.387,0.343
+Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 3,10.759,0.125,0.122,0.128,0.125
+Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 4,11.9984,0.287,0.282,0.291,0.286
+Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 5,10.7219,0.178,0.127,0.295,0.174
+Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 6,10.8101,0.304,0.359,0.264,0.294
+Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 7,10.4356,0.431,0.425,0.437,0.425
+Facenet,0%,foto's,euclidean,dichtstbij,uniek,Video 8,11.9177,0.211,0.188,0.24,0.211
+Facenet,0%,foto's,euclidean,gemiddelde,los,alle,11.4321,0.297,0.239,0.393,
+Facenet,0%,foto's,euclidean,gemiddelde,los,Video 1,11.639,0.218,0.166,0.321,0.218
+Facenet,0%,foto's,euclidean,gemiddelde,los,Video 2,11.0464,0.411,0.313,0.597,0.406
+Facenet,0%,foto's,euclidean,gemiddelde,los,Video 3,9.6136,0.312,0.306,0.318,0.312
+Facenet,0%,foto's,euclidean,gemiddelde,los,Video 4,12.1477,0.45,0.402,0.512,0.45
+Facenet,0%,foto's,euclidean,gemiddelde,los,Video 5,9.5608,0.132,0.092,0.232,0.111
+Facenet,0%,foto's,euclidean,gemiddelde,los,Video 6,9.6755,0.25,0.293,0.218,0.249
+Facenet,0%,foto's,euclidean,gemiddelde,los,Video 7,9.1006,0.56,0.969,0.393,0.467
+Facenet,0%,foto's,euclidean,gemiddelde,los,Video 8,12.4008,0.176,0.147,0.217,0.172
+Facenet,0%,foto's,euclidean,gemiddelde,uniek,alle,10.4575,0.27,0.254,0.289,
+Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 1,10.3573,0.191,0.22,0.169,0.187
+Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 2,10.2005,0.428,0.417,0.439,0.417
+Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 3,10.6641,0.133,0.13,0.136,0.133
+Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 4,10.4575,0.418,0.43,0.406,0.418
+Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 5,10.4159,0.123,0.087,0.209,0.122
+Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 6,10.4825,0.271,0.306,0.243,0.265
+Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 7,9.0874,0.561,0.974,0.393,0.46
+Facenet,0%,foto's,euclidean,gemiddelde,uniek,Video 8,12.5953,0.177,0.154,0.209,0.171
+Facenet,0%,foto's,euclidean_l2,dichtstbij,los,alle,1.0873,0.26,0.355,0.205,
+Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 1,1.0409,0.351,0.594,0.249,0.336
+Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 2,1.0202,0.431,0.481,0.391,0.39
+Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 3,1.1644,0.456,0.445,0.467,0.0
+Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 4,1.1496,0.195,0.176,0.22,0.166
+Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 5,1.1389,0.126,0.085,0.241,0.0
+Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 6,1.2137,0.369,0.415,0.333,0.0
+Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 7,1.0499,0.605,0.868,0.465,0.584
+Facenet,0%,foto's,euclidean_l2,dichtstbij,los,Video 8,1.096,0.196,0.282,0.151,0.19
+Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,alle,1.0949,0.273,0.437,0.199,
+Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 1,1.1756,0.431,0.54,0.359,0.409
+Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 2,1.0753,0.461,0.484,0.44,0.458
+Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 3,1.1553,0.065,0.09,0.051,0.0
+Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 4,1.1818,0.17,0.192,0.153,0.162
+Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 5,1.2425,0.057,0.04,0.101,0.0
+Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 6,1.2171,0.231,0.332,0.177,0.0
+Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 7,1.0564,0.6,0.868,0.459,0.58
+Facenet,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 8,1.0885,0.178,0.301,0.127,0.178
+Facenet,0%,foto's,euclidean_l2,gemiddelde,los,alle,1.1213,0.282,0.424,0.212,
+Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 1,1.0585,0.376,0.753,0.25,0.333
+Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 2,1.0453,0.508,0.772,0.379,0.446
+Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 3,1.1814,0.457,0.447,0.467,0.001
+Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 4,1.1369,0.285,0.441,0.21,0.257
+Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 5,1.1628,0.142,0.101,0.238,0.0
+Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 6,1.2272,0.398,0.449,0.358,0.0
+Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 7,1.0804,0.615,0.915,0.463,0.584
+Facenet,0%,foto's,euclidean_l2,gemiddelde,los,Video 8,1.1429,0.18,0.24,0.144,0.165
+Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,alle,1.3065,0.322,0.294,0.357,
+Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 1,1.2508,0.431,0.617,0.331,0.376
+Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 2,1.0844,0.536,0.731,0.424,0.463
+Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 3,1.2783,0.202,0.241,0.174,0.195
+Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 4,1.3223,0.369,0.343,0.401,0.357
+Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 5,1.2922,0.156,0.116,0.239,0.146
+Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 6,1.3051,0.468,0.566,0.399,0.468
+Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 7,1.0809,0.619,0.94,0.462,0.542
+Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 8,1.3514,0.204,0.177,0.239,0.2
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,alle,0.3966,0.315,0.255,0.413,
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 1,0.4083,0.332,0.251,0.487,0.332
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 2,0.3841,0.389,0.303,0.544,0.388
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 3,0.2919,0.263,0.257,0.27,0.263
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 4,0.3966,0.358,0.32,0.407,0.358
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 5,0.036,0.311,0.206,0.632,0.292
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 6,0.1292,0.252,0.285,0.227,0.251
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 7,0.4865,0.442,0.371,0.547,0.44
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,los,Video 8,0.533,0.191,0.161,0.236,0.19
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,alle,0.4134,0.239,0.209,0.28,
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 1,0.3552,0.15,0.137,0.165,0.15
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 2,0.4134,0.359,0.31,0.428,0.359
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 3,0.0576,0.082,0.082,0.082,0.08
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 4,0.2993,0.423,0.403,0.445,0.411
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 5,0.013,0.205,0.235,0.181,0.111
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 6,0.1282,0.183,0.207,0.164,0.182
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 7,0.4451,0.379,0.332,0.441,0.378
+Facenet,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 8,0.4134,0.159,0.14,0.184,0.159
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,alle,0.4142,0.339,0.365,0.317,
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 1,0.4165,0.418,0.403,0.433,0.417
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 2,0.4048,0.529,0.515,0.543,0.524
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 3,0.4131,0.003,0.007,0.002,0.003
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 4,0.5583,0.458,0.409,0.52,0.403
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 5,0.2142,0.0,0.0,0.0,0.0
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 6,0.4393,0.123,0.179,0.094,0.033
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 7,0.3345,0.542,0.909,0.386,0.531
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,los,Video 8,0.4321,0.23,0.233,0.227,0.222
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,alle,0.5227,0.349,0.343,0.355,
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 1,0.4454,0.448,0.595,0.359,0.427
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 2,0.4337,0.574,0.617,0.537,0.545
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 3,0.53,0.434,0.428,0.44,0.423
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 4,0.4687,0.381,0.479,0.316,0.352
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 5,0.6535,0.084,0.056,0.161,0.064
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 6,0.5486,0.103,0.125,0.087,0.093
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 7,0.4235,0.554,0.636,0.49,0.524
+Facenet,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 8,0.4337,0.204,0.259,0.168,0.188
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,alle,9.9989,0.295,0.236,0.394,
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 1,9.9989,0.327,0.248,0.48,0.327
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 2,9.6784,0.32,0.237,0.49,0.319
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 3,4.3696,0.266,0.26,0.272,0.266
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 4,9.1452,0.344,0.307,0.391,0.344
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 5,1.0176,0.313,0.208,0.635,0.294
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 6,2.0862,0.261,0.294,0.235,0.261
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 7,8.674,0.389,0.326,0.482,0.389
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 8,8.8772,0.175,0.147,0.217,0.175
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,alle,10.6088,0.205,0.176,0.245,
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 1,8.9379,0.114,0.104,0.126,0.113
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 2,10.6088,0.244,0.199,0.315,0.244
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 3,1.3037,0.095,0.096,0.095,0.093
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 4,7.5882,0.385,0.356,0.419,0.38
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 5,0.6173,0.205,0.233,0.182,0.11
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 6,2.0719,0.206,0.233,0.185,0.205
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 7,8.6781,0.323,0.282,0.379,0.321
+Facenet,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 8,8.6781,0.143,0.125,0.169,0.143
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,alle,9.9778,0.28,0.224,0.373,
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 1,9.3592,0.379,0.287,0.556,0.379
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 2,9.628,0.437,0.327,0.659,0.435
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 3,4.6393,0.0,0.0,0.0,0.0
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 4,4.993,0.383,0.504,0.308,0.364
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 5,4.6393,0.0,0.0,0.0,0.0
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 6,5.1923,0.115,0.13,0.104,0.115
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 7,8.4285,0.456,0.383,0.565,0.456
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 8,9.9778,0.208,0.175,0.257,0.208
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,alle,7.1779,0.254,0.246,0.263,
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 1,7.1554,0.097,0.112,0.085,0.096
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 2,9.7289,0.293,0.248,0.357,0.26
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 3,7.1938,0.418,0.411,0.425,0.417
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 4,7.2805,0.417,0.427,0.408,0.415
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 5,7.17,0.134,0.094,0.233,0.133
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 6,7.2018,0.193,0.22,0.173,0.189
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 7,7.9249,0.36,0.327,0.4,0.331
+Facenet,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 8,9.9896,0.176,0.153,0.207,0.161
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,alle,0.8907,0.315,0.255,0.413,
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 1,0.9038,0.332,0.251,0.487,0.332
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 2,0.8766,0.389,0.303,0.544,0.388
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 3,0.7641,0.263,0.257,0.27,0.263
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 4,0.8907,0.358,0.32,0.407,0.358
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 5,0.2684,0.311,0.206,0.632,0.292
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 6,0.5084,0.252,0.285,0.227,0.251
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 7,0.9864,0.442,0.371,0.547,0.44
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 8,1.0325,0.191,0.161,0.236,0.19
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,alle,0.9093,0.239,0.209,0.28,
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 1,0.8429,0.15,0.137,0.165,0.15
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 2,0.9093,0.359,0.31,0.428,0.359
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 3,0.3394,0.082,0.082,0.082,0.08
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 4,0.7738,0.423,0.403,0.445,0.411
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 5,0.1613,0.205,0.235,0.181,0.111
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 6,0.5065,0.183,0.207,0.164,0.182
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 7,0.9435,0.379,0.332,0.441,0.378
+Facenet,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 8,0.9093,0.159,0.14,0.184,0.159
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,alle,0.9103,0.339,0.365,0.317,
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 1,0.9128,0.418,0.403,0.433,0.417
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 2,0.8999,0.529,0.515,0.543,0.524
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 3,0.909,0.003,0.007,0.002,0.003
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 4,1.0567,0.458,0.409,0.52,0.403
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 5,0.6546,0.0,0.0,0.0,0.0
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 6,0.9374,0.123,0.178,0.094,0.033
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 7,0.818,0.542,0.909,0.386,0.531
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 8,0.9296,0.229,0.232,0.227,0.222
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,alle,1.0225,0.349,0.343,0.355,
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 1,0.9439,0.448,0.595,0.359,0.427
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 2,0.9314,0.574,0.617,0.537,0.545
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 3,1.0296,0.434,0.428,0.44,0.424
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 4,0.9683,0.381,0.478,0.316,0.352
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 5,1.1433,0.084,0.056,0.161,0.064
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 6,1.0475,0.103,0.125,0.087,0.096
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 7,0.9204,0.553,0.636,0.49,0.524
+Facenet,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 8,0.9314,0.204,0.259,0.168,0.188
+Facenet,20%,foto's,cosine,dichtstbij,los,alle,0.5504,0.353,0.503,0.272,
+Facenet,20%,foto's,cosine,dichtstbij,los,Video 1,0.5202,0.462,0.634,0.363,0.448
+Facenet,20%,foto's,cosine,dichtstbij,los,Video 2,0.5156,0.61,0.606,0.615,0.586
+Facenet,20%,foto's,cosine,dichtstbij,los,Video 3,0.6295,0.462,0.457,0.466,0.009
+Facenet,20%,foto's,cosine,dichtstbij,los,Video 4,0.5746,0.278,0.402,0.212,0.256
+Facenet,20%,foto's,cosine,dichtstbij,los,Video 5,0.6213,0.153,0.111,0.245,0.016
+Facenet,20%,foto's,cosine,dichtstbij,los,Video 6,0.6713,0.411,0.485,0.358,0.0
+Facenet,20%,foto's,cosine,dichtstbij,los,Video 7,0.5131,0.674,0.919,0.532,0.637
+Facenet,20%,foto's,cosine,dichtstbij,los,Video 8,0.56,0.214,0.304,0.165,0.212
+Facenet,20%,foto's,cosine,dichtstbij,uniek,alle,0.6919,0.371,0.387,0.357,
+Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 1,0.6939,0.545,0.654,0.467,0.544
+Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 2,0.515,0.613,0.676,0.562,0.508
+Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 3,0.7316,0.434,0.494,0.387,0.42
+Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 4,0.8669,0.3,0.274,0.33,0.275
+Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 5,0.7508,0.073,0.051,0.125,0.05
+Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 6,0.6693,0.283,0.541,0.191,0.28
+Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 7,0.5323,0.68,0.92,0.539,0.593
+Facenet,20%,foto's,cosine,dichtstbij,uniek,Video 8,0.7809,0.23,0.207,0.259,0.222
+Facenet,20%,foto's,cosine,gemiddelde,los,alle,0.6304,0.345,0.352,0.338,
+Facenet,20%,foto's,cosine,gemiddelde,los,Video 1,0.4922,0.401,0.775,0.271,0.32
+Facenet,20%,foto's,cosine,gemiddelde,los,Video 2,0.4981,0.741,0.917,0.623,0.583
+Facenet,20%,foto's,cosine,gemiddelde,los,Video 3,0.6524,0.47,0.465,0.476,0.393
+Facenet,20%,foto's,cosine,gemiddelde,los,Video 4,0.8273,0.298,0.266,0.338,0.285
+Facenet,20%,foto's,cosine,gemiddelde,los,Video 5,0.6338,0.189,0.156,0.24,0.18
+Facenet,20%,foto's,cosine,gemiddelde,los,Video 6,0.7165,0.412,0.489,0.356,0.036
+Facenet,20%,foto's,cosine,gemiddelde,los,Video 7,0.5553,0.682,0.925,0.54,0.586
+Facenet,20%,foto's,cosine,gemiddelde,los,Video 8,0.7556,0.161,0.136,0.197,0.149
+Facenet,20%,foto's,cosine,gemiddelde,uniek,alle,0.7823,0.369,0.396,0.346,
+Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 1,0.7774,0.461,0.593,0.378,0.461
+Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 2,0.5118,0.752,0.931,0.63,0.587
+Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 3,0.8324,0.233,0.293,0.194,0.219
+Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 4,0.9677,0.374,0.344,0.41,0.366
+Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 5,0.7913,0.133,0.115,0.157,0.131
+Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 6,0.8612,0.321,0.548,0.227,0.312
+Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 7,0.5709,0.688,0.942,0.542,0.621
+Facenet,20%,foto's,cosine,gemiddelde,uniek,Video 8,0.9057,0.204,0.182,0.23,0.175
+Facenet,20%,foto's,euclidean,dichtstbij,los,alle,11.7664,0.269,0.215,0.359,
+Facenet,20%,foto's,euclidean,dichtstbij,los,Video 1,11.5685,0.392,0.297,0.575,0.392
+Facenet,20%,foto's,euclidean,dichtstbij,los,Video 2,11.5685,0.394,0.292,0.607,0.393
+Facenet,20%,foto's,euclidean,dichtstbij,los,Video 3,7.0448,0.0,0.0,0.0,0.0
+Facenet,20%,foto's,euclidean,dichtstbij,los,Video 4,12.0344,0.33,0.295,0.375,0.33
+Facenet,20%,foto's,euclidean,dichtstbij,los,Video 5,7.0448,0.0,0.0,0.0,0.0
+Facenet,20%,foto's,euclidean,dichtstbij,los,Video 6,8.7724,0.137,0.297,0.089,0.115
+Facenet,20%,foto's,euclidean,dichtstbij,los,Video 7,11.1458,0.496,0.416,0.613,0.495
+Facenet,20%,foto's,euclidean,dichtstbij,los,Video 8,9.8006,0.196,0.17,0.231,0.193
+Facenet,20%,foto's,euclidean,dichtstbij,uniek,alle,11.2427,0.304,0.29,0.319,
+Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 1,11.1802,0.369,0.407,0.338,0.366
+Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 2,11.0748,0.446,0.425,0.469,0.442
+Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 3,10.5993,0.452,0.446,0.458,0.452
+Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 4,11.3808,0.218,0.229,0.208,0.213
+Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 5,11.2767,0.098,0.069,0.166,0.097
+Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 6,11.4955,0.272,0.315,0.239,0.268
+Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 7,11.1695,0.506,0.478,0.539,0.506
+Facenet,20%,foto's,euclidean,dichtstbij,uniek,Video 8,13.3513,0.197,0.171,0.232,0.185
+Facenet,20%,foto's,euclidean,gemiddelde,los,alle,10.8906,0.307,0.249,0.403,
+Facenet,20%,foto's,euclidean,gemiddelde,los,Video 1,11.9492,0.244,0.185,0.358,0.243
+Facenet,20%,foto's,euclidean,gemiddelde,los,Video 2,10.1701,0.521,0.426,0.669,0.499
+Facenet,20%,foto's,euclidean,gemiddelde,los,Video 3,9.6782,0.472,0.461,0.483,0.472
+Facenet,20%,foto's,euclidean,gemiddelde,los,Video 4,11.4989,0.294,0.263,0.334,0.29
+Facenet,20%,foto's,euclidean,gemiddelde,los,Video 5,9.0882,0.189,0.156,0.24,0.116
+Facenet,20%,foto's,euclidean,gemiddelde,los,Video 6,9.437,0.408,0.483,0.353,0.399
+Facenet,20%,foto's,euclidean,gemiddelde,los,Video 7,8.9327,0.592,0.867,0.45,0.551
+Facenet,20%,foto's,euclidean,gemiddelde,los,Video 8,13.7723,0.156,0.131,0.193,0.153
+Facenet,20%,foto's,euclidean,gemiddelde,uniek,alle,10.0797,0.273,0.263,0.284,
+Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 1,9.8593,0.227,0.264,0.199,0.223
+Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 2,9.8232,0.524,0.534,0.513,0.517
+Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 3,9.5895,0.21,0.274,0.17,0.182
+Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 4,10.0045,0.287,0.311,0.267,0.286
+Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 5,9.0865,0.115,0.129,0.103,0.11
+Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 6,10.383,0.343,0.387,0.308,0.314
+Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 7,8.9303,0.592,0.884,0.445,0.535
+Facenet,20%,foto's,euclidean,gemiddelde,uniek,Video 8,12.9706,0.184,0.159,0.217,0.16
+Facenet,20%,foto's,euclidean_l2,dichtstbij,los,alle,1.0492,0.353,0.502,0.272,
+Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 1,1.0201,0.462,0.634,0.364,0.448
+Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 2,1.0085,0.61,0.623,0.598,0.586
+Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 3,1.1221,0.462,0.457,0.466,0.009
+Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 4,1.072,0.278,0.402,0.212,0.256
+Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 5,1.1148,0.153,0.111,0.246,0.016
+Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 6,1.1587,0.411,0.485,0.358,0.0
+Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 7,1.0131,0.674,0.919,0.532,0.637
+Facenet,20%,foto's,euclidean_l2,dichtstbij,los,Video 8,1.0594,0.215,0.303,0.166,0.212
+Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,alle,1.1764,0.371,0.387,0.357,
+Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 1,1.1781,0.545,0.654,0.467,0.544
+Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 2,1.0149,0.613,0.676,0.562,0.508
+Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 3,1.2096,0.434,0.494,0.387,0.42
+Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 4,1.3168,0.3,0.274,0.33,0.275
+Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 5,1.2255,0.073,0.051,0.125,0.05
+Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 6,1.1571,0.283,0.541,0.191,0.28
+Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 7,1.0319,0.68,0.92,0.539,0.593
+Facenet,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 8,1.2498,0.23,0.207,0.259,0.222
+Facenet,20%,foto's,euclidean_l2,gemiddelde,los,alle,1.1229,0.345,0.352,0.339,
+Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 1,0.9922,0.401,0.775,0.271,0.32
+Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 2,0.9981,0.741,0.917,0.623,0.583
+Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 3,1.1424,0.47,0.465,0.476,0.395
+Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 4,1.2864,0.298,0.266,0.338,0.285
+Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 5,1.1255,0.189,0.157,0.237,0.181
+Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 6,1.1971,0.412,0.489,0.356,0.036
+Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 7,1.0539,0.682,0.925,0.54,0.586
+Facenet,20%,foto's,euclidean_l2,gemiddelde,los,Video 8,1.2294,0.161,0.136,0.197,0.149
+Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,alle,1.2509,0.369,0.396,0.346,
+Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 1,1.247,0.461,0.593,0.378,0.461
+Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 2,1.0118,0.752,0.931,0.63,0.587
+Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 3,1.2887,0.233,0.294,0.193,0.219
+Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 4,1.3912,0.374,0.344,0.41,0.365
+Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 5,1.258,0.133,0.115,0.157,0.131
+Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 6,1.3125,0.32,0.545,0.227,0.312
+Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 7,1.0686,0.688,0.942,0.542,0.621
+Facenet,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 8,1.346,0.204,0.182,0.23,0.175
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,alle,0.4163,0.32,0.259,0.418,
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 1,0.4517,0.369,0.28,0.542,0.368
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 2,0.3841,0.509,0.411,0.668,0.495
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 3,0.0472,0.25,0.278,0.226,0.234
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 4,0.4755,0.192,0.171,0.218,0.189
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 5,0.0152,0.386,0.424,0.354,0.278
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 6,0.2585,0.171,0.192,0.154,0.171
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 7,0.5561,0.525,0.44,0.65,0.519
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,los,Video 8,0.5561,0.26,0.218,0.321,0.255
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,alle,0.5216,0.277,0.239,0.329,
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 1,0.4551,0.168,0.153,0.187,0.168
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 2,0.4166,0.456,0.401,0.527,0.434
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 3,0.0356,0.086,0.123,0.066,0.069
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 4,0.5569,0.386,0.353,0.425,0.385
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 5,0.0188,0.398,0.488,0.336,0.209
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 6,0.2379,0.192,0.216,0.173,0.191
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 7,0.4982,0.461,0.403,0.537,0.46
+Facenet,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 8,0.5569,0.22,0.191,0.259,0.22
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,alle,0.516,0.384,0.389,0.378,
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 1,0.4192,0.459,0.687,0.344,0.361
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 2,0.4161,0.749,0.882,0.651,0.62
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 3,0.5355,0.473,0.47,0.477,0.4
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 4,0.4877,0.338,0.534,0.247,0.322
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 5,0.5225,0.183,0.148,0.239,0.162
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 6,0.5981,0.41,0.469,0.364,0.138
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 7,0.4814,0.717,0.855,0.617,0.632
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,los,Video 8,0.5126,0.236,0.274,0.206,0.234
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,alle,0.5145,0.395,0.504,0.324,
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 1,0.5368,0.53,0.631,0.457,0.528
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 2,0.4263,0.764,0.927,0.65,0.71
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 3,0.541,0.081,0.111,0.063,0.037
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 4,0.6164,0.415,0.409,0.422,0.356
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 5,0.5214,0.137,0.15,0.126,0.125
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 6,0.6774,0.336,0.38,0.301,0.128
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 7,0.482,0.723,0.882,0.613,0.685
+Facenet,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 8,0.652,0.241,0.213,0.276,0.223
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,alle,10.0685,0.301,0.24,0.402,
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 1,10.3257,0.356,0.27,0.523,0.356
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 2,9.851,0.412,0.305,0.632,0.411
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 3,1.2175,0.251,0.282,0.226,0.234
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 4,9.6543,0.162,0.144,0.184,0.162
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 5,0.6593,0.383,0.421,0.351,0.282
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 6,2.7156,0.192,0.216,0.173,0.191
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 7,9.5059,0.48,0.403,0.595,0.48
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 8,10.7323,0.265,0.223,0.328,0.265
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,alle,10.5534,0.245,0.211,0.291,
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 1,10.0793,0.124,0.112,0.137,0.124
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 2,10.5534,0.342,0.282,0.434,0.342
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 3,1.0362,0.088,0.127,0.068,0.071
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 4,9.719,0.354,0.323,0.391,0.354
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 5,0.7187,0.39,0.486,0.326,0.199
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 6,1.8402,0.192,0.22,0.17,0.191
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 7,9.0861,0.394,0.35,0.449,0.381
+Facenet,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 8,10.5534,0.227,0.197,0.268,0.227
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,alle,9.5693,0.341,0.274,0.452,
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 1,9.5693,0.389,0.295,0.572,0.389
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 2,9.3466,0.516,0.392,0.756,0.513
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 3,6.4273,0.005,0.004,0.005,0.005
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 4,9.1772,0.515,0.46,0.585,0.515
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 5,5.6485,0.006,0.017,0.004,0.002
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 6,6.0626,0.125,0.189,0.094,0.115
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 7,9.0406,0.579,0.488,0.713,0.577
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 8,10.9686,0.273,0.229,0.338,0.272
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,alle,9.2992,0.265,0.234,0.304,
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 1,8.5671,0.111,0.103,0.119,0.11
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 2,9.2992,0.401,0.354,0.461,0.401
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 3,6.6189,0.114,0.137,0.097,0.11
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 4,8.8327,0.357,0.345,0.37,0.355
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 5,6.8524,0.142,0.102,0.23,0.121
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 6,7.2027,0.425,0.484,0.378,0.42
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 7,8.6959,0.524,0.47,0.592,0.521
+Facenet,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 8,10.9094,0.268,0.232,0.316,0.263
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,alle,0.9126,0.32,0.259,0.418,
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 1,0.9506,0.369,0.28,0.542,0.368
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 2,0.8765,0.509,0.411,0.668,0.495
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 3,0.3073,0.25,0.278,0.226,0.234
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 4,0.9752,0.192,0.171,0.218,0.189
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 5,0.1745,0.386,0.424,0.354,0.278
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 6,0.7191,0.171,0.192,0.154,0.171
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 7,1.0547,0.525,0.44,0.65,0.519
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 8,1.0547,0.26,0.218,0.321,0.255
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,alle,1.0214,0.277,0.239,0.329,
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 1,0.9541,0.168,0.153,0.187,0.168
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 2,0.9129,0.456,0.401,0.527,0.434
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 3,0.2668,0.086,0.123,0.066,0.069
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 4,1.0555,0.386,0.353,0.425,0.385
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 5,0.194,0.398,0.488,0.336,0.209
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 6,0.6898,0.192,0.216,0.173,0.191
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 7,0.9983,0.461,0.403,0.537,0.46
+Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 8,1.0555,0.22,0.191,0.259,0.22
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,alle,1.0159,0.384,0.389,0.378,
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 1,0.9157,0.459,0.687,0.344,0.361
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 2,0.9123,0.749,0.882,0.651,0.62
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 3,1.0367,0.473,0.468,0.479,0.4
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 4,0.9877,0.337,0.533,0.247,0.322
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 5,1.0223,0.182,0.147,0.239,0.164
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 6,1.0938,0.41,0.469,0.364,0.138
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 7,0.9842,0.717,0.849,0.62,0.632
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 8,1.0125,0.235,0.274,0.206,0.234
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,alle,1.0168,0.395,0.498,0.327,
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 1,1.0362,0.53,0.63,0.457,0.527
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 2,0.9234,0.764,0.927,0.65,0.707
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 3,1.0402,0.081,0.111,0.063,0.04
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 4,1.1104,0.415,0.409,0.422,0.358
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 5,1.0213,0.137,0.15,0.126,0.133
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 6,1.164,0.336,0.38,0.301,0.134
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 7,0.9818,0.723,0.882,0.613,0.68
+Facenet,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 8,1.142,0.241,0.213,0.276,0.223
+Facenet512,0%,foto's,cosine,dichtstbij,los,alle,0.6262,0.446,0.575,0.365,
+Facenet512,0%,foto's,cosine,dichtstbij,los,Video 1,0.5894,0.502,0.739,0.381,0.491
+Facenet512,0%,foto's,cosine,dichtstbij,los,Video 2,0.4992,0.676,0.777,0.598,0.57
+Facenet512,0%,foto's,cosine,dichtstbij,los,Video 3,0.9395,0.544,0.532,0.557,0.071
+Facenet512,0%,foto's,cosine,dichtstbij,los,Video 4,0.6754,0.587,0.622,0.556,0.551
+Facenet512,0%,foto's,cosine,dichtstbij,los,Video 5,0.6262,0.195,0.315,0.141,0.195
+Facenet512,0%,foto's,cosine,dichtstbij,los,Video 6,0.8561,0.236,0.265,0.212,0.008
+Facenet512,0%,foto's,cosine,dichtstbij,los,Video 7,0.5729,0.737,0.861,0.644,0.701
+Facenet512,0%,foto's,cosine,dichtstbij,los,Video 8,0.6646,0.289,0.394,0.228,0.275
+Facenet512,0%,foto's,cosine,dichtstbij,uniek,alle,0.775,0.476,0.47,0.482,
+Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 1,0.6572,0.538,0.769,0.413,0.509
+Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 2,0.5221,0.705,0.809,0.624,0.59
+Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 3,0.7879,0.524,0.6,0.466,0.514
+Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 4,0.7909,0.62,0.641,0.601,0.619
+Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 5,0.6323,0.192,0.301,0.141,0.133
+Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 6,0.9037,0.318,0.375,0.277,0.291
+Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 7,0.6036,0.789,0.927,0.687,0.695
+Facenet512,0%,foto's,cosine,dichtstbij,uniek,Video 8,0.836,0.297,0.276,0.323,0.285
+Facenet512,0%,foto's,cosine,gemiddelde,los,alle,0.6767,0.473,0.674,0.365,
+Facenet512,0%,foto's,cosine,gemiddelde,los,Video 1,0.653,0.516,0.826,0.375,0.509
+Facenet512,0%,foto's,cosine,gemiddelde,los,Video 2,0.549,0.727,0.866,0.626,0.615
+Facenet512,0%,foto's,cosine,gemiddelde,los,Video 3,1.0624,0.628,0.613,0.643,0.064
+Facenet512,0%,foto's,cosine,gemiddelde,los,Video 4,0.7498,0.639,0.713,0.579,0.586
+Facenet512,0%,foto's,cosine,gemiddelde,los,Video 5,0.6593,0.27,0.66,0.169,0.26
+Facenet512,0%,foto's,cosine,gemiddelde,los,Video 6,0.9206,0.376,0.422,0.339,0.008
+Facenet512,0%,foto's,cosine,gemiddelde,los,Video 7,0.6215,0.786,0.947,0.673,0.754
+Facenet512,0%,foto's,cosine,gemiddelde,los,Video 8,0.7025,0.297,0.471,0.217,0.285
+Facenet512,0%,foto's,cosine,gemiddelde,uniek,alle,0.8023,0.539,0.588,0.497,
+Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 1,0.7792,0.582,0.805,0.456,0.58
+Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 2,0.5575,0.746,0.905,0.634,0.656
+Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 3,1.0368,0.677,0.667,0.686,0.621
+Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 4,0.8222,0.687,0.75,0.633,0.685
+Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 5,0.661,0.27,0.659,0.17,0.198
+Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 6,0.9592,0.318,0.383,0.272,0.274
+Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 7,0.6647,0.796,0.944,0.688,0.765
+Facenet512,0%,foto's,cosine,gemiddelde,uniek,Video 8,0.9379,0.305,0.285,0.329,0.29
+Facenet512,0%,foto's,euclidean,dichtstbij,los,alle,27.4906,0.398,0.319,0.528,
+Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 1,27.4906,0.319,0.242,0.468,0.319
+Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 2,23.4318,0.57,0.525,0.625,0.476
+Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 3,28.1393,0.613,0.599,0.628,0.611
+Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 4,33.5158,0.546,0.488,0.62,0.541
+Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 5,25.0565,0.168,0.11,0.358,0.166
+Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 6,24.5728,0.247,0.278,0.222,0.247
+Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 7,20.7871,0.607,0.903,0.457,0.565
+Facenet512,0%,foto's,euclidean,dichtstbij,los,Video 8,33.5158,0.252,0.211,0.311,0.24
+Facenet512,0%,foto's,euclidean,dichtstbij,uniek,alle,27.8701,0.381,0.337,0.438,
+Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 1,22.5186,0.337,0.556,0.242,0.272
+Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 2,23.583,0.649,0.701,0.604,0.57
+Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 3,28.6712,0.625,0.611,0.64,0.624
+Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 4,27.1779,0.422,0.422,0.423,0.42
+Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 5,27.0635,0.085,0.058,0.161,0.085
+Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 6,23.8142,0.246,0.293,0.212,0.238
+Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 7,20.7836,0.608,0.911,0.457,0.548
+Facenet512,0%,foto's,euclidean,dichtstbij,uniek,Video 8,30.7703,0.275,0.239,0.325,0.264
+Facenet512,0%,foto's,euclidean,gemiddelde,los,alle,26.9068,0.399,0.32,0.53,
+Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 1,26.6882,0.339,0.258,0.497,0.339
+Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 2,23.0538,0.607,0.538,0.697,0.5
+Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 3,28.0102,0.319,0.312,0.327,0.315
+Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 4,29.0968,0.636,0.568,0.723,0.634
+Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 5,25.3675,0.131,0.085,0.287,0.131
+Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 6,22.0657,0.162,0.182,0.146,0.161
+Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 7,26.193,0.61,0.512,0.756,0.61
+Facenet512,0%,foto's,euclidean,gemiddelde,los,Video 8,34.2622,0.297,0.249,0.367,0.28
+Facenet512,0%,foto's,euclidean,gemiddelde,uniek,alle,27.9811,0.389,0.341,0.451,
+Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 1,19.3739,0.304,0.76,0.19,0.294
+Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 2,23.4571,0.665,0.652,0.68,0.605
+Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 3,27.9811,0.327,0.319,0.334,0.327
+Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 4,25.779,0.512,0.507,0.518,0.505
+Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 5,24.8406,0.149,0.102,0.275,0.145
+Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 6,21.4316,0.335,0.408,0.285,0.328
+Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 7,19.9341,0.574,0.699,0.487,0.555
+Facenet512,0%,foto's,euclidean,gemiddelde,uniek,Video 8,32.131,0.301,0.261,0.355,0.292
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,alle,1.1174,0.446,0.579,0.363,
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 1,1.0858,0.502,0.739,0.381,0.493
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 2,0.9992,0.676,0.777,0.598,0.572
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 3,1.3708,0.544,0.532,0.557,0.069
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 4,1.1623,0.587,0.622,0.556,0.548
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 5,1.1192,0.195,0.315,0.141,0.192
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 6,1.3086,0.236,0.265,0.212,0.008
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 7,1.0705,0.737,0.861,0.644,0.701
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,los,Video 8,1.1506,0.289,0.404,0.225,0.274
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,alle,1.2451,0.476,0.47,0.482,
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 1,1.1465,0.538,0.769,0.414,0.509
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 2,1.0219,0.705,0.809,0.624,0.59
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 3,1.2554,0.524,0.6,0.466,0.514
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 4,1.2578,0.62,0.641,0.601,0.619
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 5,1.1246,0.191,0.3,0.141,0.133
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 6,1.3445,0.318,0.375,0.277,0.291
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 7,1.0988,0.789,0.927,0.687,0.694
+Facenet512,0%,foto's,euclidean_l2,dichtstbij,uniek,Video 8,1.2931,0.297,0.276,0.323,0.285
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,alle,1.1634,0.473,0.674,0.365,
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 1,1.1428,0.516,0.826,0.375,0.509
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 2,1.0421,0.727,0.88,0.619,0.615
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 3,1.4578,0.628,0.613,0.643,0.064
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 4,1.2246,0.639,0.713,0.579,0.586
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 5,1.1483,0.27,0.66,0.169,0.26
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 6,1.357,0.376,0.422,0.339,0.008
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 7,1.1149,0.787,0.947,0.673,0.754
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,los,Video 8,1.1854,0.297,0.471,0.217,0.285
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,alle,1.2668,0.539,0.588,0.497,
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 1,1.2484,0.582,0.805,0.456,0.58
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 2,1.056,0.746,0.905,0.634,0.656
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 3,1.4401,0.677,0.667,0.686,0.621
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 4,1.2824,0.687,0.75,0.633,0.685
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 5,1.1498,0.27,0.658,0.17,0.198
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 6,1.3851,0.318,0.383,0.272,0.274
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 7,1.1531,0.796,0.944,0.688,0.765
+Facenet512,0%,foto's,euclidean_l2,gemiddelde,uniek,Video 8,1.3721,0.305,0.284,0.33,0.29
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,alle,0.5386,0.395,0.319,0.52,
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 1,0.5386,0.426,0.327,0.613,0.426
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 2,0.3957,0.552,0.514,0.597,0.467
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 3,0.5132,0.152,0.149,0.155,0.152
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 4,0.6083,0.473,0.423,0.537,0.47
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 5,0.103,0.284,0.264,0.308,0.275
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 6,0.247,0.349,0.414,0.301,0.346
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 7,0.4831,0.605,0.518,0.728,0.602
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,los,Video 8,0.5924,0.355,0.299,0.438,0.353
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,alle,0.6309,0.333,0.289,0.394,
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 1,0.5408,0.162,0.15,0.176,0.161
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 2,0.3998,0.541,0.563,0.521,0.476
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 3,0.2724,0.088,0.15,0.062,0.079
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 4,0.6891,0.577,0.528,0.634,0.572
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 5,0.1271,0.258,0.313,0.22,0.15
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 6,0.4422,0.156,0.176,0.139,0.155
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 7,0.4048,0.536,0.509,0.566,0.514
+Facenet512,0%,foto's + kostuum,cosine,dichtstbij,uniek,Video 8,0.5866,0.308,0.268,0.36,0.307
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,alle,0.5607,0.506,0.662,0.409,
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 1,0.5164,0.541,0.832,0.4,0.515
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 2,0.4563,0.763,0.939,0.643,0.72
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 3,0.8722,0.672,0.657,0.688,0.121
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 4,0.8722,0.706,0.631,0.802,0.599
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 5,0.5467,0.186,0.406,0.121,0.184
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 6,0.8096,0.284,0.319,0.256,0.031
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 7,0.508,0.803,0.957,0.691,0.774
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,los,Video 8,0.5849,0.354,0.471,0.283,0.34
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,alle,0.7511,0.533,0.51,0.559,
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 1,0.5444,0.562,0.823,0.427,0.524
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 2,0.5371,0.786,0.889,0.704,0.704
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 3,0.799,0.671,0.735,0.618,0.62
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 4,0.7032,0.719,0.733,0.705,0.708
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 5,0.5466,0.187,0.411,0.121,0.097
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 6,0.8503,0.359,0.426,0.31,0.347
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 7,0.5079,0.802,0.96,0.689,0.693
+Facenet512,0%,foto's + kostuum,cosine,gemiddelde,uniek,Video 8,0.7277,0.358,0.345,0.372,0.355
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,alle,22.6165,0.332,0.267,0.438,
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 1,23.6343,0.382,0.289,0.56,0.381
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 2,21.043,0.455,0.371,0.59,0.433
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 3,17.1735,0.221,0.223,0.219,0.216
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 4,23.9539,0.259,0.232,0.295,0.255
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 5,3.7893,0.278,0.241,0.329,0.235
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 6,9.0935,0.36,0.408,0.322,0.358
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 7,22.6165,0.563,0.472,0.697,0.563
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,los,Video 8,23.338,0.301,0.253,0.373,0.3
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,alle,25.2973,0.269,0.232,0.322,
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 1,23.4942,0.096,0.088,0.106,0.096
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 2,21.2355,0.393,0.359,0.433,0.362
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 3,6.5615,0.095,0.179,0.064,0.073
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 4,28.5728,0.441,0.403,0.488,0.441
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 5,3.9279,0.239,0.294,0.201,0.135
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 6,15.5515,0.164,0.184,0.148,0.164
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 7,20.712,0.505,0.45,0.577,0.489
+Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 8,23.4942,0.274,0.238,0.324,0.274
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,alle,22.4263,0.42,0.34,0.548,
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 1,25.0505,0.372,0.282,0.546,0.371
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 2,19.4026,0.659,0.588,0.751,0.585
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 3,22.6044,0.212,0.207,0.217,0.211
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 4,24.6519,0.681,0.608,0.774,0.675
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 5,20.7843,0.07,0.046,0.154,0.07
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 6,14.2385,0.127,0.21,0.091,0.111
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 7,23.9945,0.621,0.52,0.768,0.62
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,los,Video 8,31.0329,0.359,0.302,0.444,0.345
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,alle,22.9051,0.38,0.336,0.437,
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 1,21.5543,0.143,0.135,0.152,0.142
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 2,20.1643,0.661,0.633,0.69,0.625
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 3,22.6286,0.282,0.276,0.289,0.282
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 4,22.9051,0.567,0.536,0.603,0.567
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 5,20.8356,0.116,0.079,0.216,0.114
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 6,17.1092,0.367,0.435,0.318,0.364
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 7,21.3116,0.558,0.496,0.637,0.557
+Facenet512,0%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 8,26.191,0.341,0.296,0.403,0.334
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,alle,1.0379,0.395,0.319,0.52,
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 1,1.0379,0.426,0.327,0.613,0.426
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 2,0.8897,0.552,0.514,0.597,0.467
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 3,1.0132,0.152,0.149,0.155,0.152
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 4,1.103,0.473,0.423,0.537,0.47
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 5,0.454,0.284,0.263,0.308,0.275
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 6,0.7029,0.349,0.414,0.301,0.346
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 7,0.983,0.605,0.518,0.728,0.602
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 8,1.0885,0.355,0.299,0.438,0.353
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,alle,1.1233,0.333,0.289,0.394,
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 1,1.0401,0.162,0.15,0.176,0.161
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 2,0.9056,0.541,0.555,0.529,0.476
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 3,0.7381,0.088,0.15,0.062,0.079
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 4,1.174,0.577,0.528,0.634,0.572
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 5,0.5043,0.258,0.313,0.22,0.15
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 6,0.9405,0.156,0.176,0.139,0.155
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 7,0.8998,0.536,0.509,0.566,0.514
+Facenet512,0%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 8,1.0832,0.308,0.268,0.36,0.307
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,alle,1.059,0.506,0.662,0.41,
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 1,1.0107,0.541,0.855,0.396,0.515
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 2,0.9553,0.763,0.939,0.643,0.72
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 3,1.3209,0.672,0.657,0.688,0.121
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 4,1.3209,0.706,0.631,0.802,0.599
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 5,1.0457,0.186,0.406,0.121,0.184
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 6,1.2725,0.284,0.319,0.256,0.031
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 7,1.008,0.803,0.957,0.691,0.774
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 8,1.0816,0.354,0.471,0.284,0.34
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,alle,1.2257,0.533,0.509,0.559,
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 1,1.0435,0.562,0.823,0.427,0.524
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 2,1.0365,0.786,0.889,0.704,0.704
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 3,1.2642,0.671,0.735,0.618,0.62
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 4,1.1814,0.719,0.735,0.704,0.708
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 5,1.0456,0.187,0.41,0.121,0.097
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 6,1.3042,0.359,0.426,0.31,0.349
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 7,1.0079,0.802,0.96,0.689,0.693
+Facenet512,0%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 8,1.2065,0.358,0.345,0.372,0.355
+Facenet512,20%,foto's,cosine,dichtstbij,los,alle,0.5807,0.518,0.738,0.399,
+Facenet512,20%,foto's,cosine,dichtstbij,los,Video 1,0.5592,0.589,0.859,0.448,0.583
+Facenet512,20%,foto's,cosine,dichtstbij,los,Video 2,0.4878,0.73,0.846,0.641,0.641
+Facenet512,20%,foto's,cosine,dichtstbij,los,Video 3,0.832,0.861,0.841,0.882,0.395
+Facenet512,20%,foto's,cosine,dichtstbij,los,Video 4,0.7029,0.636,0.669,0.605,0.589
+Facenet512,20%,foto's,cosine,dichtstbij,los,Video 5,0.6822,0.255,0.235,0.278,0.18
+Facenet512,20%,foto's,cosine,dichtstbij,los,Video 6,0.8056,0.519,0.585,0.466,0.0
+Facenet512,20%,foto's,cosine,dichtstbij,los,Video 7,0.5086,0.791,0.936,0.684,0.777
+Facenet512,20%,foto's,cosine,dichtstbij,los,Video 8,0.9901,0.341,0.287,0.422,0.285
+Facenet512,20%,foto's,cosine,dichtstbij,uniek,alle,0.7616,0.605,0.612,0.599,
+Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 1,0.7443,0.688,0.841,0.582,0.686
+Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 2,0.519,0.763,0.876,0.675,0.646
+Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 3,0.7938,0.883,0.894,0.872,0.854
+Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 4,0.7732,0.725,0.778,0.678,0.722
+Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 5,0.714,0.242,0.235,0.249,0.21
+Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 6,0.803,0.533,0.633,0.459,0.517
+Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 7,0.5764,0.805,0.93,0.71,0.719
+Facenet512,20%,foto's,cosine,dichtstbij,uniek,Video 8,0.8227,0.378,0.367,0.391,0.372
+Facenet512,20%,foto's,cosine,gemiddelde,los,alle,0.669,0.541,0.68,0.449,
+Facenet512,20%,foto's,cosine,gemiddelde,los,Video 1,0.5967,0.606,0.922,0.451,0.567
+Facenet512,20%,foto's,cosine,gemiddelde,los,Video 2,0.5254,0.754,0.913,0.642,0.623
+Facenet512,20%,foto's,cosine,gemiddelde,los,Video 3,0.8519,0.86,0.842,0.879,0.396
+Facenet512,20%,foto's,cosine,gemiddelde,los,Video 4,0.7991,0.746,0.727,0.767,0.696
+Facenet512,20%,foto's,cosine,gemiddelde,los,Video 5,0.6825,0.26,0.342,0.21,0.249
+Facenet512,20%,foto's,cosine,gemiddelde,los,Video 6,0.8848,0.65,0.732,0.584,0.016
+Facenet512,20%,foto's,cosine,gemiddelde,los,Video 7,0.5499,0.809,0.963,0.697,0.767
+Facenet512,20%,foto's,cosine,gemiddelde,los,Video 8,1.0807,0.348,0.292,0.43,0.334
+Facenet512,20%,foto's,cosine,gemiddelde,uniek,alle,0.8133,0.644,0.661,0.628,
+Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 1,0.8133,0.711,0.846,0.614,0.711
+Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 2,0.5569,0.777,0.921,0.672,0.682
+Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 3,0.8544,0.886,0.899,0.874,0.871
+Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 4,0.8892,0.841,0.848,0.834,0.829
+Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 5,0.7436,0.243,0.242,0.245,0.222
+Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 6,0.8649,0.646,0.772,0.555,0.609
+Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 7,0.6629,0.813,0.915,0.731,0.762
+Facenet512,20%,foto's,cosine,gemiddelde,uniek,Video 8,0.879,0.378,0.379,0.377,0.361
+Facenet512,20%,foto's,euclidean,dichtstbij,los,alle,26.2017,0.476,0.389,0.612,
+Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 1,20.0943,0.427,0.843,0.286,0.388
+Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 2,22.533,0.617,0.609,0.625,0.521
+Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 3,26.5686,0.861,0.842,0.882,0.86
+Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 4,26.6659,0.62,0.568,0.681,0.618
+Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 5,25.7225,0.207,0.134,0.455,0.207
+Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 6,24.1324,0.544,0.616,0.486,0.54
+Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 7,20.221,0.65,0.837,0.531,0.618
+Facenet512,20%,foto's,euclidean,dichtstbij,los,Video 8,32.848,0.317,0.266,0.392,0.285
+Facenet512,20%,foto's,euclidean,dichtstbij,uniek,alle,28.9521,0.506,0.443,0.589,
+Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 1,22.107,0.509,0.861,0.362,0.429
+Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 2,23.0062,0.695,0.769,0.634,0.604
+Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 3,26.5817,0.864,0.844,0.884,0.864
+Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 4,28.9521,0.633,0.616,0.65,0.633
+Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 5,25.0087,0.165,0.115,0.292,0.157
+Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 6,24.0989,0.502,0.58,0.443,0.494
+Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 7,20.0433,0.646,0.88,0.511,0.579
+Facenet512,20%,foto's,euclidean,dichtstbij,uniek,Video 8,30.2372,0.341,0.297,0.401,0.339
+Facenet512,20%,foto's,euclidean,gemiddelde,los,alle,26.0462,0.464,0.374,0.61,
+Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 1,28.5931,0.385,0.292,0.566,0.383
+Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 2,22.8575,0.62,0.544,0.719,0.527
+Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 3,26.0462,0.788,0.77,0.807,0.788
+Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 4,26.9772,0.615,0.55,0.697,0.613
+Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 5,26.5579,0.15,0.097,0.33,0.148
+Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 6,20.2927,0.446,0.637,0.343,0.397
+Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 7,25.6596,0.626,0.525,0.775,0.626
+Facenet512,20%,foto's,euclidean,gemiddelde,los,Video 8,32.2545,0.328,0.276,0.406,0.307
+Facenet512,20%,foto's,euclidean,gemiddelde,uniek,alle,26.0049,0.47,0.426,0.524,
+Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 1,19.0986,0.364,0.743,0.241,0.344
+Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 2,23.4737,0.653,0.636,0.671,0.619
+Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 3,26.2051,0.819,0.8,0.839,0.819
+Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 4,25.5663,0.553,0.573,0.535,0.553
+Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 5,26.632,0.163,0.111,0.31,0.16
+Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 6,25.8541,0.457,0.513,0.412,0.457
+Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 7,19.7297,0.604,0.689,0.538,0.564
+Facenet512,20%,foto's,euclidean,gemiddelde,uniek,Video 8,30.3779,0.345,0.3,0.404,0.315
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,alle,1.0777,0.518,0.738,0.399,
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 1,1.0576,0.589,0.859,0.448,0.583
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 2,0.9877,0.73,0.846,0.641,0.641
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 3,1.29,0.861,0.841,0.882,0.395
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 4,1.1857,0.636,0.669,0.605,0.589
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 5,1.1681,0.255,0.235,0.278,0.181
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 6,1.2694,0.519,0.585,0.466,0.0
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 7,1.0086,0.791,0.936,0.684,0.776
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,los,Video 8,1.4072,0.341,0.287,0.422,0.285
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,alle,1.2361,0.605,0.61,0.601,
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 1,1.2201,0.688,0.841,0.582,0.686
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 2,1.0189,0.763,0.876,0.675,0.646
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 3,1.2601,0.883,0.894,0.872,0.859
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 4,1.2436,0.725,0.778,0.678,0.722
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 5,1.195,0.243,0.235,0.25,0.208
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 6,1.2674,0.533,0.633,0.459,0.519
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 7,1.0737,0.805,0.93,0.71,0.719
+Facenet512,20%,foto's,euclidean_l2,dichtstbij,uniek,Video 8,1.2828,0.378,0.366,0.391,0.371
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,alle,1.1568,0.541,0.679,0.449,
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 1,1.0924,0.606,0.922,0.451,0.567
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 2,1.0252,0.754,0.913,0.642,0.623
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 3,1.3054,0.86,0.842,0.879,0.396
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 4,1.2642,0.746,0.727,0.767,0.696
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 5,1.1684,0.26,0.342,0.21,0.248
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 6,1.3303,0.65,0.732,0.584,0.016
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 7,1.0487,0.809,0.963,0.697,0.767
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,Video 8,1.4703,0.348,0.292,0.43,0.334
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,alle,1.2755,0.644,0.661,0.628,
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 1,1.2755,0.712,0.846,0.614,0.712
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 2,1.0554,0.777,0.921,0.672,0.681
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 3,1.3073,0.886,0.899,0.874,0.871
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 4,1.3336,0.841,0.848,0.834,0.829
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 5,1.2195,0.243,0.241,0.245,0.222
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 6,1.3153,0.646,0.772,0.555,0.609
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 7,1.1515,0.813,0.915,0.731,0.762
+Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,Video 8,1.3259,0.378,0.379,0.377,0.361
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,alle,0.4912,0.504,0.426,0.618,
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 1,0.5564,0.447,0.344,0.639,0.438
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 2,0.3965,0.692,0.69,0.695,0.602
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 3,0.5021,0.485,0.504,0.468,0.482
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 4,0.6446,0.703,0.628,0.799,0.689
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 5,0.4375,0.313,0.212,0.601,0.302
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 6,0.5871,0.088,0.098,0.079,0.079
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 7,0.499,0.637,0.543,0.77,0.636
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,los,Video 8,0.5871,0.441,0.372,0.54,0.424
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,alle,0.5005,0.496,0.489,0.503,
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 1,0.4737,0.424,0.437,0.411,0.423
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 2,0.4241,0.71,0.757,0.668,0.667
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 3,0.745,0.609,0.597,0.622,0.434
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 4,0.5747,0.701,0.708,0.695,0.681
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 5,0.2072,0.251,0.294,0.219,0.199
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 6,0.6459,0.123,0.14,0.11,0.097
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 7,0.4105,0.587,0.566,0.609,0.581
+Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,Video 8,0.5665,0.418,0.381,0.463,0.41
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,alle,0.5913,0.64,0.792,0.537,
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 1,0.5591,0.676,0.847,0.563,0.659
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 2,0.4974,0.809,0.928,0.718,0.762
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 3,0.8789,0.884,0.864,0.905,0.565
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 4,0.6253,0.777,0.806,0.751,0.765
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 5,0.6068,0.284,0.463,0.205,0.282
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 6,0.827,0.565,0.641,0.505,0.261
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 7,0.588,0.83,0.949,0.737,0.83
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,los,Video 8,0.645,0.473,0.618,0.383,0.423
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,alle,0.6387,0.672,0.812,0.573,
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 1,0.6746,0.708,0.801,0.635,0.704
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 2,0.5572,0.828,0.932,0.744,0.802
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 3,0.8494,0.888,0.888,0.888,0.583
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 4,0.7418,0.897,0.922,0.874,0.849
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 5,0.6018,0.285,0.487,0.202,0.272
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 6,0.8289,0.577,0.7,0.491,0.28
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 7,0.5903,0.825,0.949,0.729,0.815
+Facenet512,20%,foto's + kostuum,cosine,gemiddelde,uniek,Video 8,0.6433,0.46,0.635,0.36,0.458
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,alle,22.4944,0.46,0.374,0.597,
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 1,24.3034,0.418,0.317,0.614,0.417
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 2,20.7292,0.603,0.517,0.723,0.565
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 3,21.5973,0.489,0.478,0.501,0.489
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 4,23.6057,0.576,0.514,0.654,0.569
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 5,8.1122,0.285,0.208,0.456,0.26
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 6,15.0842,0.194,0.219,0.175,0.194
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 7,21.5973,0.615,0.516,0.761,0.615
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,los,Video 8,23.6057,0.384,0.322,0.475,0.383
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,alle,22.254,0.319,0.289,0.357,
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 1,24.2234,0.134,0.125,0.145,0.132
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 2,21.0628,0.55,0.537,0.564,0.54
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 3,14.0905,0.102,0.135,0.082,0.081
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 4,22.254,0.441,0.448,0.435,0.441
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 5,6.1415,0.256,0.286,0.232,0.149
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 6,12.7228,0.147,0.22,0.11,0.127
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 7,20.4597,0.532,0.485,0.59,0.52
+Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,Video 8,22.4368,0.364,0.319,0.423,0.363
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,alle,22.1693,0.544,0.447,0.695,
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 1,23.9703,0.449,0.341,0.66,0.447
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 2,20.2121,0.701,0.618,0.81,0.67
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 3,20.5508,0.876,0.856,0.897,0.876
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 4,22.7362,0.733,0.656,0.829,0.729
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 5,19.4188,0.152,0.099,0.325,0.148
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 6,17.6097,0.431,0.489,0.385,0.429
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 7,23.0935,0.635,0.533,0.786,0.635
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,los,Video 8,25.1801,0.418,0.351,0.517,0.405
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,alle,22.2978,0.515,0.464,0.578,
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 1,21.821,0.25,0.236,0.266,0.25
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 2,20.184,0.693,0.673,0.715,0.672
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 3,19.7707,0.868,0.85,0.887,0.867
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 4,22.2978,0.725,0.708,0.742,0.725
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 5,19.3586,0.157,0.109,0.278,0.147
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 6,18.4077,0.579,0.664,0.514,0.57
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 7,19.9378,0.575,0.516,0.649,0.572
+Facenet512,20%,foto's + kostuum,euclidean,gemiddelde,uniek,Video 8,24.2669,0.404,0.354,0.471,0.392
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,alle,0.9912,0.504,0.426,0.618,
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 1,1.055,0.447,0.344,0.639,0.438
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 2,0.8906,0.693,0.69,0.695,0.602
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 3,1.0022,0.485,0.504,0.468,0.482
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 4,1.1355,0.703,0.628,0.799,0.69
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 5,0.9354,0.313,0.212,0.601,0.301
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 6,1.0837,0.088,0.098,0.079,0.079
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 7,0.9991,0.637,0.543,0.77,0.636
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,los,Video 8,1.0837,0.441,0.372,0.54,0.424
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,alle,1.0005,0.496,0.489,0.503,
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 1,0.9709,0.424,0.438,0.41,0.423
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 2,0.9211,0.71,0.757,0.668,0.667
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 3,1.2207,0.609,0.597,0.622,0.434
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 4,1.0721,0.701,0.708,0.695,0.681
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 5,0.6438,0.251,0.294,0.219,0.199
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 6,1.1366,0.123,0.14,0.11,0.097
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 7,0.9061,0.587,0.566,0.609,0.581
+Facenet512,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,Video 8,1.0465,0.418,0.386,0.455,0.41
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,alle,1.0875,0.64,0.792,0.537,
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 1,1.0575,0.676,0.847,0.563,0.659
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 2,0.9974,0.809,0.928,0.718,0.762
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 3,1.3259,0.884,0.864,0.905,0.565
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 4,1.1184,0.777,0.805,0.751,0.765
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 5,1.1017,0.284,0.463,0.205,0.282
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 6,1.2861,0.565,0.641,0.505,0.261
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 7,1.0845,0.83,0.949,0.737,0.83
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,Video 8,1.1359,0.473,0.617,0.383,0.423
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,alle,1.1303,0.672,0.812,0.573,
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 1,1.1616,0.708,0.801,0.635,0.704
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 2,1.0557,0.828,0.932,0.744,0.802
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 3,1.3034,0.888,0.888,0.888,0.583
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 4,1.2181,0.898,0.922,0.874,0.849
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 5,1.0971,0.285,0.487,0.202,0.272
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 6,1.2877,0.577,0.7,0.491,0.28
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 7,1.0866,0.825,0.949,0.729,0.815
+Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,Video 8,1.1382,0.46,0.617,0.366,0.458

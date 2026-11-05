@@ -1,9 +1,9 @@
 filmpje,model,marge,voorbeelden,afstand,per_persoon,toewijzen,drempel,f1,f1_algemeen_beste
-Video 1,Facenet,0%,foto's,euclidean,dichtstbij,uniek,11.6903,0.999,0.941
-Video 2,Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,1.1303,0.885,0.851
-Video 3,Facenet,0%,foto's,euclidean_l2,gemiddelde,uniek,1.3096,0.935,0.676
-Video 4,Facenet,0%,foto's,euclidean,dichtstbij,uniek,11.6903,0.982,0.942
-Video 5,Facenet512,0%,foto's + kostuum,euclidean,dichtstbij,uniek,5.7443,0.79,0.626
-Video 6,Facenet512,20%,foto's + kostuum,euclidean,dichtstbij,uniek,18.3188,0.872,0.735
-Video 7,Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,1.2283,0.881,0.824
-Video 8,Facenet512,20%,foto's + kostuum,cosine,dichtstbij,uniek,0.5886,0.636,0.624
+Video 1,Facenet512,20%,foto's,euclidean_l2,gemiddelde,uniek,1.2755,0.712,0.704
+Video 2,Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,1.0557,0.828,0.802
+Video 3,Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,1.3034,0.888,0.583
+Video 4,Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,uniek,1.2181,0.898,0.849
+Video 5,Facenet,20%,foto's + kostuum,euclidean_l2,dichtstbij,uniek,0.194,0.398,0.272
+Video 6,Facenet512,20%,foto's,euclidean_l2,gemiddelde,los,1.3303,0.65,0.28
+Video 7,Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,1.0845,0.83,0.815
+Video 8,Facenet512,20%,foto's + kostuum,euclidean_l2,gemiddelde,los,1.1359,0.473,0.458

@@ -10,10 +10,15 @@ Vergeleken worden alle combinaties van:
               de kleinste afstand eerst)
 - drempel:    is de afstand kleiner dan de drempel, dan is het die persoon; anders iemand anders (200 drempels getest)
 
-Score: per beeld en per persoon is de vraag "staat deze persoon in dit beeld?". Het antwoord van FaceNet wordt
-vergeleken met het nagekeken antwoordenblad (labels/controle_labels.csv en labels/correcties.csv). F1 is het
-harmonisch gemiddelde van precisie (hoe vaak klopt "ja" van FaceNet) en recall (hoeveel van de echte "ja" vindt
-FaceNet). De beste configuratie is die met de hoogste F1. Let op: de drempel is gekozen op dezelfde beelden waarop
+Score: per gezicht (per kader). Elk kader heeft volgens het nagekeken antwoordenblad een van de vier namen of geen
+naam (figurant, geen gezicht). In een beeld dat bij het nakijken goed kreeg, is dat de keuze van de labelaar voor de
+track van het kader (labels/labels.csv); in een beeld dat fout kreeg, krijgt elk verbeterd kader
+(labels/correcties.csv) het kader van de computer dat er het meest mee overlapt (minstens 30% overlap, IoU), en de
+andere kaders in dat beeld geen naam. Een verbeterd kader zonder kader van de computer eronder telt als gemist.
+- goed (TP): FaceNet geeft het kader de juiste naam
+- fout (FP): FaceNet geeft een naam aan een kader met een andere of geen naam (bijvoorbeeld een figurant)
+- gemist (FN): een kader met een naam krijgt van FaceNet niet die naam, of er was geen kader
+F1 is het harmonisch gemiddelde van precisie (TP / (TP + FP)) en recall (TP / (TP + FN)). De beste configuratie is die met de hoogste F1. Let op: de drempel is gekozen op dezelfde beelden waarop
 gescoord wordt; de F1 van de beste configuratie is daardoor wat optimistisch.
 
 De embeddings van alle kaders worden één keer gemaakt en bewaard in data/embeddings/ (gaat niet mee naar GitHub).
@@ -25,6 +30,7 @@ Uitvoer in results/configuraties/:
     f1_drempel.png             F1 tegen de drempel, per model en afstand (met de beste andere keuzes)
     per_filmpje.png            F1 per filmpje: algemeen beste configuratie tegen de beste voor dat filmpje
     tabel.png, tijdlijn.png    visualisatie 1 en 2 (zoals in de basischeck) met de algemeen beste configuratie
+    verwarring.csv/.png        per gezicht wie het echt is tegen welke naam FaceNet geeft (algemeen beste configuratie)
 De plaatjes komen ook in results/experimenten/facenet_configuraties/.
 
 Gebruik (vanuit de map KTAI, met de pakketten uit requirements_herkenning.txt):
@@ -129,19 +135,17 @@ def distances(boxes: np.ndarray, names: np.ndarray, refs: np.ndarray, metric: st
     return result
 
 
-def scores(d: np.ndarray, frame_id: np.ndarray, n_frames: int, assign: str) -> np.ndarray:
-    """Per beeld en persoon de kleinste afstand van een kader dat aan die persoon is toegewezen (anders oneindig).
-    Bij een drempel t staat een persoon volgens FaceNet in een beeld als die afstand kleiner is dan t. Dat klopt ook
-    bij 'uniek': de kaders met de kleinste afstand gaan eerst, dus een drempel haalt alleen de laatste keuzes weg."""
-    best = np.full((n_frames, len(NAMES)), np.inf, dtype=np.float32)
+def assigned(d: np.ndarray, frame_id: np.ndarray, assign: str) -> tuple:
+    """Per kader de persoon die FaceNet kiest (0-3) en de afstand. Bij een drempel t krijgt een kader die persoon als
+    de afstand kleiner is dan t. Dat klopt ook bij 'uniek': de kaders met de kleinste afstand gaan eerst, dus een
+    drempel haalt alleen de laatste keuzes weg."""
     if assign == "los":
         k = d.argmin(axis=1)
-        np.minimum.at(best, (frame_id, k), d[np.arange(len(d)), k])
-        return best
+        return k, d[np.arange(len(d)), k]
+    person, dist = np.full(len(d), -1), np.full(len(d), np.inf, dtype=np.float32)
     boxes, people = np.unravel_index(np.argsort(d, axis=None), d.shape)
     order = np.lexsort((d[boxes, people], frame_id[boxes]))   # per beeld, kleinste afstand eerst
-    used_box, used_person = set(), set()
-    current = -1
+    used_box, used_person, current = set(), set(), -1
     for b, p in zip(boxes[order], people[order]):
         f = frame_id[b]
         if f != current:
@@ -150,19 +154,50 @@ def scores(d: np.ndarray, frame_id: np.ndarray, n_frames: int, assign: str) -> n
             continue
         used_box.add(b)
         used_person.add(p)
-        best[f, p] = d[b, p]
-    return best
+        person[b], dist[b] = p, d[b, p]
+    return person, dist
 
 
-def f1(pred: np.ndarray, truth: np.ndarray) -> tuple:
-    tp, fp, fn = (pred & truth).sum(), (pred & ~truth).sum(), (~pred & truth).sum()
-    precision, recall = tp / max(1, tp + fp), tp / max(1, tp + fn)
-    return 2 * precision * recall / max(1e-9, precision + recall), precision, recall
+def sweep(person: np.ndarray, dist: np.ndarray, gt: np.ndarray, missed: int, thresholds: np.ndarray) -> np.ndarray:
+    """F1, precisie en recall per kader, voor elke drempel (drempels x 3)."""
+    right = person == gt
+    result = []
+    for t in thresholds:
+        named = dist < t
+        tp = int((named & right).sum())
+        precision, recall = tp / max(1, int(named.sum())), tp / max(1, int((gt >= 0).sum()) + missed)
+        result.append((2 * precision * recall / max(1e-9, precision + recall), precision, recall))
+    return np.array(result)
 
 
-def sweep(best: np.ndarray, truth: np.ndarray, thresholds: np.ndarray) -> np.ndarray:
-    """F1, precisie en recall voor elke drempel (drempels x 3)."""
-    return np.array([f1(best < t, truth) for t in thresholds])
+def iou(a, b) -> float:
+    w = min(a[0] + a[2], b[0] + b[2]) - max(a[0], b[0])
+    h = min(a[1] + a[3], b[1] + b[3]) - max(a[1], b[1])
+    return w * h / (a[2] * a[3] + b[2] * b[3] - w * h) if w > 0 and h > 0 else 0.0
+
+
+def box_truth(detections: pd.DataFrame, todo: list, frame_id: np.ndarray) -> tuple:
+    """Per kader de juiste persoon (0-3, of -1 voor geen naam), en per beeld hoeveel verbeterde kaders geen kader van
+    de computer hebben (gemist)."""
+    verdict, fixes = judged(), corrected()
+    label = pd.read_csv(REPO / "labels" / "labels.csv").set_index("face")["label"]
+    gt = np.array([NAMES.index(PERSONS[l]) if l in PERSONS else -1 for l in
+                   (label.get(f"{v}#track{t}") for v, t in zip(detections["video"], detections["track"]))])
+    missed = np.zeros(len(todo), dtype=int)
+    in_frame = pd.Series(np.arange(len(detections))).groupby(frame_id).apply(list).to_dict()
+    for i, t in enumerate(todo):
+        if verdict[t["key"]] != "fout":
+            continue
+        own = in_frame.get(i, [])
+        gt[own] = -1
+        for name, *box in fixes[t["key"]]:
+            overlaps = [(iou(box, detections.loc[j, ["x", "y", "w", "h"]].tolist()), j) for j in own if gt[j] < 0]
+            best = max(overlaps, default=(0, None))
+            if best[0] >= 0.3:
+                gt[best[1]] = NAMES.index(name)
+            else:
+                missed[i] += 1
+    return gt, missed
 
 
 def main() -> None:
@@ -171,7 +206,7 @@ def main() -> None:
         .sort_values(["video", "frame"], kind="stable").reset_index(drop=True)   # zo leest box_embeddings ze ook
     frames = pd.read_csv(REPO / "data" / "tracks" / "frames.csv")
 
-    # het nagekeken antwoordenblad: per beeld welke van de vier erin staan
+    # het nagekeken antwoordenblad: per beeld welke van de vier erin staan (voor de tabel en de tijdlijn)
     verdict, fixes = judged(), corrected()
     todo = [t for t in items() if "#beeld" in t["key"]]
     truth = np.zeros((len(todo), len(NAMES)), dtype=bool)
@@ -183,6 +218,8 @@ def main() -> None:
     parts = fragments(frames).set_index("video")
     fragment = np.array([parts.loc[t["video"], "fragment"] for t in todo])
     groups = sorted(set(fragment), key=lambda g: int(g.split()[-1]))
+    gt, missed = box_truth(detections, todo, frame_id)       # en per kader wie het is (voor de score)
+    box_fragment = fragment[frame_id]
 
     print("embeddings van de kaders (de eerste keer duurt dit lang)")
     boxes = box_embeddings(detections)
@@ -194,25 +231,25 @@ def main() -> None:
             MODELS, MARGINS, (False, True), ("cosine", "euclidean", "euclidean_l2"), ("dichtstbij", "gemiddelde"),
             ("los", "uniek")):
         names, ref = refs[(m, g, kostuum)]
-        best = scores(distances(boxes[(m, g)], names, ref, metric, per_person), frame_id, len(todo), assign)
-        finite = best[np.isfinite(best)]
+        person, dist = assigned(distances(boxes[(m, g)], names, ref, metric, per_person), frame_id, assign)
+        finite = dist[np.isfinite(dist)]
         thresholds = np.quantile(finite, np.linspace(0.005, 1, 200)) * 1.0001
         config = {"model": m, "marge": f"{int(g * 100)}%", "voorbeelden": "foto's + kostuum" if kostuum else "foto's",
                   "afstand": metric, "per_persoon": per_person, "toewijzen": assign}
-        result = sweep(best, truth, thresholds)
+        result = sweep(person, dist, gt, int(missed.sum()), thresholds)
         k = result[:, 0].argmax()
         rows.append({**config, "fragment": "alle", "drempel": round(float(thresholds[k]), 4),
                      "f1": result[k, 0], "precisie": result[k, 1], "recall": result[k, 2]})
         for group in groups:
-            mask = fragment == group
-            part = sweep(best[mask], truth[mask], thresholds)
+            mask = box_fragment == group
+            part = sweep(person[mask], dist[mask], gt[mask], int(missed[fragment == group].sum()), thresholds)
             j = part[:, 0].argmax()
             rows.append({**config, "fragment": group, "drempel": round(float(thresholds[j]), 4),
                          "f1": part[j, 0], "precisie": part[j, 1], "recall": part[j, 2],
                          "f1_bij_algemene_drempel": part[k, 0]})
         name = " | ".join(config.values())
         curves[name] = (config, thresholds, result[:, 0])
-        kept[name] = best
+        kept[name] = (person, dist)
         print(f"  {name}: F1 {result[k, 0]:.3f} bij drempel {thresholds[k]:.3f}")
 
     table = pd.DataFrame(rows).round({"f1": 3, "precisie": 3, "recall": 3, "f1_bij_algemene_drempel": 3})
@@ -234,10 +271,15 @@ def main() -> None:
     print(per_video.to_string(index=False))
 
     figures(top, per_video, curves, winner, keys)
-    visualisations(kept[" | ".join(str(winner[k]) for k in keys)] < winner["drempel"], truth, todo, frames, winner)
+    person, dist = kept[" | ".join(str(winner[k]) for k in keys)]
+    pred = np.zeros_like(truth)
+    named = dist < winner["drempel"]
+    pred[frame_id[named], person[named]] = True
+    visualisations(pred, truth, todo, frames, winner)
+    confusion(np.where(named, person, -1), gt, int(missed.sum()), winner)
     folder = REPO / "results" / "experimenten" / "facenet_configuraties"   # de plaatjes van dit experiment bij elkaar
     folder.mkdir(parents=True, exist_ok=True)
-    for name in ("beste_algemeen", "beste_per_filmpje", "per_filmpje", "f1_drempel", "tabel", "tijdlijn"):
+    for name in ("beste_algemeen", "beste_per_filmpje", "per_filmpje", "f1_drempel", "tabel", "tijdlijn", "verwarring"):
         shutil.copyfile(OUT / f"{name}.png", folder / f"{name}.png")
     print(f"klaar: {OUT.relative_to(REPO)}/")
 
@@ -255,7 +297,7 @@ def picture_table(data: pd.DataFrame, title: str, path) -> None:
 
 
 def figures(top: pd.DataFrame, per_video: pd.DataFrame, curves: dict, winner: pd.Series, keys: list) -> None:
-    picture_table(top, "De tien beste configuraties van FaceNet (alle filmpjes samen, F1 per beeld en persoon)",
+    picture_table(top, "De tien beste configuraties van FaceNet (alle filmpjes samen, F1 per gezicht)",
                   OUT / "beste_algemeen.png")
     picture_table(per_video, "Per filmpje de beste configuratie, en de F1 van de algemeen beste configuratie daar",
                   OUT / "beste_per_filmpje.png")
@@ -290,6 +332,32 @@ def figures(top: pd.DataFrame, per_video: pd.DataFrame, curves: dict, winner: pd
     ax.set_title("F1 per filmpje (algemeen beste: " + ", ".join(str(winner[k]) for k in keys) + ")", fontsize=9)
     fig.tight_layout()
     fig.savefig(OUT / "per_filmpje.png", dpi=150)
+    plt.close(fig)
+
+
+def confusion(pred: np.ndarray, gt: np.ndarray, missed: int, winner: pd.Series) -> None:
+    """Per gezicht: wie het echt is (rij) tegen welke naam FaceNet geeft (kolom), met de algemeen beste configuratie."""
+    labels = NAMES + ["geen naam"]
+    matrix = np.zeros((5, 5), dtype=int)
+    np.add.at(matrix, (np.where(gt < 0, 4, gt), np.where(pred < 0, 4, pred)), 1)
+    pd.DataFrame(matrix, index=[f"echt: {l}" for l in labels], columns=[f"FaceNet: {l}" for l in labels]) \
+        .to_csv(OUT / "verwarring.csv", lineterminator="\n")
+    share = matrix / matrix.sum(axis=1, keepdims=True)
+    fig, ax = plt.subplots(figsize=(8, 6.5))
+    ax.imshow(share, cmap="Blues", vmin=0, vmax=1)
+    for r, c in itertools.product(range(5), range(5)):
+        ax.text(c, r, f"{matrix[r, c]}\n{100 * share[r, c]:.0f}%", ha="center", va="center", fontsize=9,
+                color="white" if share[r, c] > 0.5 else "black")
+    ax.set_xticks(range(5), labels, rotation=20)
+    ax.set_yticks(range(5), [l if l != "geen naam" else "geen naam\n(figurant, geen gezicht)" for l in labels])
+    ax.set_xlabel("naam die FaceNet geeft")
+    ax.set_ylabel("wie het echt is (nagekeken antwoordenblad)")
+    ax.set_title(f"Per gezicht: wie het is tegen wat FaceNet zegt (percentage per rij)\n{winner['model']}, marge "
+                 f"{winner['marge']}, {winner['voorbeelden']}, {winner['afstand']}, {winner['per_persoon']}, "
+                 f"{winner['toewijzen']}, drempel {winner['drempel']}. Plus {missed} verbeterde gezichten zonder kader "
+                 f"(gemist).", fontsize=9)
+    fig.tight_layout()
+    fig.savefig(OUT / "verwarring.png", dpi=150)
     plt.close(fig)
 
 
