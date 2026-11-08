@@ -1,0 +1,12 @@
+{
+ "model": "Facenet",
+ "marge": 0.2,
+ "lichter": true,
+ "afstand": "euclidean_l2",
+ "per_persoon": "dichtstbij",
+ "toewijzen": "uniek",
+ "beslissen": "track",
+ "drempel": 1.0683677342176436,
+ "f1": 0.808,
+ "f1_eerlijke_schatting": 0.766
+}

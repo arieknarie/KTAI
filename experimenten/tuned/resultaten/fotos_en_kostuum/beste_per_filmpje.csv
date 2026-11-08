@@ -1,0 +1,9 @@
+filmpje,model,marge,lichter,afstand,per_persoon,toewijzen,beslissen,drempel,f1,f1_algemeen_beste
+Video 1,Facenet512,0.3,True,euclidean_l2,gemiddelde,uniek,track,1.0833,0.887,0.856
+Video 2,Facenet512,0.0,True,euclidean_l2,gemiddelde,uniek,track,1.1142,0.892,0.871
+Video 3,Facenet,0.3,True,euclidean_l2,gemiddelde,los,track,1.086,0.971,0.924
+Video 4,Facenet,0.1,True,euclidean_l2,gemiddelde,los,track,0.9746,0.997,0.997
+Video 5,Facenet,0.0,True,euclidean_l2,gemiddelde,uniek,track,0.9849,0.974,0.957
+Video 6,Facenet512,0.1,True,euclidean_l2,gemiddelde,los,track,1.0835,0.855,0.839
+Video 7,Facenet512,0.1,True,euclidean_l2,gemiddelde,los,track,1.0658,0.863,0.85
+Video 8,Facenet512,0.3,True,euclidean_l2,gemiddelde,uniek,track,1.1721,0.671,0.655

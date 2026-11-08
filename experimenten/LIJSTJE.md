@@ -11,7 +11,7 @@ Dit is alles waar aan gewerkt wordt. Een vinkje betekent: klaar en op GitHub.
 ## Experimenten
 
 - [x] `basis/`: FaceNet standaard, met foto's en met foto's + kostuum: code in stappen, map `resultaten`, beide meetmethodes (per beeld en per gezicht) met een keuze voor de tweede, een filmpje en md's
-- [ ] `tuned/`: hetzelfde met de best mogelijke instellingen, ook voor beide sets foto's
+- [x] `tuned/`: hetzelfde met de best mogelijke instellingen, ook voor beide sets foto's
 - [x] Rapporteren welke foto precies gebruikt is voor elke identificatie
 - [x] Moving average filter op de detectie (onder 0,2 geen detectie, boven 0,7 wel)
 - [x] Spreiding binnen een karakter en kleinste afstand tussen karakters, voor out-of-character, in-character en de totale set, met figuren
@@ -22,4 +22,4 @@ Dit is alles waar aan gewerkt wordt. Een vinkje betekent: klaar en op GitHub.
 - [x] Wie wordt als Johann herkend op plekken waar Johann er niet is
 - [x] De vectoren per persoon samenvoegen tot één gemiddelde vector
 - [x] Werner met baard: wat gebeurt er als meer stills van Werner met baard in de in-karakter set zitten (alleen stills, geen beelden uit de filmpjes)
-- [ ] `README.md` over alle experimenten, en hoe je ze draait op Mac en Windows
+- [x] `README.md` over alle experimenten, en hoe je ze draait op Mac en Windows

@@ -1,0 +1,9 @@
+filmpje,model,marge,lichter,afstand,per_persoon,toewijzen,beslissen,drempel,gezichten,goed,fout_benoemd,gemist,precisie,recall,f1
+Video 1,Facenet512,0.2,True,euclidean_l2,gemiddelde,uniek,track,1.1076,3372,2729,275,643,0.908,0.809,0.856
+Video 2,Facenet512,0.2,True,euclidean_l2,gemiddelde,uniek,track,1.1076,3401,2736,143,665,0.95,0.804,0.871
+Video 3,Facenet512,0.2,True,euclidean_l2,gemiddelde,uniek,track,1.101,2587,1218,11,1369,0.991,0.471,0.638
+Video 4,Facenet512,0.2,True,euclidean_l2,gemiddelde,uniek,track,1.1076,4491,4466,0,25,1.0,0.994,0.997
+Video 5,Facenet512,0.2,True,euclidean_l2,gemiddelde,uniek,track,1.1076,1410,1350,60,60,0.957,0.957,0.957
+Video 6,Facenet512,0.2,True,euclidean_l2,gemiddelde,uniek,track,1.1076,477,347,3,130,0.991,0.727,0.839
+Video 7,Facenet512,0.2,True,euclidean_l2,gemiddelde,uniek,track,1.1076,1323,1034,76,289,0.932,0.782,0.85
+Video 8,Facenet512,0.3,True,euclidean_l2,gemiddelde,uniek,track,1.0833,3929,1759,291,2170,0.858,0.448,0.588
