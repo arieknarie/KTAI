@@ -1,0 +1,19 @@
+set,persoon_1,persoon_2,minimale_afstand,foto_1,foto_2
+out-of-character (foto's),Der Alte,Fritz Grade,1.001,derAlte3.png,fritz4.jpg
+out-of-character (foto's),Der Alte,Johann,1.02,derAlte3.png,Johann5.jpg
+out-of-character (foto's),Der Alte,Werner,1.376,derAlte2.jpg,werner4.jpg
+out-of-character (foto's),Fritz Grade,Johann,1.214,fritz4.jpg,Johann6.jpg
+out-of-character (foto's),Fritz Grade,Werner,1.16,fritz5.png,werner1.jpg
+out-of-character (foto's),Johann,Werner,1.421,Johann4.jpg,werner1.jpg
+in-character (stills),Der Alte,Fritz Grade,0.363,Fritz4.png,johann_and_fritz.png
+in-character (stills),Der Alte,Johann,0.29,Fritz4.png,johann3.png
+in-character (stills),Der Alte,Werner,0.236,Fritz4.png,Fritz1.jpg
+in-character (stills),Fritz Grade,Johann,0.281,johann_and_fritz.png,johann3.png
+in-character (stills),Fritz Grade,Werner,0.291,johann_and_fritz.png,Fritz1.jpg
+in-character (stills),Johann,Werner,0.274,johann3.png,Fritz1.jpg
+totale set,Der Alte,Fritz Grade,0.363,Fritz4.png,johann_and_fritz.png
+totale set,Der Alte,Johann,0.29,Fritz4.png,johann3.png
+totale set,Der Alte,Werner,0.236,Fritz4.png,Fritz1.jpg
+totale set,Fritz Grade,Johann,0.281,johann_and_fritz.png,johann3.png
+totale set,Fritz Grade,Werner,0.291,johann_and_fritz.png,Fritz1.jpg
+totale set,Johann,Werner,0.274,johann3.png,Fritz1.jpg

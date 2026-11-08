@@ -1,8 +1,11 @@
 """De uitleg (README.md) bij de uitkomsten van één set voorbeelden, met de echte getallen uit de resultaten."""
 
+import os
+
 import pandas as pd
 
 from gedeeld.meten import comma
+from gedeeld.paden import EXPERIMENTEN
 
 
 def number(n: int) -> str:
@@ -57,7 +60,7 @@ def write(out, heading: str, intro: str, settings: list, command: str, extra: st
               "| `methode_2_overlap.csv` | De uitkomst van methode 2 bij andere grenzen voor de overlap. |",
               "| `filmpje.mp4` | Het filmpje. |", "",
               "## Zo maak je dit opnieuw", "",
-              "Vanuit de map `experimenten` (installeren: zie [de uitleg over alle experimenten](" + "../" * (len(out.relative_to(out.parents[2]).parts)) + "README.md)).", "",
+              "Vanuit de map `experimenten` (installeren: zie [de uitleg over alle experimenten](" + os.path.relpath(EXPERIMENTEN / "README.md", out).replace(os.sep, "/") + "#installeren-op-mac-en-windows)).", "",
               "Op een Mac:", "", "```bash", f".venv/bin/python {command}", "```", "",
               "Op Windows:", "", "```bat", ".venv\\Scripts\\python " + command.replace("/", "\\"), "```", ""]
     (out / "README.md").write_bytes("\n".join(lines).encode("utf-8"))

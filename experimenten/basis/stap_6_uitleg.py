@@ -23,7 +23,7 @@ def main() -> None:
     out, title = folder(args.voorbeelden), EXAMPLE_SETS[args.voorbeelden]
     write(out, f"Basis ({title})",
           "Dit is het basisexperiment: FaceNet staat zo standaard mogelijk ingesteld en vergelijkt elk gezicht in de filmpjes met de "
-          "voorbeelden uit deze set. De uitleg van het experiment staat in [de README van de basis](../../README.md).",
+          "voorbeelden uit deze set. De uitleg van het experiment staat in [de README van de basis](" + ("../../README.md" if args.voorbeelden != "alleen_kostuum" else "../../basis/README.md") + ").",
           [("Model", MODEL), ("Extra ruimte om het kader", f"{MARGIN:.0%}"), ("Afstand", METRIC.replace("euclidean_l2", "genormaliseerde Euclidische afstand")),
            ("Drempel", f"{DREMPEL:.2f}".replace(".", ",")), ("Per persoon", "de afstand tot de meest gelijkende voorbeeldfoto"),
            ("Toewijzen", "elk kader los"), ("Voorbeelden", title.removeprefix("voorbeelden: "))],

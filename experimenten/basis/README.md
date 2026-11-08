@@ -94,8 +94,8 @@ afkeuren. In de tabel hieronder is te zien dat de keuze weinig uitmaakt: de uitk
   lijken te weinig op de donkere gezichten met baarden in de film.
 - **Met de stills erbij geeft FaceNet veel vaker een naam.** Volgens methode 1 ziet dat er goed uit (F1 0,636), maar volgens methode 2 valt de score terug naar 0,308: veel namen staan op het verkeerde gezicht. Dat is de reden om methode 2 te gebruiken.
 - **Johann wordt veel te vaak gezien.** Met de stills erbij zegt FaceNet in 4.302 beelden Johann, terwijl Johann maar in 849 beelden staat. Wie er dan echt staat, staat in [`../wie_wordt_johann/`](../wie_wordt_johann/README.md).
-- **Eén slechte foto kan veel schade doen.** Het bestand `gebruik_per_foto.csv` zegt welke voorbeeldfoto bij elk kader de doorslag gaf. In de set met stills gaf het gezicht met het label Der Alte in `Fritz4.png` 10.016 keer de doorslag, en daarvan was 7.922 keer fout. Welke foto's het resultaat
-  slechter maken, staat in [`../leave_one_out/`](../leave_one_out/README.md).
+- **Eén foto kan heel veel invloed hebben.** Het bestand `gebruik_per_foto.csv` zegt welke voorbeeldfoto bij elk kader de doorslag gaf. In de set met stills gaf het gezicht met het label Der Alte in `Fritz4.png` 10.016 keer de doorslag, en daarvan was 7.922 keer fout. Welke foto's het resultaat
+  echt slechter maken, staat in [`../leave_one_out/`](../leave_one_out/README.md).
 
 ![Per kader: wie het echt is tegen de naam die FaceNet geeft, met foto's en stills](resultaten/fotos_en_kostuum/methode_2_verwarring.png)
 

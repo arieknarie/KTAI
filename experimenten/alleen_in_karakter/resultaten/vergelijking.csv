@@ -1,0 +1,4 @@
+voorbeelden,voorbeelden_aantal,methode_1_precisie,methode_1_recall,methode_1_f1,methode_2_precisie,methode_2_recall,methode_2_f1
+alleen foto's (out-of-character),23,0.986,0.041,0.078,0.929,0.038,0.074
+alleen stills (in-character),50,0.641,0.615,0.628,0.245,0.386,0.3
+foto's + stills (totale set),73,0.645,0.626,0.636,0.251,0.398,0.308

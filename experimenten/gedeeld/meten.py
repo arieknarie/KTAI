@@ -292,3 +292,30 @@ def fast_setup(detections: pd.DataFrame) -> dict:
     truth_frames[[index[k] for k in zip(truth["bestand"], truth["beeld"])], truth["persoon"].map(NAMES.index).to_numpy()] = True
     faces_per_person = truth["persoon"].map(NAMES.index).value_counts().reindex(range(len(NAMES)), fill_value=0).to_numpy()
     return {"hit": hit_matrix(detections, truth), "frame_id": frame_id, "truth_frames": truth_frames, "faces_per_person": faces_per_person}
+
+
+def grouped_bars(labels: list, first: list, second: list, names: tuple, title: str, path) -> None:
+    """Twee staafjes per groep, met de waarde erboven."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import numpy as np
+    x = np.arange(len(labels))
+    fig, ax = plt.subplots(figsize=(8.4, 3.9), facecolor="white")
+    for shift, values, name, colour in ((-0.19, first, names[0], "#2a78d6"), (0.19, second, names[1], "#eb6834")):
+        ax.bar(x + shift, values, width=0.34, color=colour, label=name)
+        for i, value in enumerate(values):
+            ax.text(i + shift, value + 0.015, f"{value:.3f}".replace(".", ","), ha="center", fontsize=9, color="#0b0b0b")
+    ax.set_xticks(x, labels, fontsize=9.5)
+    ax.set_ylim(0, 1)
+    ax.set_ylabel("F1", fontsize=9.5, color="#52514e")
+    ax.tick_params(length=0, labelsize=9, colors="#52514e")
+    ax.grid(axis="y", color="#e4e3de", linewidth=0.8)
+    ax.set_axisbelow(True)
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+    ax.legend(frameon=False, fontsize=9, loc="upper right")
+    ax.set_title(title, loc="left", fontsize=11, fontweight="bold", color="#0b0b0b")
+    fig.tight_layout()
+    fig.savefig(path, dpi=140)
+    plt.close(fig)

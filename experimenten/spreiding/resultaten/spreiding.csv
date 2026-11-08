@@ -1,0 +1,13 @@
+set,persoon,voorbeelden,maximale_afstand,gemiddelde_afstand,foto_1,foto_2
+out-of-character (foto's),Der Alte,5,1.059,0.79,derAlte3.png,derAlte4.jpg
+out-of-character (foto's),Fritz Grade,5,1.187,0.974,fritz1.png,fritz4.jpg
+out-of-character (foto's),Johann,7,0.962,0.795,Johann1.jpg,Johann3.jpg
+out-of-character (foto's),Werner,6,1.063,0.837,werner4.png,werner5.jpg
+in-character (stills),Der Alte,16,1.489,1.085,alte_and_fritz_and_werner2.png,werner3.jpg
+in-character (stills),Fritz Grade,14,1.34,1.049,johann_and_fritz.png,alte_and_fritz_and_werner2.png
+in-character (stills),Johann,8,1.386,1.063,johann_and_fritz.png,alte_and_johann.jpg
+in-character (stills),Werner,12,1.4,1.079,werner_and_fritz.png,werner3.jpg
+totale set,Der Alte,21,1.489,1.062,alte_and_fritz_and_werner2.png,werner3.jpg
+totale set,Fritz Grade,19,1.505,1.118,fritz1.png,Fritz5.png
+totale set,Johann,15,1.443,1.079,Johann3.jpg,werner_and_johann.jpg
+totale set,Werner,18,1.4,1.03,werner_and_fritz.png,werner3.jpg

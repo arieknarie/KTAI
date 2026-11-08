@@ -1,0 +1,65 @@
+stills_met_baard,welke,werner_goed,werner_fout_benoemd,werner_gemist,werner_precisie,werner_recall,werner_f1,alle_precisie,alle_recall,alle_f1
+0,geen,1204,42,5290,0.966,0.185,0.311,0.239,0.373,0.292
+1,alte_and_fritz_and_werner.png,1204,42,5290,0.966,0.185,0.311,0.239,0.373,0.292
+1,alte_and_fritz_and_werner2.png,1208,42,5286,0.966,0.186,0.312,0.239,0.373,0.292
+1,werner_and_fritz.png,1803,66,4691,0.965,0.278,0.431,0.255,0.401,0.312
+1,werner3.jpg,1204,44,5290,0.965,0.185,0.311,0.239,0.373,0.292
+1,alte_and_werner3.jpg,1204,42,5290,0.966,0.185,0.311,0.239,0.373,0.292
+1,werner_and_johann.jpg,1208,63,5286,0.95,0.186,0.311,0.239,0.373,0.291
+2,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png,1208,42,5286,0.966,0.186,0.312,0.239,0.373,0.292
+2,alte_and_fritz_and_werner.png + werner_and_fritz.png,1803,66,4691,0.965,0.278,0.431,0.255,0.401,0.312
+2,alte_and_fritz_and_werner.png + werner3.jpg,1204,44,5290,0.965,0.185,0.311,0.239,0.373,0.292
+2,alte_and_fritz_and_werner.png + alte_and_werner3.jpg,1204,42,5290,0.966,0.185,0.311,0.239,0.373,0.292
+2,alte_and_fritz_and_werner.png + werner_and_johann.jpg,1208,63,5286,0.95,0.186,0.311,0.239,0.373,0.291
+2,alte_and_fritz_and_werner2.png + werner_and_fritz.png,1807,66,4687,0.965,0.278,0.432,0.255,0.402,0.312
+2,alte_and_fritz_and_werner2.png + werner3.jpg,1208,44,5286,0.965,0.186,0.312,0.239,0.373,0.292
+2,alte_and_fritz_and_werner2.png + alte_and_werner3.jpg,1208,42,5286,0.966,0.186,0.312,0.239,0.373,0.292
+2,alte_and_fritz_and_werner2.png + werner_and_johann.jpg,1212,63,5282,0.951,0.187,0.312,0.239,0.373,0.292
+2,werner_and_fritz.png + werner3.jpg,1803,68,4691,0.964,0.278,0.431,0.255,0.401,0.312
+2,werner_and_fritz.png + alte_and_werner3.jpg,1803,66,4691,0.965,0.278,0.431,0.255,0.401,0.312
+2,werner_and_fritz.png + werner_and_johann.jpg,1805,87,4689,0.954,0.278,0.43,0.255,0.401,0.312
+2,werner3.jpg + alte_and_werner3.jpg,1204,44,5290,0.965,0.185,0.311,0.239,0.373,0.292
+2,werner3.jpg + werner_and_johann.jpg,1208,65,5286,0.949,0.186,0.311,0.239,0.373,0.291
+2,alte_and_werner3.jpg + werner_and_johann.jpg,1208,63,5286,0.95,0.186,0.311,0.239,0.373,0.291
+3,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner_and_fritz.png,1807,66,4687,0.965,0.278,0.432,0.255,0.402,0.312
+3,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner3.jpg,1208,44,5286,0.965,0.186,0.312,0.239,0.373,0.292
+3,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + alte_and_werner3.jpg,1208,42,5286,0.966,0.186,0.312,0.239,0.373,0.292
+3,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner_and_johann.jpg,1212,63,5282,0.951,0.187,0.312,0.239,0.373,0.292
+3,alte_and_fritz_and_werner.png + werner_and_fritz.png + werner3.jpg,1803,68,4691,0.964,0.278,0.431,0.255,0.401,0.312
+3,alte_and_fritz_and_werner.png + werner_and_fritz.png + alte_and_werner3.jpg,1803,66,4691,0.965,0.278,0.431,0.255,0.401,0.312
+3,alte_and_fritz_and_werner.png + werner_and_fritz.png + werner_and_johann.jpg,1805,87,4689,0.954,0.278,0.43,0.255,0.401,0.312
+3,alte_and_fritz_and_werner.png + werner3.jpg + alte_and_werner3.jpg,1204,44,5290,0.965,0.185,0.311,0.239,0.373,0.292
+3,alte_and_fritz_and_werner.png + werner3.jpg + werner_and_johann.jpg,1208,65,5286,0.949,0.186,0.311,0.239,0.373,0.291
+3,alte_and_fritz_and_werner.png + alte_and_werner3.jpg + werner_and_johann.jpg,1208,63,5286,0.95,0.186,0.311,0.239,0.373,0.291
+3,alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner3.jpg,1807,68,4687,0.964,0.278,0.432,0.255,0.402,0.312
+3,alte_and_fritz_and_werner2.png + werner_and_fritz.png + alte_and_werner3.jpg,1807,66,4687,0.965,0.278,0.432,0.255,0.402,0.312
+3,alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner_and_johann.jpg,1809,87,4685,0.954,0.279,0.431,0.255,0.402,0.312
+3,alte_and_fritz_and_werner2.png + werner3.jpg + alte_and_werner3.jpg,1208,44,5286,0.965,0.186,0.312,0.239,0.373,0.292
+3,alte_and_fritz_and_werner2.png + werner3.jpg + werner_and_johann.jpg,1212,65,5282,0.949,0.187,0.312,0.239,0.373,0.292
+3,alte_and_fritz_and_werner2.png + alte_and_werner3.jpg + werner_and_johann.jpg,1212,63,5282,0.951,0.187,0.312,0.239,0.373,0.292
+3,werner_and_fritz.png + werner3.jpg + alte_and_werner3.jpg,1803,68,4691,0.964,0.278,0.431,0.255,0.401,0.312
+3,werner_and_fritz.png + werner3.jpg + werner_and_johann.jpg,1805,89,4689,0.953,0.278,0.43,0.255,0.401,0.312
+3,werner_and_fritz.png + alte_and_werner3.jpg + werner_and_johann.jpg,1805,87,4689,0.954,0.278,0.43,0.255,0.401,0.312
+3,werner3.jpg + alte_and_werner3.jpg + werner_and_johann.jpg,1208,65,5286,0.949,0.186,0.311,0.239,0.373,0.291
+4,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner3.jpg,1807,68,4687,0.964,0.278,0.432,0.255,0.402,0.312
+4,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner_and_fritz.png + alte_and_werner3.jpg,1807,66,4687,0.965,0.278,0.432,0.255,0.402,0.312
+4,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner_and_johann.jpg,1809,87,4685,0.954,0.279,0.431,0.255,0.402,0.312
+4,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner3.jpg + alte_and_werner3.jpg,1208,44,5286,0.965,0.186,0.312,0.239,0.373,0.292
+4,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner3.jpg + werner_and_johann.jpg,1212,65,5282,0.949,0.187,0.312,0.239,0.373,0.292
+4,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + alte_and_werner3.jpg + werner_and_johann.jpg,1212,63,5282,0.951,0.187,0.312,0.239,0.373,0.292
+4,alte_and_fritz_and_werner.png + werner_and_fritz.png + werner3.jpg + alte_and_werner3.jpg,1803,68,4691,0.964,0.278,0.431,0.255,0.401,0.312
+4,alte_and_fritz_and_werner.png + werner_and_fritz.png + werner3.jpg + werner_and_johann.jpg,1805,89,4689,0.953,0.278,0.43,0.255,0.401,0.312
+4,alte_and_fritz_and_werner.png + werner_and_fritz.png + alte_and_werner3.jpg + werner_and_johann.jpg,1805,87,4689,0.954,0.278,0.43,0.255,0.401,0.312
+4,alte_and_fritz_and_werner.png + werner3.jpg + alte_and_werner3.jpg + werner_and_johann.jpg,1208,65,5286,0.949,0.186,0.311,0.239,0.373,0.291
+4,alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner3.jpg + alte_and_werner3.jpg,1807,68,4687,0.964,0.278,0.432,0.255,0.402,0.312
+4,alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner3.jpg + werner_and_johann.jpg,1809,89,4685,0.953,0.279,0.431,0.255,0.402,0.312
+4,alte_and_fritz_and_werner2.png + werner_and_fritz.png + alte_and_werner3.jpg + werner_and_johann.jpg,1809,87,4685,0.954,0.279,0.431,0.255,0.402,0.312
+4,alte_and_fritz_and_werner2.png + werner3.jpg + alte_and_werner3.jpg + werner_and_johann.jpg,1212,65,5282,0.949,0.187,0.312,0.239,0.373,0.292
+4,werner_and_fritz.png + werner3.jpg + alte_and_werner3.jpg + werner_and_johann.jpg,1805,89,4689,0.953,0.278,0.43,0.255,0.401,0.312
+5,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner3.jpg + alte_and_werner3.jpg,1807,68,4687,0.964,0.278,0.432,0.255,0.402,0.312
+5,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner3.jpg + werner_and_johann.jpg,1809,89,4685,0.953,0.279,0.431,0.255,0.402,0.312
+5,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner_and_fritz.png + alte_and_werner3.jpg + werner_and_johann.jpg,1809,87,4685,0.954,0.279,0.431,0.255,0.402,0.312
+5,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner3.jpg + alte_and_werner3.jpg + werner_and_johann.jpg,1212,65,5282,0.949,0.187,0.312,0.239,0.373,0.292
+5,alte_and_fritz_and_werner.png + werner_and_fritz.png + werner3.jpg + alte_and_werner3.jpg + werner_and_johann.jpg,1805,89,4689,0.953,0.278,0.43,0.255,0.401,0.312
+5,alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner3.jpg + alte_and_werner3.jpg + werner_and_johann.jpg,1809,89,4685,0.953,0.279,0.431,0.255,0.402,0.312
+6,alte_and_fritz_and_werner.png + alte_and_fritz_and_werner2.png + werner_and_fritz.png + werner3.jpg + alte_and_werner3.jpg + werner_and_johann.jpg,1809,89,4685,0.953,0.279,0.431,0.255,0.402,0.312
