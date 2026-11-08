@@ -19,9 +19,5 @@ Dit is alles waar aan gewerkt wordt. Een vinkje betekent: klaar en op GitHub.
 - [ ] Convolutiefilter: herkenningsdichtheid op de tijdlijn (venster van 10 tot 20 beelden)
 - [ ] Wie wordt als Johann herkend op plekken waar Johann er niet is
 - [ ] De vectoren per persoon samenvoegen tot één gemiddelde vector
+- [ ] Werner met baard: meer foto's met baard in de in-karakter set, zelf gemaakt uit de gelabelde beelden
 - [ ] `README.md` over alle experimenten, en hoe je ze draait op Mac en Windows
-
-## Kan niet in code
-
-- Werner met baard: daarvoor zijn extra foto's nodig van Werner met baard.
-- De tekstpunten voor het verslag (τ, motivatie, opbouw, related work).
