@@ -60,7 +60,7 @@ We weten ook waar elk gezicht staat. Een naam van FaceNet telt alleen als goed a
 
 ## Zo maak je dit opnieuw
 
-Vanuit de map `experimenten` (installeren: zie [de uitleg over alle experimenten](../../../README.md)).
+Vanuit de map `experimenten` (installeren: zie [de uitleg over alle experimenten](../../../README.md#installeren-op-mac-en-windows)).
 
 Op een Mac:
 
