@@ -1,6 +1,6 @@
 # Werner met baard
 
-In de film heeft Werner vaak een baard. In dit experiment kijken we wat er gebeurt als er meer stills van Werner **met baard** in de in-karakter set zitten. Er zijn alleen stills gebruikt; beelden uit de filmpjes mogen geen voorbeeld zijn.
+In dit experiment kijken we wat er gebeurt als er meer stills van Werner **met baard** in de in-karakter set zitten. Er zijn alleen stills gebruikt; beelden uit de filmpjes mogen geen voorbeeld zijn.
 
 ## Hoe we het gedaan hebben
 
