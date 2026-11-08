@@ -1,0 +1,58 @@
+item,persoon,x,y,w,h,herkomst
+photo:pictures/personal/Werner/werner4.jpg,Werner,197,49,105,105,stap_1
+photo:pictures/personal/Werner/werner5.jpg,Werner,387,74,100,100,stap_1
+still:still_01,Fritz Grade,226,287,63,63,stap_1
+still:still_01,Der Alte,448,265,105,105,stap_1
+still:still_01,Werner,656,263,85,85,stap_1
+still:still_02,Fritz Grade,81,76,164,173,stap_1
+still:still_04,Der Alte,182,127,104,104,stap_1
+still:still_05,Fritz Grade,507,200,245,245,stap_1
+still:still_06,Der Alte,203,118,205,205,stap_1
+still:still_07,Der Alte,220,17,113,113,stap_1
+still:still_07,Werner,428,88,60,60,stap_1
+still:still_08,Johann,467,185,207,207,stap_1
+still:still_09,Fritz Grade,140,233,131,131,stap_3
+still:still_09,Der Alte,327,104,139,139,stap_3
+still:still_10,Johann,202,100,198,198,stap_1
+still:still_11,Fritz Grade,814,159,211,211,stap_1
+still:still_12,Johann,408,114,366,366,stap_1
+still:still_13,Der Alte,93,62,34,34,stap_1
+still:still_13,Werner,224,99,33,33,stap_1
+still:still_14,Werner,62,138,73,73,stap_1
+still:still_14,Der Alte,223,99,98,98,stap_1
+still:still_14,Fritz Grade,500,135,78,78,stap_1
+still:still_15,Johann,152,107,50,50,stap_1
+still:still_15,Fritz Grade,198,136,56,56,stap_1
+still:still_16,Fritz Grade,267,148,339,339,stap_1
+still:still_16,Werner,620,64,142,142,stap_1
+still:still_17,Der Alte,274,451,148,148,stap_1
+still:still_17,Fritz Grade,486,137,440,440,stap_1
+still:still_18,Der Alte,266,96,133,133,stap_1
+still:still_18,Fritz Grade,475,54,52,52,stap_1
+still:still_19,Johann,24,20,204,204,stap_1
+still:still_20,Werner,334,144,64,64,stap_1
+still:still_20,Fritz Grade,406,168,72,72,stap_1
+still:still_20,Der Alte,513,111,96,96,stap_1
+still:still_21,Johann,566,187,220,220,stap_1
+still:still_22,Werner,339,198,245,245,stap_1
+still:still_22,Fritz Grade,641,117,348,348,stap_1
+still:still_23,Der Alte,255,51,496,496,stap_1
+still:still_23,Fritz Grade,842,328,284,284,stap_1
+still:still_24,Der Alte,446,64,411,411,stap_1
+still:still_25,Der Alte,6,142,1235,557,stap_1
+still:still_26,Werner,81,145,107,107,stap_1
+still:still_27,Der Alte,435,199,287,287,stap_1
+still:still_27,Johann,813,132,187,187,stap_1
+still:still_28,Werner,217,36,35,35,stap_1
+still:still_28,Der Alte,438,294,31,31,stap_1
+still:still_29,Werner,134,143,90,90,stap_1
+still:still_29,Der Alte,709,118,159,159,stap_1
+still:still_30,Werner,102,107,97,97,stap_1
+still:still_30,Der Alte,355,99,103,103,stap_1
+still:still_30,Fritz Grade,534,155,78,78,stap_1
+still:still_31,Werner,812,279,195,195,stap_3
+still:still_31,Johann,409,390,112,112,stap_3
+still:still_32,Werner,134,271,159,159,stap_1
+still:still_32,Der Alte,350,178,213,213,stap_1
+still:still_32,Fritz Grade,777,231,230,230,stap_1
+still:still_33,Johann,809,436,219,219,stap_1

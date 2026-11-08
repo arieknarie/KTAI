@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.DS_Store
+# een nieuwe uitkomst naast een vastgelegd bestand (zie labelen/gedeeld/frozen.py)
+*.nieuw.*
+# tussenbestanden van stap 0 die de programma's zelf opnieuw maken
+labelen/output/stap_0_voorbereiding/tracks/raw/
+labelen/output/stap_0_voorbereiding/controle/alle_tracks/
+labelen/output/stap_0_voorbereiding/controle/alle_beelden/
+# proefuitkomsten van stap 2 en 3 (--uitvoer proef)
+labelen/proef/

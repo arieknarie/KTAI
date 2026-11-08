@@ -1,0 +1,7 @@
+backups/
+.labelapp.lock
+.labelapp.port
+labels_*.tmp
+# De keuzes die de app op deze computer bewaart. Die gaan niet mee naar GitHub: als het labelen klaar is, komt
+# labels.csv in de map output/stap_1_tracks_labelen/ (zie labelen/README.md).
+labels.csv

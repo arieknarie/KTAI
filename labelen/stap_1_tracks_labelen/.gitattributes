@@ -1,0 +1,3 @@
+# Windows-startbestand met Windows-regeleinden, Mac-startbestand met Mac/Linux-regeleinden.
+*.bat eol=crlf
+*.command eol=lf

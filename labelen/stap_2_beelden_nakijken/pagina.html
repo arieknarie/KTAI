@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Controle labels</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #111; color: #eee; font: 15px system-ui, sans-serif; }
+  #bar { min-height: 44px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; padding: 6px 16px; box-sizing: border-box; }
+  #bar span { white-space: nowrap; }
+  #title { font-weight: 600; }
+  #before { color: #ffd11a; }
+  #gone { background: #d1495b; color: #fff; font-weight: 600; padding: 4px 10px; border-radius: 4px; }
+  #gone:empty { display: none; }
+  #hint { margin-left: auto; color: #aaa; }
+  #stage { position: relative; margin: 0 auto; }
+  #stage.loading { opacity: 0.3; }
+  #stage img { display: block; width: 100%; height: 100%; }
+  .box { position: absolute; border: 3px solid; box-sizing: border-box; }
+  .box span { position: absolute; left: -3px; bottom: 100%; padding: 1px 6px; font-weight: 600; white-space: nowrap; color: #111; }
+  .box.top span { bottom: auto; top: 0; }
+</style></head><body>
+<div id="bar"><span id="title">laden…</span><span id="count"></span><span id="before"></span><span id="gone"></span>
+<span id="hint">← goed &nbsp;&nbsp; → fout &nbsp;&nbsp; Backspace terug</span></div>
+<div id="stage" class="loading"><img id="img" alt=""></div>
+<script>
+const COLOURS = { "Der Alte": "#ff4d4d", "Fritz Grade": "#4da6ff", "Johann": "#ffd11a", "Werner": "#33cc66" };
+const $ = id => document.getElementById(id);
+let items = [], done = {}, i = 0, ready = false;
+
+function fit() {
+  if (i >= items.length) return;
+  const t = items[i], s = Math.min(innerWidth / t.w, (innerHeight - $("bar").offsetHeight) / t.h);
+  $("stage").style.width = t.w * s + "px";
+  $("stage").style.height = t.h * s + "px";
+}
+
+function count() {
+  const v = Object.values(done);
+  $("count").textContent = `gedaan ${v.length} van ${items.length}, fout ${v.filter(o => o === "fout").length}`;
+}
+
+function show() {
+  ready = false;
+  count();
+  document.querySelectorAll(".box").forEach(b => b.remove());
+  if (i >= items.length) {
+    $("title").textContent = "Klaar: alles is nagelopen (Backspace = terug)";
+    $("stage").style.display = "none";
+    $("before").textContent = "";
+    $("gone").textContent = "";
+    return;
+  }
+  const t = items[i];
+  $("stage").style.display = "";
+  $("stage").className = "loading";
+  $("title").textContent = t.title + " (laden…)";
+  $("before").textContent = done[t.key] ? "eerder: " + done[t.key] : "";
+  const g = t.gone.length > 1 ? t.gone.slice(0, -1).join(", ") + " en " + t.gone.at(-1) : t.gone[0];
+  $("gone").textContent = g ? `Let op: ${g} ${t.gone.length > 1 ? "stonden" : "stond"} in het vorige beeld wel, nu niet` : "";
+  fit();
+  $("img").onload = () => {
+    for (const [name, x, y, w, h] of t.boxes) {
+      const b = document.createElement("div"), c = COLOURS[name] || "#ffffff";
+      b.className = "box" + (y / t.h < 0.04 ? " top" : "");
+      Object.assign(b.style, { left: 100 * x / t.w + "%", top: 100 * y / t.h + "%",
+                               width: 100 * w / t.w + "%", height: 100 * h / t.h + "%", borderColor: c });
+      const s = document.createElement("span");
+      s.textContent = name;
+      s.style.background = c;
+      b.appendChild(s);
+      $("stage").appendChild(b);
+    }
+    $("stage").className = "";
+    $("title").textContent = t.title;
+    ready = true;
+  };
+  $("img").onerror = () => { $("title").textContent = t.title + ": het beeld kon niet geladen worden"; };
+  $("img").src = "/image/" + i;
+}
+
+addEventListener("keydown", e => {
+  if (e.key === "Backspace") {
+    e.preventDefault();
+    if (i > 0) { i--; show(); }
+    return;
+  }
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  e.preventDefault();
+  if (e.repeat || !ready) return;
+  const t = items[i], verdict = e.key === "ArrowLeft" ? "goed" : "fout";
+  fetch("/oordeel", { method: "POST", body: JSON.stringify({ item: t.key, oordeel: verdict }) })
+    .then(r => { if (!r.ok) throw new Error(); })
+    .catch(() => alert("Het oordeel over " + t.title + " is NIET opgeslagen. Draait het programma nog?"));
+  done[t.key] = verdict;
+  i++;
+  show();
+});
+addEventListener("resize", fit);
+
+fetch("/items").then(r => r.json()).then(d => {
+  items = d.items;
+  done = d.done;
+  i = items.findIndex(t => !(t.key in done));
+  if (i < 0) i = items.length;
+  show();
+});
+</script></body></html>
