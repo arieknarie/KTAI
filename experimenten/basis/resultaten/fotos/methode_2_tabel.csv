@@ -1,0 +1,6 @@
+acteur,gezichten,goed,fout_benoemd,gemist,geen_kader,geen_naam,andere_naam,precisie,recall,f1
+Der Alte,8326,80,0,8246,707,7537,2,1.0,0.01,0.019
+Fritz Grade,5321,176,60,5145,515,4630,0,0.746,0.033,0.063
+Johann,849,0,0,849,61,779,9,0.0,0.0,0.0
+Werner,6494,548,1,5946,328,5613,5,0.998,0.084,0.156
+samen,20990,804,61,20186,1611,18559,16,0.929,0.038,0.074

@@ -9,3 +9,5 @@ labelen/output/stap_0_voorbereiding/controle/alle_tracks/
 labelen/output/stap_0_voorbereiding/controle/alle_beelden/
 # proefuitkomsten van stap 2 en 3 (--uitvoer proef)
 labelen/proef/
+# de vectoren van alle kaders (de experimenten maken ze opnieuw)
+experimenten/tussenbestanden/

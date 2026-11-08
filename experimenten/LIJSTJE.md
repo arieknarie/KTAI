@@ -8,9 +8,9 @@ Dit is alles waar aan gewerkt wordt. Een vinkje betekent: klaar en op GitHub.
 
 ## Experimenten
 
-- [ ] `basis/`: FaceNet standaard, met foto's en met foto's + kostuum: code in stappen, map `resultaten`, beide meetmethodes (per beeld en per gezicht) met een keuze voor de tweede, een filmpje en md's
+- [x] `basis/`: FaceNet standaard, met foto's en met foto's + kostuum: code in stappen, map `resultaten`, beide meetmethodes (per beeld en per gezicht) met een keuze voor de tweede, een filmpje en md's
 - [ ] `tuned/`: hetzelfde met de best mogelijke instellingen, ook voor beide sets foto's
-- [ ] Rapporteren welke foto precies gebruikt is voor elke identificatie
+- [x] Rapporteren welke foto precies gebruikt is voor elke identificatie
 - [ ] Moving average filter op de detectie (onder 0,2 geen detectie, boven 0,7 wel)
 - [ ] Spreiding binnen een karakter en kleinste afstand tussen karakters, voor out-of-character, in-character en de totale set, met figuren
 - [ ] Testen of FaceNet bij een onherkenbaar beeld kiest voor het karakter met de grootste spreiding

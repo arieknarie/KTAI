@@ -1,0 +1,11 @@
+# Python 3.12. Installeren (vanuit de map experimenten):
+#   Mac:     python3.12 -m venv .venv && .venv/bin/pip install -r requirements.txt
+#   Windows: py -3.12 -m venv .venv && .venv\Scripts\pip install -r requirements.txt
+# De eerste keer haalt deepface de gewichten van FaceNet op (ongeveer 90 MB per model, in de map .deepface in je thuismap).
+deepface==0.0.101
+tensorflow==2.21.0
+tf-keras==2.21.0
+pandas==3.0.6
+numpy==2.5.4
+opencv-contrib-python==5.0.0.93
+matplotlib==3.11.2
