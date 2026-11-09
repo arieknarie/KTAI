@@ -6,7 +6,7 @@
 
 ![Eén beeld door het hele proces: het filmpje, de gevonden kaders, de labels per track, het nakijken, het verbeteren en de ground truth](fotos/overzicht.jpg)
 
-*Zo lees je dit plaatje: één beeld (Das Boot 1, beeld 23) gaat van links naar rechts en van boven naar onder door het hele proces. De computer vond vijf kaders. Bij het labelen kreeg elk kader de keuze van zijn track. Bij het nakijken bleek dat er een persoon ontbrak, en bij het verbeteren kwam dat kader erbij. De getallen onder elk plaatje gaan over alle filmpjes samen.*
+*Zo lees je dit plaatje: één beeld (Das Boot 1, beeld 23) gaat van links naar rechts en van boven naar onder door het hele proces. De computer vond vijf kaders. Bij het labelen kreeg elk kader de naam die voor zijn hele track gekozen was. Bij het nakijken bleek dat er een persoon ontbrak, en bij het verbeteren kwam dat kader erbij. De getallen onder elk plaatje gaan over alle filmpjes samen.*
 
 **In deze uitleg:**
 [De uitkomst](#de-uitkomst-de-ground-truth) ·
@@ -45,17 +45,6 @@ In het bestand staan ook de kolommen `fragment` (Video 1 tot en met 8), `bestand
 
 ## Het labelen in vier stappen
 
-Bij elk gezicht in elk beeld met de hand zeggen wie het is, zou 37.003 keer kiezen betekenen. Daarom zoekt en volgt de computer eerst de gezichten, zodat een mens alleen per track hoeft te kiezen. Dat gaat snel, maar een track laat maar één beeld zien, en de computer mist ook gezichten. Daarom is daarna elk beeld nagekeken, en is elk fout beeld met de hand verbeterd.
-
-| Stap | Wat er gebeurt | Code | Uitkomst |
-|---|---|---|---|
-| **0. Voorbereiding** | De computer zoekt de gezichten, volgt ze en zet alles klaar om te labelen. | [`stap_0_voorbereiding/`](stap_0_voorbereiding/) | 37.003 kaders in 1.387 tracks |
-| **1. Per track labelen** | Een mens kiest per track wie het is. | [`stap_1_tracks_labelen/`](stap_1_tracks_labelen/) | 1.482 keuzes |
-| **2. Per beeld nakijken** | Een mens bekijkt elk beeld met de namen erbij en zegt goed of fout. | [`stap_2_beelden_nakijken/`](stap_2_beelden_nakijken/) | 9.516 keer goed, 1.701 keer fout |
-| **3. Foute beelden verbeteren** | Een mens zet in elk fout beeld de kaders van de vier personen goed. Daarna worden alle stappen samengevoegd. | [`stap_3_fouten_verbeteren/`](stap_3_fouten_verbeteren/) | de ground truth |
-
-De uitkomst van elke stap is de invoer van de volgende stap. Elke stap heeft een eigen map met code en een eigen map in [`output/`](output/).
-
 **De woorden die je hier nodig hebt:**
 
 | Woord | Wat het betekent |
@@ -71,14 +60,24 @@ De uitkomst van elke stap is de invoer van de volgende stap. Elke stap heeft een
 
 In [de woordenlijst met plaatjes](../experimenten/README.md#woordenlijst) zie je hoe een kader en een track eruitzien.
 
+**De vier stappen.** Bij elk gezicht in elk beeld met de hand zeggen wie het is, zou 37.003 keer kiezen betekenen. Daarom zoekt en volgt de computer eerst de gezichten, zodat een mens alleen per track hoeft te kiezen. Dat gaat snel, maar de labelaar ziet van een track maar één beeld, en de computer mist ook gezichten. Daarom is daarna elk beeld nagekeken, en is elk fout beeld met de hand verbeterd.
+
+| Stap | Wat er gebeurt | Code | Uitkomst |
+|---|---|---|---|
+| **0. Voorbereiding** | De computer zoekt de gezichten, volgt ze en zet alles klaar om te labelen. | [`stap_0_voorbereiding/`](stap_0_voorbereiding/) | 37.003 kaders in 1.387 tracks |
+| **1. Per track labelen** | Een mens kiest per track wie het is. | [`stap_1_tracks_labelen/`](stap_1_tracks_labelen/) | 1.482 keuzes |
+| **2. Per beeld nakijken** | Een mens bekijkt elk beeld met de namen erbij en zegt goed of fout. | [`stap_2_beelden_nakijken/`](stap_2_beelden_nakijken/) | 9.516 keer goed, 1.701 keer fout |
+| **3. Foute beelden verbeteren** | Een mens zet in elk fout beeld de kaders van de vier personen goed. Daarna worden alle stappen samengevoegd. | [`stap_3_fouten_verbeteren/`](stap_3_fouten_verbeteren/) | de ground truth |
+
+De uitkomst van elke stap is de invoer van de volgende stap. Elke stap heeft een eigen map met code en een eigen map in [`output/`](output/).
 
 ## Stap 0: de gezichten vinden en volgen
 
-**Waarom.** Een mens kan niet 37.003 keer kiezen. Daarom zoekt de computer de gezichten, en plakt de computer de kaders van hetzelfde gezicht aan elkaar tot tracks. Dan hoeft een mens per track maar één keer te kiezen. De uitkomsten van deze stap liggen vast, dus deze stap hoef je niet opnieuw te doen.
+**Waarom.** De computer zoekt de gezichten en plakt de kaders van hetzelfde gezicht aan elkaar tot tracks. De uitkomsten van deze stap liggen vast, dus deze stap hoef je niet opnieuw te doen.
 
 ### Hoe het werkte
 
-**1. Gezichten zoeken.** De MediaPipe Face Detector bekijkt elk beeld van elk filmpje. Standaard telt de detector alleen kaders met een score van minstens 0,5. In de donkere, drukke scènes mist de detector dan veel gezichten. Daarom bewaren we alles vanaf 0,3. Een kader dat geen gezicht blijkt, is geen probleem: bij het labelen wordt dat *Geen gezicht*. Een gezicht zonder kader is wel een probleem, want dat komt niet vanzelf in de ground truth.
+**1. Gezichten zoeken.** De MediaPipe Face Detector bekijkt elk beeld van elk filmpje. Standaard telt de detector alleen kaders met een score van minstens 0,5. In de donkere, drukke scènes mist de detector dan veel gezichten. Daarom bewaren we alles vanaf 0,3. Kaders met een score van 0,2 tot 0,3 gebruiken we alleen om een track te laten doorlopen. Een kader dat geen gezicht blijkt, is geen probleem: bij het labelen wordt dat *Geen gezicht*. Een gezicht zonder kader is wel een probleem, want dat komt niet vanzelf in de ground truth.
 
 ![Hetzelfde beeld met de grens 0,5 en de grens 0,3](fotos/stap0_drempel.jpg)
 
@@ -88,16 +87,16 @@ In [de woordenlijst met plaatjes](../experimenten/README.md#woordenlijst) zie je
 
 ![Zes beelden uit één track](fotos/stap0_track.jpg)
 
-*Zes beelden uit één track in Das Boot 4b. Het groene kader blijft op hetzelfde gezicht, ook als het gezicht beweegt. De grijze kaders zijn andere tracks.*
+*Zes beelden uit één track in Das Boot 4b (het tweede stuk van Video 4). Het groene kader blijft op hetzelfde gezicht, ook als het gezicht beweegt. De grijze kaders zijn andere tracks.*
 
 ![Twee beelden na elkaar met een beeldwissel ertussen](fotos/stap0_beeldwissel.jpg)
 
-*Een beeldwissel in Das Boot 5. De kleuren lijken nog op elkaar (0,95), maar het licht-donkerpatroon zakt naar -0,19. De computer laat hier alle tracks stoppen.*
+*Een beeldwissel in Video 5. De computer vergelijkt elk beeld op twee manieren met het vorige beeld: de kleuren en het licht-donkerpatroon. Hoe hoger het getal, hoe meer de beelden op elkaar lijken. Hier lijken de kleuren nog op elkaar (0,95), maar het licht-donkerpatroon niet meer (-0,19). De computer laat hier alle tracks stoppen.*
 
 <details>
 <summary><b>De zes regels van het volgen</b> (klik om open te klappen)</summary>
 
-1. **Let op beeldwissels.** Lijkt een beeld te weinig op het vorige beeld (kleur lager dan 0,9 of licht-donkerpatroon lager dan 0,7), dan stoppen alle tracks.
+1. **Let op beeldwissels.** Lijkt een beeld te weinig op het vorige beeld (gelijkenis van de kleuren lager dan 0,9, of gelijkenis van het licht-donkerpatroon lager dan 0,7), dan stoppen alle tracks.
 2. **Het kader moet bijna op dezelfde plek staan.** Het nieuwe kader en het laatste kader van de track moeten minstens 30% overlappen.
 3. **De omgeving moet nog hetzelfde zijn.** Een ruim gebied rond het kader moet nog lijken op hetzelfde gebied in het vorige beeld (gelijkenis minstens 0,6).
 4. **Een gezicht mag even weg zijn.** Is er geen passend kader, dan wacht de computer hoogstens 12 beelden (een halve seconde), maar nooit over een beeldwissel heen.
@@ -108,17 +107,18 @@ Een fout in de ground truth is erger dan extra werk. Daarom zijn de regels stren
 
 </details>
 
-**3. Alle tracks controleren.** Een track krijgt maar één label, dus het kader mag niet halverwege naar een ander gezicht springen. Daarom is elke track van twee of meer kaders kader voor kader bekeken: 810 tracks met samen 36.506 kaders. In 44 tracks stond het kader voor een deel op iets anders (285 kaders, 0,8% van alle kaders). Die tracks zijn op die plekken geknipt. Daardoor werden het 1.387 tracks.
+**3. Alle tracks controleren.** Een track krijgt maar één label, dus het kader mag niet halverwege naar een ander gezicht springen. Daarom is elke track van twee of meer kaders kader voor kader bekeken: 810 tracks met samen 36.506 kaders. In 44 tracks stond het kader voor een deel op iets anders (285 kaders, 0,8% van alle kaders). Die tracks zijn op die plekken geknipt. Naast die 810 tracks waren er 497 tracks van één kader, samen 1.307. Door het knippen werden het 1.387 tracks.
 
 ![Alle uitsneden van een track die naar een ander gezicht overspringt](fotos/stap0_controle_wissel.jpg)
 
 *Een track die overspringt: tot en met beeld 818 staat het groene kader op het gezicht vooraan, in beeld 819 springt het kader naar het gezicht erachter. Na het knippen zijn het twee tracks.*
 
-Ook elk van de 11.182 beelden is bekeken om te tellen hoe vaak de detector een gezicht mist. Daarbij hadden 10.867 gezichten geen kader (een gezicht dat in 50 beelden gemist wordt, telt 50 keer), en stonden 4.691 kaders niet op een gezicht. De detector alleen was dus niet genoeg. Daarom waren stap 2 en 3 nodig.
+Ook elk van de 11.182 beelden is bekeken om te tellen hoe vaak de detector een gezicht mist. Daarbij hadden 10.867 gezichten geen kader, ook gezichten van figuranten (een gezicht dat in 50 beelden gemist wordt, telt 50 keer). Ook stonden 4.691 kaders niet op een gezicht. De detector alleen was dus niet genoeg. Daarom waren stap 2 en 3 nodig.
 
 **4. Klaarzetten om te labelen.** Van elke track kiest het programma één beeld om te laten zien: het beeld waarin het kader groot is en de detector het zekerst is. Dat beeld komt in de labelapp.
 
-### Zo doe je het
+<details>
+<summary><b>Zelf doen op een Mac en op Windows</b> (klik om open te klappen)</summary>
 
 Dit is alleen nodig als je de uitkomsten zelf opnieuw wilt maken. Installeren staat [verderop](#installeren-op-mac-en-windows). Zoeken en volgen duurt ongeveer een uur.
 
@@ -141,6 +141,8 @@ Op Windows, vanuit de map `labelen`:
 Het eerste script zoekt en volgt de gezichten, het tweede maakt plaatjes om de tracks te controleren, en het derde zet alles klaar voor de labelapp. Met `--beelden` achter het tweede script komen er ook plaatjes van elk beeld (samen ongeveer 1,5 GB).
 
 Geeft een programma een andere uitkomst dan de vastgelegde bestanden, dan schrijft het programma de nieuwe uitkomst ernaast, als `<naam>.nieuw.<ext>`. Waarom, staat bij [Waar je op moet letten](#waar-je-op-moet-letten).
+
+</details>
 
 ### Wat eruit kwam
 
@@ -202,7 +204,8 @@ De labelapp draait op de eigen computer en werkt in de browser. Er gaat niets vi
 
 </details>
 
-### Zo doe je het
+<details>
+<summary><b>Zelf doen op een Mac en op Windows</b> (klik om open te klappen)</summary>
 
 De labelapp heeft alleen Python nodig (versie 3.8 of nieuwer), geen extra pakketten. De echte labels staan al in `output/`. Start je de app, dan begint de app met een lege lijst in een eigen bestand. De echte uitkomst verandert daar niet door.
 
@@ -255,6 +258,8 @@ De app heeft 310 automatische tests: kiezen met muis en toetsen, verdergaan na e
 ```bash
 bash stap_1_tracks_labelen/tests/run_tests.sh
 ```
+
+</details>
 
 </details>
 
@@ -313,7 +318,8 @@ Het programma laat achter elkaar alle 11.182 beelden zien, en daarna de 35 gelab
 
 De beelden worden altijd op volgorde uit de video gelezen. Direct naar een beeldnummer springen is niet betrouwbaar: OpenCV geeft dan soms het beeld ervoor, en dan staat een kader op het verkeerde beeld.
 
-### Zo doe je het
+<details>
+<summary><b>Zelf doen op een Mac en op Windows</b> (klik om open te klappen)</summary>
 
 Start het programma vanuit de map `labelen`. De pagina opent vanzelf in de browser. Stoppen doe je met Ctrl+C in de terminal.
 
@@ -336,6 +342,8 @@ Op Windows:
 | **Backspace** | Eén beeld terug. Bij een nieuw oordeel over een beeld telt het laatste oordeel. |
 
 Elk oordeel komt meteen in het bestand. Stop je en start je later opnieuw, dan ga je verder bij het eerste beeld zonder oordeel. Alle beelden hebben al een oordeel. Wil je het programma alleen proberen, zet er dan `--uitvoer proef` achter. De echte uitkomst verandert dan niet.
+
+</details>
 
 ### Wat eruit kwam
 
@@ -364,7 +372,8 @@ Het programma laat alleen de 1.701 foute beelden zien, één voor één.
 - **Doorwerken zonder alles opnieuw te doen.** In het volgende foute beeld staan dezelfde kaders al op dezelfde plek. In een reeks foute beelden na elkaar hoef je meestal alleen te controleren en op Enter te drukken.
 - **Terug is echt terug.** Met Backspace ga je een fout beeld terug, en worden de verbeteringen van dat beeld en alle beelden erna gewist.
 
-### Zo doe je het
+<details>
+<summary><b>Zelf doen op een Mac en op Windows</b> (klik om open te klappen)</summary>
 
 Start het programma vanuit de map `labelen`.
 
@@ -405,6 +414,8 @@ Op Windows:
 
 Het programma voegt alles samen. Kreeg een beeld in stap 2 *goed*, dan tellen de kaders uit stap 1. Kreeg een beeld *fout*, dan tellen de verbeterde kaders uit stap 3.
 
+</details>
+
 ### Wat eruit kwam
 
 Alle 1.701 foute beelden zijn verbeterd, in [`output/stap_3_fouten_verbeteren/correcties.csv`](output/stap_3_fouten_verbeteren/correcties.csv).
@@ -422,7 +433,7 @@ In de 1.699 foute beelden uit de filmpjes veranderde dit:
 | Een persoon weggehaald | 155 |
 | Bleef ongeveer hetzelfde | 1.913 |
 
-Meestal ging het dus om een persoon die wel in beeld is maar nog geen kader had. Van de 3.892 kaders in de verbeterde beelden hadden er 1.607 (41%) geen kader van de detector op die plek. Zonder deze stap hadden die gezichten niet in de ground truth gestaan.
+Meestal ging het dus om een persoon die wel in beeld is maar nog geen kader had. Van de 3.892 kaders in de verbeterde beelden zijn er 1.607 (41%) met de hand gezet, omdat de detector op die plek niets had gevonden. Zonder deze stap hadden die gezichten niet in de ground truth gestaan.
 
 <details>
 <summary><b>Hoe het bestand eruitziet</b> (klik om open te klappen)</summary>
@@ -450,12 +461,12 @@ Een *los stuk* is een aaneengesloten stuk film waarin een persoon in beeld is. H
 
 *Zo lees je dit plaatje: elke regel is een persoon, en de tijd loopt van links naar rechts. Grijs klopte al na stap 1. Oranje is erbij gekomen door stap 2 en 3, en blauw is weggehaald. De gaten zijn dus grotendeels gevuld.*
 
-De ground truth laat nu veel beter zien wanneer iemand in beeld is. Dat is precies wat het project moet meten.
+De ground truth laat nu veel beter zien wanneer iemand in beeld is. Dat is nodig, want de namen van FaceNet worden hiermee vergeleken.
 
-**Hoe we weten dat dit klopt.**
+**Hoe we de bestanden en de code gecontroleerd hebben.** Of de namen zelf kloppen, is in stap 2 nagekeken door één persoon.
 
 - **De bestanden zijn nog precies dezelfde.** `0_check_setup.py` controleert de 12 videobestanden, de pixels van alle beelden, de foto's en de vastgelegde uitkomsten.
-- **De code doet nog hetzelfde.** Stap 0 is in deze indeling opnieuw gedraaid en gaf precies dezelfde tracks en dezelfde bestanden voor de labelapp.
+- **De code doet nog hetzelfde.** Stap 0 is in de mappenindeling van deze versie opnieuw gedraaid en gaf precies dezelfde tracks en dezelfde bestanden voor de labelapp.
 - **De labelapp is getest.** Alle 310 automatische tests slagen.
 - **De ground truth is los nageteld.** Een apart programma kwam op dezelfde aantallen per persoon uit.
 
