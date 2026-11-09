@@ -41,6 +41,12 @@ from gedeeld.voorbeelden import rows
 from instellingen import ASSIGN, DECIDE, KEYS, LIGHT, MARGINS, METRICS, MODELS, PER_PERSON, SETS, THRESHOLDS, example_path, folder
 
 
+SETTINGS = {"model": "Model", "marge": "Extra ruimte", "lichter": "Lichter maken", "afstand": "Soort afstand", "per_persoon": "Vergelijken met",
+            "toewijzen": "Naam in een beeld", "beslissen": "Beslissen"}
+CHOICES = {"euclidean_l2": "genormaliseerd", "cosine": "cosinus", "euclidean": "gewoon", "dichtstbij": "beste foto", "gemiddelde": "gemiddelde",
+           "uniek": "elk één keer", "los": "mag vaker", "track": "per track", "kader": "per kader"}
+
+
 def sweep(person, distance, hit, face_part, box_part, parts, thresholds):
     """Per filmpje en per drempel hoeveel gezichten goed zijn en hoeveel kaders fout benoemd zijn (methode 2)."""
     named = person >= 0
@@ -139,25 +145,26 @@ def main() -> None:
     best["f1_eerlijke_schatting"] = rates(g, w, int(faces.sum()) - g)[2]
     (out / "beste_instelling.json").write_text(json.dumps(best, indent=1, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
 
-    # per instelling: de beste F1 per keuze
-    fig, axes = plt.subplots(1, len(KEYS), figsize=(2.15 * len(KEYS), 3.2), sharey=True, facecolor="white")
+    # per instelling: de hoogste score die met elke keuze te halen is; de keuze van de winnaar staat in blauw
+    fig, axes = plt.subplots(1, len(KEYS), figsize=(2.25 * len(KEYS), 3.5), sharey=True, facecolor="white")
     for ax, key in zip(axes, KEYS):
         values = overview.groupby(key, sort=False)["f1"].max()
-        labels = [("ja" if v is True else "nee" if v is False else f"{v:.0%}" if isinstance(v, float) else str(v)) for v in values.index]
-        ax.bar(labels, values.to_numpy(), width=0.55, color="#2a78d6")
+        labels = [("ja" if v is True else "nee" if v is False else f"{v:.0%}" if isinstance(v, float) else CHOICES.get(str(v), str(v))) for v in values.index]
+        ax.bar(labels, values.to_numpy(), width=0.6, color=["#2a78d6"] + ["#c9c8c2"] * (len(values) - 1))
         for i, v in enumerate(values):
-            ax.text(i, v + 0.008, f"{v:.3f}".replace(".", ","), ha="center", fontsize=7.5, color="#0b0b0b")
-        ax.set_title(key.replace("_", " "), fontsize=9.5, color="#0b0b0b")
-        ax.tick_params(axis="x", labelsize=7.5, rotation=30, length=0, colors="#52514e")
+            ax.text(i, v + 0.012, f"{v:.3f}".replace(".", ","), ha="center", fontsize=8, color="#0b0b0b")
+        ax.set_title(SETTINGS[key], fontsize=10, color="#0b0b0b", fontweight="bold")
+        ax.tick_params(axis="x", labelsize=8.5, rotation=35, length=0, colors="#52514e")
         ax.tick_params(axis="y", labelsize=8, length=0, colors="#52514e")
         ax.grid(axis="y", color="#e4e3de", linewidth=0.8)
         ax.set_axisbelow(True)
         for spine in ax.spines.values():
             spine.set_visible(False)
-    axes[0].set_ylabel("beste F1 (methode 2)", fontsize=9, color="#52514e")
-    axes[0].set_ylim(0, 1)
-    fig.suptitle(f"Beste F1 per keuze ({title})", x=0.01, ha="left", fontsize=11, fontweight="bold", color="#0b0b0b")
-    fig.tight_layout(rect=(0, 0, 1, 0.93))
+    axes[0].set_ylabel("hoogste score (F1 per gezicht)", fontsize=9, color="#52514e")
+    axes[0].set_ylim(0, 1.08)
+    axes[0].set_yticks(np.arange(0, 1.01, 0.2))
+    fig.suptitle(f"Hoe hoog komt de score met elke keuze? Blauw is de keuze van de winnaar ({EXAMPLE_SETS[args.voorbeelden]}).", x=0.01, ha="left", fontsize=11, fontweight="bold", color="#0b0b0b")
+    fig.tight_layout(rect=(0, 0, 1, 0.94))
     fig.savefig(out / "afstellen_per_instelling.png", dpi=140)
     plt.close(fig)
     print(json.dumps(best, ensure_ascii=False))

@@ -1,8 +1,21 @@
-# Tuned (voorbeelden: foto's + stills in kostuum)
+# De uitkomsten van tuned: foto's + stills in kostuum
 
-In dit experiment staat FaceNet zo goed mogelijk afgesteld op deze set voorbeelden. De winnende instellingen staan hieronder. De uitleg van het experiment staat in [de README van tuned](../../README.md).
+Dit zijn de uitkomsten van FaceNet met de best gevonden instellingen. Als voorbeelden krijgt FaceNet hier: foto's + stills in kostuum. Waarom we dit doen en hoe we hebben afgesteld, staat in [de uitleg van tuned](../../README.md).
+
+> **In het kort.** De score per gezicht is **0,874**. De score is een cijfer van 0 tot 1: bij 1 vindt FaceNet alle gezichten en klopt elke naam.
+>
+> - Van de 20.990 gezichten krijgen er 16.949 de juiste naam (81%).
+> - FaceNet zette 17.807 namen in de filmpjes, en daarvan klopten er 16.949 (95%).
+> - Het best herkend: Werner (score 0,919). Het slechtst herkend: Johann (score 0,374).
+
+**Het filmpje:** [`filmpje.mp4`](filmpje.mp4) laat alle fragmenten achter elkaar zien, met een vierkantje om elk gezicht dat FaceNet als een van de vier personen herkent. Klik op GitHub op de link en daarna op *View raw* om het filmpje te downloaden.
+
+Wat de woorden betekenen, staat in [de woordenlijst](../../../README.md#woordenlijst). Hoe we meten, staat bij [Zo meten we hoe goed FaceNet is](../../../README.md#zo-meten-we-hoe-goed-facenet-is).
+
 
 ## De instellingen
+
+Dit zijn de instellingen waarmee deze uitkomsten gemaakt zijn.
 
 | Instelling | Waarde |
 |---|---|
@@ -15,59 +28,100 @@ In dit experiment staat FaceNet zo goed mogelijk afgesteld op deze set voorbeeld
 | Beslissen | per track |
 | Drempel | 1,1076 |
 
-## Methode 1: per beeld
+![Alle voorbeeldfoto's in deze set, per persoon](voorbeelden.jpg)
 
-We weten wie er in elk beeld te zien is, en tellen per persoon in hoeveel beelden FaceNet die persoon ziet. *Goed* is een beeld waarin FaceNet de persoon terecht ziet, *fout* een beeld waarin FaceNet de persoon ten onrechte ziet, en *gemist* een beeld waarin de persoon wel staat maar FaceNet de persoon niet ziet. Waar in het beeld FaceNet de persoon ziet, maakt bij deze methode niet uit.
+*De voorbeelden in deze set. Elk klein plaatje is precies wat FaceNet van een voorbeeld te zien krijgt.*
 
-| Acteur | Ground truth (beelden) | FaceNet (beelden) | Foutmarge | Goed | Fout | Gemist | Precisie | Recall | F1 |
-|---|---|---|---|---|---|---|---|---|---|
-| Der Alte | 8.326 | 7.226 | 13,2% | 7.040 | 186 | 1.286 | 0,974 | 0,846 | 0,905 |
-| Fritz Grade | 5.321 | 4.439 | 16,6% | 4.368 | 71 | 953 | 0,984 | 0,821 | 0,895 |
-| Johann | 849 | 343 | 59,6% | 223 | 120 | 626 | 0,650 | 0,263 | 0,374 |
-| Werner | 6.494 | 5.799 | 10,7% | 5.685 | 114 | 809 | 0,980 | 0,875 | 0,925 |
-| **samen** | 20.990 | 17.807 | 15,2% | 17.316 | 491 | 3.674 | 0,972 | 0,825 | **0,893** |
-
-![Tijdlijn: wanneer elke acteur te zien is, volgens de ground truth en volgens FaceNet](methode_1_tijdlijn.png)
 
 ## Methode 2: per gezicht
 
-We weten ook waar elk gezicht staat. Een naam van FaceNet telt alleen als goed als het kader met die naam minstens 30% overlapt met het kader van die persoon in de ground truth. *Gemist* is verdeeld in: geen kader van de detector op die plek, wel een kader maar geen naam, of wel een kader maar een andere naam.
+Dit is de maat waarmee we FaceNet beoordelen. We weten waar elk gezicht staat. Een naam telt alleen als goed als het kader met die naam minstens 30% overlapt met het gezicht van die persoon.
 
-| Acteur | Gezichten | Goed | Fout benoemd | Gemist | waarvan geen kader | waarvan geen naam | waarvan andere naam | Precisie | Recall | F1 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Der Alte | 8.326 | 6.984 | 242 | 1.342 | 707 | 599 | 36 | 0,967 | 0,839 | 0,898 |
-| Fritz Grade | 5.321 | 4.093 | 346 | 1.228 | 515 | 694 | 19 | 0,922 | 0,769 | 0,839 |
-| Johann | 849 | 223 | 120 | 626 | 61 | 483 | 82 | 0,650 | 0,263 | 0,374 |
-| Werner | 6.494 | 5.649 | 150 | 845 | 328 | 473 | 44 | 0,974 | 0,870 | 0,919 |
-| **samen** | 20.990 | 16.949 | 858 | 4.041 | 1.611 | 2.249 | 181 | 0,952 | 0,807 | **0,874** |
+**De score per persoon.** Precisie zegt hoe vaak een naam klopt. Recall zegt hoeveel van de echte gezichten de juiste naam krijgen. De score (F1) is die twee samen.
+
+| Persoon | Score (F1) | Precisie | Recall |
+|---|---|---|---|
+| Der Alte | 0,898 | 0,967 | 0,839 |
+| Fritz Grade | 0,839 | 0,922 | 0,769 |
+| Johann | 0,374 | 0,650 | 0,263 |
+| Werner | 0,919 | 0,974 | 0,870 |
+| **alle vier samen** | **0,874** | **0,952** | **0,807** |
+
+**De aantallen.** *Goed* is een gezicht met de juiste naam. *Naam op de verkeerde plek* is een kader met een naam dat niet op het gezicht van die persoon ligt. *Gemist* is een gezicht zonder de juiste naam.
+
+| Persoon | Gezichten | Goed | Naam op de verkeerde plek | Gemist |
+|---|---|---|---|---|
+| Der Alte | 8.326 | 6.984 | 242 | 1.342 |
+| Fritz Grade | 5.321 | 4.093 | 346 | 1.228 |
+| Johann | 849 | 223 | 120 | 626 |
+| Werner | 6.494 | 5.649 | 150 | 845 |
+| **alle vier samen** | **20.990** | **16.949** | **858** | **4.041** |
+
+**Waarom een gezicht gemist wordt.** Soms heeft de detector op die plek geen kader gevonden. Soms is er wel een kader, maar geeft FaceNet geen naam of een andere naam.
+
+| Persoon | Geen kader | Wel kader, geen naam | Wel kader, andere naam |
+|---|---|---|---|
+| Der Alte | 707 | 599 | 36 |
+| Fritz Grade | 515 | 694 | 19 |
+| Johann | 61 | 483 | 82 |
+| Werner | 328 | 473 | 44 |
+| **alle vier samen** | **1.611** | **2.249** | **181** |
 
 ![Per kader: wie het echt is tegen de naam die FaceNet geeft](methode_2_verwarring.png)
 
-De instellingen zijn gekozen op dezelfde beelden als waarop gemeten is; deze F1 is daardoor wat te gunstig. De eerlijke schatting, waarbij de instelling steeds op de andere filmpjes gekozen is, geeft een F1 van **0,834** (zie `eerlijke_schatting.csv`). Alle geprobeerde instellingen staan in `alle_instellingen.csv`, en per filmpje de beste instelling in `beste_per_filmpje.csv`.
+*Zo lees je dit plaatje: elke rij is wie het echt is, elke kolom is de naam die FaceNet geeft. Bij een goed resultaat staan de hoge percentages op de schuine lijn van linksboven naar rechtsonder. De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan.*
 
-![De beste F1 per keuze bij het afstellen](afstellen_per_instelling.png)
+**Een eerlijke schatting.** De instellingen zijn gekozen op dezelfde beelden als waarop we meten. Daardoor is de score hierboven wat te gunstig. Bij de eerlijke schatting kiezen we de instellingen steeds op zeven filmpjes en meten we op het achtste. Dan is de score **0,834** (zie `eerlijke_schatting.csv`). Alle geprobeerde instellingen staan in `alle_instellingen.csv`, en per filmpje de beste instelling in `beste_per_filmpje.csv`.
 
-![De voorbeelden in deze set](voorbeelden.jpg)
+![De hoogste score per keuze bij het afstellen](afstellen_per_instelling.png)
 
-## Het filmpje
+*Zo lees je dit plaatje: elk blok is één instelling. De balken laten zien hoe hoog de score kan worden met elke keuze. De blauwe balk is de keuze van de winnaar.*
 
-[`filmpje.mp4`](filmpje.mp4) is alle filmpjes achter elkaar, met een vierkantje om elk gezicht dat FaceNet als een van de vier personen herkent, en de naam erbij.
+
+## Methode 1: per beeld
+
+Deze maat staat in de opdracht. We weten wie er in elk beeld te zien is, en tellen per persoon in hoeveel beelden FaceNet die persoon ziet. Waar in het beeld FaceNet de persoon ziet, maakt niet uit.
+
+| Persoon | Score (F1) | Precisie | Recall |
+|---|---|---|---|
+| Der Alte | 0,905 | 0,974 | 0,846 |
+| Fritz Grade | 0,895 | 0,984 | 0,821 |
+| Johann | 0,374 | 0,650 | 0,263 |
+| Werner | 0,925 | 0,980 | 0,875 |
+| **alle vier samen** | **0,893** | **0,972** | **0,825** |
+
+**De aantallen.** De *foutmarge* zegt hoeveel procent het aantal beelden van FaceNet afwijkt van het echte aantal beelden. *Goed* is een beeld waarin FaceNet de persoon terecht ziet, *fout* een beeld waarin FaceNet de persoon ten onrechte ziet, en *gemist* een beeld waarin de persoon wel staat maar FaceNet de persoon niet ziet.
+
+| Persoon | Echt in beeld | FaceNet ziet | Foutmarge | Goed | Fout | Gemist |
+|---|---|---|---|---|---|---|
+| Der Alte | 8.326 | 7.226 | 13,2% | 7.040 | 186 | 1.286 |
+| Fritz Grade | 5.321 | 4.439 | 16,6% | 4.368 | 71 | 953 |
+| Johann | 849 | 343 | 59,6% | 223 | 120 | 626 |
+| Werner | 6.494 | 5.799 | 10,7% | 5.685 | 114 | 809 |
+| **alle vier samen** | **20.990** | **17.807** | **15,2%** | **17.316** | **491** | **3.674** |
+
+![Tijdlijn: wanneer elke persoon te zien is, volgens de ground truth en volgens FaceNet](methode_1_tijdlijn.png)
+
+*Zo lees je dit plaatje: elke regel is een persoon, en van links naar rechts loopt de tijd in het filmpje. Zwart is wanneer de persoon echt in beeld is, rood is wanneer FaceNet de persoon ziet. Lopen zwart en rood gelijk, dan klopt het. Rood zonder zwart betekent dat FaceNet de persoon ten onrechte ziet, en zwart zonder rood dat FaceNet de persoon mist.*
+
 
 ## De bestanden in deze map
 
 | Bestand | Wat erin staat |
 |---|---|
-| `voorspellingen.csv` | Per kader wie FaceNet zegt dat het is (`facenet`), de dichtstbijzijnde persoon (`dichtstbij`), de afstand (`afstand`) en de voorbeeldfoto die de doorslag gaf (`foto`). |
-| `gebruik_per_foto.csv` | Per voorbeeldfoto hoe vaak die foto de doorslag gaf, en hoe vaak dat goed of fout was. |
+| `voorspellingen.csv` | Elk kader op een regel: wie FaceNet zegt dat het is (`facenet`), de persoon die het dichtstbij is (`dichtstbij`), de afstand (`afstand`) en de voorbeeldfoto die het meest op het kader lijkt (`foto`). |
+| `gebruik_per_foto.csv` | Per voorbeeldfoto hoe vaak die foto het meest op een kader leek, en hoe vaak de naam dan goed of fout was. |
+| `voorbeelden.jpg` | De voorbeelden in deze set. |
 | `methode_1_tabel.csv`, `methode_1_tabel.png`, `methode_1_tijdlijn.png` | De uitkomst van methode 1. |
 | `methode_2_tabel.csv`, `methode_2_tabel.png` | De uitkomst van methode 2. |
 | `methode_2_verwarring.csv`, `methode_2_verwarring.png` | Per kader wie het echt is tegen de naam van FaceNet. |
-| `methode_2_overlap.csv` | De uitkomst van methode 2 bij andere grenzen voor de overlap. |
-| `filmpje.mp4` | Het filmpje. |
+| `methode_2_overlap.csv` | De uitkomst van methode 2 als de grens voor de overlap anders is. |
+| `filmpje.mp4` | Het filmpje met de namen van FaceNet. |
+
 
 ## Zo maak je dit opnieuw
 
-Vanuit de map `experimenten` (installeren: zie [de uitleg over alle experimenten](../../../README.md#installeren-op-mac-en-windows)).
+Doe dit vanuit de map `experimenten`. Installeren hoeft één keer, zie [Installeren op Mac en Windows](../../../README.md#installeren-op-mac-en-windows).
 
 Op een Mac:
 

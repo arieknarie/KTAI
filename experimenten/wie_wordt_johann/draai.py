@@ -64,7 +64,7 @@ def main() -> None:
 
     films = sorted(set(per_film["filmpje"]), key=lambda g: int(g.split()[-1]))
     shown = [name for name in SETS if (per_film["voorbeelden"] == name).any()]      # met alleen foto's zegt FaceNet nergens ten onrechte Johann
-    fig, axes = plt.subplots(1, len(shown), figsize=(4.6 * len(shown) + 1.2, 4.2), sharey=True, facecolor="white", squeeze=False)
+    fig, axes = plt.subplots(1, len(shown), figsize=(4.6 * len(shown) + 1.2, 4.6), sharey=True, facecolor="white", squeeze=False)
     axes = axes[0]
     for ax, set_name in zip(axes, shown):
         part = per_film[per_film["voorbeelden"] == set_name].set_index("filmpje").reindex(films).fillna(0)
@@ -80,8 +80,10 @@ def main() -> None:
         ax.set_axisbelow(True)
         for spine in ax.spines.values():
             spine.set_visible(False)
-    axes[0].legend(frameon=False, fontsize=9, loc="lower right", title="wie het echt is", title_fontsize=9)
-    fig.tight_layout()
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="upper left", ncol=4, frameon=False, fontsize=10, bbox_to_anchor=(0.115, 1.0))
+    fig.text(0.012, 0.955, "Wie het echt is:", fontsize=10, fontweight="bold", color="#0b0b0b", va="center")
+    fig.tight_layout(rect=(0, 0, 1, 0.92))
     fig.savefig(out / "wie_wordt_johann.png", dpi=140)
     plt.close(fig)
     examples = pd.read_csv(SETS["foto's + stills"] / "voorbeelden.csv")

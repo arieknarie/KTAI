@@ -36,7 +36,7 @@ def main() -> None:
     table.to_csv(HERE / "overzicht.csv", index=False, lineterminator="\n")
 
     y = np.arange(len(table))
-    fig, ax = plt.subplots(figsize=(10, 4.4), facecolor="white")
+    fig, ax = plt.subplots(figsize=(10, 4.9), facecolor="white")
     for shift, column, colour, label in ((-0.19, "methode_1_f1", "#2a78d6", "methode 1 (per beeld)"), (0.19, "methode_2_f1", "#eb6834", "methode 2 (per gezicht)")):
         ax.barh(y + shift, table[column], height=0.34, color=colour, label=label)
         for i, value in enumerate(table[column]):
@@ -44,15 +44,15 @@ def main() -> None:
     ax.set_yticks(y, table["experiment"], fontsize=9.5)
     ax.invert_yaxis()
     ax.set_xlim(0, 1)
-    ax.set_xlabel("F1 (0 is niets goed, 1 is alles goed)", fontsize=9.5, color="#52514e")
+    ax.set_xlabel("score (F1): 0 is niets goed, 1 is alles goed", fontsize=9.5, color="#52514e")
     ax.tick_params(length=0, labelsize=9, colors="#52514e")
     ax.tick_params(axis="y", colors="#0b0b0b")
     ax.grid(axis="x", color="#e4e3de", linewidth=0.8)
     ax.set_axisbelow(True)
     for spine in ax.spines.values():
         spine.set_visible(False)
-    ax.legend(frameon=False, fontsize=9, loc="lower right")
-    ax.set_title("Hoe goed is elk experiment?", loc="left", fontsize=12, fontweight="bold", color="#0b0b0b")
+    ax.legend(frameon=False, fontsize=9.5, ncol=2, loc="lower left", bbox_to_anchor=(-0.01, 1.0))
+    ax.set_title("Hoe goed is elk experiment?", loc="left", fontsize=12, fontweight="bold", color="#0b0b0b", pad=30)
     fig.tight_layout()
     fig.savefig(HERE / "overzicht.png", dpi=140)
     plt.close(fig)

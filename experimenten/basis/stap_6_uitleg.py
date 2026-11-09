@@ -21,9 +21,11 @@ def main() -> None:
     parser.add_argument("--voorbeelden", choices=EXAMPLE_SETS, default="fotos", help="welke set voorbeeldfoto's")
     args = parser.parse_args()
     out, title = folder(args.voorbeelden), EXAMPLE_SETS[args.voorbeelden]
-    write(out, f"Basis ({title})",
-          "Dit is het basisexperiment: FaceNet staat zo standaard mogelijk ingesteld en vergelijkt elk gezicht in de filmpjes met de "
-          "voorbeelden uit deze set. De uitleg van het experiment staat in [de README van de basis](" + ("../../README.md" if args.voorbeelden != "alleen_kostuum" else "../../basis/README.md") + ").",
+    name = title.removeprefix("voorbeelden: ")
+    home = "../../basis/README.md" if args.voorbeelden == "alleen_kostuum" else "../../README.md"
+    write(out, f"De uitkomsten van de basis: {name}",
+          f"Dit zijn de uitkomsten van FaceNet met de standaardinstellingen. Als voorbeelden krijgt FaceNet hier: {name}. "
+          f"Waarom we dit doen en hoe het werkt, staat in [de uitleg van de basis]({home}).",
           [("Model", MODEL), ("Extra ruimte om het kader", f"{MARGIN:.0%}"), ("Afstand", METRIC.replace("euclidean_l2", "genormaliseerde Euclidische afstand")),
            ("Drempel", f"{DREMPEL:.2f}".replace(".", ",")), ("Per persoon", "de afstand tot de meest gelijkende voorbeeldfoto"),
            ("Toewijzen", "elk kader los"), ("Voorbeelden", title.removeprefix("voorbeelden: "))],
