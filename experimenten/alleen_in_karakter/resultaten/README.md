@@ -1,8 +1,8 @@
-# De uitkomsten van de basis: alleen stills in kostuum
+# De uitkomsten van FaceNet standaard: alleen stills
 
-Dit zijn de uitkomsten van FaceNet met de standaardinstellingen. Als voorbeelden krijgt FaceNet hier: alleen stills in kostuum. Waarom we dit doen en hoe het werkt, staat in [de uitleg van de basis](../../basis/README.md).
+Dit zijn de uitkomsten van FaceNet met de standaardinstellingen. FaceNet krijgt hier als voorbeelden alleen de stills uit de film. Waarom we dit doen en hoe het werkt, staat in [de uitleg van de basis](../../basis/README.md).
 
-> **In het kort.** De score per gezicht is **0,300**. De score is een cijfer van 0 tot 1: bij 1 vindt FaceNet alle gezichten en klopt elke naam.
+> **In het kort.** De score per gezicht is **0,300**. De score is een cijfer van 0 tot 1: bij 1 krijgt elk gezicht van de vier personen de juiste naam, en klopt elke naam die FaceNet geeft.
 >
 > - Van de 20.990 gezichten krijgen er 8.098 de juiste naam (39%).
 > - FaceNet zette 33.041 namen in de filmpjes, en daarvan klopten er 8.098 (25%).
@@ -23,9 +23,10 @@ Dit zijn de instellingen waarmee deze uitkomsten gemaakt zijn.
 | Extra ruimte om het kader | 0% |
 | Afstand | genormaliseerde Euclidische afstand |
 | Drempel | 0,80 |
-| Per persoon | de afstand tot de meest gelijkende voorbeeldfoto |
-| Toewijzen | elk kader los |
-| Voorbeelden | alleen stills in kostuum |
+| Vergelijken met | de beste foto van elke persoon |
+| Naam in een beeld | mag vaker |
+| Beslissen | per kader |
+| Voorbeelden | alleen stills |
 
 ![Alle voorbeeldfoto's in deze set, per persoon](voorbeelden.jpg)
 
@@ -66,9 +67,11 @@ Dit is de maat waarmee we FaceNet beoordelen. We weten waar elk gezicht staat. E
 | Werner | 328 | 710 | 3.522 |
 | **alle vier samen** | **1.611** | **1.378** | **9.903** |
 
+De score kan hier niet 1 worden. FaceNet bekijkt alleen kaders, dus de 1.611 gezichten zonder kader krijgen nooit een naam. Zelfs als elke naam klopt, blijft de score onder 0,96.
+
 ![Per kader: wie het echt is tegen de naam die FaceNet geeft](methode_2_verwarring.png)
 
-*Zo lees je dit plaatje: elke rij is wie het echt is, elke kolom is de naam die FaceNet geeft. Bij een goed resultaat staan de hoge percentages op de schuine lijn van linksboven naar rechtsonder. De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan.*
+*Zo lees je dit plaatje: elke rij is wie het echt is, elke kolom is de naam die FaceNet geeft. Bij een goed resultaat staan de hoge percentages op de schuine lijn van linksboven naar rechtsonder. De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan. Dit plaatje telt kaders, de tabellen hierboven tellen gezichten. Daarom zijn de getallen niet precies gelijk.*
 
 ![Tijdlijn per gezicht: wanneer elke persoon echt in beeld is, en wanneer FaceNet de naam goed of op een verkeerde plek zet](methode_2_tijdlijn.png)
 

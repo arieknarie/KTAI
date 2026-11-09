@@ -41,7 +41,7 @@ def write(out, heading: str, intro: str, settings: list, command: str, extra: st
     named = total["goed"] + total["fout_benoemd"]
     home = os.path.relpath(EXPERIMENTEN / "README.md", out).replace(os.sep, "/")
     lines = [f"# {heading}", "", intro, "",
-             f"> **In het kort.** De score per gezicht is **{comma(total['f1'])}**. De score is een cijfer van 0 tot 1: bij 1 vindt FaceNet alle gezichten en klopt elke naam.",
+             f"> **In het kort.** De score per gezicht is **{comma(total['f1'])}**. De score is een cijfer van 0 tot 1: bij 1 krijgt elk gezicht van de vier personen de juiste naam, en klopt elke naam die FaceNet geeft.",
              ">",
              f"> - Van de {number(total['gezichten'])} gezichten krijgen er {number(total['goed'])} de juiste naam ({share(total['goed'], total['gezichten'])}).",
              f"> - FaceNet zette {number(named)} namen in de filmpjes, en daarvan klopten er {number(total['goed'])} ({share(total['goed'], named)}).",
@@ -65,9 +65,11 @@ def write(out, heading: str, intro: str, settings: list, command: str, extra: st
     lines += _table(["Persoon", "Gezichten", "Goed", "Naam op de verkeerde plek", "Gemist"], two, lambda r: [number(r.gezichten), number(r.goed), number(r.fout_benoemd), number(r.gemist)])
     lines += ["", "**Waarom een gezicht gemist wordt.** Soms heeft de detector op die plek geen kader gevonden. Soms is er wel een kader, maar geeft FaceNet geen naam of een andere naam.", ""]
     lines += _table(["Persoon", "Geen kader", "Wel kader, geen naam", "Wel kader, andere naam"], two, lambda r: [number(r.geen_kader), number(r.geen_naam), number(r.andere_naam)])
+    reach = 1 - total["geen_kader"] / total["gezichten"]
+    lines += ["", f"De score kan hier niet 1 worden. FaceNet bekijkt alleen kaders, dus de {number(total['geen_kader'])} gezichten zonder kader krijgen nooit een naam. Zelfs als elke naam klopt, blijft de score onder {comma(2 * reach / (1 + reach), 2)}."]
     lines += ["", "![Per kader: wie het echt is tegen de naam die FaceNet geeft](methode_2_verwarring.png)", "",
               "*Zo lees je dit plaatje: elke rij is wie het echt is, elke kolom is de naam die FaceNet geeft. Bij een goed resultaat staan de hoge percentages op de schuine lijn van linksboven naar rechtsonder. "
-              "De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan.*", ""]
+              "De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan. Dit plaatje telt kaders, de tabellen hierboven tellen gezichten. Daarom zijn de getallen niet precies gelijk.*", ""]
     lines += ["![Tijdlijn per gezicht: wanneer elke persoon echt in beeld is, en wanneer FaceNet de naam goed of op een verkeerde plek zet](methode_2_tijdlijn.png)", "",
               "*Zo lees je dit plaatje: elke regel is een persoon, en van links naar rechts loopt de tijd in het filmpje. Zwart is wanneer de persoon echt in beeld is. Groen is wanneer FaceNet de juiste naam op het gezicht van die persoon zet. "
               "Rood is wanneer FaceNet die naam op een verkeerde plek zet. Hoe meer groen gelijk loopt met zwart en hoe minder rood er is, hoe beter.*", ""]
@@ -77,7 +79,7 @@ def write(out, heading: str, intro: str, settings: list, command: str, extra: st
         lines += ["", "## Methode 1: per beeld", "",
                   "Deze maat staat in de opdracht, maar is te gunstig: een naam op het verkeerde gezicht telt ook als goed. Daarom laten we deze maat alleen bij de basis zien. We weten wie er in elk beeld te zien is, en tellen per persoon in hoeveel beelden FaceNet die persoon ziet. Waar in het beeld FaceNet de persoon ziet, maakt niet uit.", ""]
         lines += _table(["Persoon", "Score (F1)", "Precisie", "Recall"], one, lambda r: [comma(r.f1), comma(r.precisie), comma(r.recall)])
-        lines += ["", "**De aantallen.** De *foutmarge* zegt hoeveel procent het aantal beelden van FaceNet afwijkt van het echte aantal beelden. *Goed* is een beeld waarin FaceNet de persoon terecht ziet, *fout* een beeld waarin FaceNet de persoon ten onrechte ziet, en *gemist* een beeld waarin de persoon wel staat maar FaceNet de persoon niet ziet.", ""]
+        lines += ["", "**De aantallen.** De *foutmarge* zegt hoeveel procent het aantal beelden van FaceNet afwijkt van het echte aantal beelden. *Goed* is een beeld waarin FaceNet de persoon terecht ziet, *fout* een beeld waarin FaceNet de persoon ten onrechte ziet, en *gemist* een beeld waarin de persoon wel staat maar FaceNet de persoon niet ziet. Let op: de foutmarge vergelijkt alleen aantallen beelden. Beelden waarin FaceNet iemand ten onrechte ziet en beelden die FaceNet mist, vallen daarin tegen elkaar weg. Kijk daarom ook naar *Fout* en *Gemist*.", ""]
         lines += _table(["Persoon", "Echt in beeld", "FaceNet ziet", "Foutmarge", "Goed", "Fout", "Gemist"], one,
                         lambda r: [number(r.ground_truth), number(r.ai_voorspelling), _pct(r.foutmarge_procent), number(r.goed), number(r.fout), number(r.gemist)])
         lines += ["", "![Tijdlijn: wanneer elke persoon te zien is, volgens de ground truth en volgens FaceNet](methode_1_tijdlijn.png)", "",

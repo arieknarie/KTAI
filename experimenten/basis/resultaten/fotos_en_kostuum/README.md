@@ -1,8 +1,8 @@
-# De uitkomsten van de basis: foto's + stills in kostuum
+# De uitkomsten van FaceNet standaard: foto's + stills
 
-Dit zijn de uitkomsten van FaceNet met de standaardinstellingen. Als voorbeelden krijgt FaceNet hier: foto's + stills in kostuum. Waarom we dit doen en hoe het werkt, staat in [de uitleg van de basis](../../README.md).
+Dit zijn de uitkomsten van FaceNet met de standaardinstellingen. FaceNet krijgt hier als voorbeelden de gewone foto's en de stills uit de film. Waarom we dit doen en hoe het werkt, staat in [de uitleg van de basis](../../README.md).
 
-> **In het kort.** De score per gezicht is **0,308**. De score is een cijfer van 0 tot 1: bij 1 vindt FaceNet alle gezichten en klopt elke naam.
+> **In het kort.** De score per gezicht is **0,308**. De score is een cijfer van 0 tot 1: bij 1 krijgt elk gezicht van de vier personen de juiste naam, en klopt elke naam die FaceNet geeft.
 >
 > - Van de 20.990 gezichten krijgen er 8.355 de juiste naam (40%).
 > - FaceNet zette 33.333 namen in de filmpjes, en daarvan klopten er 8.355 (25%).
@@ -23,9 +23,10 @@ Dit zijn de instellingen waarmee deze uitkomsten gemaakt zijn.
 | Extra ruimte om het kader | 0% |
 | Afstand | genormaliseerde Euclidische afstand |
 | Drempel | 0,80 |
-| Per persoon | de afstand tot de meest gelijkende voorbeeldfoto |
-| Toewijzen | elk kader los |
-| Voorbeelden | foto's + stills in kostuum |
+| Vergelijken met | de beste foto van elke persoon |
+| Naam in een beeld | mag vaker |
+| Beslissen | per kader |
+| Voorbeelden | foto's + stills |
 
 ![Alle voorbeeldfoto's in deze set, per persoon](voorbeelden.jpg)
 
@@ -66,9 +67,11 @@ Dit is de maat waarmee we FaceNet beoordelen. We weten waar elk gezicht staat. E
 | Werner | 328 | 457 | 3.524 |
 | **alle vier samen** | **1.611** | **1.115** | **9.909** |
 
+De score kan hier niet 1 worden. FaceNet bekijkt alleen kaders, dus de 1.611 gezichten zonder kader krijgen nooit een naam. Zelfs als elke naam klopt, blijft de score onder 0,96.
+
 ![Per kader: wie het echt is tegen de naam die FaceNet geeft](methode_2_verwarring.png)
 
-*Zo lees je dit plaatje: elke rij is wie het echt is, elke kolom is de naam die FaceNet geeft. Bij een goed resultaat staan de hoge percentages op de schuine lijn van linksboven naar rechtsonder. De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan.*
+*Zo lees je dit plaatje: elke rij is wie het echt is, elke kolom is de naam die FaceNet geeft. Bij een goed resultaat staan de hoge percentages op de schuine lijn van linksboven naar rechtsonder. De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan. Dit plaatje telt kaders, de tabellen hierboven tellen gezichten. Daarom zijn de getallen niet precies gelijk.*
 
 ![Tijdlijn per gezicht: wanneer elke persoon echt in beeld is, en wanneer FaceNet de naam goed of op een verkeerde plek zet](methode_2_tijdlijn.png)
 
@@ -87,7 +90,7 @@ Deze maat staat in de opdracht, maar is te gunstig: een naam op het verkeerde ge
 | Werner | 0,631 | 0,831 | 0,509 |
 | **alle vier samen** | **0,636** | **0,645** | **0,626** |
 
-**De aantallen.** De *foutmarge* zegt hoeveel procent het aantal beelden van FaceNet afwijkt van het echte aantal beelden. *Goed* is een beeld waarin FaceNet de persoon terecht ziet, *fout* een beeld waarin FaceNet de persoon ten onrechte ziet, en *gemist* een beeld waarin de persoon wel staat maar FaceNet de persoon niet ziet.
+**De aantallen.** De *foutmarge* zegt hoeveel procent het aantal beelden van FaceNet afwijkt van het echte aantal beelden. *Goed* is een beeld waarin FaceNet de persoon terecht ziet, *fout* een beeld waarin FaceNet de persoon ten onrechte ziet, en *gemist* een beeld waarin de persoon wel staat maar FaceNet de persoon niet ziet. Let op: de foutmarge vergelijkt alleen aantallen beelden. Beelden waarin FaceNet iemand ten onrechte ziet en beelden die FaceNet mist, vallen daarin tegen elkaar weg. Kijk daarom ook naar *Fout* en *Gemist*.
 
 | Persoon | Echt in beeld | FaceNet ziet | Foutmarge | Goed | Fout | Gemist |
 |---|---|---|---|---|---|---|

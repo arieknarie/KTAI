@@ -109,7 +109,7 @@ def main() -> None:
         y = np.arange(len(changed))
         values = changed["methode_2_verschil"].to_numpy()
         ax.barh(y, values, height=0.65, color=np.where(values > 0, "#d1495b", "#8a8983"))
-        ax.set_yticks(y, [f"{p}: {b.split('/')[-1]}" for p, b in zip(changed["persoon"], changed["bestand"])], fontsize=8.5)
+        ax.set_yticks(y, [f"{p}: {b.split('/')[-1]} ({'foto' if '/personal/' in b else 'still'})" for p, b in zip(changed["persoon"], changed["bestand"])], fontsize=8.5)
         ax.invert_yaxis()
         ax.axvline(0, color="#52514e", linewidth=1)
         ax.set_xlabel("verandering van de score (F1 per gezicht) als deze foto wordt weggelaten", fontsize=9.5, color="#52514e")

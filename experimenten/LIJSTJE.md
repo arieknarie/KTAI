@@ -2,9 +2,9 @@
 
 Dit is de checklist van alles wat we in deze branch wilden doen. Een vinkje betekent: klaar en op GitHub. Elke link gaat naar de uitleg van dat onderdeel, met daarin hoe het gedaan is, wat eruit kwam en hoe je het draait op een Mac en op Windows.
 
-![Staafjes: de score van elk experiment, met beide meetmethodes](overzicht.png)
+![Staafjes: de score van de experimenten](overzicht.png)
 
-*De uitkomst van de experimenten in één plaatje. Zo lees je het plaatje: een langere balk is beter, en oranje is de maat waarmee we FaceNet beoordelen.*
+*De uitkomst van de experimenten in één plaatje. Zo lees je het plaatje: een langere balk is beter. Oranje is de score per gezicht: daarmee beoordelen we FaceNet.*
 
 ## De basis van het project
 
@@ -14,13 +14,15 @@ Dit is de checklist van alles wat we in deze branch wilden doen. Een vinkje bete
 
 ## De experimenten
 
+Elk los experiment is gedaan met FaceNet standaard én met het getunde model.
+
 - [x] [Basis](basis/README.md): FaceNet standaard, met foto's en met foto's + stills
+- [x] [Twee meetmethodes](basis/README.md#de-twee-meetmethodes), per beeld en per gezicht, met een keuze voor de tweede. De meting per beeld staat alleen bij de basis
 - [x] [Tuned](tuned/README.md): FaceNet met de best mogelijke instellingen, algemeen en per filmpje
-- [x] [Twee meetmethodes](README.md#zo-meten-we-hoe-goed-facenet-is), per beeld en per gezicht, met een keuze voor de tweede
-- [x] Bij elke herkenning rapporteren welke foto gebruikt is: `voorspellingen.csv` en `gebruik_per_foto.csv` in elke map `resultaten`
+- [x] Bij elke herkenning rapporteren welke foto het meest op het kader leek: `voorspellingen.csv` en `gebruik_per_foto.csv`
 - [x] [Moving average](moving_average/README.md): een filter met ondergrens 0,2 en bovengrens 0,7
 - [x] [Spreiding](spreiding/README.md): de grootste afstand binnen een persoon en de kleinste afstand tussen personen, voor out-of-character, in-character en de totale set
-- [x] [Grootste spreiding](spreiding/README.md#kiest-facenet-bij-een-onherkenbaar-kader-de-persoon-met-de-grootste-spreiding): kiest FaceNet bij een onherkenbaar beeld die persoon?
+- [x] [Grootste spreiding](spreiding/README.md#krijgt-een-kader-dat-geen-van-de-vier-personen-is-vaak-de-persoon-met-de-grootste-spreiding): krijgt een onherkenbaar kader vaak die persoon?
 - [x] [Alleen in karakter](alleen_in_karakter/README.md): de tijdlijnen met alleen de stills, en wat er gebeurt zonder de gewone foto's
 - [x] [Leave-one-out](leave_one_out/README.md): welke foto's maken het resultaat slechter?
 - [x] [Herkenningsdichtheid](herkenningsdichtheid/README.md): een convolutiefilter over de tijdlijn, met vensters van 10 tot 20 beelden
