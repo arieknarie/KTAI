@@ -70,10 +70,14 @@ Dit is de maat waarmee we FaceNet beoordelen. We weten waar elk gezicht staat. E
 
 *Zo lees je dit plaatje: elke rij is wie het echt is, elke kolom is de naam die FaceNet geeft. Bij een goed resultaat staan de hoge percentages op de schuine lijn van linksboven naar rechtsonder. De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan.*
 
+![Tijdlijn per gezicht: wanneer elke persoon echt in beeld is, en wanneer FaceNet de naam goed of op een verkeerde plek zet](methode_2_tijdlijn.png)
+
+*Zo lees je dit plaatje: elke regel is een persoon, en van links naar rechts loopt de tijd in het filmpje. Zwart is wanneer de persoon echt in beeld is. Groen is wanneer FaceNet de juiste naam op het gezicht van die persoon zet. Rood is wanneer FaceNet die naam op een verkeerde plek zet. Hoe meer groen gelijk loopt met zwart en hoe minder rood er is, hoe beter.*
+
 
 ## Methode 1: per beeld
 
-Deze maat staat in de opdracht. We weten wie er in elk beeld te zien is, en tellen per persoon in hoeveel beelden FaceNet die persoon ziet. Waar in het beeld FaceNet de persoon ziet, maakt niet uit.
+Deze maat staat in de opdracht, maar is te gunstig: een naam op het verkeerde gezicht telt ook als goed. Daarom laten we deze maat alleen bij de basis zien. We weten wie er in elk beeld te zien is, en tellen per persoon in hoeveel beelden FaceNet die persoon ziet. Waar in het beeld FaceNet de persoon ziet, maakt niet uit.
 
 | Persoon | Score (F1) | Precisie | Recall |
 |---|---|---|---|
@@ -106,7 +110,7 @@ Deze maat staat in de opdracht. We weten wie er in elk beeld te zien is, en tell
 | `gebruik_per_foto.csv` | Per voorbeeldfoto hoe vaak die foto het meest op een kader leek, en hoe vaak de naam dan goed of fout was. |
 | `voorbeelden.csv`, `voorbeelden.jpg` | De voorbeelden in deze set. |
 | `methode_1_tabel.csv`, `methode_1_tabel.png`, `methode_1_tijdlijn.png` | De uitkomst van methode 1. |
-| `methode_2_tabel.csv`, `methode_2_tabel.png` | De uitkomst van methode 2. |
+| `methode_2_tabel.csv`, `methode_2_tabel.png`, `methode_2_tijdlijn.png` | De uitkomst per gezicht. |
 | `methode_2_verwarring.csv`, `methode_2_verwarring.png` | Per kader wie het echt is tegen de naam van FaceNet. |
 | `methode_2_overlap.csv` | De uitkomst van methode 2 als de grens voor de overlap anders is. |
 | `filmpje.mp4` | Het filmpje met de namen van FaceNet. |

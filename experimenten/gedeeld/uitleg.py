@@ -33,7 +33,8 @@ def _table(heads: list, data: pd.DataFrame, cells) -> list:
 def write(out, heading: str, intro: str, settings: list, command: str, extra: str = "") -> None:
     """Schrijft README.md in de map met uitkomsten. `settings` is een lijst (naam, waarde). `command` is de opdracht om deze
     uitkomsten opnieuw te maken, met / als scheidingsteken; voor Windows worden de schuine strepen omgedraaid."""
-    one, two = pd.read_csv(out / "methode_1_tabel.csv"), pd.read_csv(out / "methode_2_tabel.csv")
+    two = pd.read_csv(out / "methode_2_tabel.csv")
+    one = pd.read_csv(out / "methode_1_tabel.csv") if (out / "methode_1_tabel.csv").exists() else None     # methode 1 staat alleen bij de basis
     total = two[two["acteur"] == "samen"].iloc[0]
     people = two[two["acteur"] != "samen"]
     best, worst = people.loc[people["f1"].idxmax()], people.loc[people["f1"].idxmin()]
@@ -55,7 +56,7 @@ def write(out, heading: str, intro: str, settings: list, command: str, extra: st
     lines += [f"| {name} | {value} |" for name, value in settings]
     lines += ["", "![Alle voorbeeldfoto's in deze set, per persoon](voorbeelden.jpg)", "",
               "*De voorbeelden in deze set. Elk klein plaatje is precies wat FaceNet van een voorbeeld te zien krijgt.*", "",
-              "", "## Methode 2: per gezicht", "",
+              "", "## Methode 2: per gezicht" if one is not None else "## De score per gezicht", "",
               "Dit is de maat waarmee we FaceNet beoordelen. We weten waar elk gezicht staat. Een naam telt alleen als goed als het kader met die naam "
               "minstens 30% overlapt met het gezicht van die persoon.", "",
               "**De score per persoon.** Precisie zegt hoe vaak een naam klopt. Recall zegt hoeveel van de echte gezichten de juiste naam krijgen. De score (F1) is die twee samen.", ""]
@@ -67,24 +68,28 @@ def write(out, heading: str, intro: str, settings: list, command: str, extra: st
     lines += ["", "![Per kader: wie het echt is tegen de naam die FaceNet geeft](methode_2_verwarring.png)", "",
               "*Zo lees je dit plaatje: elke rij is wie het echt is, elke kolom is de naam die FaceNet geeft. Bij een goed resultaat staan de hoge percentages op de schuine lijn van linksboven naar rechtsonder. "
               "De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan.*", ""]
+    lines += ["![Tijdlijn per gezicht: wanneer elke persoon echt in beeld is, en wanneer FaceNet de naam goed of op een verkeerde plek zet](methode_2_tijdlijn.png)", "",
+              "*Zo lees je dit plaatje: elke regel is een persoon, en van links naar rechts loopt de tijd in het filmpje. Zwart is wanneer de persoon echt in beeld is. Groen is wanneer FaceNet de juiste naam op het gezicht van die persoon zet. "
+              "Rood is wanneer FaceNet die naam op een verkeerde plek zet. Hoe meer groen gelijk loopt met zwart en hoe minder rood er is, hoe beter.*", ""]
     if extra:
         lines += [extra, ""]
-    lines += ["", "## Methode 1: per beeld", "",
-              "Deze maat staat in de opdracht. We weten wie er in elk beeld te zien is, en tellen per persoon in hoeveel beelden FaceNet die persoon ziet. Waar in het beeld FaceNet de persoon ziet, maakt niet uit.", ""]
-    lines += _table(["Persoon", "Score (F1)", "Precisie", "Recall"], one, lambda r: [comma(r.f1), comma(r.precisie), comma(r.recall)])
-    lines += ["", "**De aantallen.** De *foutmarge* zegt hoeveel procent het aantal beelden van FaceNet afwijkt van het echte aantal beelden. *Goed* is een beeld waarin FaceNet de persoon terecht ziet, *fout* een beeld waarin FaceNet de persoon ten onrechte ziet, en *gemist* een beeld waarin de persoon wel staat maar FaceNet de persoon niet ziet.", ""]
-    lines += _table(["Persoon", "Echt in beeld", "FaceNet ziet", "Foutmarge", "Goed", "Fout", "Gemist"], one,
-                    lambda r: [number(r.ground_truth), number(r.ai_voorspelling), _pct(r.foutmarge_procent), number(r.goed), number(r.fout), number(r.gemist)])
-    lines += ["", "![Tijdlijn: wanneer elke persoon te zien is, volgens de ground truth en volgens FaceNet](methode_1_tijdlijn.png)", "",
-              "*Zo lees je dit plaatje: elke regel is een persoon, en van links naar rechts loopt de tijd in het filmpje. Zwart is wanneer de persoon echt in beeld is, rood is wanneer FaceNet de persoon ziet. "
-              "Lopen zwart en rood gelijk, dan klopt het. Rood zonder zwart betekent dat FaceNet de persoon ten onrechte ziet, en zwart zonder rood dat FaceNet de persoon mist.*", "",
-              "", "## De bestanden in deze map", "",
+    if one is not None:
+        lines += ["", "## Methode 1: per beeld", "",
+                  "Deze maat staat in de opdracht, maar is te gunstig: een naam op het verkeerde gezicht telt ook als goed. Daarom laten we deze maat alleen bij de basis zien. We weten wie er in elk beeld te zien is, en tellen per persoon in hoeveel beelden FaceNet die persoon ziet. Waar in het beeld FaceNet de persoon ziet, maakt niet uit.", ""]
+        lines += _table(["Persoon", "Score (F1)", "Precisie", "Recall"], one, lambda r: [comma(r.f1), comma(r.precisie), comma(r.recall)])
+        lines += ["", "**De aantallen.** De *foutmarge* zegt hoeveel procent het aantal beelden van FaceNet afwijkt van het echte aantal beelden. *Goed* is een beeld waarin FaceNet de persoon terecht ziet, *fout* een beeld waarin FaceNet de persoon ten onrechte ziet, en *gemist* een beeld waarin de persoon wel staat maar FaceNet de persoon niet ziet.", ""]
+        lines += _table(["Persoon", "Echt in beeld", "FaceNet ziet", "Foutmarge", "Goed", "Fout", "Gemist"], one,
+                        lambda r: [number(r.ground_truth), number(r.ai_voorspelling), _pct(r.foutmarge_procent), number(r.goed), number(r.fout), number(r.gemist)])
+        lines += ["", "![Tijdlijn: wanneer elke persoon te zien is, volgens de ground truth en volgens FaceNet](methode_1_tijdlijn.png)", "",
+                  "*Zo lees je dit plaatje: elke regel is een persoon, en van links naar rechts loopt de tijd in het filmpje. Zwart is wanneer de persoon echt in beeld is, rood is wanneer FaceNet de persoon ziet. "
+                  "Lopen zwart en rood gelijk, dan klopt het. Rood zonder zwart betekent dat FaceNet de persoon ten onrechte ziet, en zwart zonder rood dat FaceNet de persoon mist.*", ""]
+    lines += ["", "## De bestanden in deze map", "",
               "| Bestand | Wat erin staat |", "|---|---|",
               "| `voorspellingen.csv` | Elk kader op een regel: wie FaceNet zegt dat het is (`facenet`), de persoon die het dichtstbij is (`dichtstbij`), de afstand (`afstand`) en de voorbeeldfoto die het meest op het kader lijkt (`foto`). |",
               "| `gebruik_per_foto.csv` | Per voorbeeldfoto hoe vaak die foto het meest op een kader leek, en hoe vaak de naam dan goed of fout was. |",
               "| `voorbeelden.csv`, `voorbeelden.jpg` | De voorbeelden in deze set. |" if (out / "voorbeelden.csv").exists() else "| `voorbeelden.jpg` | De voorbeelden in deze set. |",
-              "| `methode_1_tabel.csv`, `methode_1_tabel.png`, `methode_1_tijdlijn.png` | De uitkomst van methode 1. |",
-              "| `methode_2_tabel.csv`, `methode_2_tabel.png` | De uitkomst van methode 2. |",
+              ] + (["| `methode_1_tabel.csv`, `methode_1_tabel.png`, `methode_1_tijdlijn.png` | De uitkomst van methode 1. |"] if one is not None else []) + [
+              "| `methode_2_tabel.csv`, `methode_2_tabel.png`, `methode_2_tijdlijn.png` | De uitkomst per gezicht. |",
               "| `methode_2_verwarring.csv`, `methode_2_verwarring.png` | Per kader wie het echt is tegen de naam van FaceNet. |",
               "| `methode_2_overlap.csv` | De uitkomst van methode 2 als de grens voor de overlap anders is. |",
               "| `filmpje.mp4` | Het filmpje met de namen van FaceNet. |", "",

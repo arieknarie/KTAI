@@ -4,11 +4,14 @@ Telt alle kaders waaraan FaceNet (standaard, drempel 0,80) de naam Johann geeft,
 die kaders staat in de ground truth wie het echt is: een van de andere drie personen, of geen van de vier (een figurant of iets dat geen
 gezicht is). Dat wordt per filmpje geteld, voor de drie sets voorbeelden, en ook welke voorbeeldfoto de doorslag gaf.
 
-Uitvoer in resultaten/: johann_per_filmpje.csv, johann_per_foto.csv en wie_wordt_johann.png.
+Uitvoer in resultaten/ (met --model tuned in resultaten_tuned/): johann_per_filmpje.csv, johann_per_foto.csv en wie_wordt_johann.png.
 
-Gebruik (vanuit de map experimenten, na basis/draai_alles.py en alleen_in_karakter/draai.py):
+Gebruik (vanuit de map experimenten, na basis/draai_alles.py en alleen_in_karakter/draai.py; voor --model tuned na tuned/draai_alles.py
+en alleen_in_karakter/draai.py --model tuned):
     Mac:     .venv/bin/python wie_wordt_johann/draai.py
+             .venv/bin/python wie_wordt_johann/draai.py --model tuned
     Windows: .venv\Scripts\python wie_wordt_johann\draai.py
+             .venv\Scripts\python wie_wordt_johann\draai.py --model tuned
 """
 
 import sys
@@ -25,19 +28,20 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))   # zodat de map gedeeld/ gevonden wordt
 
 from gedeeld.facenet import cut, load_detections
+from gedeeld.getuned import OUTPUT, model_choice, results_of
 from gedeeld.meten import hit_matrix
-from gedeeld.paden import EXPERIMENTEN, GROUND_TRUTH, NAMES, PICTURES
+from gedeeld.paden import GROUND_TRUTH, NAMES, PICTURES
+from gedeeld.voorbeelden import rows
 
 HERE = Path(__file__).resolve().parent
-SETS = {"foto's": EXPERIMENTEN / "basis" / "resultaten" / "fotos",
-        "alleen stills": EXPERIMENTEN / "alleen_in_karakter" / "resultaten",
-        "foto's + stills": EXPERIMENTEN / "basis" / "resultaten" / "fotos_en_kostuum"}
+SETS = {"foto's": "fotos", "alleen stills": "alleen_kostuum", "foto's + stills": "fotos_en_kostuum"}
 WHO = ["Der Alte", "Fritz Grade", "Werner", "geen van de vier"]
 COLOURS = {"Der Alte": "#2a78d6", "Fritz Grade": "#eb6834", "Werner": "#1baf7a", "geen van de vier": "#8a8983"}
 
 
 def main() -> None:
-    out = HERE / "resultaten"
+    model = model_choice()
+    out = HERE / OUTPUT[model]
     out.mkdir(parents=True, exist_ok=True)
     detections = load_detections()
     truth = pd.read_csv(GROUND_TRUTH)
@@ -45,8 +49,8 @@ def main() -> None:
     johann = NAMES.index("Johann")
     has_johann = set(truth.loc[truth["persoon"] == "Johann", "fragment"])
     per_film, per_photo = [], []
-    for set_name, folder in SETS.items():
-        found = pd.read_csv(folder / "voorspellingen.csv")
+    for set_name, example_set in SETS.items():
+        found = pd.read_csv(results_of(model, example_set) / "voorspellingen.csv")
         wrong = (found["facenet"] == "Johann").to_numpy() & (hit[:, johann] < 0)
         real = np.array(["geen van de vier"] * len(found), dtype=object)
         for k, name in enumerate(NAMES):
@@ -58,7 +62,8 @@ def main() -> None:
             per_film.append(row)
         by_photo = table.groupby("foto").size().sort_values(ascending=False)
         per_photo += [{"voorbeelden": set_name, "foto": photo, "keer_ten_onrechte_johann": int(n)} for photo, n in by_photo.items()]
-    per_film, per_photo = pd.DataFrame(per_film), pd.DataFrame(per_photo)
+    per_film = pd.DataFrame(per_film, columns=["voorbeelden", "filmpje", "johann_in_dit_filmpje", "kaders_ten_onrechte_johann"] + WHO)
+    per_photo = pd.DataFrame(per_photo, columns=["voorbeelden", "foto", "keer_ten_onrechte_johann"])
     per_film.to_csv(out / "johann_per_filmpje.csv", index=False, lineterminator="\n")
     per_photo.to_csv(out / "johann_per_foto.csv", index=False, lineterminator="\n")
 
@@ -86,7 +91,7 @@ def main() -> None:
     fig.tight_layout(rect=(0, 0, 1, 0.92))
     fig.savefig(out / "wie_wordt_johann.png", dpi=140)
     plt.close(fig)
-    examples = pd.read_csv(SETS["foto's + stills"] / "voorbeelden.csv")
+    examples = rows("fotos_en_kostuum")
     tiles = []
     for row in per_photo[per_photo["voorbeelden"] == "foto's + stills"].head(5).itertuples():
         r = examples[(examples["bestand"] == row.foto) & (examples["persoon"] == "Johann")].iloc[0]
@@ -95,7 +100,8 @@ def main() -> None:
         cv2.putText(bar, row.foto.split("/")[-1][:22], (3, 18), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 0), 1, cv2.LINE_AA)
         cv2.putText(bar, f"{row.keer_ten_onrechte_johann} keer ten onrechte", (3, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 0), 1, cv2.LINE_AA)
         tiles.append(np.vstack([bar, face]))
-    cv2.imwrite(str(out / "johann_fotos.jpg"), np.hstack(tiles), [cv2.IMWRITE_JPEG_QUALITY, 88])
+    if tiles:
+        cv2.imwrite(str(out / "johann_fotos.jpg"), np.hstack(tiles), [cv2.IMWRITE_JPEG_QUALITY, 88])
     print(per_film.to_string(index=False))
     print(per_photo.groupby("voorbeelden").head(4).to_string(index=False))
 

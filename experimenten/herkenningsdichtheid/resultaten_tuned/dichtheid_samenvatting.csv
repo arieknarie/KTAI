@@ -1,0 +1,25 @@
+voorbeelden,venster,persoon,gemiddelde_dichtheid_juiste_naam,gemiddelde_dichtheid_verkeerde_plek,gemiddelde_dichtheid_ground_truth
+foto's,10,Der Alte,0.537,0.008,0.745
+foto's,10,Fritz Grade,0.263,0.004,0.476
+foto's,10,Johann,0.028,0.001,0.076
+foto's,10,Werner,0.52,0.097,0.581
+foto's,15,Der Alte,0.537,0.008,0.745
+foto's,15,Fritz Grade,0.263,0.004,0.476
+foto's,15,Johann,0.028,0.001,0.076
+foto's,15,Werner,0.52,0.097,0.581
+foto's,20,Der Alte,0.537,0.008,0.745
+foto's,20,Fritz Grade,0.263,0.004,0.476
+foto's,20,Johann,0.028,0.001,0.076
+foto's,20,Werner,0.52,0.097,0.581
+foto's + stills in kostuum,10,Der Alte,0.625,0.022,0.745
+foto's + stills in kostuum,10,Fritz Grade,0.366,0.031,0.476
+foto's + stills in kostuum,10,Johann,0.02,0.011,0.076
+foto's + stills in kostuum,10,Werner,0.505,0.013,0.581
+foto's + stills in kostuum,15,Der Alte,0.625,0.022,0.745
+foto's + stills in kostuum,15,Fritz Grade,0.366,0.031,0.476
+foto's + stills in kostuum,15,Johann,0.02,0.011,0.076
+foto's + stills in kostuum,15,Werner,0.505,0.013,0.581
+foto's + stills in kostuum,20,Der Alte,0.625,0.022,0.745
+foto's + stills in kostuum,20,Fritz Grade,0.366,0.031,0.476
+foto's + stills in kostuum,20,Johann,0.02,0.011,0.076
+foto's + stills in kostuum,20,Werner,0.505,0.013,0.581

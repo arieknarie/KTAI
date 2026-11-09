@@ -11,12 +11,12 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-STEPS = ["stap_2_afstellen", "stap_3_herkennen", "stap_4_methode_1_per_beeld", "stap_5_methode_2_per_gezicht", "stap_6_filmpje", "stap_7_uitleg"]
+STEPS = ["stap_2_afstellen", "stap_3_herkennen", "stap_4_methode_2_per_gezicht", "stap_5_filmpje", "stap_6_uitleg"]
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Alle stappen van tuned")
-    parser.add_argument("--voorbeelden", choices=["fotos", "fotos_en_kostuum"], help="alleen deze set voorbeelden")
+    parser.add_argument("--voorbeelden", choices=["fotos", "fotos_en_kostuum", "alleen_kostuum"], help="alleen deze set voorbeelden")
     args = parser.parse_args()
     subprocess.run([sys.executable, str(HERE / "stap_1_vectoren.py")], check=True)
     for example_set in ([args.voorbeelden] if args.voorbeelden else ["fotos", "fotos_en_kostuum"]):

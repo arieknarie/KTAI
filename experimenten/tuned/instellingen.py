@@ -11,13 +11,16 @@ PER_PERSON = ["dichtstbij", "gemiddelde"]            # afstand tot de meest geli
 ASSIGN = ["los", "uniek"]                            # elk kader los, of per beeld elke persoon hoogstens één keer
 DECIDE = ["kader", "track"]                          # per kader beslissen, of per track (gemiddelde afstand van de hele track)
 THRESHOLDS = 200                                     # zoveel drempels worden per instelling geprobeerd
-SETS = ["fotos", "fotos_en_kostuum"]
+SETS = ["fotos", "fotos_en_kostuum", "alleen_kostuum"]
 
 TUNED = Path(__file__).resolve().parent
 KEYS = ["model", "marge", "lichter", "afstand", "per_persoon", "toewijzen", "beslissen"]
 
 
 def folder(example_set: str) -> Path:
+    """De map met de uitkomsten van een set voorbeelden. De set "alleen_kostuum" hoort bij een eigen experiment."""
+    if example_set == "alleen_kostuum":
+        return TUNED.parent / "alleen_in_karakter" / "resultaten_tuned"
     return TUNED / "resultaten" / example_set
 
 

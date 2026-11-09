@@ -1,0 +1,4 @@
+voorbeelden,keuze_van_het_getunde_model,drempel_alle_vectoren,methode_2_f1_alle_vectoren,methode_2_precisie_alle_vectoren,methode_2_recall_alle_vectoren,drempel_gemiddelde,methode_2_f1_gemiddelde,methode_2_precisie_gemiddelde,methode_2_recall_gemiddelde
+foto's,dichtstbij,1.0684,0.808,0.924,0.718,1.1349,0.802,0.884,0.734
+foto's + stills in kostuum,gemiddelde,1.0315,0.773,0.75,0.797,1.1076,0.874,0.952,0.807
+alleen stills in kostuum,gemiddelde,0.9715,0.725,0.641,0.836,1.044,0.87,0.925,0.821

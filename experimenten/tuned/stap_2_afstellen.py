@@ -150,7 +150,7 @@ def main() -> None:
     for ax, key in zip(axes, KEYS):
         values = overview.groupby(key, sort=False)["f1"].max()
         labels = [("ja" if v is True else "nee" if v is False else f"{v:.0%}" if isinstance(v, float) else CHOICES.get(str(v), str(v))) for v in values.index]
-        ax.bar(labels, values.to_numpy(), width=0.6, color=["#2a78d6"] + ["#c9c8c2"] * (len(values) - 1))
+        ax.bar(labels, values.to_numpy(), width=0.6, color=["#eb6834"] + ["#c9c8c2"] * (len(values) - 1))
         for i, v in enumerate(values):
             ax.text(i, v + 0.012, f"{v:.3f}".replace(".", ","), ha="center", fontsize=8, color="#0b0b0b")
         ax.set_title(SETTINGS[key], fontsize=10, color="#0b0b0b", fontweight="bold")
@@ -163,7 +163,7 @@ def main() -> None:
     axes[0].set_ylabel("hoogste score (F1 per gezicht)", fontsize=9, color="#52514e")
     axes[0].set_ylim(0, 1.08)
     axes[0].set_yticks(np.arange(0, 1.01, 0.2))
-    fig.suptitle(f"Hoe hoog komt de score met elke keuze? Blauw is de keuze van de winnaar ({EXAMPLE_SETS[args.voorbeelden]}).", x=0.01, ha="left", fontsize=11, fontweight="bold", color="#0b0b0b")
+    fig.suptitle(f"Hoe hoog komt de score met elke keuze? Oranje is de keuze van de winnaar ({EXAMPLE_SETS[args.voorbeelden]}).", x=0.01, ha="left", fontsize=11, fontweight="bold", color="#0b0b0b")
     fig.tight_layout(rect=(0, 0, 1, 0.94))
     fig.savefig(out / "afstellen_per_instelling.png", dpi=140)
     plt.close(fig)

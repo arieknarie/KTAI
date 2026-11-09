@@ -41,7 +41,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))   # zodat de map
 from gedeeld.facenet import cut, lighten, load_detections, unit, vector_path
 from gedeeld.film import fragments
 from gedeeld.herkennen import by_track, example_distances, person_distances
-from gedeeld.meten import IOU, comma, hit_matrix, overlap, presence
+from gedeeld.meten import IOU, comma, hit_matrix, method_2_counts, overlap, right_and_wrong
 from gedeeld.paden import EXPERIMENTEN, FRAMES, GROUND_TRUTH, MOVIES, NAMES, PICTURES
 from gedeeld.voorbeelden import rows
 from tuned.instellingen import example_path, winner
@@ -248,7 +248,7 @@ def two_methods(data: dict) -> None:
 
 def explain_score() -> None:
     fig, axes = plt.subplots(2, 1, figsize=(13.4, 5.5), facecolor="white", sharex=True, gridspec_kw={"hspace": 0.36})
-    cases = (("tuned", "FaceNet afgesteld, met foto's + stills"), ("basis", "FaceNet standaard, met foto's + stills"))
+    cases = (("tuned", "FaceNet getuned, met foto's + stills"), ("basis", "FaceNet standaard, met foto's + stills"))
     tables = {e: pd.read_csv(result(e, "fotos_en_kostuum") / "methode_2_tabel.csv").set_index("acteur").loc["samen"] for e, _ in cases}
     longest = max(max(int(r["goed"]) + int(r["fout_benoemd"]), int(r["goed"]) + int(r["gemist"])) for r in tables.values())
     for ax, (experiment, title) in zip(axes, cases):
@@ -288,8 +288,8 @@ def threshold(data: dict) -> None:
     hit = data["hit"]
     panels = [("basis", "fotos", 0.80, "Standaard, alleen foto's", "bijna niemand krijgt een naam"),
               ("basis", "fotos_en_kostuum", 0.80, "Standaard, foto's + stills", "bijna iedereen krijgt een naam, ook als het fout is"),
-              ("tuned", "fotos", winner("fotos")["drempel"], "Afgesteld, alleen foto's", "goed en fout liggen aan weerszijden van de drempel"),
-              ("tuned", "fotos_en_kostuum", winner("fotos_en_kostuum")["drempel"], "Afgesteld, foto's + stills", "goed en fout liggen aan weerszijden van de drempel")]
+              ("tuned", "fotos", winner("fotos")["drempel"], "Getuned, alleen foto's", "goed en fout liggen aan weerszijden van de drempel"),
+              ("tuned", "fotos_en_kostuum", winner("fotos_en_kostuum")["drempel"], "Getuned, foto's + stills", "goed en fout liggen aan weerszijden van de drempel")]
     fig, axes = plt.subplots(2, 2, figsize=(12.6, 7.9), facecolor="white", sharex=True, gridspec_kw={"hspace": 0.42, "wspace": 0.12})
     bins = np.linspace(0, 1.6, 65)
     for ax, (experiment, example_set, limit, title, note) in zip(axes.flat, panels):
@@ -327,7 +327,7 @@ def before_after_gif(data: dict) -> None:
     truth = truth[truth["bestand"] == VIDEO_5]
     scores = {}
     panels = []
-    for experiment, title in (("basis", "FaceNet standaard"), ("tuned", "FaceNet afgesteld")):
+    for experiment, title in (("basis", "FaceNet standaard"), ("tuned", "FaceNet getuned")):
         found = pd.read_csv(result(experiment, "fotos_en_kostuum") / "voorspellingen.csv")
         panels.append((title, found[(found["bestand"] == VIDEO_5) & found["facenet"].isin(NAMES)]))
         scores[title] = pd.read_csv(result(experiment, "fotos_en_kostuum") / "methode_2_tabel.csv").set_index("acteur").loc["samen", "f1"]
@@ -350,7 +350,7 @@ def before_after_gif(data: dict) -> None:
                     tag(pen, tuple(round(v * scale) for v in (b.x, b.y, b.w, b.h)), b.facenet, RIGHT if good else WRONG, size=12, width=2)
                 canvas.paste(shown, (left, top))
                 draw.text((left + 4, 8), f"{title}: score {comma(scores[title])}", fill=(11, 11, 11), font=font(17, bold=True))
-            draw.text((4, top + panel_h + 5), "groen: de naam klopt     rood: de naam klopt niet     (Video 5, 5 seconden)", fill=(82, 81, 78), font=font(13))
+            draw.text((4, top + panel_h + 5), "groen: de naam klopt     rood: de naam klopt niet     de score geldt voor alle filmpjes samen", fill=(82, 81, 78), font=font(13))
             canvas.save(Path(folder) / f"{n:03d}.png")
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", "12.5", "-i", str(Path(folder) / "%03d.png"), "-vf",
                         "split[a][b];[a]palettegen=max_colors=160:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle",
@@ -459,13 +459,24 @@ def fair_estimate() -> None:
     plt.close(fig)
 
 
-def sliding_window() -> None:
+def sliding_window(data: dict) -> None:
     frames = pd.read_csv(FRAMES)
     frames = frames[frames["video"] == VIDEO_1].sort_values("frame")
-    found = presence(pd.read_csv(result("basis", "fotos_en_kostuum") / "voorspellingen.csv"))
-    seen = set(found[(found["bestand"] == VIDEO_1) & (found["persoon"] == "Der Alte")]["beeld"])
+    found = pd.read_csv(result("basis", "fotos_en_kostuum") / "voorspellingen.csv")
+    good = right_and_wrong(found, method_2_counts(found, data["truth"])[2])[0]
+    window, cells = 15, 47
+    best = (-1, None, 0)                 # het stukje film waarin de juiste naam het vaakst aan- en uitgaat
+    for person in NAMES:
+        seen = set(good[(good["bestand"] == VIDEO_1) & (good["persoon"] == person)]["beeld"])
+        candidate = np.array([f in seen for f in frames["frame"]], dtype=float)
+        for first in range(0, len(candidate) - cells, 5):
+            part = candidate[first:first + cells]
+            changes = int(np.abs(np.diff(part)).sum()) if 0.35 <= part.mean() <= 0.65 else -1
+            if changes > best[0]:
+                best = (changes, person, first)
+    _, person, start = best
+    seen = set(good[(good["bestand"] == VIDEO_1) & (good["persoon"] == person)]["beeld"])
     signal = np.array([f in seen for f in frames["frame"]], dtype=float)
-    window, start, cells = 15, 425, 47
     density = np.convolve(signal, np.ones(window), "same") / np.convolve(np.ones(len(signal)), np.ones(window), "same")
     centre = 8                        # het beeld (geteld vanaf het begin van het plaatje) waarvoor het venster getekend wordt
     fig, ax = plt.subplots(figsize=(12, 3.5), facecolor="white")
@@ -477,8 +488,8 @@ def sliding_window() -> None:
     ax.add_patch(Rectangle((centre + 0.02, -0.04), 0.96, 0.98, fill=False, edgecolor=ORANGE, linewidth=2.6))
     ax.annotate("", xy=(centre + 0.5, 0.98), xytext=(centre + 0.5, 1.31), arrowprops={"arrowstyle": "-|>", "color": ORANGE, "linewidth": 2})
     part = signal[start + left:start + left + window]
-    ax.text(left, 2.62, f"Venster van {window} beelden: FaceNet ziet de persoon in {int(part.sum())} van de {window} beelden. {int(part.sum())} / {window} = {comma(part.sum() / window, 2)}", ha="left", va="bottom", fontsize=11.5, fontweight="bold", color=ORANGE)
-    ax.text(-0.3, 1.9, "FaceNet ziet\nde persoon\n(zwart = ja)", ha="right", va="center", fontsize=10, color=INK)
+    ax.text(left, 2.62, f"Venster van {window} beelden: in {int(part.sum())} van de {window} beelden staat de juiste naam op het gezicht. {int(part.sum())} / {window} = {comma(part.sum() / window, 2)}", ha="left", va="bottom", fontsize=11.5, fontweight="bold", color=ORANGE)
+    ax.text(-0.3, 1.9, "De juiste naam\nop het gezicht\n(zwart = ja)", ha="right", va="center", fontsize=10, color=INK)
     ax.text(-0.3, 0.45, "Herkennings-\ndichtheid\n(donkerder = hoger)", ha="right", va="center", fontsize=10, color=INK)
     ax.set_xlim(-7.4, cells + 0.1)
     ax.set_ylim(-0.2, 3.02)
@@ -574,7 +585,7 @@ def main() -> None:
     margin_and_light(data, "Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4", 511)
     per_track_figure(data)
     fair_estimate()
-    sliding_window()
+    sliding_window(data)
     glossary(data, images[OVERVIEW_FRAME])
     print("klaar")
 

@@ -85,16 +85,16 @@ def segments(times: np.ndarray, step: float) -> list:
     return [(s, e - s + step) for s, e in zip(starts, ends)]
 
 
-def timeline(truth: pd.DataFrame, ai: pd.DataFrame, path, title: str, ai_label: str = "AI-voorspelling (FaceNet)") -> None:
-    """Visualisatie 2 van de opdracht: de tijd (x) tegen de personen (y), per fragment."""
+def _timeline(layers: list, height: float, path, title: str) -> None:
+    """De tijd (x) tegen de personen (y), per fragment. `layers` is een lijst met (tabel, verschuiving, kleur, naam)."""
     lengths = fragments(pd.read_csv(FRAMES)).groupby("fragment")["lengte"].first().to_dict()
     groups = sorted(lengths, key=lambda g: int(g.split()[-1]))
     fig, axes = plt.subplots(len(groups), 1, figsize=(12, 1.6 * len(groups) + 0.5), squeeze=False)
     for ax, group in zip(axes[:, 0], groups):
         for y, person in enumerate(NAMES):
-            for data, shift, colour in ((truth, 0.18, "#333333"), (ai, -0.18, "#d1495b")):
+            for data, shift, colour, _ in layers:
                 t = data[(data["fragment"] == group) & (data["persoon"] == person)]["tijd_s"].to_numpy()
-                ax.broken_barh(segments(t, 0.04), (y + shift - 0.15, 0.3), color=colour)
+                ax.broken_barh(segments(t, 0.04), (y + shift - height / 2, height), color=colour)
         ax.set_yticks(range(len(NAMES)), NAMES, fontsize=8)
         ax.set_ylim(-0.6, len(NAMES) - 0.4)
         ax.set_xlim(0, lengths[group])
@@ -102,12 +102,17 @@ def timeline(truth: pd.DataFrame, ai: pd.DataFrame, path, title: str, ai_label: 
         ax.set_title(group, fontsize=9, loc="left")
         ax.tick_params(axis="x", labelsize=8)
     axes[-1, 0].set_xlabel("tijd in het fragment (seconden)")
-    fig.legend(handles=[plt.Rectangle((0, 0), 1, 1, color="#333333"), plt.Rectangle((0, 0), 1, 1, color="#d1495b")],
-               labels=["ground truth (labelen)", ai_label], loc="upper right", ncol=2, fontsize=8)
+    fig.legend(handles=[plt.Rectangle((0, 0), 1, 1, color=layer[2]) for layer in layers],
+               labels=[layer[3] for layer in layers], loc="upper right", ncol=len(layers), fontsize=8)
     fig.suptitle(f"Wanneer elke acteur te zien is ({title})", x=0.01, ha="left", fontsize=10)
     fig.tight_layout(rect=(0, 0, 1, 0.96))
     fig.savefig(path, dpi=130)
     plt.close(fig)
+
+
+def timeline(truth: pd.DataFrame, ai: pd.DataFrame, path, title: str, ai_label: str = "AI-voorspelling (FaceNet)") -> None:
+    """Visualisatie 2 van de opdracht, per beeld: de tijd (x) tegen de personen (y), per fragment."""
+    _timeline([(truth, 0.18, "#333333", "ground truth (labelen)"), (ai, -0.18, "#d1495b", ai_label)], 0.3, path, title)
 
 
 def picture_table(data: pd.DataFrame, labels: list, title: str, path) -> None:
@@ -139,6 +144,23 @@ def method_1(found: pd.DataFrame, out, title: str) -> pd.DataFrame:
 
 
 # ---------- methode 2: per gezicht ----------
+
+def right_and_wrong(found: pd.DataFrame, right: np.ndarray) -> tuple:
+    """Per persoon de beelden waarin FaceNet de naam op het juiste gezicht zet, en de beelden waarin de naam op een verkeerde plek staat."""
+    named = found.assign(goed=right)
+    named = named[named["facenet"].isin(NAMES)]
+    keep = COLUMNS + ["facenet"]
+    good, wrong = named.loc[named["goed"], keep], named.loc[~named["goed"], keep]
+    return tuple(part.drop_duplicates(["bestand", "beeld", "facenet"]).rename(columns={"facenet": "persoon"}) for part in (good, wrong))
+
+
+def face_timeline(truth: pd.DataFrame, found: pd.DataFrame, right: np.ndarray, path, title: str) -> None:
+    """De tijdlijn per gezicht: wanneer een persoon echt in beeld is, wanneer de juiste naam op het juiste gezicht staat, en wanneer de naam op een
+    verkeerde plek staat."""
+    good, wrong = right_and_wrong(found, right)
+    _timeline([(wrong, -0.27, "#d1495b", "FaceNet: de naam op een verkeerde plek"), (good, 0.0, "#1baf7a", "FaceNet: de juiste naam op het juiste gezicht"),
+               (truth, 0.27, "#333333", "echt in beeld (ground truth)")], 0.22, path, title)
+
 
 def _by_frame(table: pd.DataFrame) -> dict:
     result = defaultdict(list)
@@ -190,10 +212,11 @@ def method_2_table(counts: dict) -> pd.DataFrame:
 
 
 def method_2(found: pd.DataFrame, out, title: str) -> pd.DataFrame:
-    """Methode 2. Schrijft methode_2_tabel.csv/.png, methode_2_verwarring.csv/.png, methode_2_overlap.csv (de uitkomst bij
+    """Methode 2. Schrijft methode_2_tabel.csv/.png, methode_2_verwarring.csv/.png, methode_2_tijdlijn.png, methode_2_overlap.csv (de uitkomst bij
     andere grenzen voor de overlap) en gebruik_per_foto.csv (welke voorbeeldfoto de doorslag gaf, en hoe vaak dat klopte)."""
     truth = pd.read_csv(GROUND_TRUTH)
     counts, confusion, right = method_2_counts(found, truth)
+    face_timeline(truth, found, right, out / "methode_2_tijdlijn.png", title)
     table = method_2_table(counts)
     table.to_csv(out / "methode_2_tabel.csv", index=False, lineterminator="\n")
     shown = table[["acteur", "gezichten", "goed", "fout_benoemd", "gemist", "precisie", "recall", "f1"]].copy()
@@ -269,53 +292,47 @@ def fast_per_person(person: np.ndarray, distance: np.ndarray, hit: np.ndarray, f
     return result
 
 
-def fast_method_1(person: np.ndarray, distance: np.ndarray, frame_id: np.ndarray, truth_frames: np.ndarray, threshold: float) -> tuple:
-    """Goed, fout en gemist van methode 1 over alle personen, bij één drempel. `truth_frames` is beelden x 4 (ja of nee)."""
-    predicted = np.zeros_like(truth_frames)
-    named = (person >= 0) & (distance < threshold)
-    predicted[frame_id[named], person[named]] = True
-    good = int((predicted & truth_frames).sum())
-    return good, int((predicted & ~truth_frames).sum()), int((~predicted & truth_frames).sum())
-
-
 def fast_setup(detections: pd.DataFrame) -> dict:
     """Alles wat de snelle metingen nodig hebben: de ground truth als getallen."""
     truth = pd.read_csv(GROUND_TRUTH)
-    frame_id = detections.groupby(["video", "frame"], sort=False).ngroup().to_numpy()
-    index = {(v, f): i for (v, f), i in zip(zip(detections["video"], detections["frame"]), frame_id)}
-    frames = len(set(frame_id))
-    extra = {}
-    for key in set(zip(truth["bestand"], truth["beeld"])) - set(index):       # gezichten in beelden zonder enig kader
-        extra[key] = frames + len(extra)
-    index.update(extra)
-    truth_frames = np.zeros((frames + len(extra), len(NAMES)), dtype=bool)
-    truth_frames[[index[k] for k in zip(truth["bestand"], truth["beeld"])], truth["persoon"].map(NAMES.index).to_numpy()] = True
     faces_per_person = truth["persoon"].map(NAMES.index).value_counts().reindex(range(len(NAMES)), fill_value=0).to_numpy()
-    return {"hit": hit_matrix(detections, truth), "frame_id": frame_id, "truth_frames": truth_frames, "faces_per_person": faces_per_person}
+    return {"hit": hit_matrix(detections, truth), "faces_per_person": faces_per_person}
 
 
-def grouped_bars(labels: list, first: list, second: list, names: tuple, title: str, path) -> None:
-    """Twee staafjes per groep, met de waarde erboven."""
-    import matplotlib
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-    import numpy as np
-    x = np.arange(len(labels))
-    fig, ax = plt.subplots(figsize=(8.4, 3.9), facecolor="white")
-    for shift, values, name, colour in ((-0.19, first, names[0], "#2a78d6"), (0.19, second, names[1], "#eb6834")):
-        ax.bar(x + shift, values, width=0.34, color=colour, label=name)
-        for i, value in enumerate(values):
-            ax.text(i + shift, value + 0.015, f"{value:.3f}".replace(".", ","), ha="center", fontsize=9, color="#0b0b0b")
-    ax.set_xticks(x, labels, fontsize=9.5)
+def _bar_style(ax, labels: list, title: str, pad: float = 6) -> None:
+    ax.set_xticks(np.arange(len(labels)), labels, fontsize=9.5)
     ax.set_ylim(0, 1)
-    ax.set_ylabel("F1", fontsize=9.5, color="#52514e")
+    ax.set_ylabel("score (F1 per gezicht)", fontsize=9.5, color="#52514e")
     ax.tick_params(length=0, labelsize=9, colors="#52514e")
     ax.grid(axis="y", color="#e4e3de", linewidth=0.8)
     ax.set_axisbelow(True)
     for spine in ax.spines.values():
         spine.set_visible(False)
-    ax.legend(frameon=False, fontsize=9, loc="upper right")
-    ax.set_title(title, loc="left", fontsize=11, fontweight="bold", color="#0b0b0b")
+    ax.set_title(title, loc="left", fontsize=11, fontweight="bold", color="#0b0b0b", pad=pad)
+
+
+def bars(labels: list, values: list, title: str, path) -> None:
+    """Eén staafje per groep, met de score erboven."""
+    fig, ax = plt.subplots(figsize=(8.4, 3.9), facecolor="white")
+    ax.bar(np.arange(len(labels)), values, width=0.5, color="#eb6834")
+    for i, value in enumerate(values):
+        ax.text(i, value + 0.015, f"{value:.3f}".replace(".", ","), ha="center", fontsize=10, color="#0b0b0b")
+    _bar_style(ax, labels, title)
+    fig.tight_layout()
+    fig.savefig(path, dpi=140)
+    plt.close(fig)
+
+
+def grouped_bars(labels: list, first: list, second: list, names: tuple, title: str, path) -> None:
+    """Twee staafjes per groep, met de waarde erboven: grijs is de vergelijking, oranje is het experiment."""
+    x = np.arange(len(labels))
+    fig, ax = plt.subplots(figsize=(8.4, 3.9), facecolor="white")
+    for shift, values, name, colour in ((-0.19, first, names[0], "#8a8983"), (0.19, second, names[1], "#eb6834")):
+        ax.bar(x + shift, values, width=0.34, color=colour, label=name)
+        for i, value in enumerate(values):
+            ax.text(i + shift, value + 0.015, f"{value:.3f}".replace(".", ","), ha="center", fontsize=9, color="#0b0b0b")
+    _bar_style(ax, labels, title, pad=28)
+    ax.legend(frameon=False, fontsize=9, ncol=2, loc="lower left", bbox_to_anchor=(-0.01, 1.0))
     fig.tight_layout()
     fig.savefig(path, dpi=140)
     plt.close(fig)

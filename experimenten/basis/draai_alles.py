@@ -20,6 +20,8 @@ def main() -> None:
     args = parser.parse_args()
     for example_set in ([args.voorbeelden] if args.voorbeelden else ["fotos", "fotos_en_kostuum"]):
         for step in STEPS:
+            if example_set == "alleen_kostuum" and step == "stap_3_methode_1_per_beeld":      # methode 1 staat alleen bij de basis
+                continue
             print(f"--- {example_set}: {step}", flush=True)
             subprocess.run([sys.executable, str(HERE / f"{step}.py"), "--voorbeelden", example_set], check=True)
 

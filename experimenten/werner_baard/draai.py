@@ -4,12 +4,15 @@ De in-karakter set bestaat uit de stills. Van de 12 stills van Werner zijn er 6 
 (te donker; die doet hier niet mee). De andere drie personen blijven hetzelfde. Begonnen wordt met de 5 stills zonder baard. Daarna komen er 1
 tot en met 6 stills met baard bij; elke combinatie wordt geprobeerd. Er zijn geen beelden uit de filmpjes gebruikt.
 
-FaceNet staat standaard (drempel 0,80). Gemeten wordt met methode 2 (per gezicht).
-Uitvoer in resultaten/: alle_combinaties.csv, per_aantal.csv en werner_baard.png.
+FaceNet staat standaard (drempel 0,80), of met --model tuned op de beste instellingen voor de stills (de drempel blijft dan gelijk).
+Gemeten wordt met methode 2 (per gezicht).
+Uitvoer in resultaten/ (met --model tuned in resultaten_tuned/): alle_combinaties.csv, per_aantal.csv en werner_baard.png.
 
-Gebruik (vanuit de map experimenten, na alleen_in_karakter/draai.py):
+Gebruik (vanuit de map experimenten, na alleen_in_karakter/draai.py; voor --model tuned na alleen_in_karakter/draai.py --model tuned):
     Mac:     .venv/bin/python werner_baard/draai.py
+             .venv/bin/python werner_baard/draai.py --model tuned
     Windows: .venv\Scripts\python werner_baard\draai.py
+             .venv\Scripts\python werner_baard\draai.py --model tuned
 """
 
 import itertools
@@ -27,6 +30,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))   # zodat de map gedeeld/ gevonden wordt
 
 from gedeeld.facenet import box_vectors, cut, load_detections
+from gedeeld.getuned import OUTPUT, Tuned, model_choice
 from gedeeld.herkennen import example_distances
 from gedeeld.meten import fast_per_person, fast_setup, rates
 from gedeeld.paden import EXPERIMENTEN, NAMES, PICTURES
@@ -40,16 +44,29 @@ UNCLEAR = "pictures/inCharacter/FritzGrade/Fritz1.jpg"
 
 
 def main() -> None:
-    out = HERE / "resultaten"
+    model = model_choice()
+    out = HERE / OUTPUT[model]
     out.mkdir(parents=True, exist_ok=True)
-    examples = pd.read_csv(EXPERIMENTEN / "alleen_in_karakter" / "resultaten" / "voorbeelden.csv")
-    names, photos = examples["persoon"].to_numpy(), examples["bestand"].to_numpy()
-    refs = examples[[f"v{i}" for i in range(128)]].to_numpy(dtype=np.float32)
     detections = load_detections()
-    boxes = box_vectors(detections, [("Facenet", 0.0)])[("Facenet", 0.0)]
     setup = fast_setup(detections)
-    distance = example_distances(boxes, refs, "euclidean_l2")
-    person_of = np.array([NAMES.index(n) for n in names])
+    if model == "tuned":
+        tuned = Tuned("alleen_kostuum", detections)
+        examples, names, photos, threshold = tuned.table, tuned.names, tuned.photos, tuned.threshold
+
+        def decide(active: list) -> tuple:
+            return tuned.decide(tuned.person_matrix(active))[1:]
+    else:
+        examples = pd.read_csv(EXPERIMENTEN / "alleen_in_karakter" / "resultaten" / "voorbeelden.csv")
+        names, photos, threshold = examples["persoon"].to_numpy(), examples["bestand"].to_numpy(), DREMPEL
+        refs = examples[[f"v{i}" for i in range(128)]].to_numpy(dtype=np.float32)
+        boxes = box_vectors(detections, [("Facenet", 0.0)])[("Facenet", 0.0)]
+        distance = example_distances(boxes, refs, "euclidean_l2")
+        person_of = np.array([NAMES.index(n) for n in names])
+
+        def decide(active: list) -> tuple:
+            part = distance[:, active]
+            nearest = part.argmin(axis=1)
+            return person_of[np.array(active)][nearest], part[np.arange(len(part)), nearest]
 
     beard = [i for i in np.flatnonzero(names == "Werner") if photos[i] in WITH_BEARD]
     unclear = [i for i in np.flatnonzero(names == "Werner") if photos[i] == UNCLEAR]
@@ -59,11 +76,8 @@ def main() -> None:
     rows = []
     for size in range(len(beard) + 1):
         for chosen in itertools.combinations(beard, size):
-            active = base + list(chosen)
-            part = distance[:, active]
-            nearest = part.argmin(axis=1)
-            person = person_of[np.array(active)][nearest]
-            counts = fast_per_person(person, part[np.arange(len(part)), nearest], setup["hit"], setup["faces_per_person"], DREMPEL)
+            person, best = decide(base + list(chosen))
+            counts = fast_per_person(person, best, setup["hit"], setup["faces_per_person"], threshold)
             werner = counts[NAMES.index("Werner")]
             total = counts.sum(axis=0)
             rows.append({"stills_met_baard": size, "welke": " + ".join(photos[i].split("/")[-1] for i in chosen) or "geen",
@@ -85,12 +99,13 @@ def main() -> None:
         bar = np.full((28, row.shape[1], 3), 255, np.uint8)
         cv2.putText(bar, f"Stills van Werner, {text}: {len(group)}", (4, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.52, (0, 0, 0), 1, cv2.LINE_AA)
         lines += [bar, row]
-    cv2.imwrite(str(out / "werner_stills.jpg"), np.vstack(lines), [cv2.IMWRITE_JPEG_QUALITY, 88])
+    if model == "standaard":                              # de stills zijn voor beide modellen dezelfde
+        cv2.imwrite(str(out / "werner_stills.jpg"), np.vstack(lines), [cv2.IMWRITE_JPEG_QUALITY, 88])
 
     fig, ax = plt.subplots(figsize=(8.2, 4.6), facecolor="white")
     x = mean["stills_met_baard"]
-    ax.fill_between(x, mean["werner_f1_laagste"], mean["werner_f1_hoogste"], color="#2a78d6", alpha=0.15, linewidth=0, label="F1 van Werner: laagste tot hoogste combinatie")
-    for column, colour, label in (("werner_f1", "#2a78d6", "F1 van Werner"), ("werner_precisie", "#eb6834", "precisie van Werner"), ("werner_recall", "#1baf7a", "recall van Werner"), ("alle_f1", "#8a8983", "F1 van alle vier")):
+    ax.fill_between(x, mean["werner_f1_laagste"], mean["werner_f1_hoogste"], color="#eb6834", alpha=0.15, linewidth=0, label="score van Werner: laagste tot hoogste combinatie")
+    for column, colour, label in (("werner_f1", "#eb6834", "score van Werner"), ("werner_precisie", "#1baf7a", "precisie van Werner"), ("werner_recall", "#6250d6", "recall van Werner"), ("alle_f1", "#8a8983", "score van alle vier")):
         ax.plot(x, mean[column], marker="o", markersize=5, linewidth=2, color=colour, label=label)
     ax.set_xlabel("aantal stills van Werner met baard in de in-karakter set", fontsize=9.5, color="#52514e")
     ax.set_ylabel("gemiddelde over alle combinaties", fontsize=9.5, color="#52514e")
@@ -102,7 +117,7 @@ def main() -> None:
     for spine in ax.spines.values():
         spine.set_visible(False)
     ax.legend(frameon=False, fontsize=8.5, ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.17))
-    ax.set_title("Meer stills van Werner met baard in de in-karakter set", loc="left", fontsize=11, fontweight="bold", color="#0b0b0b")
+    ax.set_title("Meer stills van Werner met baard in de in-karakter set" + (", getuned" if model == "tuned" else ""), loc="left", fontsize=11, fontweight="bold", color="#0b0b0b")
     fig.tight_layout()
     fig.savefig(out / "werner_baard.png", dpi=140)
     plt.close(fig)

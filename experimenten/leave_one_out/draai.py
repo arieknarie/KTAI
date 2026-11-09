@@ -6,11 +6,17 @@ foto het resultaat slechter. FaceNet staat standaard (drempel 0,80), en de vecto
 Daarna wordt stap voor stap steeds de foto weggelaten die de F1 het meest verbetert, tot weglaten niet meer helpt. Let op: dat zegt wat er bij deze
 filmpjes had kunnen gebeuren; de foto's zijn op dezelfde beelden uitgekozen als waarop gemeten wordt.
 
-Uitvoer in resultaten/<set>/: leave_one_out.csv, weglaten_stap_voor_stap.csv, leave_one_out.png en slechtste_fotos.jpg.
+Met --model tuned staat FaceNet op de beste instellingen voor die set, en blijft de drempel gelijk.
 
-Gebruik (vanuit de map experimenten, na basis/draai_alles.py en alleen_in_karakter/draai.py):
+Uitvoer in resultaten/<set>/ (met --model tuned in resultaten_tuned/<set>/): leave_one_out.csv, weglaten_stap_voor_stap.csv, leave_one_out.png
+en slechtste_fotos.jpg.
+
+Gebruik (vanuit de map experimenten, na basis/draai_alles.py en alleen_in_karakter/draai.py; voor --model tuned na tuned/draai_alles.py
+en alleen_in_karakter/draai.py --model tuned):
     Mac:     .venv/bin/python leave_one_out/draai.py
+             .venv/bin/python leave_one_out/draai.py --model tuned
     Windows: .venv\Scripts\python leave_one_out\draai.py
+             .venv\Scripts\python leave_one_out\draai.py --model tuned
 """
 
 import sys
@@ -27,75 +33,82 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))   # zodat de map gedeeld/ gevonden wordt
 
 from gedeeld.facenet import box_vectors, cut, load_detections
+from gedeeld.getuned import OUTPUT, Tuned, model_choice, results_of
 from gedeeld.herkennen import example_distances
-from gedeeld.meten import fast_counts, fast_method_1, fast_setup, rates
-from gedeeld.paden import EXPERIMENTEN, NAMES, PICTURES
+from gedeeld.meten import fast_counts, fast_setup, rates
+from gedeeld.paden import NAMES, PICTURES
 
 HERE = Path(__file__).resolve().parent
 DREMPEL = 0.80
-SETS = {"fotos": EXPERIMENTEN / "basis" / "resultaten" / "fotos",
-        "fotos_en_kostuum": EXPERIMENTEN / "basis" / "resultaten" / "fotos_en_kostuum",
-        "alleen_kostuum": EXPERIMENTEN / "alleen_in_karakter" / "resultaten"}
+SETS = ["fotos", "fotos_en_kostuum", "alleen_kostuum"]
 
 
-def score(distance, person_of, active, setup) -> tuple:
-    part = distance[:, active]
-    nearest = part.argmin(axis=1)
-    person, best = person_of[np.array(active)][nearest], part[np.arange(len(part)), nearest]
-    two = rates(*fast_counts(person, best, setup["hit"], int(setup["faces_per_person"].sum()), DREMPEL))[2]
-    one = rates(*fast_method_1(person, best, setup["frame_id"], setup["truth_frames"], DREMPEL))[2]
-    return two, one
+def score(decide, active, setup, threshold) -> float:
+    person, best = decide(active)
+    return rates(*fast_counts(person, best, setup["hit"], int(setup["faces_per_person"].sum()), threshold))[2]
 
 
 def main() -> None:
+    model = model_choice()
     detections = load_detections()
-    boxes = box_vectors(detections, [("Facenet", 0.0)])[("Facenet", 0.0)]
     setup = fast_setup(detections)
-    for example_set, source in SETS.items():
-        out = HERE / "resultaten" / example_set
+    boxes = None if model == "tuned" else box_vectors(detections, [("Facenet", 0.0)])[("Facenet", 0.0)]
+    for example_set in SETS:
+        out = HERE / OUTPUT[model] / example_set
         out.mkdir(parents=True, exist_ok=True)
-        examples = pd.read_csv(source / "voorbeelden.csv")
-        names = examples["persoon"].to_numpy()
-        refs = examples[[f"v{i}" for i in range(128)]].to_numpy(dtype=np.float32)
-        person_of = np.array([NAMES.index(n) for n in names])
-        distance = example_distances(boxes, refs, "euclidean_l2")
+        if model == "tuned":
+            tuned = Tuned(example_set, detections)
+            examples, names, threshold = tuned.table, tuned.names, tuned.threshold
+
+            def decide(active: list, tuned=tuned) -> tuple:
+                return tuned.decide(tuned.person_matrix(active))[1:]
+        else:
+            examples = pd.read_csv(results_of(model, example_set) / "voorbeelden.csv")
+            names, threshold = examples["persoon"].to_numpy(), DREMPEL
+            refs = examples[[f"v{i}" for i in range(128)]].to_numpy(dtype=np.float32)
+            person_of = np.array([NAMES.index(n) for n in names])
+            distance = example_distances(boxes, refs, "euclidean_l2")
+
+            def decide(active: list, distance=distance, person_of=person_of) -> tuple:
+                part = distance[:, active]
+                nearest = part.argmin(axis=1)
+                return person_of[np.array(active)][nearest], part[np.arange(len(part)), nearest]
         everything = list(range(len(names)))
-        base_two, base_one = score(distance, person_of, everything, setup)
+        base_two = score(decide, everything, setup, threshold)
 
         rows = []
         for i in everything:
-            two, one = score(distance, person_of, [j for j in everything if j != i], setup)
+            two = score(decide, [j for j in everything if j != i], setup, threshold)
             rows.append({"persoon": names[i], "bestand": examples["bestand"][i], "x": int(examples["x"][i]), "y": int(examples["y"][i]), "w": int(examples["w"][i]), "h": int(examples["h"][i]),
-                         "methode_2_f1_met": base_two, "methode_2_f1_zonder": two, "methode_2_verschil": round(two - base_two, 4),
-                         "methode_1_f1_met": base_one, "methode_1_f1_zonder": one, "methode_1_verschil": round(one - base_one, 4)})
+                         "methode_2_f1_met": base_two, "methode_2_f1_zonder": two, "methode_2_verschil": round(two - base_two, 4)})
         table = pd.DataFrame(rows).sort_values("methode_2_verschil", ascending=False, kind="stable").reset_index(drop=True)
         table.to_csv(out / "leave_one_out.csv", index=False, lineterminator="\n")
 
-        active, path = everything.copy(), [{"stap": 0, "weggelaten": "niets", "voorbeelden_over": len(everything), "methode_2_f1": base_two, "methode_1_f1": base_one}]
+        active, path = everything.copy(), [{"stap": 0, "weggelaten": "niets", "voorbeelden_over": len(everything), "methode_2_f1": base_two}]
         current = base_two
         while len(active) > 4:
             tries = []
             for i in active:
                 left = [j for j in active if j != i]
                 if len({names[j] for j in left}) == 4:      # elke persoon houdt minstens één voorbeeld
-                    tries.append((score(distance, person_of, left, setup)[0], i))
+                    tries.append((score(decide, left, setup, threshold), i))
             best_score, drop = max(tries)
             if best_score <= current:
                 break
             active.remove(drop)
             current = best_score
             path.append({"stap": len(path), "weggelaten": f"{names[drop]}: {examples['bestand'][drop].split('/')[-1]}", "voorbeelden_over": len(active),
-                         "methode_2_f1": best_score, "methode_1_f1": score(distance, person_of, active, setup)[1]})
+                         "methode_2_f1": best_score})
         pd.DataFrame(path).to_csv(out / "weglaten_stap_voor_stap.csv", index=False, lineterminator="\n")
 
         changed = table[table["methode_2_verschil"] != 0]
-        print(example_set, "F1 met alles:", base_two); print(table.head(6)[["persoon", "bestand", "methode_2_verschil", "methode_1_verschil"]].to_string(index=False)); print(pd.DataFrame(path).tail(4).to_string(index=False))
+        print(example_set, "F1 met alles:", base_two); print(table.head(6)[["persoon", "bestand", "methode_2_verschil"]].to_string(index=False)); print(pd.DataFrame(path).tail(4).to_string(index=False))
         if changed.empty:                                   # dan heeft geen enkele foto invloed en valt er niets te tekenen
             continue
         fig, ax = plt.subplots(figsize=(9.4, 0.3 * len(changed) + 1.5), facecolor="white")
         y = np.arange(len(changed))
         values = changed["methode_2_verschil"].to_numpy()
-        ax.barh(y, values, height=0.65, color=np.where(values > 0, "#d1495b", "#2a78d6"))
+        ax.barh(y, values, height=0.65, color=np.where(values > 0, "#d1495b", "#8a8983"))
         ax.set_yticks(y, [f"{p}: {b.split('/')[-1]}" for p, b in zip(changed["persoon"], changed["bestand"])], fontsize=8.5)
         ax.invert_yaxis()
         ax.axvline(0, color="#52514e", linewidth=1)
@@ -106,7 +119,7 @@ def main() -> None:
         ax.set_axisbelow(True)
         for spine in ax.spines.values():
             spine.set_visible(False)
-        fig.suptitle(f"Wat gebeurt er als je één foto weglaat? Rood: de score wordt hoger. Blauw: de score wordt lager.", x=0.012, ha="left", fontsize=11, fontweight="bold", color="#0b0b0b")
+        fig.suptitle(f"Wat gebeurt er als je één foto weglaat? Rood: de score wordt hoger. Grijs: de score wordt lager.", x=0.012, ha="left", fontsize=11, fontweight="bold", color="#0b0b0b")
         fig.tight_layout(rect=(0, 0, 1, 1 - 0.3 / fig.get_figheight()))
         fig.savefig(out / "leave_one_out.png", dpi=130)
         plt.close(fig)

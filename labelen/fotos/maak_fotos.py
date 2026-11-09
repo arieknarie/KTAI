@@ -101,7 +101,7 @@ def threshold_image() -> None:
             x, y, w, h = (round(v * scale) for v in (face.x, face.y, face.w, face.h))
             cv2.rectangle(panel, (x, y), (x + w, y + h), GREEN, 2)
             label(panel, f"{face.score:.2f}", x, y, GREEN)
-        panels.append(caption(panel, f"detectiescore >= {threshold}: {len(shown)} gezichten"))
+        panels.append(caption(panel, f"score minstens {str(threshold).replace('.', ',')}: {len(shown)} kaders"))
     gap = np.full((panels[0].shape[0], 10, 3), 255, np.uint8)
     save_jpg(DOCS / "stap0_drempel.jpg", np.hstack([panels[0], gap, panels[1]]), 90)
 
@@ -130,7 +130,7 @@ def track_image() -> None:
         label(frame, f"track {face.track}", face.x, face.y, GREEN, scale=max(0.9, frame.shape[1] / 900))
         small = cv2.resize(frame, (400, round(frame.shape[0] * 400 / frame.shape[1])), interpolation=cv2.INTER_AREA)
         minutes, seconds = divmod(face.time_s, 60)
-        panels.append(caption(small, f"frame {face.frame}  ({int(minutes)}:{seconds:04.1f})"))
+        panels.append(caption(small, f"beeld {face.frame}  ({int(minutes)}:{seconds:04.1f})".replace(".", ",")))
     rows = [np.hstack(panels[i:i + 3]) for i in (0, 3)]
     save_jpg(DOCS / "stap0_track.jpg", np.vstack(rows), 90)
     print(f"track {longest['track']}: {longest['faces']} frames, {longest['start_s']} s tot {longest['end_s']} s")
@@ -147,9 +147,9 @@ def cut_image() -> None:
            else cuts.sort_values(["colour_similarity", "frame"], ascending=[False, True])).iloc[0]
     video, frame_index = row["video"], int(row["frame"])
     panels = []
-    for index, title in ((frame_index - 1, f"frame {frame_index - 1}"),
-                         (frame_index, f"frame {frame_index}: kleur {row['colour_similarity']:.2f}, "
-                                       f"structuur {row['structure_similarity']:.2f} -> beeldwissel")):
+    for index, title in ((frame_index - 1, f"beeld {frame_index - 1}"),
+                         (frame_index, f"beeld {frame_index}: kleuren {row['colour_similarity']:.2f}, ".replace(".", ",") + 
+                                       f"licht-donkerpatroon {row['structure_similarity']:.2f}: beeldwissel".replace(".", ","))):
         image = read_frame(video, index)
         small = cv2.resize(image, (560, round(image.shape[0] * 560 / image.shape[1])), interpolation=cv2.INTER_AREA)
         panels.append(caption(small, title))
@@ -270,7 +270,7 @@ def overview(todo: dict, verdicts: dict, fixes: dict) -> None:
     axes[3].text(0.5, 0.965, "Let op: Der Alte stond in het vorige beeld wel, nu niet", transform=axes[3].transAxes, ha="center", va="top",
                  fontsize=10.5, fontweight="bold", color="white", bbox={"facecolor": "#d1495b", "edgecolor": "none", "pad": 4})
     count = Counter(verdicts.values())
-    note(axes[3], "Stap 2: per beeld nakijken", f"Dit beeld kreeg pijltje rechts: fout.\nIn totaal {number(count['goed'])} keer goed en {number(count['fout'])} keer fout.")
+    note(axes[3], "Stap 2: per beeld nakijken", f"De nakijker vond dit beeld fout.\nIn totaal {number(count['goed'])} keer goed en {number(count['fout'])} keer fout.")
 
     show(axes[4], image, fixes[key])
     note(axes[4], "Stap 3: foute beelden verbeteren", f"Het ontbrekende kader staat erbij.\nAlle {number(count['fout'])} foute beelden zijn verbeterd.")

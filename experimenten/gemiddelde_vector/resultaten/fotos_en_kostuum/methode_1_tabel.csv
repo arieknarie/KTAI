@@ -1,6 +1,0 @@
-acteur,ground_truth,ai_voorspelling,foutmarge_procent,goed,fout,gemist,precisie,recall,f1
-Der Alte,8326,542,93.5,538,4,7788,0.993,0.065,0.121
-Fritz Grade,5321,853,84.0,739,114,4582,0.866,0.139,0.239
-Johann,849,29,96.6,0,29,849,0.0,0.0,0.0
-Werner,6494,1155,82.2,1149,6,5345,0.995,0.177,0.3
-samen,20990,2579,87.7,2426,153,18564,0.941,0.116,0.206

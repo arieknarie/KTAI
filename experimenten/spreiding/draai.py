@@ -9,11 +9,16 @@ Daarnaast een test van het idee dat FaceNet bij een onherkenbaar kader kiest voo
 kader is hier een kader dat niet op het gezicht van een van de vier personen ligt (figuranten en dingen die geen gezicht zijn). Per set
 wordt geteld welke persoon voor die kaders het dichtstbij is.
 
-Uitvoer in resultaten/: spreiding.csv, kleinste_afstand.csv, onherkenbaar.csv en afstanden.png.
+Met --model tuned gebruikt elke set de vectoren en de beslissingen van het getunde model voor die set.
 
-Gebruik (vanuit de map experimenten, na basis/draai_alles.py en alleen_in_karakter/draai.py):
+Uitvoer in resultaten/ (met --model tuned in resultaten_tuned/): spreiding.csv, kleinste_afstand.csv, onherkenbaar.csv en afstanden.png.
+
+Gebruik (vanuit de map experimenten, na basis/draai_alles.py en alleen_in_karakter/draai.py; voor --model tuned na tuned/draai_alles.py
+en alleen_in_karakter/draai.py --model tuned):
     Mac:     .venv/bin/python spreiding/draai.py
+             .venv/bin/python spreiding/draai.py --model tuned
     Windows: .venv\Scripts\python spreiding\draai.py
+             .venv\Scripts\python spreiding\draai.py --model tuned
 """
 
 import itertools
@@ -31,29 +36,39 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))   # zodat de map gedeeld/ gevonden wordt
 
 from gedeeld.facenet import cut, load_detections, unit
+from gedeeld.getuned import OUTPUT, model_choice, results_of
 from gedeeld.meten import hit_matrix
-from gedeeld.paden import EXPERIMENTEN, GROUND_TRUTH, NAMES, PICTURES
+from gedeeld.paden import GROUND_TRUTH, NAMES, PICTURES
+from gedeeld.voorbeelden import rows
+from tuned.instellingen import example_path, winner
 
 HERE = Path(__file__).resolve().parent
-SETS = {"out-of-character (foto's)": EXPERIMENTEN / "basis" / "resultaten" / "fotos",
-        "in-character (stills)": EXPERIMENTEN / "alleen_in_karakter" / "resultaten",
-        "totale set": EXPERIMENTEN / "basis" / "resultaten" / "fotos_en_kostuum"}
+SETS = {"out-of-character (foto's)": "fotos", "in-character (stills)": "alleen_kostuum", "totale set": "fotos_en_kostuum"}
 
 
 def short(path: str) -> str:
     return path.split("/")[-1]
 
 
+def example_vectors(model: str, example_set: str) -> tuple:
+    """De voorbeelden van een set, en hun vectoren met lengte 1."""
+    if model == "tuned":
+        best = winner(example_set)
+        return rows(example_set), unit(np.load(example_path(example_set, best["model"], best["marge"], best["lichter"])))
+    table = pd.read_csv(results_of(model, example_set) / "voorbeelden.csv")
+    return table, unit(table[[f"v{i}" for i in range(128)]].to_numpy(dtype=np.float32))
+
+
 def main() -> None:
-    out = HERE / "resultaten"
+    model = model_choice()
+    out = HERE / OUTPUT[model]
     out.mkdir(parents=True, exist_ok=True)
     detections = load_detections()
     hit = hit_matrix(detections, pd.read_csv(GROUND_TRUTH))
     spread, closest, unknown, matrices, pairs = [], [], [], {}, []
-    for set_name, folder in SETS.items():
-        examples = pd.read_csv(folder / "voorbeelden.csv")
+    for set_name, example_set in SETS.items():
+        examples, vectors = example_vectors(model, example_set)
         names, photos = examples["persoon"].to_numpy(), examples["bestand"].to_numpy()
-        vectors = unit(examples[[f"v{i}" for i in range(128)]].to_numpy(dtype=np.float32))
         distance = np.linalg.norm(vectors[:, None] - vectors[None], axis=2)
         matrix = np.zeros((4, 4))
         for a, b in itertools.product(range(4), range(4)):
@@ -77,7 +92,7 @@ def main() -> None:
                     pairs.append((set_name, f"{NAMES[a]} / {NAMES[b]}: kleinste afstand {part[i, j]:.2f}".replace(".", ","), examples, int(ia[i]), int(ib[j])))
         matrices[set_name] = matrix
 
-        found = pd.read_csv(folder / "voorspellingen.csv")
+        found = pd.read_csv(results_of(model, example_set) / "voorspellingen.csv")
         nobody = (hit < 0).all(axis=1)                      # kaders die op geen van de vier gezichten liggen
         share = found.loc[nobody, "dichtstbij"].value_counts(normalize=True).reindex(NAMES, fill_value=0.0)
         named = found.loc[nobody, "facenet"].value_counts().reindex(NAMES, fill_value=0)

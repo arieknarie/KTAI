@@ -33,7 +33,7 @@ Dit zijn de instellingen waarmee deze uitkomsten gemaakt zijn.
 *De voorbeelden in deze set. Elk klein plaatje is precies wat FaceNet van een voorbeeld te zien krijgt.*
 
 
-## Methode 2: per gezicht
+## De score per gezicht
 
 Dit is de maat waarmee we FaceNet beoordelen. We weten waar elk gezicht staat. Een naam telt alleen als goed als het kader met die naam minstens 30% overlapt met het gezicht van die persoon.
 
@@ -71,38 +71,15 @@ Dit is de maat waarmee we FaceNet beoordelen. We weten waar elk gezicht staat. E
 
 *Zo lees je dit plaatje: elke rij is wie het echt is, elke kolom is de naam die FaceNet geeft. Bij een goed resultaat staan de hoge percentages op de schuine lijn van linksboven naar rechtsonder. De onderste rij zijn kaders die op geen van de vier personen liggen: figuranten en dingen die geen gezicht zijn. Daar hoort alles in de laatste kolom te staan.*
 
+![Tijdlijn per gezicht: wanneer elke persoon echt in beeld is, en wanneer FaceNet de naam goed of op een verkeerde plek zet](methode_2_tijdlijn.png)
+
+*Zo lees je dit plaatje: elke regel is een persoon, en van links naar rechts loopt de tijd in het filmpje. Zwart is wanneer de persoon echt in beeld is. Groen is wanneer FaceNet de juiste naam op het gezicht van die persoon zet. Rood is wanneer FaceNet die naam op een verkeerde plek zet. Hoe meer groen gelijk loopt met zwart en hoe minder rood er is, hoe beter.*
+
 **Een eerlijke schatting.** De instellingen zijn gekozen op dezelfde beelden als waarop we meten. Daardoor is de score hierboven wat te gunstig. Bij de eerlijke schatting kiezen we de instellingen steeds op zeven filmpjes en meten we op het achtste. Dan is de score **0,834** (zie `eerlijke_schatting.csv`). Alle geprobeerde instellingen staan in `alle_instellingen.csv`, en per filmpje de beste instelling in `beste_per_filmpje.csv`.
 
 ![De hoogste score per keuze bij het afstellen](afstellen_per_instelling.png)
 
 *Zo lees je dit plaatje: elk blok is één instelling. De balken laten zien hoe hoog de score kan worden met elke keuze. De blauwe balk is de keuze van de winnaar.*
-
-
-## Methode 1: per beeld
-
-Deze maat staat in de opdracht. We weten wie er in elk beeld te zien is, en tellen per persoon in hoeveel beelden FaceNet die persoon ziet. Waar in het beeld FaceNet de persoon ziet, maakt niet uit.
-
-| Persoon | Score (F1) | Precisie | Recall |
-|---|---|---|---|
-| Der Alte | 0,905 | 0,974 | 0,846 |
-| Fritz Grade | 0,895 | 0,984 | 0,821 |
-| Johann | 0,374 | 0,650 | 0,263 |
-| Werner | 0,925 | 0,980 | 0,875 |
-| **alle vier samen** | **0,893** | **0,972** | **0,825** |
-
-**De aantallen.** De *foutmarge* zegt hoeveel procent het aantal beelden van FaceNet afwijkt van het echte aantal beelden. *Goed* is een beeld waarin FaceNet de persoon terecht ziet, *fout* een beeld waarin FaceNet de persoon ten onrechte ziet, en *gemist* een beeld waarin de persoon wel staat maar FaceNet de persoon niet ziet.
-
-| Persoon | Echt in beeld | FaceNet ziet | Foutmarge | Goed | Fout | Gemist |
-|---|---|---|---|---|---|---|
-| Der Alte | 8.326 | 7.226 | 13,2% | 7.040 | 186 | 1.286 |
-| Fritz Grade | 5.321 | 4.439 | 16,6% | 4.368 | 71 | 953 |
-| Johann | 849 | 343 | 59,6% | 223 | 120 | 626 |
-| Werner | 6.494 | 5.799 | 10,7% | 5.685 | 114 | 809 |
-| **alle vier samen** | **20.990** | **17.807** | **15,2%** | **17.316** | **491** | **3.674** |
-
-![Tijdlijn: wanneer elke persoon te zien is, volgens de ground truth en volgens FaceNet](methode_1_tijdlijn.png)
-
-*Zo lees je dit plaatje: elke regel is een persoon, en van links naar rechts loopt de tijd in het filmpje. Zwart is wanneer de persoon echt in beeld is, rood is wanneer FaceNet de persoon ziet. Lopen zwart en rood gelijk, dan klopt het. Rood zonder zwart betekent dat FaceNet de persoon ten onrechte ziet, en zwart zonder rood dat FaceNet de persoon mist.*
 
 
 ## De bestanden in deze map
@@ -112,8 +89,7 @@ Deze maat staat in de opdracht. We weten wie er in elk beeld te zien is, en tell
 | `voorspellingen.csv` | Elk kader op een regel: wie FaceNet zegt dat het is (`facenet`), de persoon die het dichtstbij is (`dichtstbij`), de afstand (`afstand`) en de voorbeeldfoto die het meest op het kader lijkt (`foto`). |
 | `gebruik_per_foto.csv` | Per voorbeeldfoto hoe vaak die foto het meest op een kader leek, en hoe vaak de naam dan goed of fout was. |
 | `voorbeelden.jpg` | De voorbeelden in deze set. |
-| `methode_1_tabel.csv`, `methode_1_tabel.png`, `methode_1_tijdlijn.png` | De uitkomst van methode 1. |
-| `methode_2_tabel.csv`, `methode_2_tabel.png` | De uitkomst van methode 2. |
+| `methode_2_tabel.csv`, `methode_2_tabel.png`, `methode_2_tijdlijn.png` | De uitkomst per gezicht. |
 | `methode_2_verwarring.csv`, `methode_2_verwarring.png` | Per kader wie het echt is tegen de naam van FaceNet. |
 | `methode_2_overlap.csv` | De uitkomst van methode 2 als de grens voor de overlap anders is. |
 | `filmpje.mp4` | Het filmpje met de namen van FaceNet. |
