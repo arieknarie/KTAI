@@ -13,7 +13,7 @@ Wat de woorden betekenen, staat in [de woordenlijst](../README.md#woordenlijst).
 
 ## Waarom dit experiment
 
-In de film heeft Werner vaak een baard. Op veel voorbeeldfoto's niet. Daarom willen we weten of FaceNet Werner beter vindt met meer voorbeelden met baard. We gebruiken alleen stills. Beelden uit de filmpjes die we testen, mogen geen voorbeeld zijn.
+Op een deel van de stills heeft Werner een baard, en op een deel niet. We willen weten of FaceNet Werner beter vindt als er meer voorbeelden met baard zijn. We gebruiken alleen stills. Beelden uit de filmpjes die we testen, mogen geen voorbeeld zijn.
 
 
 ## Hoe we het gedaan hebben

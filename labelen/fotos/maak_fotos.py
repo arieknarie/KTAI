@@ -289,8 +289,8 @@ def overview(todo: dict, verdicts: dict, fixes: dict) -> None:
         if row == 0:
             cell.set_text_props(fontweight="bold", color=TEXT)
             cell.set_facecolor("#f4f3ef")
-    ax.text(0, 0.4, "Voor elk beeld staat vast wie er te zien is en waar.\nDit is het antwoordenblad waarmee we later controleren of\n"
-            "het herkenningsprogramma de juiste persoon aanwijst.", transform=ax.transAxes, fontsize=11, color=TEXT, va="top", linespacing=1.5)
+    ax.text(0, 0.4, "Voor elk beeld staat vast wie er te zien is en waar.\nMet deze lijst kijken we later na of\n"
+            "FaceNet de juiste persoon aanwijst.", transform=ax.transAxes, fontsize=11, color=TEXT, va="top", linespacing=1.5)
     total = sum(len(fixes[k] if verdicts[k] == "fout" else t["boxes"]) for k, t in todo.items() if "video" in t)
     ax.text(0, -0.03, f"{number(total)} rijen: per beeld één rij\nvoor elke persoon in dat beeld.", transform=ax.transAxes, fontsize=10, color=MUTED, va="top", linespacing=1.35)
     axes[4].apply_aspect()
