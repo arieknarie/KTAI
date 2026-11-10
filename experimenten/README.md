@@ -6,7 +6,8 @@ In deze map testen we **FaceNet**, een programma dat gezichten herkent, op acht 
 >
 > - **FaceNet standaard is slecht.** Met alleen gewone foto's als voorbeeld krijgt bijna niemand een naam (score 0,074). Met de gewone foto's én de stills uit de film krijgt bijna iedereen een naam, vaak de verkeerde (score 0,308).
 > - **Het getunde model haalt 0,874.** Dat is FaceNet met de best gevonden instellingen. Dat getal is iets te gunstig, omdat de instellingen gekozen zijn op dezelfde beelden als waarop we meten. Kiezen we de instellingen op andere filmpjes, dan is de score 0,834.
-> - **De winst komt vooral van** het lichter maken van donkere gezichten, extra ruimte om het kader, vergelijken met het gemiddelde van de foto's en per track beslissen, met een drempel die daarbij past. Alleen de drempel veranderen helpt bij foto's + stills bijna niet: de score gaat dan van 0,308 naar 0,315.
+> - **Het top model, [Periskop](top_model/README.md), haalt 0,903.** Dat is alles wat we geleerd hebben in één model. De eerlijke schatting is 0,889, en het zet bijna geen namen meer op de verkeerde plek.
+> - **De winst komt vooral van** het lichter maken van donkere gezichten, extra ruimte om het kader, vergelijken met het gemiddelde van de foto's en per track beslissen, met een drempel die daarbij past. Periskop kijkt daarbovenop met twee modellen tegelijk, en alleen naar de beste beelden van een track. Alleen de drempel veranderen helpt bij foto's + stills bijna niet: de score gaat dan van 0,308 naar 0,315.
 
 ![Staafjes: de score van de experimenten](overzicht.png)
 
@@ -80,7 +81,7 @@ Een kader krijgt alleen een naam als de afstand kleiner is dan de drempel. Goed 
 
 ## Alle experimenten
 
-Basis en Tuned zijn de twee hoofdproeven. De acht proeven daarna hebben we met allebei gedaan: met FaceNet standaard en met het getunde model. Elke naam is een link naar de volledige uitleg.
+Basis en Tuned zijn de twee hoofdproeven. De acht proeven daarna hebben we met allebei gedaan: met FaceNet standaard en met het getunde model. Onderaan staat het top model, waarin alles samenkomt. Elke naam is een link naar de volledige uitleg.
 
 | Experiment | De vraag | Met FaceNet standaard | Met het getunde model |
 |---|---|---|---|
@@ -94,6 +95,7 @@ Basis en Tuned zijn de twee hoofdproeven. De acht proeven daarna hebben we met a
 | [**Leave-one-out**](leave_one_out/README.md) | Welke voorbeeldfoto's maken het resultaat slechter? | Vooral `johann3.png`. Zonder die foto is de score 0,357 in plaats van 0,308. | Geen enkele foto doet nog veel kwaad. Het grootste effect is +0,005. |
 | [**Moving average**](moving_average/README.md) | Wordt het beter met een filter dat losse flitsen weghaalt? | Een beetje. Hoogstens van 0,308 naar 0,345. | Nee. De score blijft gelijk of wordt lager. |
 | [**Herkenningsdichtheid**](herkenningsdichtheid/README.md) | Wanneer staat de juiste naam op het juiste gezicht, en wanneer op een verkeerde plek? | Vaak op een verkeerde plek. | Meestal op het juiste gezicht. |
+| [**Top model: Periskop**](top_model/README.md) | Wat is het beste dat we kunnen bouwen met alles wat we geleerd hebben? | | Score 0,903, eerlijke schatting 0,889. Nog maar 139 namen op de verkeerde plek. |
 
 Welke voorbeeldfoto bij elk kader het meest op het gezicht leek, staat per experiment in `voorspellingen.csv` (kolom `foto`). Hoe vaak elke foto gekozen is, staat in `gebruik_per_foto.csv`. De filmpjes met de namen van FaceNet staan bij [de basis](basis/README.md#de-filmpjes), [tuned](tuned/README.md#de-filmpjes) en [alleen in karakter](alleen_in_karakter/README.md).
 
@@ -191,6 +193,7 @@ Op Windows typ je `.venv\Scripts\python`, gevolgd door het script, met `\` in pl
 |---|---|---|---|
 | Basis | `basis/draai_alles.py` | | de eerste keer een kwartier |
 | Tuned | `tuned/draai_alles.py` | | de eerste keer een uur |
+| Top model | `top_model/draai_alles.py` | | de eerste keer twintig minuten, na Tuned |
 | Alleen in karakter | `alleen_in_karakter/draai.py` | zet er `--model tuned` achter | enkele minuten |
 | Eén gemiddelde vector | `gemiddelde_vector/draai.py` | zet er `--model tuned` achter | een halve minuut |
 | Spreiding | `spreiding/draai.py` | zet er `--model tuned` achter | een halve minuut |
@@ -210,6 +213,7 @@ De vectoren van alle gezichten worden één keer uitgerekend en bewaard in de ma
 | Map of bestand | Wat het is |
 |---|---|
 | `basis/`, `tuned/` | De twee hoofdproeven, elk met de code in stappen, een map `resultaten` en een eigen uitleg. |
+| `top_model/` | Periskop, het beste model dat we hebben gebouwd, met de code in stappen, een map `resultaten` en een eigen uitleg. |
 | `alleen_in_karakter/`, `gemiddelde_vector/`, `spreiding/`, `wie_wordt_johann/`, `werner_baard/`, `leave_one_out/`, `moving_average/`, `herkenningsdichtheid/` | De andere experimenten, elk met de code, de mappen `resultaten` (standaard) en `resultaten_tuned` (getuned) en een eigen uitleg. |
 | `gedeeld/` | De code die alle experimenten gebruiken: waar de bestanden staan, FaceNet aanroepen, de voorbeelden, het meten, het getunde model en het filmpje. |
 | `fotos/` | De uitlegplaatjes in deze README's, en `maak_fotos.py` die ze maakt. |

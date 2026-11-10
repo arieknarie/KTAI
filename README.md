@@ -8,7 +8,8 @@ FaceNet zet een gezicht om in getallen en vergelijkt die met voorbeeldfoto's van
 >
 > - **FaceNet standaard is slecht.** De score is 0,074 met alleen gewone foto's en 0,308 met foto's + stills.
 > - **Het getunde model is veel beter.** Getuned betekent dat we de beste instellingen hebben gezocht, bijvoorbeeld hoeveel beeld FaceNet rond een gezicht te zien krijgt. FaceNet zelf is niet opnieuw getraind. De score wordt 0,808 met alleen foto's en 0,874 met foto's + stills.
-> - **Die scores zijn iets te gunstig**, omdat de instellingen gekozen zijn op dezelfde beelden als waarop we meten. Kiezen we de instellingen op andere filmpjes, dan is de score 0,766 en 0,834.
+> - **Ons beste model heet [Periskop](experimenten/top_model/README.md).** Daarin komt alles samen wat we geleerd hebben. De score is 0,903, en Periskop zet bijna geen namen meer op de verkeerde plek.
+> - **Die scores zijn iets te gunstig**, omdat de instellingen gekozen zijn op dezelfde beelden als waarop we meten. Kiezen we de instellingen op andere filmpjes, dan is de score 0,766 en 0,834 voor het getunde model, en 0,889 voor Periskop.
 >
 > Met *score* bedoelen we de score per gezicht: staat de juiste naam op het juiste gezicht? De score is een cijfer van 0 tot 1. Bij 1 krijgt elk gezicht van de vier personen de juiste naam, en klopt elke naam die FaceNet geeft.
 
@@ -37,7 +38,7 @@ Het project bestaat uit drie delen, en elk deel bouwt voort op het vorige.
 |---|---|---|
 | **1. De filmpjes** | Acht fragmenten uit *Das Boot*, samen 11.182 beelden. | [`filmpjes/`](filmpjes/) |
 | **2. Het labelen** | Met de hand is vastgelegd wie er in elk beeld staat en waar. Die lijst heet de *ground truth*. Daarmee kijken we FaceNet na. | [`labelen/`](labelen/README.md) |
-| **3. De experimenten** | FaceNet wordt getest, standaard en getuned. Daarnaast zijn er acht andere proeven. Ook die staan er standaard én getuned in. | [`experimenten/`](experimenten/README.md) |
+| **3. De experimenten** | FaceNet wordt getest, standaard en getuned. Daarnaast zijn er acht andere proeven. Ook die staan er standaard én getuned in. Het top model Periskop combineert alles wat we geleerd hebben. | [`experimenten/`](experimenten/README.md) |
 
 ![Eén beeld door het hele labelproces: het filmpje, de gevonden kaders, de labels per track, het nakijken, het verbeteren en de ground truth](labelen/fotos/overzicht.jpg)
 
@@ -55,6 +56,7 @@ Het project bestaat uit drie delen, en elk deel bouwt voort op het vorige.
 | wat een woord betekent | [De woordenlijst met plaatjes](experimenten/README.md#woordenlijst) |
 | hoe FaceNet het doet zonder afstellen | [Basis](experimenten/basis/README.md) |
 | hoe FaceNet het doet na het afstellen | [Tuned](experimenten/tuned/README.md) |
+| wat het beste model is dat we gebouwd hebben | [Top model: Periskop](experimenten/top_model/README.md) |
 | hoe de juiste antwoorden gemaakt zijn | [Het labelen](labelen/README.md) |
 
 

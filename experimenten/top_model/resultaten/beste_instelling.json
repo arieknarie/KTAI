@@ -1,0 +1,32 @@
+{
+ "naam_blikken": "twee modellen, twee uitsneden",
+ "blikken": [
+  [
+   "Facenet512",
+   0.2,
+   false
+  ],
+  [
+   "Facenet",
+   0.2,
+   false
+  ],
+  [
+   "Facenet512",
+   0.3,
+   false
+  ],
+  [
+   "Facenet",
+   0.3,
+   false
+  ]
+ ],
+ "deel_van_de_track": 0.3,
+ "verschil_met_tweede": 0.05,
+ "zekerheid_detector": 0.0,
+ "gaten_vullen": true,
+ "drempel": 0.9973284049093724,
+ "f1": 0.903,
+ "f1_eerlijke_schatting": 0.889
+}

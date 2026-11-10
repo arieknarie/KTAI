@@ -5,7 +5,9 @@ Uitvoer in deze map (experimenten/fotos/):
     twee_methodes.jpg       het verschil tussen de twee meetmethodes op een echt beeld
     score_uitgelegd.png     wat precisie, recall en F1 betekenen, met de echte aantallen
     drempel.png             waarom afstellen zoveel uitmaakt: de afstanden en de drempel
-    basis_tegen_tuned.gif   FaceNet standaard en FaceNet afgesteld naast elkaar, als bewegend plaatje
+    basis_tegen_tuned.gif   FaceNet standaard en het getunde model naast elkaar, als bewegend plaatje
+    tuned_tegen_periskop.gif  het getunde model en het top model naast elkaar, als bewegend plaatje
+    beste_momenten.jpg      waarom het top model alleen naar de beste beelden van een track kijkt
     marge_en_lichter.jpg    wat extra ruimte om het kader en lichter maken doen met een gezicht
     per_track.jpg           waarom per track beslissen helpt
     eerlijke_schatting.png  hoe de eerlijke schatting werkt
@@ -19,6 +21,7 @@ Gebruik (vanuit de map experimenten, als de experimenten gedraaid hebben):
     Windows: .venv\Scripts\python fotos\maak_fotos.py
 """
 
+import json
 import subprocess
 import sys
 import tempfile
@@ -44,6 +47,7 @@ from gedeeld.herkennen import by_track, example_distances, person_distances
 from gedeeld.meten import IOU, comma, hit_matrix, method_2_counts, overlap, right_and_wrong
 from gedeeld.paden import EXPERIMENTEN, FRAMES, GROUND_TRUTH, MOVIES, NAMES, PICTURES
 from gedeeld.voorbeelden import rows
+from top_model.model import Data as TopData
 from tuned.instellingen import example_path, winner
 
 HERE = Path(__file__).resolve().parent
@@ -322,24 +326,24 @@ def threshold(data: dict) -> None:
 
 # ---------- FaceNet standaard en afgesteld naast elkaar ----------
 
-def before_after_gif(data: dict) -> None:
+def side_by_side_gif(data: dict, left: tuple, right: tuple, video: str, start: int, count: int, path: Path) -> None:
+    """Twee keer hetzelfde stukje film naast elkaar, als bewegend plaatje. `left` en `right` zijn de map met uitkomsten en de titel."""
     truth = data["truth"]
-    truth = truth[truth["bestand"] == VIDEO_5]
-    scores = {}
-    panels = []
-    for experiment, title in (("basis", "FaceNet standaard"), ("tuned", "FaceNet getuned")):
-        found = pd.read_csv(result(experiment, "fotos_en_kostuum") / "voorspellingen.csv")
-        panels.append((title, found[(found["bestand"] == VIDEO_5) & found["facenet"].isin(NAMES)]))
-        scores[title] = pd.read_csv(result(experiment, "fotos_en_kostuum") / "methode_2_tabel.csv").set_index("acteur").loc["samen", "f1"]
-    wanted = range(GIF_START, GIF_START + GIF_FRAMES, 2)
-    images = frames_of(VIDEO_5, wanted)
+    truth = truth[truth["bestand"] == video]
+    scores, panels = {}, []
+    for folder, title in (left, right):
+        found = pd.read_csv(folder / "voorspellingen.csv")
+        panels.append((title, found[(found["bestand"] == video) & found["facenet"].isin(NAMES)]))
+        scores[title] = pd.read_csv(folder / "methode_2_tabel.csv").set_index("acteur").loc["samen", "f1"]
+    wanted = range(start, start + count, 2)
+    images = frames_of(video, wanted)
     panel_w, panel_h, top, bottom = 480, 270, 36, 26
     with tempfile.TemporaryDirectory() as folder:
         for n, frame in enumerate(wanted):
             canvas = Image.new("RGB", (panel_w * 2 + 8, top + panel_h + bottom), "white")
             draw = ImageDraw.Draw(canvas)
             for k, (title, found) in enumerate(panels):
-                left = k * (panel_w + 8)
+                left_edge = k * (panel_w + 8)
                 shown = Image.fromarray(rgb(cv2.resize(images[frame], (panel_w, panel_h), interpolation=cv2.INTER_AREA)))
                 pen = ImageDraw.Draw(shown)
                 scale = panel_w / images[frame].shape[1]
@@ -348,13 +352,97 @@ def before_after_gif(data: dict) -> None:
                     same = faces[faces["persoon"] == b.facenet]
                     good = len(same) > 0 and overlap((b.x, b.y, b.w, b.h), tuple(same[["x", "y", "w", "h"]].iloc[0])) >= IOU
                     tag(pen, tuple(round(v * scale) for v in (b.x, b.y, b.w, b.h)), b.facenet, RIGHT if good else WRONG, size=12, width=2)
-                canvas.paste(shown, (left, top))
-                draw.text((left + 4, 8), f"{title}: score {comma(scores[title])}", fill=(11, 11, 11), font=font(17, bold=True))
+                canvas.paste(shown, (left_edge, top))
+                draw.text((left_edge + 4, 8), f"{title}: score {comma(scores[title])}", fill=(11, 11, 11), font=font(17, bold=True))
             draw.text((4, top + panel_h + 5), "groen: de naam klopt     rood: de naam klopt niet     de score geldt voor alle filmpjes samen", fill=(82, 81, 78), font=font(13))
             canvas.save(Path(folder) / f"{n:03d}.png")
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", "12.5", "-i", str(Path(folder) / "%03d.png"), "-vf",
                         "split[a][b];[a]palettegen=max_colors=160:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle",
-                        "-loop", "0", str(HERE / "basis_tegen_tuned.gif")], check=True)
+                        "-loop", "0", str(path)], check=True)
+
+
+def before_after_gif(data: dict) -> None:
+    side_by_side_gif(data, (result("basis", "fotos_en_kostuum"), "FaceNet standaard"), (result("tuned", "fotos_en_kostuum"), "FaceNet getuned"), VIDEO_5, GIF_START, GIF_FRAMES, HERE / "basis_tegen_tuned.gif")
+
+
+def biggest_difference(data: dict, left: pd.DataFrame, right: pd.DataFrame) -> tuple:
+    """Het stukje film van 5 seconden, met minstens twee grote gezichten, waarin het rechtermodel het meest beter is dan het linkermodel."""
+    truth = data["truth"]
+    def per_frame(found):
+        ok = method_2_counts(found, truth)[2]
+        named = found["facenet"].isin(NAMES).to_numpy()
+        return found.assign(goed=ok.astype(int), fout=(named & ~ok).astype(int)).groupby(["bestand", "beeld"])[["goed", "fout"]].sum()
+    a, b = per_frame(left), per_frame(right)
+    best, chosen = -1.0, None
+    for video, g in truth.groupby("bestand"):
+        if g["w"].median() < 250:
+            continue
+        faces = g.groupby("beeld").size().reindex(range(int(g["beeld"].max()) + 1), fill_value=0).to_numpy()
+        for start in range(0, max(1, len(faces) - GIF_FRAMES), 25):
+            if faces[start:start + GIF_FRAMES].min() < 2:
+                continue
+            frames_here = pd.MultiIndex.from_product([[video], range(start, start + GIF_FRAMES)])
+            first, second = a.reindex(frames_here, fill_value=0).sum(), b.reindex(frames_here, fill_value=0).sum()
+            gain = float((second["goed"] - second["fout"]) - (first["goed"] - first["fout"]))
+            if gain > best:
+                best, chosen = gain, (video, start)
+    return chosen
+
+
+def tuned_against_periskop(data: dict) -> None:
+    left, right = result("tuned", "fotos_en_kostuum"), EXPERIMENTEN / "top_model" / "resultaten"
+    video, start = biggest_difference(data, pd.read_csv(left / "voorspellingen.csv"), pd.read_csv(right / "voorspellingen.csv"))
+    side_by_side_gif(data, (left, "Het getunde model"), (right, "Periskop"), video, start, GIF_FRAMES, HERE / "tuned_tegen_periskop.gif")
+    print(f"tuned_tegen_periskop: {video.split(' [')[0]}, vanaf beeld {start}")
+
+
+def best_moments() -> None:
+    settings = json.loads((EXPERIMENTEN / "top_model" / "resultaten" / "beste_instelling.json").read_text(encoding="utf-8"))
+    top = TopData("fotos_en_kostuum")
+    raw = top.distances(settings["blikken"])
+    _, person, _ = top.decide(settings)
+    limit, part = settings["drempel"], settings["deel_van_de_track"]
+    widths = top.detections["w"].to_numpy()
+    candidates = []
+    for t, index in top.tracks.items():               # een track die met alle beelden geen naam krijgt, en met de beste beelden de juiste naam
+        name = person[index[0]]
+        if len(index) < 30 or np.median(widths[index]) < 300 or name < 0 or (top.hit[index, name] >= 0).mean() < 0.95:
+            continue
+        column = raw[index, name]
+        everything, best = float(column.mean()), float(np.sort(column)[:round(part * len(index))].mean())
+        if everything >= limit and best < limit - 0.02:
+            candidates.append((everything - best, t, int(name), everything, best))
+    _, t, name, everything, best_value = max(candidates)
+    index = top.tracks[t]
+    index = index[np.argsort(top.detections["frame"].to_numpy()[index])]
+    column = raw[index, name]
+    cut_off = np.sort(column)[round(part * len(index)) - 1]
+    chosen = index[np.linspace(0, len(index) - 1, 10).round().astype(int)]
+    video = top.detections["video"].iloc[index[0]]
+    images = frames_of(video, top.detections["frame"].to_numpy()[chosen])
+    fig = plt.figure(figsize=(13.4, 3.7), facecolor="white")
+    grid = fig.add_gridspec(2, 10, height_ratios=[2.2, 1], hspace=0.28, wspace=0.05, left=0.008, right=0.992, top=0.97, bottom=0.03)
+    for k, b in enumerate(chosen):
+        box = top.detections.iloc[b]
+        ax = fig.add_subplot(grid[0, k])
+        ax.imshow(cv2.resize(rgb(lighten(cut(images[box.frame], box.x, box.y, box.w, box.h, 0.2))), (200, 200), interpolation=cv2.INTER_AREA))
+        bare(ax)
+        good = raw[b, name] <= cut_off
+        if good:
+            for spine in ax.spines.values():
+                spine.set_visible(True)
+                spine.set_color(ORANGE)
+                spine.set_linewidth(4)
+        ax.text(0.5, -0.05, comma(float(raw[b, name]), 2), transform=ax.transAxes, ha="center", va="top", fontsize=11.5, fontweight="bold" if good else "normal", color=INK)
+    ax = fig.add_subplot(grid[1, :])
+    ax.axis("off")
+    ax.text(0, 0.78, f"Alle {len(index)} beelden van deze track:", fontsize=12.5, color=INK, va="center", transform=ax.transAxes)
+    ax.text(0.30, 0.78, f"gemiddelde afstand {comma(everything, 2)}. Dat is meer dan de drempel van {comma(limit, 2)}, dus geen naam.", fontsize=12.5, color=INK, va="center", transform=ax.transAxes)
+    ax.text(0, 0.22, f"Alleen de beste {part:.0%} (oranje):", fontsize=12.5, fontweight="bold", color=ORANGE, va="center", transform=ax.transAxes)
+    ax.text(0.30, 0.22, f"gemiddelde afstand {comma(best_value, 2)}. Dat is minder dan de drempel, dus de juiste naam: {NAMES[name]}.", fontsize=12.5, fontweight="bold", color=INK, va="center", transform=ax.transAxes)
+    fig.savefig(HERE / "beste_momenten.jpg", dpi=105, pil_kwargs={"quality": 90})
+    plt.close(fig)
+    print(f"beste_momenten: {video.split(' [')[0]}, track {top.detections['track'].iloc[index[0]]}, {NAMES[name]}")
 
 
 # ---------- wat de instellingen doen ----------
@@ -582,6 +670,8 @@ def main() -> None:
     explain_score()
     threshold(data)
     before_after_gif(data)
+    tuned_against_periskop(data)
+    best_moments()
     margin_and_light(data, "Das Boot 3 [kefBHWylmMk] 30m08s-31m04s.mp4", 511)
     per_track_figure(data)
     fair_estimate()

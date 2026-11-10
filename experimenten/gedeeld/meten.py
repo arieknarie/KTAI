@@ -326,7 +326,7 @@ def bars(labels: list, values: list, title: str, path) -> None:
 def grouped_bars(labels: list, first: list, second: list, names: tuple, title: str, path) -> None:
     """Twee staafjes per groep, met de waarde erboven: grijs is de vergelijking, oranje is het experiment."""
     x = np.arange(len(labels))
-    fig, ax = plt.subplots(figsize=(8.4, 3.9), facecolor="white")
+    fig, ax = plt.subplots(figsize=(max(8.4, 1.45 * len(labels)), 3.9), facecolor="white")
     for shift, values, name, colour in ((-0.19, first, names[0], "#8a8983"), (0.19, second, names[1], "#eb6834")):
         ax.bar(x + shift, values, width=0.34, color=colour, label=name)
         for i, value in enumerate(values):

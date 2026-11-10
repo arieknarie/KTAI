@@ -1,0 +1,7 @@
+stap,score
+Het getunde model,0.874
++ alleen de beste 30% van de beelden van een track,0.887
++ twee modellen samen,0.896
++ twee uitsneden van elk gezicht,0.899
++ duidelijk verschil met de tweede persoon,0.902
++ gaten in een track vullen,0.903

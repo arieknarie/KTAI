@@ -24,7 +24,8 @@ EXPERIMENTS = [("Basis, foto's", "basis/resultaten/fotos"),
                ("Tuned, foto's", "tuned/resultaten/fotos"),
                ("Tuned, foto's + stills", "tuned/resultaten/fotos_en_kostuum"),
                ("Alleen stills, tuned", "alleen_in_karakter/resultaten_tuned"),
-               ("Eén gemiddelde vector, tuned", "gemiddelde_vector/resultaten_tuned/fotos_en_kostuum")]
+               ("Eén gemiddelde vector, tuned", "gemiddelde_vector/resultaten_tuned/fotos_en_kostuum"),
+               ("Top model: Periskop", "top_model/resultaten")]
 
 
 def main() -> None:
@@ -39,7 +40,7 @@ def main() -> None:
     table = pd.DataFrame(rows)
     table.to_csv(HERE / "overzicht.csv", index=False, lineterminator="\n")
 
-    fig, ax = plt.subplots(figsize=(10, 5.6), facecolor="white")
+    fig, ax = plt.subplots(figsize=(10, 6.1), facecolor="white")
     for i, r in table.iterrows():
         both = pd.notna(r["methode_1_f1"])
         if both:

@@ -29,6 +29,7 @@ Elk los experiment is gedaan met FaceNet standaard én met het getunde model.
 - [x] [Wie wordt Johann](wie_wordt_johann/README.md): wie wordt als Johann herkend op plekken waar Johann er niet is?
 - [x] [Eén gemiddelde vector](gemiddelde_vector/README.md) per persoon
 - [x] [Werner met baard](werner_baard/README.md): meer stills van Werner met baard, alleen met stills en dus niet met beelden uit de filmpjes
+- [x] [Top model: Periskop](top_model/README.md): het beste dat we kunnen bouwen met alles wat we geleerd hebben
 - [x] [Overzicht van alle experimenten](README.md#alle-experimenten)
 
 ## Zo voer je het lijstje uit op Mac en Windows

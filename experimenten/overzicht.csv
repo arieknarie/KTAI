@@ -7,3 +7,4 @@ experiment,methode_2_precisie,methode_2_recall,methode_2_f1,methode_1_precisie,m
 "Tuned, foto's + stills",0.952,0.807,0.874,,,
 "Alleen stills, tuned",0.925,0.821,0.87,,,
 "Eén gemiddelde vector, tuned",0.952,0.807,0.874,,,
+Top model: Periskop,0.992,0.829,0.903,,,

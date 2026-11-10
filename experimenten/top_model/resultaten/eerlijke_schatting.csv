@@ -1,0 +1,9 @@
+filmpje,blikken,deel_van_de_track,verschil_met_tweede,zekerheid_detector,gaten_vullen,drempel,gezichten,goed,fout_benoemd,gemist,precisie,recall,f1
+Video 1,"twee modellen, twee uitsneden",0.3,0.05,0.35,True,0.9973,3372,2767,21,605,0.992,0.821,0.898
+Video 2,"twee modellen, twee uitsneden",0.3,0.05,0.0,True,0.9973,3401,2677,32,724,0.988,0.787,0.876
+Video 3,"twee modellen, twee uitsneden",0.3,0.05,0.0,True,0.9973,2587,2437,0,150,1.0,0.942,0.97
+Video 4,"twee modellen, twee uitsneden",0.3,0.05,0.0,True,0.9973,4491,4472,9,19,0.998,0.996,0.997
+Video 5,"twee modellen, twee uitsneden",0.3,0.03,0.35,True,0.9973,1410,1367,72,43,0.95,0.97,0.96
+Video 6,"twee modellen, twee uitsneden",0.3,0.05,0.0,True,0.9973,477,350,1,127,0.997,0.734,0.845
+Video 7,"twee modellen, twee uitsneden",0.3,0.05,0.0,True,0.9973,1323,1046,26,277,0.976,0.791,0.873
+Video 8,twee modellen,0.3,0.05,0.35,True,0.974,3929,1819,24,2110,0.987,0.463,0.63
