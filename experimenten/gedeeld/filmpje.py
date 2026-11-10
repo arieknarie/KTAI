@@ -26,7 +26,8 @@ def make(found: pd.DataFrame, path, caption: str) -> None:
     ffmpeg = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{WIDTH}x{HEIGHT}",
                                "-r", "25", "-i", "-", "-c:v", "libx264", "-crf", "28", "-preset", "medium", "-pix_fmt", "yuv420p",
                                "-movflags", "+faststart", str(path)], stdin=subprocess.PIPE)
-    for video in sorted(pd.read_csv(FRAMES)["video"].unique()):
+    expected = pd.read_csv(FRAMES)["video"].value_counts()
+    for video in sorted(expected.index):
         boxes = {f: g for f, g in shown[shown["bestand"] == video].groupby("beeld")}
         capture, index = cv2.VideoCapture(str(MOVIES / video)), 0
         while True:                                       # op volgorde lezen, nooit naar een beeld springen
@@ -49,6 +50,9 @@ def make(found: pd.DataFrame, path, caption: str) -> None:
             ffmpeg.stdin.write(image.tobytes())
             index += 1
         capture.release()
+        if index != expected[video]:                      # anders wordt het filmpje stilletjes te kort
+            ffmpeg.stdin.close()
+            raise SystemExit(f"{video}: {index} van de {expected[video]} beelden gelezen. Draai deze stap opnieuw.")
         print(f"  {video}: {index} beelden")
     ffmpeg.stdin.close()
     ffmpeg.wait()
