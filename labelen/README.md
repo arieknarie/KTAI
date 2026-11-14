@@ -549,10 +549,10 @@ Dit hoef je maar één keer te doen. Wie alleen de uitkomsten wil gebruiken, hoe
 
 **1. Installeer Python 3.12** vanaf <https://www.python.org/downloads/>. Zet op Windows in het eerste scherm een vinkje bij *Add python.exe to PATH*.
 
-**2. Zet het project op je computer.** Download de branch als [ZIP-bestand](https://github.com/arieknarie/KTAI/archive/refs/heads/final-version.zip) (ongeveer 1 GB) en pak het uit, of gebruik git:
+**2. Zet het project op je computer.** Download de branch als [ZIP-bestand](https://github.com/arieknarie/KTAI/archive/refs/heads/main.zip) (ongeveer 1 GB) en pak het uit, of gebruik git:
 
 ```bash
-git clone -b final-version https://github.com/arieknarie/KTAI.git
+git clone https://github.com/arieknarie/KTAI.git
 ```
 
 Zet de map niet in iCloud, OneDrive of een andere clouddienst, en op Windows in een map zonder letters als é in het pad.

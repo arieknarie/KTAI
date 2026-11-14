@@ -69,7 +69,7 @@ Zet eerst het project op je computer. Dat is ongeveer 1 GB. Zet de map niet in i
 Op een Mac en op Windows gaat dat hetzelfde:
 
 ```bash
-git clone -b final-version https://github.com/arieknarie/KTAI.git
+git clone https://github.com/arieknarie/KTAI.git
 ```
 
 Daarna kies je wat je wilt draaien. Per deel staat precies beschreven wat je op een Mac en op Windows moet doen:
